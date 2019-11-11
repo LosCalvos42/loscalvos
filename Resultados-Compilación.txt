@@ -1,0 +1,38 @@
+﻿1>------ Operación Recompilar todo iniciada: proyecto: Datos, configuración: Debug Any CPU ------
+1>E:\LC42\FuentesBK\ALBPROD\Datos\CDEmpleado.cs(62,29,62,31): warning CS0168: La variable 'ex' se ha declarado pero nunca se usa
+1>  Datos -> E:\LC42\FuentesBK\ALBPROD\Datos\bin\Debug\Datos.dll
+2>------ Operación Recompilar todo iniciada: proyecto: logica, configuración: Debug Any CPU ------
+2>E:\LC42\FuentesBK\ALBPROD\logica\CNEmpleado.cs(8,7,8,12): warning CS0105: La directiva using para 'Datos' aparece previamente en este espacio de nombres
+2>  logica -> E:\LC42\FuentesBK\ALBPROD\logica\bin\Debug\logica.dll
+3>------ Operación Recompilar todo iniciada: proyecto: AGGA, configuración: Debug Any CPU ------
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Nrotextura’ and the line ‘Line1’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Btipo’ and the line ‘Line1’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Btipo’ and the text box ‘Nrotextura’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Blote’ and the tablix ‘Tablix5’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Nrotextura2’ and the line ‘Line2’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Btipo2’ and the line ‘Line2’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Btipo2’ and the text box ‘Nrotextura2’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The text box ‘Blote2’ and the tablix ‘Tablix6’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The rectangle ‘Rectangle6’ and the rectangle ‘Rectangle2’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\RBatea1.rdlc : warning rsOverlappingReportItems: The rectangle ‘Rectangle5’ and the rectangle ‘Rectangle1’ overlap. Overlapping report items are not supported in all renderers.
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmIngresoCarnicosTrazabilidad.cs(263,22,263,27): warning CS0168: La variable 'Fecha' se ha declarado pero nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(206,21,206,24): warning CS0168: La variable 'fed' se ha declarado pero nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(207,21,207,24): warning CS0168: La variable 'feh' se ha declarado pero nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(208,24,208,30): warning CS0219: La variable 'filtro' está asignada pero su valor nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmRecepcion.cs(92,30,92,32): warning CS0168: La variable 'ex' se ha declarado pero nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmSelecJamon.cs(87,30,87,32): warning CS0168: La variable 'ex' se ha declarado pero nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmMenu.cs(27,13,27,15): warning CS0169: El campo 'FrmMenu.sw' nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmMenu.cs(27,17,27,19): warning CS0169: El campo 'FrmMenu.sh' nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteBalanceMateriaPrima.cs(19,13,19,24): warning CS0169: El campo 'FrmReporteBalanceMateriaPrima.diferencia2' nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmMenu.cs(26,17,26,19): warning CS0169: El campo 'FrmMenu.ly' nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmRecepcion.cs(16,22,16,43): warning CS0649: El campo 'FrmRecepcion.InvokeRequinetworking' nunca se asigna y siempre tendrá el valor predeterminado false
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmMenu.cs(26,13,26,15): warning CS0169: El campo 'FrmMenu.lx' nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(21,13,21,20): warning CS0414: El campo 'FrmReporteProcesos.Ksalida' está asignado pero su valor nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(22,16,22,21): warning CS0414: El campo 'FrmReporteProcesos.magro' está asignado pero su valor nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmReporteProcesos.cs(20,13,20,21): warning CS0414: El campo 'FrmReporteProcesos.Kentrada' está asignado pero su valor nunca se usa
+3>E:\LC42\FuentesBK\ALBPROD\ProdCatriel\FrmCarnicosCuentaCorriente.cs(115,24,115,35): warning CS0414: El campo 'FrmCarnicosCuentaCorriente.curAnterior' está asignado pero su valor nunca se usa
+3>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(3867,5): warning MSB3177: La referencia 'Microsoft.VisualBasic.PowerPacks.Vs' no permite llamadores de confianza parcial.
+3>  AGGA -> E:\LC42\FuentesBK\ALBPROD\ProdCatriel\bin\Debug\TWINS TRACING.exe
+4>------ Operación Recompilar todo omitida: proyecto: SetupAGGA, configuración: Debug ------
+4>Proyecto no seleccionado para compilarse para esta configuración de solución 
+========== Recompilar todo: 3 correctos, 0 incorrectos, 1 omitidos ==========
