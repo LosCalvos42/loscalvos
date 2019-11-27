@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmIngresoCarnicosCalidad
     {
@@ -268,7 +268,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Image = global::Alberdi.Properties.Resources.pdf32;
+            this.button1.Image = global::TRAZAAR.Properties.Resources.pdf32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(521, 115);
             this.button1.Name = "button1";
@@ -291,7 +291,7 @@
             // 
             this.pBuscar.BackColor = System.Drawing.Color.Transparent;
             this.pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBuscar.Image = global::Alberdi.Properties.Resources.search_32;
+            this.pBuscar.Image = global::TRAZAAR.Properties.Resources.search_32;
             this.pBuscar.Location = new System.Drawing.Point(463, 13);
             this.pBuscar.Name = "pBuscar";
             this.pBuscar.Size = new System.Drawing.Size(26, 25);

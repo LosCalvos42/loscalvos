@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmConsultas: Form
     {
@@ -65,11 +65,6 @@ namespace Alberdi
         {
             this.Close();
             Program._FrmConsultas = false;
-            
-        }
-
-        private void Despostada_Click(object sender, EventArgs e)
-        {
             
         }
 

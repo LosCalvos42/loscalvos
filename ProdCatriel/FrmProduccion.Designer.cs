@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmProduccion
     {
@@ -52,7 +52,7 @@
             // 
             // menuForm
             // 
-            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PArchivo,
             this.Pmaestros,
@@ -74,16 +74,16 @@
             this.PStock});
             this.PArchivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PArchivo.ForeColor = System.Drawing.Color.White;
-            this.PArchivo.Image = global::Alberdi.Properties.Resources.icons8_check_file_48;
+            this.PArchivo.Image = global::TRAZAAR.Properties.Resources.icons8_check_file_48;
             this.PArchivo.Name = "PArchivo";
             this.PArchivo.Size = new System.Drawing.Size(87, 24);
             this.PArchivo.Text = "&Archivo";
             // 
             // PRecepcion
             // 
-            this.PRecepcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PRecepcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PRecepcion.ForeColor = System.Drawing.Color.White;
-            this.PRecepcion.Image = global::Alberdi.Properties.Resources.mercaderia;
+            this.PRecepcion.Image = global::TRAZAAR.Properties.Resources.mercaderia;
             this.PRecepcion.Name = "PRecepcion";
             this.PRecepcion.Size = new System.Drawing.Size(247, 24);
             this.PRecepcion.Text = "&Recepcion de Mercaderia";
@@ -91,9 +91,9 @@
             // 
             // PStock
             // 
-            this.PStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PStock.ForeColor = System.Drawing.Color.White;
-            this.PStock.Image = global::Alberdi.Properties.Resources.stock;
+            this.PStock.Image = global::TRAZAAR.Properties.Resources.stock;
             this.PStock.Name = "PStock";
             this.PStock.Size = new System.Drawing.Size(247, 24);
             this.PStock.Text = "&Stock";
@@ -101,7 +101,7 @@
             // 
             // Pmaestros
             // 
-            this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PProductos,
             this.PTRecurso,
@@ -111,16 +111,16 @@
             this.Precursos});
             this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pmaestros.ForeColor = System.Drawing.Color.White;
-            this.Pmaestros.Image = global::Alberdi.Properties.Resources.icons8_paste_special_30;
+            this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.icons8_paste_special_30;
             this.Pmaestros.Name = "Pmaestros";
             this.Pmaestros.Size = new System.Drawing.Size(99, 24);
             this.Pmaestros.Text = "Maestros";
             // 
             // PProductos
             // 
-            this.PProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PProductos.ForeColor = System.Drawing.Color.White;
-            this.PProductos.Image = global::Alberdi.Properties.Resources.icons8_shopping_basket_48;
+            this.PProductos.Image = global::TRAZAAR.Properties.Resources.icons8_shopping_basket_48;
             this.PProductos.Name = "PProductos";
             this.PProductos.Size = new System.Drawing.Size(197, 22);
             this.PProductos.Text = "Productos";
@@ -128,7 +128,7 @@
             // 
             // PTRecurso
             // 
-            this.PTRecurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PTRecurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PTRecurso.ForeColor = System.Drawing.Color.White;
             this.PTRecurso.Name = "PTRecurso";
             this.PTRecurso.Size = new System.Drawing.Size(197, 22);
@@ -137,7 +137,7 @@
             // 
             // PAlmacenes
             // 
-            this.PAlmacenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PAlmacenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PAlmacenes.ForeColor = System.Drawing.Color.White;
             this.PAlmacenes.Name = "PAlmacenes";
             this.PAlmacenes.Size = new System.Drawing.Size(197, 22);
@@ -146,7 +146,7 @@
             // 
             // PFamilias
             // 
-            this.PFamilias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PFamilias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PFamilias.ForeColor = System.Drawing.Color.White;
             this.PFamilias.Name = "PFamilias";
             this.PFamilias.Size = new System.Drawing.Size(197, 22);
@@ -155,7 +155,7 @@
             // 
             // PMarcas
             // 
-            this.PMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PMarcas.ForeColor = System.Drawing.Color.White;
             this.PMarcas.Name = "PMarcas";
             this.PMarcas.Size = new System.Drawing.Size(197, 22);
@@ -164,7 +164,7 @@
             // 
             // Precursos
             // 
-            this.Precursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.Precursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Precursos.ForeColor = System.Drawing.Color.White;
             this.Precursos.Name = "Precursos";
             this.Precursos.Size = new System.Drawing.Size(197, 22);
@@ -179,7 +179,7 @@
             this.PSOTrabajo});
             this.PProcesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PProcesos.ForeColor = System.Drawing.Color.White;
-            this.PProcesos.Image = global::Alberdi.Properties.Resources.icons8_maintenance_16;
+            this.PProcesos.Image = global::TRAZAAR.Properties.Resources.icons8_maintenance_16;
             this.PProcesos.Name = "PProcesos";
             this.PProcesos.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
             this.PProcesos.Size = new System.Drawing.Size(101, 24);
@@ -187,7 +187,7 @@
             // 
             // PDProcesos
             // 
-            this.PDProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PDProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PDProcesos.ForeColor = System.Drawing.Color.White;
             this.PDProcesos.Name = "PDProcesos";
             this.PDProcesos.Size = new System.Drawing.Size(268, 22);
@@ -196,7 +196,7 @@
             // 
             // POdTrabajo
             // 
-            this.POdTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.POdTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.POdTrabajo.ForeColor = System.Drawing.Color.White;
             this.POdTrabajo.Name = "POdTrabajo";
             this.POdTrabajo.Size = new System.Drawing.Size(268, 22);
@@ -205,7 +205,7 @@
             // 
             // PSOTrabajo
             // 
-            this.PSOTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PSOTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PSOTrabajo.ForeColor = System.Drawing.Color.White;
             this.PSOTrabajo.Name = "PSOTrabajo";
             this.PSOTrabajo.Size = new System.Drawing.Size(268, 22);
@@ -218,14 +218,14 @@
             this.PUMedida});
             this.Pparametros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pparametros.ForeColor = System.Drawing.Color.White;
-            this.Pparametros.Image = global::Alberdi.Properties.Resources.icons8_adjust_48;
+            this.Pparametros.Image = global::TRAZAAR.Properties.Resources.icons8_adjust_48;
             this.Pparametros.Name = "Pparametros";
             this.Pparametros.Size = new System.Drawing.Size(114, 24);
             this.Pparametros.Text = "Parametros";
             // 
             // PUMedida
             // 
-            this.PUMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.PUMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PUMedida.ForeColor = System.Drawing.Color.White;
             this.PUMedida.Name = "PUMedida";
             this.PUMedida.Size = new System.Drawing.Size(197, 22);
@@ -236,7 +236,7 @@
             // 
             this.PReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PReportes.ForeColor = System.Drawing.Color.White;
-            this.PReportes.Image = global::Alberdi.Properties.Resources.icons8_print_48;
+            this.PReportes.Image = global::TRAZAAR.Properties.Resources.icons8_print_48;
             this.PReportes.Name = "PReportes";
             this.PReportes.Size = new System.Drawing.Size(97, 24);
             this.PReportes.Text = "Reportes";
@@ -245,7 +245,7 @@
             // 
             this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Psalir.ForeColor = System.Drawing.Color.White;
-            this.Psalir.Image = global::Alberdi.Properties.Resources.icons8_shutdown_30;
+            this.Psalir.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
             this.Psalir.Name = "Psalir";
             this.Psalir.Size = new System.Drawing.Size(65, 24);
             this.Psalir.Text = "Salir";

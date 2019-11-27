@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmLogin
     {
@@ -43,12 +43,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.LblBy = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblErrorAcceso = new System.Windows.Forms.Label();
             this.linkpass = new System.Windows.Forms.LinkLabel();
@@ -59,6 +57,7 @@
             this.btnverPass = new System.Windows.Forms.Button();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -90,11 +89,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(445, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 32);
+            this.label3.Size = new System.Drawing.Size(90, 30);
             this.label3.TabIndex = 17;
             this.label3.Text = "LOGIN";
             // 
@@ -116,7 +115,7 @@
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(53)))), ((int)(((byte)(73)))));
-            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.MediumAquamarine;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnAceptar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -203,15 +202,14 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lblEmpresa);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.LblBy);
             this.panel1.Controls.Add(this.lblversion);
             this.panel1.Controls.Add(this.lblServer);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -243,23 +241,11 @@
             this.label10.TabIndex = 35;
             this.label10.Text = "Autorizado a :";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.LightGreen;
-            this.label9.Location = new System.Drawing.Point(117, 137);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 19);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "by";
-            this.label9.Visible = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label8.Location = new System.Drawing.Point(9, 78);
+            this.label8.Location = new System.Drawing.Point(3, 95);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 33;
@@ -269,7 +255,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.label7.Location = new System.Drawing.Point(156, 155);
+            this.label7.Location = new System.Drawing.Point(156, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 32;
@@ -281,11 +267,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label6.Location = new System.Drawing.Point(92, 115);
+            this.label6.Location = new System.Drawing.Point(35, 144);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 23);
+            this.label6.Size = new System.Drawing.Size(206, 23);
             this.label6.TabIndex = 20;
-            this.label6.Text = "Producción";
+            this.label6.Text = "Trazabilidad Cárnica";
             // 
             // label5
             // 
@@ -294,29 +280,15 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label5.Location = new System.Drawing.Point(36, 93);
+            this.label5.Location = new System.Drawing.Point(11, 115);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 23);
+            this.label5.Size = new System.Drawing.Size(110, 23);
             this.label5.TabIndex = 19;
-            this.label5.Text = "Seguimiento De";
-            // 
-            // LblBy
-            // 
-            this.LblBy.AutoSize = true;
-            this.LblBy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LblBy.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBy.ForeColor = System.Drawing.Color.LightGreen;
-            this.LblBy.Location = new System.Drawing.Point(141, 137);
-            this.LblBy.Name = "LblBy";
-            this.LblBy.Size = new System.Drawing.Size(107, 19);
-            this.LblBy.TabIndex = 17;
-            this.LblBy.Text = "JanckoSoft.com";
-            this.LblBy.Visible = false;
-            this.LblBy.Click += new System.EventHandler(this.LblBy_Click);
+            this.label5.Text = "Gestión de";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Alberdi.Properties.Resources.serververde32;
+            this.pictureBox2.Image = global::TRAZAAR.Properties.Resources.serververde32;
             this.pictureBox2.Location = new System.Drawing.Point(16, 245);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(23, 19);
@@ -328,7 +300,7 @@
             // 
             this.lblErrorAcceso.AutoSize = true;
             this.lblErrorAcceso.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorAcceso.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.lblErrorAcceso.ForeColor = System.Drawing.Color.MediumAquamarine;
             this.lblErrorAcceso.Location = new System.Drawing.Point(341, 171);
             this.lblErrorAcceso.Name = "lblErrorAcceso";
             this.lblErrorAcceso.Size = new System.Drawing.Size(54, 17);
@@ -399,7 +371,7 @@
             this.btnverPass.FlatAppearance.BorderSize = 0;
             this.btnverPass.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(81)))));
             this.btnverPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnverPass.Image = global::Alberdi.Properties.Resources.ojo;
+            this.btnverPass.Image = global::TRAZAAR.Properties.Resources.ojo;
             this.btnverPass.Location = new System.Drawing.Point(610, 117);
             this.btnverPass.Name = "btnverPass";
             this.btnverPass.Size = new System.Drawing.Size(37, 24);
@@ -431,6 +403,17 @@
             this.btncerrar.TabIndex = 22;
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(49, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(147, 32);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "TRAZAAR";
             // 
             // FrmLogin
             // 
@@ -494,13 +477,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnverPass;
-        private System.Windows.Forms.Label LblBy;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblEmpresa;
+        private System.Windows.Forms.Label label9;
     }
 }

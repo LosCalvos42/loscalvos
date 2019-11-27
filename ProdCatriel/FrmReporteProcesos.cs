@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmReporteProcesos : Form
     {

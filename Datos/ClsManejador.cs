@@ -13,10 +13,12 @@ namespace Datos
     public class ClsManejador
     {
         public static string ip;
+        public static string database;
+        public static string contra;
         public static string admin;
 
-       
-            SqlConnection conexion = new SqlConnection("Server=" + ip + ";DataBase=ALBPROD; user id = sa; password = 38157Srl");
+
+                SqlConnection conexion = new SqlConnection("Server=" + ip + ";DataBase=" + database + "; user id = sa; password =" + contra);
 
 
 

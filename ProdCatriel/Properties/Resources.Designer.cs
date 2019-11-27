@@ -163,26 +163,6 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Alberdi {
-            get {
-                object obj = ResourceManager.GetObject("Alberdi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Alberdi2 {
-            get {
-                object obj = ResourceManager.GetObject("Alberdi2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap APs {
             get {
                 object obj = ResourceManager.GetObject("APs", resourceCulture);
@@ -236,6 +216,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap buscar2 {
             get {
                 object obj = ResourceManager.GetObject("buscar2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap buscarB {
+            get {
+                object obj = ResourceManager.GetObject("buscarB", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

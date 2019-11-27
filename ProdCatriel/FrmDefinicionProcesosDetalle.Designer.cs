@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmDefinicionProcesosDetalle
     {
@@ -257,7 +257,7 @@
             // 
             this.pBuscar.BackColor = System.Drawing.Color.Transparent;
             this.pBuscar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pBuscar.Image = global::Alberdi.Properties.Resources.search_32;
+            this.pBuscar.Image = global::TRAZAAR.Properties.Resources.search_32;
             this.pBuscar.Location = new System.Drawing.Point(180, 0);
             this.pBuscar.Name = "pBuscar";
             this.pBuscar.Size = new System.Drawing.Size(26, 24);
@@ -317,7 +317,7 @@
             this.btnMenosOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosOP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosOP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosOP.Image = global::Alberdi.Properties.Resources.menos;
+            this.btnMenosOP.Image = global::TRAZAAR.Properties.Resources.menos;
             this.btnMenosOP.Location = new System.Drawing.Point(1068, 260);
             this.btnMenosOP.Name = "btnMenosOP";
             this.btnMenosOP.Size = new System.Drawing.Size(21, 20);
@@ -332,7 +332,7 @@
             this.btnModOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModOP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModOP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModOP.Image = global::Alberdi.Properties.Resources.update;
+            this.btnModOP.Image = global::TRAZAAR.Properties.Resources.update;
             this.btnModOP.Location = new System.Drawing.Point(1068, 234);
             this.btnModOP.Name = "btnModOP";
             this.btnModOP.Size = new System.Drawing.Size(21, 20);
@@ -346,7 +346,7 @@
             this.btnMasOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasOP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasOP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMasOP.Image = global::Alberdi.Properties.Resources.mas;
+            this.btnMasOP.Image = global::TRAZAAR.Properties.Resources.mas;
             this.btnMasOP.Location = new System.Drawing.Point(1068, 208);
             this.btnMasOP.Name = "btnMasOP";
             this.btnMasOP.Size = new System.Drawing.Size(21, 20);
@@ -361,7 +361,7 @@
             this.btnMenosMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosMQ.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosMQ.Image = global::Alberdi.Properties.Resources.menos;
+            this.btnMenosMQ.Image = global::TRAZAAR.Properties.Resources.menos;
             this.btnMenosMQ.Location = new System.Drawing.Point(1068, 71);
             this.btnMenosMQ.Name = "btnMenosMQ";
             this.btnMenosMQ.Size = new System.Drawing.Size(21, 20);
@@ -376,7 +376,7 @@
             this.btnModMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModMQ.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModMQ.Image = global::Alberdi.Properties.Resources.update;
+            this.btnModMQ.Image = global::TRAZAAR.Properties.Resources.update;
             this.btnModMQ.Location = new System.Drawing.Point(1068, 45);
             this.btnModMQ.Name = "btnModMQ";
             this.btnModMQ.Size = new System.Drawing.Size(21, 20);
@@ -390,7 +390,7 @@
             this.btnMasMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasMQ.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMasMQ.Image = global::Alberdi.Properties.Resources.mas;
+            this.btnMasMQ.Image = global::TRAZAAR.Properties.Resources.mas;
             this.btnMasMQ.Location = new System.Drawing.Point(1068, 19);
             this.btnMasMQ.Name = "btnMasMQ";
             this.btnMasMQ.Size = new System.Drawing.Size(21, 20);
@@ -405,7 +405,7 @@
             this.btnMenosMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosMP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosMP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosMP.Image = global::Alberdi.Properties.Resources.menos;
+            this.btnMenosMP.Image = global::TRAZAAR.Properties.Resources.menos;
             this.btnMenosMP.Location = new System.Drawing.Point(528, 71);
             this.btnMenosMP.Name = "btnMenosMP";
             this.btnMenosMP.Size = new System.Drawing.Size(21, 20);
@@ -420,7 +420,7 @@
             this.btnModMt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModMt.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModMt.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnModMt.Image = global::Alberdi.Properties.Resources.update;
+            this.btnModMt.Image = global::TRAZAAR.Properties.Resources.update;
             this.btnModMt.Location = new System.Drawing.Point(528, 45);
             this.btnModMt.Name = "btnModMt";
             this.btnModMt.Size = new System.Drawing.Size(21, 20);
@@ -434,7 +434,7 @@
             this.btnMasMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasMP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasMP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMasMP.Image = global::Alberdi.Properties.Resources.mas;
+            this.btnMasMP.Image = global::TRAZAAR.Properties.Resources.mas;
             this.btnMasMP.Location = new System.Drawing.Point(528, 19);
             this.btnMasMP.Name = "btnMasMP";
             this.btnMasMP.Size = new System.Drawing.Size(21, 20);
@@ -793,7 +793,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Image = global::Alberdi.Properties.Resources.menos;
+            this.button2.Image = global::TRAZAAR.Properties.Resources.menos;
             this.button2.Location = new System.Drawing.Point(528, 74);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(21, 20);
@@ -807,7 +807,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Image = global::Alberdi.Properties.Resources.update;
+            this.button3.Image = global::TRAZAAR.Properties.Resources.update;
             this.button3.Location = new System.Drawing.Point(528, 48);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(21, 20);
@@ -821,7 +821,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Image = global::Alberdi.Properties.Resources.mas;
+            this.button4.Image = global::TRAZAAR.Properties.Resources.mas;
             this.button4.Location = new System.Drawing.Point(528, 22);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(21, 20);
@@ -1043,7 +1043,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::Alberdi.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(588, 616);
             this.btnCancel.Name = "btnCancel";
@@ -1061,7 +1061,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::Alberdi.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(454, 616);
             this.btnAceptar.Name = "btnAceptar";

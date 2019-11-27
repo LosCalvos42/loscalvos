@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class ReporteBatea
     {
@@ -54,7 +54,7 @@
             reportDataSource2.Value = this.DTBateaDataTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Alberdi.RBatea1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TRAZAAR.RBatea1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(730, 394);

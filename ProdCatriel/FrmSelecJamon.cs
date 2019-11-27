@@ -12,7 +12,7 @@ using logica;
 using Datos;
 using System.Text.RegularExpressions;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmSelecJamon : Form
     {

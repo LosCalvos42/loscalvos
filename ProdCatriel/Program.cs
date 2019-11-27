@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public static class Program
     {
@@ -18,6 +18,7 @@ namespace Alberdi
         public static bool _FrmTipoRecurso = false;
         public static bool FMantCliente = false;
         public static bool FABMCliente = false;
+        public static bool _FrmConfiguracion = false;
         public static bool _FrmMenuProduccion = false;
         public static bool _FrmProductos = false;
         public static bool _FrmUser = false;

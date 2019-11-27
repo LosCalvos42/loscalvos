@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmConsumidoNoCarnicos
     {
@@ -156,7 +156,7 @@
             // 
             this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::Alberdi.Properties.Resources.icons8_print_48;
+            this.mimprimir.Image = global::TRAZAAR.Properties.Resources.icons8_print_48;
             this.mimprimir.Name = "mimprimir";
             this.mimprimir.Size = new System.Drawing.Size(89, 22);
             this.mimprimir.Text = "Imprimir";
@@ -166,7 +166,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::Alberdi.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.salirToolStripMenuItem.Text = "Salir";

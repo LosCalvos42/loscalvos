@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class ReporteFrmReSJporFecha
     {
@@ -46,7 +46,7 @@
             reportDataSource2.Value = null;
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer2.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer2.LocalReport.ReportEmbeddedResource = "Alberdi.Report1.rdlc";
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "TRAZAAR.Report1.rdlc";
             this.reportViewer2.Location = new System.Drawing.Point(0, 0);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.Size = new System.Drawing.Size(756, 389);

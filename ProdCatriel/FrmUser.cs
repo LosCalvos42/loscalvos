@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Datos;
 using logica;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmUser : Form
     {
@@ -86,13 +86,12 @@ namespace Alberdi
             _FrmAddUser.Tipo = "NUEVO";
             _FrmAddUser.id = 0;
             _FrmAddUser.ShowDialog();
+            inicializar();
         }
 
         private void FrmUser_Activated(object sender, EventArgs e)
         {
-            //LlenarGrid("USER", "");
-            //Dgprincipal.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-            //Cursor.Current = Cursors.Default;
+            
         }
 
         
@@ -161,8 +160,9 @@ namespace Alberdi
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "Alberdi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            inicializar();
 
         }
 
@@ -190,7 +190,7 @@ namespace Alberdi
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "Alberdi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LlenarGrid("USER", "");
         }

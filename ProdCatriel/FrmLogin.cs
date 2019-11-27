@@ -19,7 +19,7 @@ using System.Diagnostics;
 using CapaLogicaNegocio;
 using System.Data.SqlClient;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmLogin : Form
     {
@@ -32,7 +32,7 @@ namespace Alberdi
         string pass;
         Splash _Splash = new Splash();
         //string Sproduccion, Sdesarrollo, recordar_pass;
-        public static String Login_Servidor = leerini(), Sproduccion, Sdesarrollo, Actualiza, INIUSER, TIPOENTRADA, RACTUALIZACION, EMPRESA;
+        public static String Login_Servidor = leerini(), Sproduccion, Sdesarrollo,  Sbase, SContra  , Actualiza, INIUSER, TIPOENTRADA, RACTUALIZACION, EMPRESA;
         //ClsLogin USL = new ClsLogin();
         public FrmLogin()
         {
@@ -73,7 +73,9 @@ namespace Alberdi
                         Rutaini = rutaini,
                         Servidor = Login_Servidor,
                         RutaActualizacion = RACTUALIZACION,
-                        Actualiza = Actualiza
+                        Actualiza = Actualiza,
+                        Database=Sbase,
+                        Contra=SContra
                     };
                     _FrmEntrada.ShowDialog();
                     //string archivo = rutaini;
@@ -93,6 +95,8 @@ namespace Alberdi
             try
             {
                 ClsManejador.ip = Login_Servidor;
+                ClsManejador.database = Sbase;
+                ClsManejador.contra = SContra;
                 ClsManejador2.ip = Login_Servidor;
                 ClsLogin USL = new ClsLogin();
 
@@ -163,6 +167,8 @@ namespace Alberdi
             //ClsLogin USL = new ClsLogin();
             StringBuilder SERVIDOR_P = new StringBuilder();
             StringBuilder SERVIDOR_D = new StringBuilder();
+            StringBuilder DATABASE = new StringBuilder();
+            StringBuilder CONTRA = new StringBuilder();
             StringBuilder SOURCE = new StringBuilder();
             StringBuilder R_ENTRADA = new StringBuilder();
             StringBuilder R_USER = new StringBuilder();
@@ -180,6 +186,13 @@ namespace Alberdi
 
                 Util.GetPrivateProfileString("Datos", "SERVIDOR_D", "", SERVIDOR_D, SERVIDOR_D.MaxCapacity, archivo);
                 Sdesarrollo = SERVIDOR_D.ToString();
+
+                Util.GetPrivateProfileString("Datos", "DATABASE", "", DATABASE, DATABASE.MaxCapacity, archivo);
+                Sbase = DATABASE.ToString();
+                //Program.DATABASE = Sbase;
+                Util.GetPrivateProfileString("Datos", "CONTRA", "", CONTRA, DATABASE.MaxCapacity, archivo);
+                SContra = CONTRA.ToString();
+                //Program.CONTRA = SContra;
 
                 Util.GetPrivateProfileString("Datos", "SOURCE", "", SOURCE, SOURCE.MaxCapacity, archivo);
                 RACTUALIZACION = SOURCE.ToString();
@@ -203,6 +216,10 @@ namespace Alberdi
             }
             //Program.Servidor = valor;
             ClsManejador.ip = Login_Servidor;
+            ClsManejador.admin = Sbase;
+            ClsManejador.contra = SContra;
+
+
             return Login_Servidor;
         }
 

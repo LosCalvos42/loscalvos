@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmIngresoCarnicos : Form
     {

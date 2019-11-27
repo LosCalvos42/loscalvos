@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmDefinicionProcesosDetalle : Form
     {
@@ -433,7 +433,7 @@ namespace Alberdi
                         else
                         {
                             
-                            MessageBox.Show(msg[1], "Alberdi.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                            MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                             this.Close();
                             return;
                         }

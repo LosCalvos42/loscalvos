@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmIngresoCarnicosCalidad : Form
     {

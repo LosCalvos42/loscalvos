@@ -120,6 +120,12 @@
     <Compile Include="FrmCarnicosDiferencias.designer.cs">
       <DependentUpon>FrmCarnicosDiferencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfiguracion.designer.cs">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmConsumidoNoCarnicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -410,6 +416,9 @@
     <EmbeddedResource Include="FrmCarnicosDiferencias.resx">
       <DependentUpon>FrmCarnicosDiferencias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfiguracion.resx">
+      <DependentUpon>FrmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmConsumidoNoCarnicos.resx">
       <DependentUpon>FrmConsumidoNoCarnicos.cs</DependentUpon>
     </EmbeddedResource>
@@ -686,6 +695,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\imagenes\buscarB.png" />
     <Content Include="TRACING.ico" />
     <None Include="Resources\pdf32.png" />
     <None Include="Resources\pdf2.png" />

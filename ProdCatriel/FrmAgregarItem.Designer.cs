@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmAgregarItem
     {
@@ -79,7 +79,7 @@
             // 
             this.pBuscar2.BackColor = System.Drawing.Color.Transparent;
             this.pBuscar2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pBuscar2.Image = global::Alberdi.Properties.Resources.search_32;
+            this.pBuscar2.Image = global::TRAZAAR.Properties.Resources.search_32;
             this.pBuscar2.Location = new System.Drawing.Point(178, 0);
             this.pBuscar2.Name = "pBuscar2";
             this.pBuscar2.Size = new System.Drawing.Size(26, 24);
@@ -143,7 +143,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::Alberdi.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(287, 152);
             this.btnCancel.Name = "btnCancel";
@@ -161,7 +161,7 @@
             this.btnMasMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasMP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasMP.ForeColor = System.Drawing.Color.White;
-            this.btnMasMP.Image = global::Alberdi.Properties.Resources.aceptarBlanco;
+            this.btnMasMP.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
             this.btnMasMP.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMasMP.Location = new System.Drawing.Point(184, 152);
             this.btnMasMP.Name = "btnMasMP";

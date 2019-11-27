@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmEntrada
     {
@@ -35,6 +35,10 @@
             this.txtactualizacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.chActualiza = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtBase = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Txtcontraseña = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -45,9 +49,9 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::Alberdi.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(152, 192);
+            this.btnCancel.Location = new System.Drawing.Point(152, 252);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 28);
             this.btnCancel.TabIndex = 76;
@@ -63,9 +67,9 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::Alberdi.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(37, 192);
+            this.btnAceptar.Location = new System.Drawing.Point(37, 252);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(97, 28);
             this.btnAceptar.TabIndex = 75;
@@ -102,7 +106,7 @@
             this.txtactualizacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtactualizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtactualizacion.ForeColor = System.Drawing.Color.White;
-            this.txtactualizacion.Location = new System.Drawing.Point(57, 134);
+            this.txtactualizacion.Location = new System.Drawing.Point(57, 213);
             this.txtactualizacion.Name = "txtactualizacion";
             this.txtactualizacion.Size = new System.Drawing.Size(181, 22);
             this.txtactualizacion.TabIndex = 77;
@@ -112,7 +116,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(54, 115);
+            this.label2.Location = new System.Drawing.Point(54, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 16);
             this.label2.TabIndex = 78;
@@ -123,19 +127,67 @@
             this.chActualiza.AutoSize = true;
             this.chActualiza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chActualiza.ForeColor = System.Drawing.Color.White;
-            this.chActualiza.Location = new System.Drawing.Point(57, 84);
+            this.chActualiza.Location = new System.Drawing.Point(57, 173);
             this.chActualiza.Name = "chActualiza";
             this.chActualiza.Size = new System.Drawing.Size(85, 20);
             this.chActualiza.TabIndex = 79;
             this.chActualiza.Text = "Actualizar";
             this.chActualiza.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(54, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Base de Datos";
+            // 
+            // TxtBase
+            // 
+            this.TxtBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.TxtBase.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtBase.ForeColor = System.Drawing.Color.White;
+            this.TxtBase.Location = new System.Drawing.Point(57, 98);
+            this.TxtBase.Name = "TxtBase";
+            this.TxtBase.Size = new System.Drawing.Size(181, 22);
+            this.TxtBase.TabIndex = 80;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(54, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.TabIndex = 83;
+            this.label4.Text = "Contraseña";
+            // 
+            // Txtcontraseña
+            // 
+            this.Txtcontraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.Txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Txtcontraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtcontraseña.ForeColor = System.Drawing.Color.White;
+            this.Txtcontraseña.Location = new System.Drawing.Point(57, 145);
+            this.Txtcontraseña.Name = "Txtcontraseña";
+            this.Txtcontraseña.Size = new System.Drawing.Size(181, 22);
+            this.Txtcontraseña.TabIndex = 82;
+            // 
             // FrmEntrada
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.ClientSize = new System.Drawing.Size(296, 232);
+            this.ClientSize = new System.Drawing.Size(296, 293);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Txtcontraseña);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TxtBase);
             this.Controls.Add(this.chActualiza);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtactualizacion);
@@ -161,5 +213,9 @@
         private System.Windows.Forms.TextBox txtactualizacion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chActualiza;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtBase;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Txtcontraseña;
     }
 }

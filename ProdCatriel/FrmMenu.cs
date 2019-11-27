@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using logica;
 using System.Runtime.InteropServices;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmMenu : Form
     {
@@ -169,10 +169,10 @@ namespace Alberdi
 
         private void permisos()
         {
-            if (Program.perfil != 2)//administrador
+            if (Program.perfil != 1)//administrador
             {
-                button1.Enabled = false;
-                button2.Enabled = false;
+                Btnproduccion.Enabled = false;
+                BtnConfiguracion.Enabled = false;
             }
         }
 
@@ -197,10 +197,11 @@ namespace Alberdi
             if (panelMenu.Width == 160)
             {
                 this.tmOcultarMenu.Enabled = true;
+                lblNombresoft.Visible = false;
             }
-            else if (panelMenu.Width == 52)
+            else if (panelMenu.Width == 52) { 
                 this.tmMostrarMenu.Enabled = true;
-
+            lblNombresoft.Visible = true;}
             //-------SIN EFECTO SLIDE
             //if (panelMenu.Width == 55)
             //{
@@ -232,7 +233,7 @@ namespace Alberdi
 
             if (Program._FrmProduccion == false)
             {
-                HabilitarBotones(button1);
+                HabilitarBotones(Btnproduccion);
                 FrmProduccion fm = new FrmProduccion();
 
                 fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
@@ -246,8 +247,10 @@ namespace Alberdi
         {
             //MostrarFormLogo();
 
-            button1.BackColor = Color.FromArgb(40, 116, 166);
-            button2.BackColor = Color.FromArgb(40, 116, 166);
+            Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
+            BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
+            BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
+
             //btnListaClientes.BackColor = Color.FromArgb(29, 34, 39);
 
         }
@@ -270,10 +273,10 @@ namespace Alberdi
         }
         private void HabilitarBotones(Button b)
         {
-            button1.BackColor = Color.FromArgb(40, 116,166);
-            button2.BackColor = Color.FromArgb(40, 116, 166);
-            btnConsultas.BackColor = Color.FromArgb(40, 116, 166);
-            b.BackColor = Color.FromArgb(27, 79, 114);
+            Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
+            BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
+            BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
+            b.BackColor = Color.FromArgb(35, 155, 86);
 
         }
 
@@ -287,15 +290,14 @@ namespace Alberdi
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Program._FrmProductos == false)
+            if (Program._FrmConfiguracion == false)
             {
-                HabilitarBotones(button2);
-                FrmProductos fm2 = new FrmProductos();
-
+                HabilitarBotones(BtnConfiguracion);
+                FrmConfiguracion fm2 = new FrmConfiguracion();
                 fm2.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
                 AbrirFormEnPanel(fm2);
-                botones(Program._FrmProductos);
-                Program._FrmProductos = true;
+                botones(Program._FrmConfiguracion);
+                Program._FrmConfiguracion = true;
             }
         }
 
@@ -349,7 +351,7 @@ namespace Alberdi
         {
             if (Program._FrmConsultas == false)
             {
-                HabilitarBotones(btnConsultas);
+                HabilitarBotones(BtnConsultas);
                 FrmConsultas fm2 = new FrmConsultas();
 
                 fm2.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
@@ -376,6 +378,7 @@ namespace Alberdi
             Program._FrmUser = false;
             Program._FrmProduccion = false;
             Program._FrmConsultas = false;
+            Program._FrmConfiguracion = false;
             formHijo = true;
         }
     }

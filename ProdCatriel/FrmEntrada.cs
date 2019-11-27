@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmEntrada : Form
     {
@@ -22,6 +22,8 @@ namespace Alberdi
 
         public int Id { get; set; }
         public string Servidor { get; set; }
+        public string Database { get; set; }
+        public string Contra { get; set; }
         public string RutaActualizacion { get; set; }
         public string Rutaini { get; set; }
         public string Actualiza { get; set; }
@@ -30,6 +32,10 @@ namespace Alberdi
         {
             txtserver.Text = Servidor;
             txtactualizacion.Text = RutaActualizacion;
+            TxtBase.Text = Database;
+            Txtcontraseña.Text = Contra;
+
+
             if (Actualiza == "SI")
             {
                 chActualiza.Checked = true;
@@ -113,6 +119,8 @@ namespace Alberdi
                     string act;
                     string archivo = Rutaini;
                     Util.WritePrivateProfileString("Datos", "SERVIDOR_P",txtserver.Text, archivo);
+                    Util.WritePrivateProfileString("Datos", "DATABASE", TxtBase.Text, archivo);
+                    Util.WritePrivateProfileString("Datos", "CONTRA", Txtcontraseña.Text, archivo);
                     Util.WritePrivateProfileString("Datos", "RUTAA", txtactualizacion.Text, archivo);
                     if (chActualiza.Checked)
                     {

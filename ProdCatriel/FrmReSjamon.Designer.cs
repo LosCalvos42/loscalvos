@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class FrmReSjamon
     {
@@ -687,7 +687,7 @@
             this.btndelanteB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndelanteB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndelanteB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndelanteB.Image = global::Alberdi.Properties.Resources.adelanteN;
+            this.btndelanteB.Image = global::TRAZAAR.Properties.Resources.adelanteN;
             this.btndelanteB.Location = new System.Drawing.Point(635, 200);
             this.btndelanteB.Name = "btndelanteB";
             this.btndelanteB.Size = new System.Drawing.Size(29, 22);
@@ -702,7 +702,7 @@
             this.btnatrasB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnatrasB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnatrasB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnatrasB.Image = global::Alberdi.Properties.Resources.atrasN;
+            this.btnatrasB.Image = global::TRAZAAR.Properties.Resources.atrasN;
             this.btnatrasB.Location = new System.Drawing.Point(635, 164);
             this.btnatrasB.Name = "btnatrasB";
             this.btnatrasB.Size = new System.Drawing.Size(29, 28);
@@ -717,7 +717,7 @@
             this.btndelanteI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btndelanteI.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btndelanteI.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btndelanteI.Image = global::Alberdi.Properties.Resources.adelanteN;
+            this.btndelanteI.Image = global::TRAZAAR.Properties.Resources.adelanteN;
             this.btndelanteI.Location = new System.Drawing.Point(342, 199);
             this.btndelanteI.Name = "btndelanteI";
             this.btndelanteI.Size = new System.Drawing.Size(29, 22);
@@ -732,7 +732,7 @@
             this.btnatrasI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnatrasI.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnatrasI.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnatrasI.Image = global::Alberdi.Properties.Resources.atrasN;
+            this.btnatrasI.Image = global::TRAZAAR.Properties.Resources.atrasN;
             this.btnatrasI.Location = new System.Drawing.Point(342, 165);
             this.btnatrasI.Name = "btnatrasI";
             this.btnatrasI.Size = new System.Drawing.Size(29, 26);

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmReporteBalanceMateriaPrimaStock : Form
     {

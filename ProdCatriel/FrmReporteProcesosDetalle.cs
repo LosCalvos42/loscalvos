@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmReporteProcesosDetalle : Form
     {

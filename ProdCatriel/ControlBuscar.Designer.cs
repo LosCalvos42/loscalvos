@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class ControlBuscar
     {
@@ -98,7 +98,7 @@
             // 
             this.pBuscar.BackColor = System.Drawing.Color.Transparent;
             this.pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBuscar.Image = global::Alberdi.Properties.Resources.search_32;
+     
             this.pBuscar.Location = new System.Drawing.Point(391, -2);
             this.pBuscar.Name = "pBuscar";
             this.pBuscar.Size = new System.Drawing.Size(26, 25);

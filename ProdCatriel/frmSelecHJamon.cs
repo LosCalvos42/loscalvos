@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 using Datos;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class frmSelecHJamon : Form
     {

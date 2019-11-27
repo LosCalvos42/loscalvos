@@ -1,4 +1,4 @@
-﻿namespace Alberdi
+﻿namespace TRAZAAR
 {
     partial class Splash
     {
@@ -44,7 +44,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Alberdi.Properties.Resources.INICIOGIF1;
+            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.INICIOGIF1;
             this.pictureBox1.Location = new System.Drawing.Point(-13, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(526, 303);

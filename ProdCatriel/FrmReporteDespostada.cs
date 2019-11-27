@@ -13,7 +13,7 @@ using System.Windows.Forms;
 //using System.Windows.Forms.DataVisualization.Charting;
 using static System.Windows.Forms.LinkLabel;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmReporteDespostada : Form
     {

@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Alberdi
+namespace TRAZAAR
 {
     public partial class FrmReporteBalanceMateriaPrima : Form
     {
@@ -300,7 +300,7 @@ namespace Alberdi
 
         private void mimprimir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Esta opción No esta Disponible.", "Alberdi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Esta opción No esta Disponible.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void print_Click(object sender, EventArgs e)
