@@ -30,22 +30,26 @@ namespace TRAZAAR
 
         private void PStock_Click(object sender, EventArgs e)
         {
+            //Cursor.Current = Cursors.WaitCursor;
+            //FormsegundoPlano _FormsegundoPlano = new FormsegundoPlano();
+            //_FormsegundoPlano.StartPosition = FormStartPosition.CenterScreen;
+            ////_FrmInformeDespostada.ParentForm;
+            //_FormsegundoPlano.ShowDialog();
+
             Cursor.Current = Cursors.WaitCursor;
-            FrmStock _FrmStock = new FrmStock();
-            _FrmStock.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmStock.ShowDialog();
+            CheckForIllegalCrossThreadCalls = false;
+            FormsegundoPlano _FormsegundoPlano = new FormsegundoPlano();
+
+            _FormsegundoPlano.StartPosition = FormStartPosition.CenterScreen;
+            _FormsegundoPlano.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FormsegundoPlano);
+
+
+
+
         }
 
-        private void PProductos_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            FrmProductos _FrmProductos = new FrmProductos();
-            _FrmProductos.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmProductos.ShowDialog();
-            
-        }
+       
 
         private void PTRecurso_Click(object sender, EventArgs e)
         {
@@ -56,22 +60,37 @@ namespace TRAZAAR
             _FrmTipoRecurso.ShowDialog();
         }
 
-        private void PAlmacenes_Click(object sender, EventArgs e)
+        
+
+        private void AbrirFormEnPanel(object formHijo)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            FrmAlmacenes _FrmAlmacenes = new FrmAlmacenes();
-            _FrmAlmacenes.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmAlmacenes.ShowDialog();
+            //if (this.panel1.Controls.Count > 0)
+            //    this.panel1.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            //fh.FormBorderStyle = FormBorderStyle.None;
+            //fh.Dock = DockStyle.Fill;
+            this.panel1.Controls.Add(fh);
+            fh.Parent.Controls.SetChildIndex(fh, 0);
+
+            this.panel1.Tag = fh;
+            //fh.MdiParent=this;
+            fh.Show();
         }
 
         private void PFamilias_Click(object sender, EventArgs e)
         {
+            
             Cursor.Current = Cursors.WaitCursor;
-            FrmFamilias _FrmFamilias = new FrmFamilias();
-            _FrmFamilias.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmFamilias.ShowDialog();
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddAlmacen _FrmAddAlmacen = new FrmAddAlmacen();
+            _FrmListados.Tabla = "ALMACENTIPO";
+            _FrmListados.Listado = "ALMACENTIPO";
+            _FrmListados.Abm = _FrmAddAlmacen;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
         }
 
         private void PMarcas_Click(object sender, EventArgs e)
@@ -133,6 +152,134 @@ namespace TRAZAAR
             this.Close();
             Program._FrmProduccion = false;
             
+        }
+
+        private void ProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddArticulos _FrmAddArticulos = new FrmAddArticulos();
+            _FrmListados.Tabla = "ARTI";
+            _FrmListados.Listado = "PRODUCTOS";
+            _FrmListados.TituloListado = "Listado de Productos";
+            _FrmListados.Abm = _FrmAddArticulos;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void TipoDeAlmacenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+             Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddAlmacenTipo _FrmAddAlmacenTipo = new FrmAddAlmacenTipo();
+            _FrmListados.Tabla = "ALMACENTIPO";
+            _FrmListados.Listado = "ALMACENTIPO";
+            _FrmListados.Abm = _FrmAddAlmacenTipo;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void almacenesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddAlmacen _FrmAddAlmacen = new FrmAddAlmacen();
+            _FrmListados.Tabla = "ALMACEN";
+            _FrmListados.Listado = "ALMACENES";
+            _FrmListados.Abm = _FrmAddAlmacen;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void GrupoItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddGrupoPruducto _FrmAddGrupoPruducto = new FrmAddGrupoPruducto();
+            _FrmListados.Tabla = "GRUPOPRODUCTO";
+            _FrmListados.Listado = "GRUPOPRODUCTO";
+            _FrmListados.Abm = _FrmAddGrupoPruducto;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void TipoProductoItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddTipoProducto _FrmAddTipoProducto = new FrmAddTipoProducto();
+            _FrmListados.Tabla = "TIPOPRODUCTO";
+            _FrmListados.Listado = "TIPOPRODUCTO";
+            _FrmListados.Abm = _FrmAddTipoProducto;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void FamiliaItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddFamilia _FrmAddFamilia = new FrmAddFamilia();
+            _FrmListados.Tabla = "ARTIFAMILIA";
+            _FrmListados.Listado = "FAMILIA";
+            _FrmListados.Abm = _FrmAddFamilia;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void GrupoFamiliaItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddGrupoFamilia _FrmAddGrupoFamilia = new FrmAddGrupoFamilia();
+            _FrmListados.Tabla = "GRPFAMILIA";
+            _FrmListados.Listado = "GRUPOFAMILIA";
+            _FrmListados.Abm = _FrmAddGrupoFamilia;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+            
+        }
+
+        private void CategoriaPorPesomenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddCategoriaPeso _FrmAddCategoriaPeso = new FrmAddCategoriaPeso();
+            _FrmListados.Tabla = "CATEGORIAPESO";
+            _FrmListados.Listado = "CATEGORIAPESO";
+            _FrmListados.Abm = _FrmAddCategoriaPeso;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void CategoriaPorMermaMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddCategoriaMerma _FrmAddCategoriaMerma = new FrmAddCategoriaMerma();
+            _FrmListados.Tabla = "CATEGORIAPMERMA";
+            _FrmListados.Listado = "CATEGORIAMERMA";
+            _FrmListados.Abm = _FrmAddCategoriaMerma;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
         }
     }
 }

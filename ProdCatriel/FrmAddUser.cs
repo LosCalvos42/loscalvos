@@ -94,12 +94,12 @@ namespace TRAZAAR
                 dt = M.Listado("sp_CargaCombos", lst);
                 _combo.DataSource = dt;
                 _combo.DisplayMember = "NOMBRE";
-                _combo.ValueMember = "CODIGO";
+                _combo.ValueMember = "ID";
                 DataRow topItem = dt.NewRow();
                 topItem[0] = 0;
-                topItem[1] = "-Select-";
+                topItem[2] = "-Select-";
                 dt.Rows.InsertAt(topItem, 0);
-                _combo.SelectedValue = 0;
+                _combo.SelectedValue =0;
             }
             catch (Exception ex)
             {
@@ -240,7 +240,7 @@ namespace TRAZAAR
                     id = id;
                     Nombre = txtNombre.Text;
                     Apellido = txtApellido.Text;
-                    User = txtUser.Text;
+                    User = txtUser.Text.ToUpper();
                     Pass = Encriptar(txtpass.Text);
                     Perfil = Convert.ToInt32(cmbPerfil.SelectedValue);
                     string[] msg = AbmUser(Tipo);

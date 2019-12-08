@@ -114,6 +114,72 @@
     <Compile Include="ControlBuscar.Designer.cs">
       <DependentUpon>ControlBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsegundoPlano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsegundoPlano.Designer.cs">
+      <DependentUpon>FormsegundoPlano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddAlmacenTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddAlmacenTipo.designer.cs">
+      <DependentUpon>FrmAddAlmacenTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddCategoriaMerma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCategoriaMerma.designer.cs">
+      <DependentUpon>FrmAddCategoriaMerma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddCategoriaPeso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCategoriaPeso.designer.cs">
+      <DependentUpon>FrmAddCategoriaPeso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddTipoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddTipoProducto.designer.cs">
+      <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddFamilia.designer.cs">
+      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddGrupoFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddGrupoFamilia.designer.cs">
+      <DependentUpon>FrmAddGrupoFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddGrupoPruducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddGrupoPruducto.designer.cs">
+      <DependentUpon>FrmAddGrupoPruducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddArticulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddArticulos.designer.cs">
+      <DependentUpon>FrmAddArticulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddAlmacen.designer.cs">
+      <DependentUpon>FrmAddAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddUserPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddUserPerfil.designer.cs">
+      <DependentUpon>FrmAddUserPerfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCarnicosDiferencias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +215,12 @@
     </Compile>
     <Compile Include="FrmIngresoCarnicosTrazabilidad.designer.cs">
       <DependentUpon>FrmIngresoCarnicosTrazabilidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUtilidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUtilidades.Designer.cs">
+      <DependentUpon>FrmUtilidades.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporteProcesosDetalle.cs">
       <SubType>Form</SubType>
@@ -198,11 +270,11 @@
     <Compile Include="FrmAgregarItem.Designer.cs">
       <DependentUpon>FrmAgregarItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlmacenes.cs">
+    <Compile Include="FrmListados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAlmacenes.Designer.cs">
-      <DependentUpon>FrmAlmacenes.cs</DependentUpon>
+    <Compile Include="FrmListados.Designer.cs">
+      <DependentUpon>FrmListados.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngresoCarnicos.cs">
       <SubType>Form</SubType>
@@ -378,6 +450,12 @@
     <Compile Include="FrmUnidadMedida.Designer.cs">
       <DependentUpon>FrmUnidadMedida.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUserPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUserPerfiles.designer.cs">
+      <DependentUpon>FrmUserPerfiles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -413,6 +491,39 @@
       <DependentUpon>ControlBuscar.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsegundoPlano.resx">
+      <DependentUpon>FormsegundoPlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddAlmacenTipo.resx">
+      <DependentUpon>FrmAddAlmacenTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCategoriaMerma.resx">
+      <DependentUpon>FrmAddCategoriaMerma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCategoriaPeso.resx">
+      <DependentUpon>FrmAddCategoriaPeso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddTipoProducto.resx">
+      <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddFamilia.resx">
+      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddGrupoFamilia.resx">
+      <DependentUpon>FrmAddGrupoFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddGrupoPruducto.resx">
+      <DependentUpon>FrmAddGrupoPruducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddArticulos.resx">
+      <DependentUpon>FrmAddArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddAlmacen.resx">
+      <DependentUpon>FrmAddAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddUserPerfil.resx">
+      <DependentUpon>FrmAddUserPerfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCarnicosDiferencias.resx">
       <DependentUpon>FrmCarnicosDiferencias.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCarnicosTrazabilidad.resx">
       <DependentUpon>FrmIngresoCarnicosTrazabilidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUtilidades.resx">
+      <DependentUpon>FrmUtilidades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteProcesosDetalle.resx">
       <DependentUpon>FrmReporteProcesosDetalle.cs</DependentUpon>
@@ -457,8 +571,8 @@
       <DependentUpon>FrmAgregarItem.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlmacenes.resx">
-      <DependentUpon>FrmAlmacenes.cs</DependentUpon>
+    <EmbeddedResource Include="FrmListados.resx">
+      <DependentUpon>FrmListados.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCarnicos.resx">
@@ -551,6 +665,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUnidadMedida.resx">
       <DependentUpon>FrmUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUserPerfiles.resx">
+      <DependentUpon>FrmUserPerfiles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUser.resx">
       <DependentUpon>FrmUser.cs</DependentUpon>
@@ -696,6 +813,37 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\imagenes\buscarB.png" />
+    <None Include="Resources\icons8-automation-32.png" />
+    <None Include="Resources\usuarios16.png" />
+    <None Include="Resources\salir.png" />
+    <None Include="Resources\exit24.png" />
+    <None Include="Resources\Perfiles-32.png" />
+    <None Include="Resources\permisos32.png" />
+    <None Include="bin\Debug\imagenes\FONDOTRAZAAR.png" />
+    <None Include="Resources\LOGOAGGA.png" />
+    <None Include="Resources\alta32.png" />
+    <None Include="Resources\modificar32.png" />
+    <None Include="Resources\eliminar32.png" />
+    <None Include="Resources\print-32.png" />
+    <None Include="Resources\imprimir32.png" />
+    <None Include="Resources\report-32.png" />
+    <None Include="Resources\logoLosCalvosGris.png" />
+    <None Include="Resources\logoLosCalvosGris2.png" />
+    <None Include="Resources\logoLosCalvosGris3.png" />
+    <None Include="Archivero.png" />
+    <None Include="Archivero1.png" />
+    <None Include="AlmacenBC.png" />
+    <None Include="Resources\ProductosB.png" />
+    <None Include="Resources\grupos.png" />
+    <None Include="Resources\familia.png" />
+    <None Include="Resources\gfamilia.png" />
+    <None Include="Resources\family-32.png" />
+    <None Include="Resources\KG.png" />
+    <None Include="Resources\merma.png" />
+    <None Include="Resources\CARGANDO.gif" />
+    <None Include="Resources\gargando2.gif" />
+    <None Include="Resources\gargando3.gif" />
+    <None Include="Resources\gargando4.gif" />
     <Content Include="TRACING.ico" />
     <None Include="Resources\pdf32.png" />
     <None Include="Resources\pdf2.png" />

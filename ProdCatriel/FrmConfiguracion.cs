@@ -27,11 +27,7 @@ namespace TRAZAAR
 
         private void Usuarios_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            CheckForIllegalCrossThreadCalls = false;
-            FrmUser _FrmUser = new FrmUser();
-
-            AbrirFormEnPanel(_FrmUser);
+            
         }
 
         private void AbrirFormEnPanel(object formHijo)
@@ -50,7 +46,27 @@ namespace TRAZAAR
             fh.Show();
         }
 
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmUser _FrmUser = new FrmUser();
 
+            AbrirFormEnPanel(_FrmUser);
+        }
+
+        private void perfilDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmUserPerfiles _FrmUserPerfiles = new FrmUserPerfiles();
+            AbrirFormEnPanel(_FrmUserPerfiles);
+        }
+
+        private void PProductos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

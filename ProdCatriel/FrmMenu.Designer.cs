@@ -31,10 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnUtilidades = new System.Windows.Forms.Button();
             this.BtnConsultas = new System.Windows.Forms.Button();
             this.BtnConfiguracion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.lblNombresoft = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -44,14 +46,13 @@
             this.Btnproduccion = new System.Windows.Forms.Button();
             this.tmMostrarMenu = new System.Windows.Forms.Timer(this.components);
             this.tmOcultarMenu = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.statusBar = new System.Windows.Forms.StatusBar();
             this.pnlempresa = new System.Windows.Forms.StatusBarPanel();
             this.pnlsistema = new System.Windows.Forms.StatusBarPanel();
             this.pnlserver = new System.Windows.Forms.StatusBarPanel();
             this.pnluser = new System.Windows.Forms.StatusBarPanel();
-            this.lblNombresoft = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -71,6 +72,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.panelMenu.Controls.Add(this.BtnUtilidades);
             this.panelMenu.Controls.Add(this.BtnConsultas);
             this.panelMenu.Controls.Add(this.BtnConfiguracion);
             this.panelMenu.Controls.Add(this.panel2);
@@ -87,6 +89,28 @@
             this.panelMenu.Size = new System.Drawing.Size(160, 600);
             this.panelMenu.TabIndex = 13;
             // 
+            // BtnUtilidades
+            // 
+            this.BtnUtilidades.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnUtilidades.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.BtnUtilidades.FlatAppearance.BorderSize = 0;
+            this.BtnUtilidades.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.BtnUtilidades.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.BtnUtilidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUtilidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUtilidades.ForeColor = System.Drawing.Color.White;
+            this.BtnUtilidades.Image = ((System.Drawing.Image)(resources.GetObject("BtnUtilidades.Image")));
+            this.BtnUtilidades.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUtilidades.Location = new System.Drawing.Point(6, 218);
+            this.BtnUtilidades.Name = "BtnUtilidades";
+            this.BtnUtilidades.Size = new System.Drawing.Size(150, 40);
+            this.BtnUtilidades.TabIndex = 16;
+            this.BtnUtilidades.Text = "   &Utilidades";
+            this.BtnUtilidades.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUtilidades.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnUtilidades.UseVisualStyleBackColor = true;
+            this.BtnUtilidades.Click += new System.EventHandler(this.BtnGeneral_Click);
+            // 
             // BtnConsultas
             // 
             this.BtnConsultas.Cursor = System.Windows.Forms.Cursors.Default;
@@ -97,7 +121,7 @@
             this.BtnConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConsultas.ForeColor = System.Drawing.Color.White;
-            this.BtnConsultas.Image = global::TRAZAAR.Properties.Resources.reporte;
+            this.BtnConsultas.Image = global::TRAZAAR.Properties.Resources.report_32;
             this.BtnConsultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConsultas.Location = new System.Drawing.Point(6, 126);
             this.BtnConsultas.Name = "BtnConsultas";
@@ -119,7 +143,7 @@
             this.BtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfiguracion.ForeColor = System.Drawing.Color.White;
-            this.BtnConfiguracion.Image = global::TRAZAAR.Properties.Resources.Configuracion;
+            this.BtnConfiguracion.Image = global::TRAZAAR.Properties.Resources.icons8_automation_32;
             this.BtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnConfiguracion.Location = new System.Drawing.Point(6, 172);
             this.BtnConfiguracion.Name = "BtnConfiguracion";
@@ -141,6 +165,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(160, 40);
             this.panel2.TabIndex = 13;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnMenu
             // 
@@ -154,6 +179,17 @@
             this.btnMenu.TabIndex = 12;
             this.btnMenu.TabStop = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
+            // lblNombresoft
+            // 
+            this.lblNombresoft.AutoSize = true;
+            this.lblNombresoft.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombresoft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.lblNombresoft.Location = new System.Drawing.Point(44, 15);
+            this.lblNombresoft.Name = "lblNombresoft";
+            this.lblNombresoft.Size = new System.Drawing.Size(68, 15);
+            this.lblNombresoft.TabIndex = 13;
+            this.lblNombresoft.Text = "TRAZAAR";
             // 
             // pictureBox5
             // 
@@ -183,7 +219,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(3, 40);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
             // 
             // pictureBox4
             // 
@@ -222,13 +257,13 @@
             this.Btnproduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btnproduccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnproduccion.ForeColor = System.Drawing.Color.White;
-            this.Btnproduccion.Image = global::TRAZAAR.Properties.Resources.produccion;
+            this.Btnproduccion.Image = ((System.Drawing.Image)(resources.GetObject("Btnproduccion.Image")));
             this.Btnproduccion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btnproduccion.Location = new System.Drawing.Point(6, 80);
             this.Btnproduccion.Name = "Btnproduccion";
             this.Btnproduccion.Size = new System.Drawing.Size(150, 40);
             this.Btnproduccion.TabIndex = 0;
-            this.Btnproduccion.Text = "  &Producción";
+            this.Btnproduccion.Text = "   &Producción";
             this.Btnproduccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btnproduccion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Btnproduccion.UseVisualStyleBackColor = true;
@@ -241,17 +276,6 @@
             // tmOcultarMenu
             // 
             this.tmOcultarMenu.Tick += new System.EventHandler(this.tmOcultarMenu_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 573);
-            this.panel1.TabIndex = 17;
             // 
             // BarraTitulo
             // 
@@ -266,7 +290,7 @@
             // 
             // statusBar
             // 
-            this.statusBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statusBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.statusBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.statusBar.Location = new System.Drawing.Point(0, 0);
             this.statusBar.Name = "statusBar";
@@ -276,7 +300,7 @@
             this.pnlserver,
             this.pnluser});
             this.statusBar.ShowPanels = true;
-            this.statusBar.Size = new System.Drawing.Size(912, 24);
+            this.statusBar.Size = new System.Drawing.Size(912, 27);
             this.statusBar.SizingGrip = false;
             this.statusBar.TabIndex = 12;
             // 
@@ -301,16 +325,18 @@
             this.pnluser.Icon = ((System.Drawing.Icon)(resources.GetObject("pnluser.Icon")));
             this.pnluser.Name = "pnluser";
             // 
-            // lblNombresoft
+            // panel1
             // 
-            this.lblNombresoft.AutoSize = true;
-            this.lblNombresoft.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombresoft.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
-            this.lblNombresoft.Location = new System.Drawing.Point(21, 15);
-            this.lblNombresoft.Name = "lblNombresoft";
-            this.lblNombresoft.Size = new System.Drawing.Size(79, 16);
-            this.lblNombresoft.TabIndex = 13;
-            this.lblNombresoft.Text = "TRAZAAR";
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.panel1.BackgroundImage = global::TRAZAAR.Properties.Resources.logoLosCalvosGris3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(160, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(912, 573);
+            this.panel1.TabIndex = 17;
             // 
             // FrmMenu
             // 
@@ -373,5 +399,6 @@
         private System.Windows.Forms.Button BtnConfiguracion;
         private System.Windows.Forms.Button BtnConsultas;
         private System.Windows.Forms.Label lblNombresoft;
+        private System.Windows.Forms.Button BtnUtilidades;
     }
 }

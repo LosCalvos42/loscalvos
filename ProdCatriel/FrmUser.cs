@@ -107,30 +107,30 @@ namespace TRAZAAR
             Dgprincipal.ClearSelection();
         }
 
-        private void Dgprincipal_DoubleClick(object sender, EventArgs e)
-        {
-            FrmAddUser _FrmAddUser = new FrmAddUser();
-            _FrmAddUser.StartPosition = FormStartPosition.CenterScreen;
-            _FrmAddUser.Tipo = "CONSULTAR";
-            _FrmAddUser.id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
-            _FrmAddUser.Nombre=Dgprincipal.CurrentRow.Cells[1].Value.ToString();
-            _FrmAddUser.Apellido = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
-            _FrmAddUser.Perfil = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[3].Value.ToString());
-            _FrmAddUser.User = Dgprincipal.CurrentRow.Cells[5].Value.ToString();
-            _FrmAddUser.Pass = Dgprincipal.CurrentRow.Cells[6].Value.ToString();
+        //private void Dgprincipal_DoubleClick(object sender, EventArgs e)
+        //{
+        //    FrmAddUser _FrmAddUser = new FrmAddUser();
+        //    _FrmAddUser.StartPosition = FormStartPosition.CenterScreen;
+        //    _FrmAddUser.Tipo = "CONSULTAR";
+        //    _FrmAddUser.id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
+        //    _FrmAddUser.Nombre=Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+        //    _FrmAddUser.Apellido = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+        //    _FrmAddUser.Perfil = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[3].Value.ToString());
+        //    _FrmAddUser.User = Dgprincipal.CurrentRow.Cells[5].Value.ToString();
+        //    _FrmAddUser.Pass = Dgprincipal.CurrentRow.Cells[6].Value.ToString();
 
-            bool acti = Convert.ToBoolean(Dgprincipal.CurrentRow.Cells[8].Value);
-            if (acti==true)
-            {
-                _FrmAddUser.Activo = "N";
-            }
-            else
-            {
-                _FrmAddUser.Activo = "S";
-            }
-            _FrmAddUser.ShowDialog();
-            inicializar();
-        }
+        //    bool acti = Convert.ToBoolean(Dgprincipal.CurrentRow.Cells[8].Value);
+        //    if (acti==true)
+        //    {
+        //        _FrmAddUser.Activo = "N";
+        //    }
+        //    else
+        //    {
+        //        _FrmAddUser.Activo = "S";
+        //    }
+        //    _FrmAddUser.ShowDialog();
+        //    inicializar();
+        //}
 
         private void mmodificar_Click(object sender, EventArgs e)
         {
@@ -193,6 +193,31 @@ namespace TRAZAAR
                 MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LlenarGrid("USER", "");
+        }
+
+        private void Dgprincipal_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmAddUser _FrmAddUser = new FrmAddUser();
+            _FrmAddUser.StartPosition = FormStartPosition.CenterScreen;
+            _FrmAddUser.Tipo = "CONSULTAR";
+            _FrmAddUser.id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
+            _FrmAddUser.Nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+            _FrmAddUser.Apellido = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+            _FrmAddUser.Perfil = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[3].Value.ToString());
+            _FrmAddUser.User = Dgprincipal.CurrentRow.Cells[5].Value.ToString();
+            _FrmAddUser.Pass = Dgprincipal.CurrentRow.Cells[6].Value.ToString();
+
+            bool acti = Convert.ToBoolean(Dgprincipal.CurrentRow.Cells[8].Value);
+            if (acti == true)
+            {
+                _FrmAddUser.Activo = "N";
+            }
+            else
+            {
+                _FrmAddUser.Activo = "S";
+            }
+            _FrmAddUser.ShowDialog();
+            inicializar();
         }
     }
 }

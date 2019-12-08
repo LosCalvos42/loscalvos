@@ -115,10 +115,11 @@ namespace TRAZAAR
                     USL.m_PASS = passE;
                     //MSJ = USL.BuscarUser() ;
                     DataTable DT = USL.BuscarUser();
-                    Program.perfil = Convert.ToInt32(DT.Rows[0][0].ToString());
-                    user = DT.Rows[0][1].ToString();
-                    pass = DT.Rows[0][2].ToString();
-                    MSJ = DT.Rows[0][3].ToString();
+                    Program.IDUSER= Convert.ToInt32(DT.Rows[0][0].ToString());
+                    Program.perfil = Convert.ToInt32(DT.Rows[0][1].ToString());
+                    user = DT.Rows[0][2].ToString();
+                    pass = DT.Rows[0][3].ToString();
+                    MSJ = DT.Rows[0][4].ToString();
 
                     if (MSJ == "INACTIVO")
                     {
@@ -127,9 +128,7 @@ namespace TRAZAAR
 
                     }
 
-
-
-                    if (user == txtUsuario.Text & pass == passE)
+                    if (user == txtUsuario.Text.ToUpper() & pass == passE)
                     {
 
                         if (INIUSER != txtUsuario.Text)

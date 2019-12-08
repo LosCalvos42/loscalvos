@@ -250,6 +250,7 @@ namespace TRAZAAR
             Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
             BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
             BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
+            BtnUtilidades.BackColor = Color.FromArgb(62, 59, 135);
 
             //btnListaClientes.BackColor = Color.FromArgb(29, 34, 39);
 
@@ -276,6 +277,7 @@ namespace TRAZAAR
             Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
             BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
             BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
+            BtnUtilidades.BackColor = Color.FromArgb(62, 59, 135);
             b.BackColor = Color.FromArgb(35, 155, 86);
 
         }
@@ -379,7 +381,26 @@ namespace TRAZAAR
             Program._FrmProduccion = false;
             Program._FrmConsultas = false;
             Program._FrmConfiguracion = false;
+            Program._FrmUtilidades = false;
             formHijo = true;
+        }
+
+        private void BtnGeneral_Click(object sender, EventArgs e)
+        {
+            if (Program._FrmUtilidades == false)
+            {
+                HabilitarBotones(BtnUtilidades);
+                FrmUtilidades fm2 = new FrmUtilidades();
+                fm2.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+                AbrirFormEnPanel(fm2);
+                botones(Program._FrmUtilidades);
+                Program._FrmUtilidades = true;
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

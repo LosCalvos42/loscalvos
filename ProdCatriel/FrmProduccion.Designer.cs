@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduccion));
             this.menuForm = new System.Windows.Forms.MenuStrip();
-            this.PArchivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.PRecepcion = new System.Windows.Forms.ToolStripMenuItem();
-            this.PStock = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Pmaestros = new System.Windows.Forms.ToolStripMenuItem();
             this.PProductos = new System.Windows.Forms.ToolStripMenuItem();
-            this.PTRecurso = new System.Windows.Forms.ToolStripMenuItem();
+            this.Productos = new System.Windows.Forms.ToolStripMenuItem();
+            this.GrupoItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TipoProductoItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FamiliaItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GrupoFamiliaItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CategoriaPorPesomenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CategoriaPorMermaMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PAlmacenes = new System.Windows.Forms.ToolStripMenuItem();
-            this.PFamilias = new System.Windows.Forms.ToolStripMenuItem();
-            this.PMarcas = new System.Windows.Forms.ToolStripMenuItem();
-            this.Precursos = new System.Windows.Forms.ToolStripMenuItem();
+            this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeAlmacenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.PDProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.POdTrabajo = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +50,9 @@
             this.Pparametros = new System.Windows.Forms.ToolStripMenuItem();
             this.PUMedida = new System.Windows.Forms.ToolStripMenuItem();
             this.PReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.PArchivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.PRecepcion = new System.Windows.Forms.ToolStripMenuItem();
+            this.PStock = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +61,11 @@
             // 
             this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PArchivo,
             this.Pmaestros,
             this.PProcesos,
             this.Pparametros,
             this.PReportes,
+            this.PArchivo,
             this.Psalir});
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
@@ -67,109 +74,149 @@
             this.menuForm.TabIndex = 2;
             this.menuForm.Text = "Menu";
             // 
-            // PArchivo
+            // panel1
             // 
-            this.PArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PRecepcion,
-            this.PStock});
-            this.PArchivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PArchivo.ForeColor = System.Drawing.Color.White;
-            this.PArchivo.Image = global::TRAZAAR.Properties.Resources.icons8_check_file_48;
-            this.PArchivo.Name = "PArchivo";
-            this.PArchivo.Size = new System.Drawing.Size(87, 24);
-            this.PArchivo.Text = "&Archivo";
-            // 
-            // PRecepcion
-            // 
-            this.PRecepcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PRecepcion.ForeColor = System.Drawing.Color.White;
-            this.PRecepcion.Image = global::TRAZAAR.Properties.Resources.mercaderia;
-            this.PRecepcion.Name = "PRecepcion";
-            this.PRecepcion.Size = new System.Drawing.Size(247, 24);
-            this.PRecepcion.Text = "&Recepcion de Mercaderia";
-            this.PRecepcion.Click += new System.EventHandler(this.PRecepcion_Click);
-            // 
-            // PStock
-            // 
-            this.PStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PStock.ForeColor = System.Drawing.Color.White;
-            this.PStock.Image = global::TRAZAAR.Properties.Resources.stock;
-            this.PStock.Name = "PStock";
-            this.PStock.Size = new System.Drawing.Size(247, 24);
-            this.PStock.Text = "&Stock";
-            this.PStock.Click += new System.EventHandler(this.PStock_Click);
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 422);
+            this.panel1.TabIndex = 21;
             // 
             // Pmaestros
             // 
             this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PProductos,
-            this.PTRecurso,
-            this.PAlmacenes,
-            this.PFamilias,
-            this.PMarcas,
-            this.Precursos});
+            this.PAlmacenes});
             this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pmaestros.ForeColor = System.Drawing.Color.White;
-            this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.icons8_paste_special_30;
+            this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.Archivero1;
             this.Pmaestros.Name = "Pmaestros";
-            this.Pmaestros.Size = new System.Drawing.Size(99, 24);
-            this.Pmaestros.Text = "Maestros";
+            this.Pmaestros.Size = new System.Drawing.Size(85, 24);
+            this.Pmaestros.Text = "&Archivo";
             // 
             // PProductos
             // 
             this.PProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.PProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Productos,
+            this.GrupoItem,
+            this.TipoProductoItem,
+            this.FamiliaItem,
+            this.GrupoFamiliaItem,
+            this.CategoriaPorPesomenuItem,
+            this.CategoriaPorMermaMenuItem});
             this.PProductos.ForeColor = System.Drawing.Color.White;
-            this.PProductos.Image = global::TRAZAAR.Properties.Resources.icons8_shopping_basket_48;
+            this.PProductos.Image = global::TRAZAAR.Properties.Resources.ProductosB;
             this.PProductos.Name = "PProductos";
-            this.PProductos.Size = new System.Drawing.Size(197, 22);
-            this.PProductos.Text = "Productos";
-            this.PProductos.Click += new System.EventHandler(this.PProductos_Click);
+            this.PProductos.Size = new System.Drawing.Size(180, 22);
+            this.PProductos.Text = "&Productos";
             // 
-            // PTRecurso
+            // Productos
             // 
-            this.PTRecurso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PTRecurso.ForeColor = System.Drawing.Color.White;
-            this.PTRecurso.Name = "PTRecurso";
-            this.PTRecurso.Size = new System.Drawing.Size(197, 22);
-            this.PTRecurso.Text = "&Tipo De Recursos";
-            this.PTRecurso.Click += new System.EventHandler(this.PTRecurso_Click);
+            this.Productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.Productos.ForeColor = System.Drawing.Color.White;
+            this.Productos.Image = global::TRAZAAR.Properties.Resources.ProductosB;
+            this.Productos.Name = "Productos";
+            this.Productos.Size = new System.Drawing.Size(217, 22);
+            this.Productos.Text = "&Productos";
+            this.Productos.Click += new System.EventHandler(this.ProductosToolStripMenuItem_Click);
+            // 
+            // GrupoItem
+            // 
+            this.GrupoItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.GrupoItem.ForeColor = System.Drawing.Color.White;
+            this.GrupoItem.Image = global::TRAZAAR.Properties.Resources.grupos;
+            this.GrupoItem.Name = "GrupoItem";
+            this.GrupoItem.Size = new System.Drawing.Size(217, 22);
+            this.GrupoItem.Text = "&Grupo";
+            this.GrupoItem.Click += new System.EventHandler(this.GrupoItem_Click);
+            // 
+            // TipoProductoItem
+            // 
+            this.TipoProductoItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.TipoProductoItem.ForeColor = System.Drawing.Color.White;
+            this.TipoProductoItem.Image = global::TRAZAAR.Properties.Resources.alta32;
+            this.TipoProductoItem.Name = "TipoProductoItem";
+            this.TipoProductoItem.Size = new System.Drawing.Size(217, 22);
+            this.TipoProductoItem.Text = "&Tipo de Productos";
+            this.TipoProductoItem.Click += new System.EventHandler(this.TipoProductoItem_Click);
+            // 
+            // FamiliaItem
+            // 
+            this.FamiliaItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.FamiliaItem.ForeColor = System.Drawing.Color.White;
+            this.FamiliaItem.Image = global::TRAZAAR.Properties.Resources.family_32;
+            this.FamiliaItem.Name = "FamiliaItem";
+            this.FamiliaItem.Size = new System.Drawing.Size(217, 22);
+            this.FamiliaItem.Text = "&Familia";
+            this.FamiliaItem.Click += new System.EventHandler(this.FamiliaItem_Click);
+            // 
+            // GrupoFamiliaItem
+            // 
+            this.GrupoFamiliaItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.GrupoFamiliaItem.ForeColor = System.Drawing.Color.White;
+            this.GrupoFamiliaItem.Image = global::TRAZAAR.Properties.Resources.familia;
+            this.GrupoFamiliaItem.Name = "GrupoFamiliaItem";
+            this.GrupoFamiliaItem.Size = new System.Drawing.Size(217, 22);
+            this.GrupoFamiliaItem.Text = "&Grupo Familia";
+            this.GrupoFamiliaItem.Click += new System.EventHandler(this.GrupoFamiliaItem_Click);
+            // 
+            // CategoriaPorPesomenuItem
+            // 
+            this.CategoriaPorPesomenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.CategoriaPorPesomenuItem.ForeColor = System.Drawing.Color.White;
+            this.CategoriaPorPesomenuItem.Image = global::TRAZAAR.Properties.Resources.KG;
+            this.CategoriaPorPesomenuItem.Name = "CategoriaPorPesomenuItem";
+            this.CategoriaPorPesomenuItem.Size = new System.Drawing.Size(217, 22);
+            this.CategoriaPorPesomenuItem.Text = "&Categoria por Peso";
+            this.CategoriaPorPesomenuItem.Click += new System.EventHandler(this.CategoriaPorPesomenuItem_Click);
+            // 
+            // CategoriaPorMermaMenuItem
+            // 
+            this.CategoriaPorMermaMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.CategoriaPorMermaMenuItem.ForeColor = System.Drawing.Color.White;
+            this.CategoriaPorMermaMenuItem.Image = global::TRAZAAR.Properties.Resources.merma;
+            this.CategoriaPorMermaMenuItem.Name = "CategoriaPorMermaMenuItem";
+            this.CategoriaPorMermaMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.CategoriaPorMermaMenuItem.Text = "&Categoria por Merma";
+            this.CategoriaPorMermaMenuItem.Click += new System.EventHandler(this.CategoriaPorMermaMenuItem_Click);
             // 
             // PAlmacenes
             // 
             this.PAlmacenes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.PAlmacenes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.almacenesToolStripMenuItem,
+            this.tipoDeAlmacenToolStripMenuItem});
             this.PAlmacenes.ForeColor = System.Drawing.Color.White;
+            this.PAlmacenes.Image = global::TRAZAAR.Properties.Resources.AlmacenBC;
             this.PAlmacenes.Name = "PAlmacenes";
-            this.PAlmacenes.Size = new System.Drawing.Size(197, 22);
+            this.PAlmacenes.Size = new System.Drawing.Size(180, 22);
             this.PAlmacenes.Text = "&Almacenes";
-            this.PAlmacenes.Click += new System.EventHandler(this.PAlmacenes_Click);
             // 
-            // PFamilias
+            // almacenesToolStripMenuItem
             // 
-            this.PFamilias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PFamilias.ForeColor = System.Drawing.Color.White;
-            this.PFamilias.Name = "PFamilias";
-            this.PFamilias.Size = new System.Drawing.Size(197, 22);
-            this.PFamilias.Text = "&Familias";
-            this.PFamilias.Click += new System.EventHandler(this.PFamilias_Click);
+            this.almacenesToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.almacenesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.almacenesToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.AlmacenBC;
+            this.almacenesToolStripMenuItem.Name = "almacenesToolStripMenuItem";
+            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.almacenesToolStripMenuItem.Text = "&Almacenes";
+            this.almacenesToolStripMenuItem.Click += new System.EventHandler(this.almacenesToolStripMenuItem_Click);
             // 
-            // PMarcas
+            // tipoDeAlmacenToolStripMenuItem
             // 
-            this.PMarcas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PMarcas.ForeColor = System.Drawing.Color.White;
-            this.PMarcas.Name = "PMarcas";
-            this.PMarcas.Size = new System.Drawing.Size(197, 22);
-            this.PMarcas.Text = "&Marcas";
-            this.PMarcas.Click += new System.EventHandler(this.PMarcas_Click);
-            // 
-            // Precursos
-            // 
-            this.Precursos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.Precursos.ForeColor = System.Drawing.Color.White;
-            this.Precursos.Name = "Precursos";
-            this.Precursos.Size = new System.Drawing.Size(197, 22);
-            this.Precursos.Text = "&Recursos";
-            this.Precursos.Click += new System.EventHandler(this.Precursos_Click);
+            this.tipoDeAlmacenToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.tipoDeAlmacenToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.tipoDeAlmacenToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.Perfiles_32;
+            this.tipoDeAlmacenToolStripMenuItem.Name = "tipoDeAlmacenToolStripMenuItem";
+            this.tipoDeAlmacenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.tipoDeAlmacenToolStripMenuItem.Text = "&Tipo de Almacen";
+            this.tipoDeAlmacenToolStripMenuItem.Click += new System.EventHandler(this.TipoDeAlmacenToolStripMenuItem_Click);
             // 
             // PProcesos
             // 
@@ -241,6 +288,38 @@
             this.PReportes.Size = new System.Drawing.Size(97, 24);
             this.PReportes.Text = "Reportes";
             // 
+            // PArchivo
+            // 
+            this.PArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PRecepcion,
+            this.PStock});
+            this.PArchivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PArchivo.ForeColor = System.Drawing.Color.White;
+            this.PArchivo.Image = global::TRAZAAR.Properties.Resources.icons8_check_file_48;
+            this.PArchivo.Name = "PArchivo";
+            this.PArchivo.Size = new System.Drawing.Size(76, 24);
+            this.PArchivo.Text = "&varios";
+            // 
+            // PRecepcion
+            // 
+            this.PRecepcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.PRecepcion.ForeColor = System.Drawing.Color.White;
+            this.PRecepcion.Image = global::TRAZAAR.Properties.Resources.mercaderia;
+            this.PRecepcion.Name = "PRecepcion";
+            this.PRecepcion.Size = new System.Drawing.Size(247, 24);
+            this.PRecepcion.Text = "&Recepcion de Mercaderia";
+            this.PRecepcion.Click += new System.EventHandler(this.PRecepcion_Click);
+            // 
+            // PStock
+            // 
+            this.PStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.PStock.ForeColor = System.Drawing.Color.White;
+            this.PStock.Image = global::TRAZAAR.Properties.Resources.stock;
+            this.PStock.Name = "PStock";
+            this.PStock.Size = new System.Drawing.Size(247, 24);
+            this.PStock.Text = "&Stock";
+            this.PStock.Click += new System.EventHandler(this.PStock_Click);
+            // 
             // Psalir
             // 
             this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,7 +335,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmProduccion";
             this.Text = "FrmProduccion";
             this.menuForm.ResumeLayout(false);
@@ -275,11 +356,7 @@
         private System.Windows.Forms.ToolStripMenuItem PReportes;
         private System.Windows.Forms.ToolStripMenuItem Psalir;
         private System.Windows.Forms.ToolStripMenuItem PProductos;
-        private System.Windows.Forms.ToolStripMenuItem PTRecurso;
         private System.Windows.Forms.ToolStripMenuItem PAlmacenes;
-        private System.Windows.Forms.ToolStripMenuItem PFamilias;
-        private System.Windows.Forms.ToolStripMenuItem PMarcas;
-        private System.Windows.Forms.ToolStripMenuItem Precursos;
         private System.Windows.Forms.ToolStripMenuItem PDProcesos;
         private System.Windows.Forms.ToolStripMenuItem POdTrabajo;
         private System.Windows.Forms.ToolStripMenuItem PSOTrabajo;
@@ -287,5 +364,15 @@
         private System.Windows.Forms.ToolStripMenuItem PArchivo;
         private System.Windows.Forms.ToolStripMenuItem PRecepcion;
         private System.Windows.Forms.ToolStripMenuItem PStock;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripMenuItem Productos;
+        private System.Windows.Forms.ToolStripMenuItem TipoProductoItem;
+        private System.Windows.Forms.ToolStripMenuItem GrupoItem;
+        private System.Windows.Forms.ToolStripMenuItem FamiliaItem;
+        private System.Windows.Forms.ToolStripMenuItem GrupoFamiliaItem;
+        private System.Windows.Forms.ToolStripMenuItem almacenesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeAlmacenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CategoriaPorPesomenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CategoriaPorMermaMenuItem;
     }
 }

@@ -41,6 +41,7 @@
             this.lblErrorPass = new System.Windows.Forms.Label();
             this.lblErrorUser = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblEmpresa = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.btnverPass = new System.Windows.Forms.Button();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
@@ -218,6 +218,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 332);
             this.panel1.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(49, 58);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(147, 32);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "TRAZAAR";
             // 
             // lblEmpresa
             // 
@@ -403,17 +414,6 @@
             this.btncerrar.TabIndex = 22;
             this.btncerrar.TabStop = false;
             this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(49, 58);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 32);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "TRAZAAR";
             // 
             // FrmLogin
             // 

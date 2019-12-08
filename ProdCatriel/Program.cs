@@ -16,15 +16,19 @@ namespace TRAZAAR
         public static string SERVIDORPRODUCCION;
         public static bool _FrmSelecJamon = false;
         public static bool _FrmTipoRecurso = false;
-        public static bool FMantCliente = false;
-        public static bool FABMCliente = false;
+        //public static bool FMantCliente = false;
+        //public static bool FABMCliente = false;
         public static bool _FrmConfiguracion = false;
         public static bool _FrmMenuProduccion = false;
         public static bool _FrmProductos = false;
         public static bool _FrmUser = false;
         public static bool _FrmProduccion=false;
         public static bool _FrmConsultas = false;
+        public static bool _FrmUtilidades = false; 
+
+
         public static int perfil;
+        public static int IDUSER;
 
         [STAThread]
 
