@@ -177,6 +177,7 @@ namespace TRAZAAR
             FrmAddAlmacenTipo _FrmAddAlmacenTipo = new FrmAddAlmacenTipo();
             _FrmListados.Tabla = "ALMACENTIPO";
             _FrmListados.Listado = "ALMACENTIPO";
+            _FrmListados.TituloListado = "Listado de Tipo de Almacenes";
             _FrmListados.Abm = _FrmAddAlmacenTipo;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -191,6 +192,7 @@ namespace TRAZAAR
             FrmAddAlmacen _FrmAddAlmacen = new FrmAddAlmacen();
             _FrmListados.Tabla = "ALMACEN";
             _FrmListados.Listado = "ALMACENES";
+            _FrmListados.TituloListado = "Listado de Almacenes";
             _FrmListados.Abm = _FrmAddAlmacen;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -205,6 +207,7 @@ namespace TRAZAAR
             FrmAddGrupoPruducto _FrmAddGrupoPruducto = new FrmAddGrupoPruducto();
             _FrmListados.Tabla = "GRUPOPRODUCTO";
             _FrmListados.Listado = "GRUPOPRODUCTO";
+            _FrmListados.TituloListado = "Listado de Grupo de Productos";
             _FrmListados.Abm = _FrmAddGrupoPruducto;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -219,6 +222,7 @@ namespace TRAZAAR
             FrmAddTipoProducto _FrmAddTipoProducto = new FrmAddTipoProducto();
             _FrmListados.Tabla = "TIPOPRODUCTO";
             _FrmListados.Listado = "TIPOPRODUCTO";
+            _FrmListados.TituloListado = "Listado de Tipo de Productos";
             _FrmListados.Abm = _FrmAddTipoProducto;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -233,6 +237,7 @@ namespace TRAZAAR
             FrmAddFamilia _FrmAddFamilia = new FrmAddFamilia();
             _FrmListados.Tabla = "ARTIFAMILIA";
             _FrmListados.Listado = "FAMILIA";
+            _FrmListados.TituloListado = "Listado de Familia de Productos";
             _FrmListados.Abm = _FrmAddFamilia;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -247,6 +252,7 @@ namespace TRAZAAR
             FrmAddGrupoFamilia _FrmAddGrupoFamilia = new FrmAddGrupoFamilia();
             _FrmListados.Tabla = "GRPFAMILIA";
             _FrmListados.Listado = "GRUPOFAMILIA";
+            _FrmListados.TituloListado = "Listado de Grupos de Familia";
             _FrmListados.Abm = _FrmAddGrupoFamilia;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -262,6 +268,7 @@ namespace TRAZAAR
             FrmAddCategoriaPeso _FrmAddCategoriaPeso = new FrmAddCategoriaPeso();
             _FrmListados.Tabla = "CATEGORIAPESO";
             _FrmListados.Listado = "CATEGORIAPESO";
+            _FrmListados.TituloListado = "Listado de Categoria por Peso";
             _FrmListados.Abm = _FrmAddCategoriaPeso;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -276,7 +283,23 @@ namespace TRAZAAR
             FrmAddCategoriaMerma _FrmAddCategoriaMerma = new FrmAddCategoriaMerma();
             _FrmListados.Tabla = "CATEGORIAPMERMA";
             _FrmListados.Listado = "CATEGORIAMERMA";
+            _FrmListados.TituloListado = "Listado de Categoria por Merma";
             _FrmListados.Abm = _FrmAddCategoriaMerma;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddEstados _FrmAddEstados = new FrmAddEstados();
+            _FrmListados.Tabla = "ESTADO";
+            _FrmListados.Listado = "ESTADOS";
+            _FrmListados.TituloListado = "Listado de Estado de Etiqueta";
+            _FrmListados.Abm = _FrmAddEstados;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmListados);

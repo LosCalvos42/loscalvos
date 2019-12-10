@@ -67,6 +67,7 @@ namespace TRAZAAR
                     lst.Add(new ClsParametros("@listado", "ALMACENES"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@debaja", ' '));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
                     dt = M.Listado("SP_LISTADOS_PRODUCCION", lst);

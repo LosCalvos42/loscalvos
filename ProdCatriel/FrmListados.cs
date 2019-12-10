@@ -37,6 +37,7 @@ namespace TRAZAAR
         
         private void LLENAR()
         {
+            Dgprincipal.DataSource = null;
             progressBar.Visible = true;
             pictureBox1.Visible = true;
             LblPorcentaje.Visible = true;
@@ -49,7 +50,7 @@ namespace TRAZAAR
 
         private void loadTable()
         {
-            Dgprincipal.DataSource = null;
+            //Dgprincipal.DataSource = null;
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
             List<ClsParametros> lst = new List<ClsParametros>();
@@ -58,6 +59,14 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@listado",Listado));
                 lst.Add(new ClsParametros("@Filtro",Filtro));
                 lst.Add(new ClsParametros("@id", 0));
+                if (Reliminados.Checked)
+                {
+                    lst.Add(new ClsParametros("@debaja",'S'));
+                }
+                else
+                {
+                    lst.Add(new ClsParametros("@debaja", 'N'));
+                }
                 setDataSource(dt = M.Listado("SP_LISTADOS_PRODUCCION", lst));
             }
             catch (Exception ex)
@@ -140,15 +149,22 @@ namespace TRAZAAR
             if (Dgprincipal.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
-                string Nom = Dgprincipal.CurrentRow.Cells[1].Value.ToString()+" - "+Dgprincipal.CurrentRow.Cells[2].Value.ToString() ;
-                if (MessageBox.Show("¿Confirma que desea Eliminar el Registro " + (char)13 + Nom + "? ", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                string Nom = Dgprincipal.CurrentRow.Cells[1].Value.ToString() + " - " + Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+                if (MessageBox.Show("Esta por ELIMINAR!!!", "Eliminar", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.Cancel)
                 {
                     return;
                 }
                 else
                 {
-                    ClsManejador M = new ClsManejador();
-                    M.Ejecutarquery(@"update " + Tabla + "set FERFIL_DEBAJA= 'S' where "+Tabla+"_ID=" + id);
+                    if (MessageBox.Show("¿Confirma que desea ELIMINAR " + (char)13 + Nom + "? ", "Eliminar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        ClsManejador M = new ClsManejador();
+                        M.Ejecutarquery(@"update " + Tabla + " set "+Tabla+"_DEBAJA= 'S' where " + Tabla + "_ID=" + id);
+                    }
                 }
             }
             else
@@ -165,6 +181,16 @@ namespace TRAZAAR
             _Formulario.Text = "CONSULTAR" + " - " + Dgprincipal.CurrentRow.Cells[0].Value.ToString();
             _Formulario.ShowDialog();
             inicializar();
+        }
+
+        private void Ractivos_CheckedChanged(object sender, EventArgs e)
+        {
+            LLENAR();
+        }
+
+        private void Reliminados_CheckedChanged(object sender, EventArgs e)
+        {
+            LLENAR();
         }
     }
 }

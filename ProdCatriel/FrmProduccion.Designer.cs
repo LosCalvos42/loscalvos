@@ -43,6 +43,7 @@
             this.PAlmacenes = new System.Windows.Forms.ToolStripMenuItem();
             this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeAlmacenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.PDProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.POdTrabajo = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +92,8 @@
             this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PProductos,
-            this.PAlmacenes});
+            this.PAlmacenes,
+            this.estadosToolStripMenuItem});
             this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pmaestros.ForeColor = System.Drawing.Color.White;
             this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.Archivero1;
@@ -217,6 +219,16 @@
             this.tipoDeAlmacenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.tipoDeAlmacenToolStripMenuItem.Text = "&Tipo de Almacen";
             this.tipoDeAlmacenToolStripMenuItem.Click += new System.EventHandler(this.TipoDeAlmacenToolStripMenuItem_Click);
+            // 
+            // estadosToolStripMenuItem
+            // 
+            this.estadosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.estadosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.estadosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.estado;
+            this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estadosToolStripMenuItem.Text = "&Estados";
+            this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
             // PProcesos
             // 
@@ -374,5 +386,6 @@
         private System.Windows.Forms.ToolStripMenuItem tipoDeAlmacenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CategoriaPorPesomenuItem;
         private System.Windows.Forms.ToolStripMenuItem CategoriaPorMermaMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
     }
 }

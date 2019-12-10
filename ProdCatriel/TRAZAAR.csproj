@@ -138,6 +138,12 @@
     <Compile Include="FrmAddCategoriaPeso.designer.cs">
       <DependentUpon>FrmAddCategoriaPeso.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEstados.designer.cs">
+      <DependentUpon>FrmAddEstados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddTipoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -503,6 +509,9 @@
     <EmbeddedResource Include="FrmAddCategoriaPeso.resx">
       <DependentUpon>FrmAddCategoriaPeso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEstados.resx">
+      <DependentUpon>FrmAddEstados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddTipoProducto.resx">
       <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -844,6 +853,7 @@
     <None Include="Resources\gargando2.gif" />
     <None Include="Resources\gargando3.gif" />
     <None Include="Resources\gargando4.gif" />
+    <None Include="Resources\estado.png" />
     <Content Include="TRACING.ico" />
     <None Include="Resources\pdf32.png" />
     <None Include="Resources\pdf2.png" />

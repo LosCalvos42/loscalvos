@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace TRAZAAR
 {
-    public partial class FrmAddAlmacenTipo : Form
+    public partial class FrmAddEstados : Form
     {
-        public FrmAddAlmacenTipo()
+        public FrmAddEstados()
         {
             InitializeComponent();
         }
@@ -23,18 +23,23 @@ namespace TRAZAAR
         public string Activo { get; set; }
         public string Listado { get; set; }
 
-        private void FrmAddUser_Load(object sender, EventArgs e)
+        private void FrmAddGrupoFamilia_Load(object sender, EventArgs e)
         {
+
             //Tipo = this.Text;
             Tipo = this.Text.Split()[0];
             id = Convert.ToInt32(this.Text.Split()[2]);
             Inicio();
+
         }
         private void limpiarObjetos() {
             
             TxtCodigo.Text = "";
             TxtDescripcion.Text = "";
+            TxtObs.Text = "";
         }
+
+
         private void Inicio()
         {
             if (Tipo == "NUEVO")
@@ -43,6 +48,7 @@ namespace TRAZAAR
                 limpiarObjetos();
                 chekActivo.Checked = true;
                 groupBox1.Enabled = true;
+
             }
             if (Tipo == "MODIFICAR")
             {
@@ -52,7 +58,7 @@ namespace TRAZAAR
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "ALMACENTIPO"));
+                    lst.Add(new ClsParametros("@listado", "ESTADOS"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
                     lst.Add(new ClsParametros("@DeBaja", ""));
@@ -64,8 +70,9 @@ namespace TRAZAAR
                        
                        TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
                        TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                       
-                        if (dt.Rows[0][3].ToString() == "N")
+                       TxtObs.Text= dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
+
+                        if (dt.Rows[0][5].ToString() == "N")
                         {
                             chekActivo.Checked = true;
                         }
@@ -79,6 +86,7 @@ namespace TRAZAAR
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
             if (Tipo == "CONSULTAR")
             {
@@ -87,7 +95,7 @@ namespace TRAZAAR
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "ALMACENTIPO"));
+                    lst.Add(new ClsParametros("@listado", "ESTADOS"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
                     lst.Add(new ClsParametros("@DeBaja", ""));
@@ -98,14 +106,15 @@ namespace TRAZAAR
                     {
                         TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
                         TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                        
-                        if (dt.Rows[0][3].ToString() == "N")
+                        TxtObs.Text = dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
+                       
+                        if (dt.Rows[0][5].ToString() == "N")
                         {
-                            chekActivo.Checked = false;
+                            chekActivo.Checked = true;
                         }
                         else
                         {
-                            chekActivo.Checked = true;
+                            chekActivo.Checked = false;
                         }
                     }
                 }
@@ -116,24 +125,32 @@ namespace TRAZAAR
                 groupBox1.Enabled = false;
             }
         }
+      
+
         private bool valido()
         {
+
             if (TxtCodigo.Text == "")
             {
                 MessageBox.Show("El Campo Nombre NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtCodigo.Focus();
                 return false;
             }
+
             if (TxtDescripcion.Text == "")
             {
-                MessageBox.Show("El Campo Descripcion NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo Apellido NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtDescripcion.Focus();
                 return false;
             }
+          
+
             return true;
+
         }
         private String[] AbmUser(string tipo)
         {
+
             ClsManejador M = new ClsManejador();
             string[] msj;
             List<ClsParametros> lst = new List<ClsParametros>();
@@ -144,6 +161,7 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@ID", id));
                 lst.Add(new ClsParametros("@CODIGO", TxtCodigo.Text));
                 lst.Add(new ClsParametros("@DESCRIPCION", TxtDescripcion.Text));
+                lst.Add(new ClsParametros("@OBSERVACION", TxtObs.Text));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 if (chekActivo.Checked == true)
                 { 
@@ -155,16 +173,18 @@ namespace TRAZAAR
                 }
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("sp_AddAlmacenTipo", ref lst);
+                M.EjecutarSP("sp_AddEstados", ref lst);
                 msj = new string[2];
-                msj[0] = lst[6].Valor.ToString();
-                msj[1] = lst[7].Valor.ToString();
+                msj[0] = lst[7].Valor.ToString();
+                msj[1] = lst[8].Valor.ToString();
             }
+
             catch (Exception ex)
             {
                 msj = new string[2];
                 msj[0] = "0";
                 msj[1] = ex.Message;
+
             }
             return msj;
         }
@@ -174,6 +194,7 @@ namespace TRAZAAR
             this.Close();
             //this.cl;
         }
+
         public static string Encriptar(string _cadenaAencriptar)
         {
             string result = string.Empty;
@@ -208,7 +229,10 @@ namespace TRAZAAR
             {
                 if (valido() == true)
                 {
+                  
                     string[] msg = AbmUser(Tipo);
+
+
                     if (msg[0] == "0")
                     {
 
@@ -217,17 +241,22 @@ namespace TRAZAAR
                     }
                     else
                     {
+
                         MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         DialogResult = DialogResult.Yes;
                         this.Close();
                         return;
                     }
+
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+
         }
     }
 }

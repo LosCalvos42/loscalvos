@@ -48,6 +48,8 @@
             this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Reliminados = new System.Windows.Forms.RadioButton();
+            this.Ractivos = new System.Windows.Forms.RadioButton();
             this.menuForm.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).BeginInit();
@@ -160,11 +162,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTituloListado.AutoSize = true;
             this.LblTituloListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.LblTituloListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.LblTituloListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTituloListado.ForeColor = System.Drawing.Color.White;
-            this.LblTituloListado.Location = new System.Drawing.Point(496, 5);
+            this.LblTituloListado.Location = new System.Drawing.Point(496, 1);
             this.LblTituloListado.Name = "LblTituloListado";
-            this.LblTituloListado.Size = new System.Drawing.Size(54, 17);
+            this.LblTituloListado.Size = new System.Drawing.Size(69, 24);
             this.LblTituloListado.TabIndex = 44;
             this.LblTituloListado.Text = "Listado";
             // 
@@ -173,9 +175,9 @@
             this.progressBar.Location = new System.Drawing.Point(4, 82);
             this.progressBar.MarqueeAnimationSpeed = 10;
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(425, 10);
+            this.progressBar.Size = new System.Drawing.Size(425, 5);
             this.progressBar.TabIndex = 45;
-            this.progressBar.Value = 50;
+            this.progressBar.Value = 100;
             // 
             // LblPorcentaje
             // 
@@ -183,7 +185,7 @@
             this.LblPorcentaje.BackColor = System.Drawing.Color.Transparent;
             this.LblPorcentaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPorcentaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.LblPorcentaje.Location = new System.Drawing.Point(432, 78);
+            this.LblPorcentaje.Location = new System.Drawing.Point(433, 74);
             this.LblPorcentaje.Name = "LblPorcentaje";
             this.LblPorcentaje.Size = new System.Drawing.Size(70, 15);
             this.LblPorcentaje.TabIndex = 81;
@@ -269,11 +271,41 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // Reliminados
+            // 
+            this.Reliminados.AutoSize = true;
+            this.Reliminados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reliminados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.Reliminados.Location = new System.Drawing.Point(436, 53);
+            this.Reliminados.Name = "Reliminados";
+            this.Reliminados.Size = new System.Drawing.Size(74, 17);
+            this.Reliminados.TabIndex = 83;
+            this.Reliminados.Text = "Eliminados";
+            this.Reliminados.UseVisualStyleBackColor = true;
+            this.Reliminados.CheckedChanged += new System.EventHandler(this.Reliminados_CheckedChanged);
+            // 
+            // Ractivos
+            // 
+            this.Ractivos.AutoSize = true;
+            this.Ractivos.Checked = true;
+            this.Ractivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ractivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.Ractivos.Location = new System.Drawing.Point(341, 53);
+            this.Ractivos.Name = "Ractivos";
+            this.Ractivos.Size = new System.Drawing.Size(59, 17);
+            this.Ractivos.TabIndex = 84;
+            this.Ractivos.TabStop = true;
+            this.Ractivos.Text = "Activos";
+            this.Ractivos.UseVisualStyleBackColor = true;
+            this.Ractivos.CheckedChanged += new System.EventHandler(this.Ractivos_CheckedChanged);
+            // 
             // FrmListados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Ractivos);
+            this.Controls.Add(this.Reliminados);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblPorcentaje);
             this.Controls.Add(this.progressBar);
@@ -313,5 +345,7 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label LblPorcentaje;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RadioButton Reliminados;
+        private System.Windows.Forms.RadioButton Ractivos;
     }
 }
