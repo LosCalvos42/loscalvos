@@ -304,6 +304,21 @@ namespace TRAZAAR
             _FrmListados.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmListados);
         }
+
+        private void procesosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddProcesos _FrmAddProcesos = new FrmAddProcesos();
+            _FrmListados.Tabla = "PROCESOS";
+            _FrmListados.Listado = "PROCESOS";
+            _FrmListados.TituloListado = "Listado de Procesos Productivos";
+            _FrmListados.Abm = _FrmAddProcesos;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
     }
 }
 

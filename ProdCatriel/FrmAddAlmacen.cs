@@ -177,14 +177,14 @@ namespace TRAZAAR
 
             if (TxtCodigo.Text == "")
             {
-                MessageBox.Show("El Campo Nombre NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo Codigo NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtCodigo.Focus();
                 return false;
             }
 
             if (TxtDescripcion.Text == "")
             {
-                MessageBox.Show("El Campo Apellido NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo Descripcion NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtDescripcion.Focus();
                 return false;
             }
@@ -202,7 +202,7 @@ namespace TRAZAAR
             }
             if (TxtTMin.Text == "")
             {
-                MessageBox.Show("El Campo Contraseña NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo  NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtDescripcion.Focus();
                 return false;
             }

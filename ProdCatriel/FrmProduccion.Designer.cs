@@ -55,6 +55,8 @@
             this.PRecepcion = new System.Windows.Forms.ToolStripMenuItem();
             this.PStock = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +95,8 @@
             this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PProductos,
             this.PAlmacenes,
-            this.estadosToolStripMenuItem});
+            this.estadosToolStripMenuItem,
+            this.procesosToolStripMenuItem});
             this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pmaestros.ForeColor = System.Drawing.Color.White;
             this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.Archivero1;
@@ -238,7 +241,7 @@
             this.PSOTrabajo});
             this.PProcesos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PProcesos.ForeColor = System.Drawing.Color.White;
-            this.PProcesos.Image = global::TRAZAAR.Properties.Resources.icons8_maintenance_16;
+            this.PProcesos.Image = global::TRAZAAR.Properties.Resources.Procesos;
             this.PProcesos.Name = "PProcesos";
             this.PProcesos.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
             this.PProcesos.Size = new System.Drawing.Size(101, 24);
@@ -248,18 +251,20 @@
             // 
             this.PDProcesos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.PDProcesos.ForeColor = System.Drawing.Color.White;
+            this.PDProcesos.Image = global::TRAZAAR.Properties.Resources.Procesos;
             this.PDProcesos.Name = "PDProcesos";
             this.PDProcesos.Size = new System.Drawing.Size(268, 22);
-            this.PDProcesos.Text = "&Definicion De Procesos";
+            this.PDProcesos.Text = "&Procesos";
             this.PDProcesos.Click += new System.EventHandler(this.PDProcesos_Click);
             // 
             // POdTrabajo
             // 
             this.POdTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.POdTrabajo.ForeColor = System.Drawing.Color.White;
+            this.POdTrabajo.Image = global::TRAZAAR.Properties.Resources.reporte;
             this.POdTrabajo.Name = "POdTrabajo";
             this.POdTrabajo.Size = new System.Drawing.Size(268, 22);
-            this.POdTrabajo.Text = "&Ord. De Trabajo";
+            this.POdTrabajo.Text = "&Definicion de procesos";
             this.POdTrabajo.Click += new System.EventHandler(this.POdTrabajo_Click);
             // 
             // PSOTrabajo
@@ -342,6 +347,27 @@
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
             // 
+            // procesosToolStripMenuItem
+            // 
+            this.procesosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.procesosToolStripMenuItem1});
+            this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.procesosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.Procesos;
+            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procesosToolStripMenuItem.Text = "&Procesos";
+            // 
+            // procesosToolStripMenuItem1
+            // 
+            this.procesosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.procesosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.procesosToolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.Procesos;
+            this.procesosToolStripMenuItem1.Name = "procesosToolStripMenuItem1";
+            this.procesosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.procesosToolStripMenuItem1.Text = "&Procesos";
+            this.procesosToolStripMenuItem1.Click += new System.EventHandler(this.procesosToolStripMenuItem1_Click);
+            // 
             // FrmProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,5 +413,7 @@
         private System.Windows.Forms.ToolStripMenuItem CategoriaPorPesomenuItem;
         private System.Windows.Forms.ToolStripMenuItem CategoriaPorMermaMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem1;
     }
 }

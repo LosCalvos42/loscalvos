@@ -303,6 +303,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cargandotrazaar {
+            get {
+                object obj = ResourceManager.GetObject("cargandotrazaar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Carne {
             get {
                 object obj = ResourceManager.GetObject("Carne", resourceCulture);
@@ -1023,6 +1033,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inicioTra {
+            get {
+                object obj = ResourceManager.GetObject("inicioTra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap KG {
             get {
                 object obj = ResourceManager.GetObject("KG", resourceCulture);
@@ -1383,6 +1403,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Procesos {
+            get {
+                object obj = ResourceManager.GetObject("Procesos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap produccion {
             get {
                 object obj = ResourceManager.GetObject("produccion", resourceCulture);
@@ -1553,6 +1583,36 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Tbuscar {
+            get {
+                object obj = ResourceManager.GetObject("Tbuscar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tmas {
+            get {
+                object obj = ResourceManager.GetObject("Tmas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tmenos {
+            get {
+                object obj = ResourceManager.GetObject("Tmenos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trabajos {
             get {
                 object obj = ResourceManager.GetObject("trabajos", resourceCulture);
@@ -1586,6 +1646,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap trans2 {
             get {
                 object obj = ResourceManager.GetObject("trans2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Tsearch {
+            get {
+                object obj = ResourceManager.GetObject("Tsearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -109,9 +109,11 @@ namespace TRAZAAR
 
         private void pBuscar2_Click(object sender, EventArgs e)
         {
-            FrmGrillaBuscar _FrmGrillaBuscar = new FrmGrillaBuscar();
-            _FrmGrillaBuscar.StartPosition = FormStartPosition.CenterScreen;
-            _FrmGrillaBuscar.combo = Grilla;
+            FrmGrillaBuscar _FrmGrillaBuscar = new FrmGrillaBuscar
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                combo = Grilla
+            };
             if (_FrmGrillaBuscar.ShowDialog() == DialogResult.OK)
             {
                 txtCodigo.Text = _FrmGrillaBuscar.Codigo;

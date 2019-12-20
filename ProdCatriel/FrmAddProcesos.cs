@@ -11,38 +11,148 @@ using System.Windows.Forms;
 
 namespace TRAZAAR
 {
-    public partial class FrmDefinicionProcesosDetalle : Form
+    public partial class FrmAddProcesos : Form
     {
-        public string ID { get; set; }
-        public string MODO { get; set; }
         string ARTI { get; set; }
-        
-        double CostoTotal { get; set; } = 0.00;
 
-        public FrmDefinicionProcesosDetalle()
+        public int id { get; set; }
+        public string Tipo { get; set; }
+        public string Activo { get; set; }
+        public string Listado { get; set; }
+
+        double CostoTotal { get; set; } = 0.00;
+        public FrmAddProcesos()
         {
             InitializeComponent();
         }
         private void FrmDefinicionProcesosDetalle_Load(object sender, EventArgs e)
         {
-            Cargarcombo("TPROCESO", cmbTProceso);
-            Cargarcombo("ALMA", cmbAlmacen);
+            Tipo=this.Text.Split()[0];
+            id = Convert.ToInt32(this.Text.Split()[2]);
 
-            Cargar();
+            Cargarcombo("TIPOPROCESO", cmbTProceso);
+            Cargarcombo("ALMACEN", cmbAlmacen);
+            Cargarcombo("ESTADOS", CmbEstado);
+            limpiarObjetos();
+            inicio();
         }
-
-        private void Cargar()
+        private void limpiarObjetos()
         {
-            switch (MODO)
+            treResumen.Nodes.Clear();
+            txtCodProceso.Text = "";
+            TxtNombre.Text = "";
+            TxtOsb.Text = "";
+            cmbAlmacen.SelectedValue = 1;
+            CmbEstado.SelectedValue = 1;
+            cmbTProceso.SelectedValue = 1;
+            dgMPrima.Rows.Clear();
+            dgMaquinas.Rows.Clear();
+            dgRecursoH.Rows.Clear();
+            dgResultado.Rows.Clear();
+        }
+        private void inicio()
+        {
+            switch (Tipo)
             {
                 case "NUEVO":
+                    
+                    id = 0;
                     Console.WriteLine("One");
                     break;
-                case "MODIFICACION":
-                    Console.WriteLine("Two");
-                    Console.WriteLine("Two");
+                case "MODIFICAR":
+                    ClsManejador M = new ClsManejador();
+                    DataTable dt = new DataTable();
+                    List<ClsParametros> lst = new List<ClsParametros>();
+                    try
+                    {
+                        lst.Add(new ClsParametros("@id", id));
+                        lst.Add(new ClsParametros("@tipo", "CABECERA"));
+                        //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
+                        //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
+                        dt = M.Listado("SP_ListadoProcesos", lst);
+                        if (dt.Rows.Count > 0)
+                        {
+                            txtCodProceso.Text = dt.Rows[0][1].ToString();
+                            TxtNombre.Text = dt.Rows[0][2].ToString();
+                            cmbTProceso.SelectedValue = dt.Rows[0][3].ToString();
+                            cmbAlmacen.SelectedValue = dt.Rows[0][4].ToString();
+                            if (dt.Rows[0][5].ToString() == "S")
+                            {
+                                ChekCtMerma.Checked = true;
+                            }
+                            else
+                            {
+                                ChekCtMerma.Checked = false;
+                            }
+                            CmbEstado.SelectedValue = dt.Rows[0][6].ToString();
+                            TxtOsb.Text = dt.Rows[0][7].ToString();
+                            if (dt.Rows[0][8].ToString() == "N")
+                            {
+                                ChekActivo.Checked = true;
+                            }
+                            else
+                            {
+                                ChekActivo.Checked = false;
+                            }
+                        }
+                        lst.Clear();
+                        lst.Add(new ClsParametros("@id", id));
+                        lst.Add(new ClsParametros("@tipo", "DETALLE"));
+                        //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
+                        //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
+                        dt = M.Listado("SP_ListadoProcesos", lst);
+                        if (dt.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dt.Rows.Count; i++)
+                            {
+                                if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString()=="E")
+                                {
+                                    dgMPrima.Rows.Add(1);
+                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                                }
+                                if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "S")
+                                {
+                                    dgResultado.Rows.Add(1);
+                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                                }
+                                if (dt.Rows[i][5].ToString() == "MAQ")
+                                {
+                                    dgMaquinas.Rows.Add(1);
+                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                                }
+
+                                //if (dt.Rows[i][4].ToString() == "MP")
+                                //{
+                                //    dgMPrima.Rows.Add(1);
+                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+
+                                //}
+
+
+                            }
+
+                        }
+
+                        treresumen();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                     break;
-                case "ELIMINAR":
+                case "CONSULTAR":
                     Console.WriteLine("Other");
                     break;
             }
@@ -63,12 +173,12 @@ namespace TRAZAAR
                 dt = M.Listado("sp_CargaCombos", lst);
                 _combo.DataSource = dt;
                 _combo.DisplayMember = "NOMBRE";
-                _combo.ValueMember = "ID";
+                _combo.ValueMember = "CODIGO";
                 DataRow topItem = dt.NewRow();
-                topItem[0] = 0;
-                topItem[1] = "-Select-";
+                topItem[1] = 1;
+                topItem[2] = "-Select-";
                 dt.Rows.InsertAt(topItem, 0);
-                _combo.SelectedValue = 0;
+                _combo.SelectedValue = 1;
             }
             catch (Exception ex)
             {
@@ -87,46 +197,11 @@ namespace TRAZAAR
             {
                 string codProd = _FrmGrillaBuscar.Codigo; 
                 ARTI = _FrmGrillaBuscar.nombre;
-                txtBuscar.Text = codProd; 
                 //nombreProd = nombreArt;
-                txtIDProd.Text = Convert.ToString(_FrmGrillaBuscar.id);
-                txtNombreArt.Text = txtNombreTProceso.Text+" de " +ARTI;
-                txtProCanti.Focus();
+                //txtIDProd.Text = Convert.ToString(_FrmGrillaBuscar.id);
+                TxtNombre.Text =  ARTI;
             }
         }
-
-        private void cmbTProceso_Leave(object sender, EventArgs e)
-        {
-            if (cmbTProceso.Text != "-Select-")
-            { 
-                string[] datos = cmbTProceso.Text.Split('-');
-                txtNombreTProceso.Text = datos[1];
-}
-            }
-
-        private void chekGenArt_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chekGenArt.Checked == true)
-            {
-
-                pnArti.Visible = true;
-                label2.Text = "Código Producto:";
-                txtCodProceso.Text = "";
-                txtBuscar.Text = "";
-                cmbAlmacen.Enabled = true;
-                cmbAlmacen.SelectedValue = 0;
-            }
-            else
-            {
-                pnArti.Visible = false;
-                label2.Text = "Código Proceso:";
-                txtCodProceso.Text = "";
-                txtBuscar.Text = "";
-                cmbAlmacen.Enabled = false;
-                cmbAlmacen.SelectedValue = 0;
-            }
-        }
-
         private void txtProCanti_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46) && (e.KeyChar != (char)13))
@@ -141,12 +216,7 @@ namespace TRAZAAR
         {
             try
             {
-                if (txtProCanti.Text != "")
-                {
-
-                    double n = Convert.ToDouble(txtProCanti.Text.Replace(".", ","));
-                    txtProCanti.Text = string.Format("{0:n}", n);
-                }
+                
                 treresumen();
                 //dg_resultado();
                 //sivalido = 1;
@@ -158,26 +228,7 @@ namespace TRAZAAR
 
         }
 
-        private void pBuscar_MouseDown(object sender, MouseEventArgs e)
-        {
-            pBuscar.BackColor = Color.DarkGray;
-        }
-
-        private void pBuscar_MouseHover(object sender, EventArgs e)
-        {
-            pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        }
-
-        private void pBuscar_MouseLeave(object sender, EventArgs e)
-        {
-            pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-        }
-
-        private void pBuscar_MouseUp(object sender, MouseEventArgs e)
-        {
-            pBuscar.BackColor = Color.Transparent;
-        }
-
+        
         //
         
         private void pBuscar2_Click(object sender, EventArgs e)
@@ -193,7 +244,7 @@ namespace TRAZAAR
                 string nombreArt = _FrmGrillaBuscar.nombre;
                 //txtBuscar2.Text = codProd;
                 //txtMateriaPrima.Text = nombreArt;
-                txtProCanti.Focus();
+               
             }
         }
 
@@ -211,12 +262,7 @@ namespace TRAZAAR
         {
             try
             {
-                if (txtProCanti.Text != "")
-                {
-
-                    //double n = Convert.ToDouble(txtCantiDetalle.Text.Replace(".", ","));
-                    //txtCantiDetalle.Text = string.Format("{0:n}", n);
-                }
+                
                 //sivalido = 1;
             }
             catch (Exception ex)
@@ -230,17 +276,28 @@ namespace TRAZAAR
             FrmAgregarItem _FrmAgregarItem = new FrmAgregarItem
             {
                 StartPosition = FormStartPosition.CenterScreen,
-                Grilla = "Arti"
+                Grilla = "MATERIAPRIMA"
             };
             if (_FrmAgregarItem.ShowDialog() == DialogResult.OK)
             {
+                for (int i = 0; i < dgMPrima.RowCount; i++)
+                {
+                    if(_FrmAgregarItem.Codigo== dgMPrima.Rows[i].Cells[1].Value.ToString())
+                    {
+                        MessageBox.Show("Materia Prima ya ingresada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+                    
+                }
+
+
                 dgMPrima.Rows.Add(1);
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = 0;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = _FrmAgregarItem.Descrip;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = _FrmAgregarItem.Cantidad;
-                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
-                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value.ToString())* Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value.ToString());
+               // dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
+                //dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value.ToString())* Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value.ToString());
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = _FrmAgregarItem.id;
 
             }
@@ -249,11 +306,11 @@ namespace TRAZAAR
 
         private void treresumen()
         {
-
+            double canti = 0;
             dg_resultado();
             CostoTotal = 0.0;
             treResumen.Nodes.Clear();
-            treResumen.Nodes.Add(txtNombreArt.Text).ForeColor=Color.Blue;
+            treResumen.Nodes.Add(TxtNombre.Text).ForeColor=Color.Blue;
 
             TreeNode node;
 ///////////////////////////////////////////////////////////
@@ -263,23 +320,21 @@ namespace TRAZAAR
             {
                 string codigo = dgMPrima.Rows[i].Cells[1].Value.ToString();
                 string nombre = dgMPrima.Rows[i].Cells[2].Value.ToString();
-                double canti = Convert.ToDouble(dgMPrima.Rows[i].Cells[3].Value.ToString());
+                
                 node.Nodes.Add(String.Format("{0,-50}",codigo.PadLeft(10, '_')) + " - " + String.Format("{0,-50}",nombre.PadRight(50,'.')) + String.Format("{0,50}",canti.ToString("N2").PadLeft(50,'.'))).ForeColor = Color.FromArgb(39, 55, 70);
-                CostoTotal = CostoTotal + Convert.ToDouble(dgMPrima.Rows[i].Cells[5].Value.ToString());
-
-
+                CostoTotal = CostoTotal + Convert.ToDouble(dgMPrima.Rows[i].Cells[3].Value.ToString());
             }
 
 //////////////////////////////////////////////////
             node = treResumen.Nodes.Add("MAQUINARIAS");
             node.ForeColor = Color.FromArgb(40, 53, 147);
+
             for (int i = 0; i < dgMaquinas.RowCount; i++)
             {
                 string codigo = dgMaquinas.Rows[i].Cells[1].Value.ToString();
                 string nombre = dgMaquinas.Rows[i].Cells[2].Value.ToString();
-                double canti = Convert.ToDouble(dgMaquinas.Rows[i].Cells[3].Value.ToString());
                 node.Nodes.Add(String.Format("{0,-50}", codigo.PadLeft(10, '_')) + " - " + String.Format("{0,-50}", nombre.PadRight(50, '.')) + String.Format("{0,50}", canti.ToString("N2").PadLeft(50, '.'))).ForeColor = Color.FromArgb(39, 55, 70);
-                CostoTotal = CostoTotal + Convert.ToDouble(dgMaquinas.Rows[i].Cells[5].Value.ToString());
+                CostoTotal = CostoTotal + Convert.ToDouble(dgMaquinas.Rows[i].Cells[3].Value.ToString());
 
             }
             ////////////////////////////////////////////
@@ -289,15 +344,24 @@ namespace TRAZAAR
             {
                 string codigo = dgRecursoH.Rows[i].Cells[1].Value.ToString();
                 string nombre = dgRecursoH.Rows[i].Cells[2].Value.ToString();
-                double canti = Convert.ToDouble(dgRecursoH.Rows[i].Cells[3].Value.ToString());
                 node.Nodes.Add(String.Format("{0,-50}", codigo.PadLeft(10, '_')) + " - " + String.Format("{0,-50}", nombre.PadRight(50, '.')) + String.Format("{0,50}", canti.ToString("N2").PadLeft(50, '.'))).ForeColor = Color.FromArgb(39, 55, 70);
-                CostoTotal = CostoTotal + Convert.ToDouble(dgRecursoH.Rows[i].Cells[5].Value.ToString());
+                CostoTotal = CostoTotal + Convert.ToDouble(dgRecursoH.Rows[i].Cells[3].Value.ToString());
+
+            }
+            node = treResumen.Nodes.Add("RESULTADO");
+            node.ForeColor = Color.FromArgb(40, 53, 147);
+            for (int i = 0; i < dgResultado.RowCount; i++)
+            {
+                string codigo = dgResultado.Rows[i].Cells[1].Value.ToString();
+                string nombre = dgResultado.Rows[i].Cells[2].Value.ToString();
+                node.Nodes.Add(String.Format("{0,-50}", codigo.PadLeft(10, '_')) + " - " + String.Format("{0,-50}", nombre.PadRight(50, '.')) + String.Format("{0,50}", canti.ToString("N2").PadLeft(50, '.'))).ForeColor = Color.FromArgb(39, 55, 70);
+                CostoTotal = CostoTotal + Convert.ToDouble(dgResultado.Rows[i].Cells[3].Value.ToString());
 
             }
             //dgResultado.Rows.Clear();
             //dgResultado.Rows.Add(1);
-            dgResultado.Rows[dgResultado.RowCount - 1].Cells[5].Value = CostoTotal;
-            dgResultado.Rows[dgResultado.RowCount - 1].Cells[4].Value = CostoTotal / Convert.ToDouble(txtProCanti.Text);
+            //dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = CostoTotal;
+            //dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = 0;
         }
 
         private void btnMasMQ_Click(object sender, EventArgs e)
@@ -305,17 +369,27 @@ namespace TRAZAAR
             FrmAgregarItem _FrmAgregarItem = new FrmAgregarItem
             {
                 StartPosition = FormStartPosition.CenterScreen,
-                Grilla = "MAQUI"
+                Grilla = "MAQUINARIA"
             };
             if (_FrmAgregarItem.ShowDialog() == DialogResult.OK)
             {
-                dgMaquinas.Rows.Add(1);
+                for (int i = 0; i < dgMaquinas.RowCount; i++)
+                {
+                    if (_FrmAgregarItem.Codigo == dgMaquinas.Rows[i].Cells[1].Value.ToString())
+                    {
+                        MessageBox.Show("Maquinaria ya ingresada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
+                }
+
+                    dgMaquinas.Rows.Add(1);
                 dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[0].Value = 0;
                 dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
                 dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[2].Value = _FrmAgregarItem.Descrip;
                 dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[3].Value = _FrmAgregarItem.Cantidad;
-                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
-                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[3].Value.ToString()) * Convert.ToDecimal(dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[4].Value.ToString());
+                //dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
+                //dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[3].Value.ToString()) * Convert.ToDecimal(dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[4].Value.ToString());
                 dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[0].Value = _FrmAgregarItem.id;
             }
             treresumen();
@@ -335,6 +409,16 @@ namespace TRAZAAR
             };
             if (_FrmAgregarItem.ShowDialog() == DialogResult.OK)
             {
+                for (int i = 0; i < dgRecursoH.RowCount; i++)
+                {
+                    if (_FrmAgregarItem.Codigo == dgRecursoH.Rows[i].Cells[1].Value.ToString())
+                    {
+                        MessageBox.Show("Operario ya ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
+                }
+
                 dgRecursoH.Rows.Add(1);
                 dgRecursoH.Rows[dgRecursoH.RowCount - 1].Cells[0].Value = 0;
                 dgRecursoH.Rows[dgRecursoH.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
@@ -353,31 +437,31 @@ namespace TRAZAAR
         }
         private bool valido()
         {
-            if (txtNombreTProceso.Text == "")
+            if (cmbTProceso.SelectedIndex == 0)
             {
                 MessageBox.Show("Hay Datos Sin completar (Tipo de Proceso)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 cmbTProceso.Focus();
                 return false;
             }
             
-            if (chekGenArt.Checked == false)
-            {
-                if (txtCodProceso.Text == "")
-                {
-                    MessageBox.Show("Hay Datos Sin completar (Codigo de Proceso)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtCodProceso.Focus();
-                    return false;
-                }
+            //if (chekGenArt.Checked == false)
+            //{
+            //    if (txtCodProceso.Text == "")
+            //    {
+            //        MessageBox.Show("Hay Datos Sin completar (Codigo de Proceso)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //        txtCodProceso.Focus();
+            //        return false;
+            //    }
 
-            }
+            //}
             else
             {
-                if (txtBuscar.Text == "")
-                {
-                    MessageBox.Show("Hay Datos Sin completar (Codigo de Producto)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txtBuscar.Focus();
-                    return false;
-                }
+                //if (txtBuscar.Text == "")
+                //{
+                //    MessageBox.Show("Hay Datos Sin completar (Codigo de Producto)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //    txtBuscar.Focus();
+                //    return false;
+                //}
 
                 if (cmbAlmacen.SelectedIndex == 0)
                 {
@@ -386,20 +470,14 @@ namespace TRAZAAR
                     return false;
                 }
 
-
             }
-            if (txtNombreArt.Text == "")
+            if (TxtNombre.Text == "")
             {
                 MessageBox.Show("Hay Datos Sin completar (Nombre Proceso)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtNombreArt.Focus();
+                TxtNombre.Focus();
                 return false;
             }
-            if (txtProCanti.Text == "")
-            {
-                MessageBox.Show("Hay Datos Sin completar (Cantidad)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtProCanti.Focus();
-                return false;
-            }
+            
 
             if (dgMPrima.RowCount==0 && dgMaquinas.RowCount==0 && dgRecursoH.RowCount == 0)
             {
@@ -412,15 +490,13 @@ namespace TRAZAAR
 
             }
 
-
             return true;
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            switch (MODO)
+            switch (Tipo)
             {
-                case "NUEVO":
-                    
+                case "NUEVO": 
                     if (valido() == true)
                     {
                         string[] msg=alta();
@@ -437,14 +513,11 @@ namespace TRAZAAR
                             this.Close();
                             return;
                         }
-                        
                     }
                     else
                     {
                         return;
                     }
-
-
                     break;
                 case "MODIFICACION":
                     Console.WriteLine("Two");
@@ -464,33 +537,17 @@ namespace TRAZAAR
             try
             {
                 //cabecera PROCPRODH
-                if (chekGenArt.Checked == false)
-                {
-                    lst.Add(new ClsParametros("@CODIGO", txtCodProceso.Text));
-                    lst.Add(new ClsParametros("@GENARTICULO", 0));
-                    lst.Add(new ClsParametros("@ARTI_ID", 0));
-                    lst.Add(new ClsParametros("@RESULTADO_ALMACEN_ID", 0));
-
-                }
-                else
-                {
-                  lst.Add(new ClsParametros("@CODIGO", txtBuscar.Text));
+            
+                  lst.Add(new ClsParametros("@CODIGO", cmbTProceso.Text));
                   lst.Add(new ClsParametros("@GENARTICULO", 1));
-                  lst.Add(new ClsParametros("@ARTI_ID", Convert.ToInt32(txtIDProd.Text)));
                   lst.Add(new ClsParametros("@RESULTADO_ALMACEN_ID", Convert.ToInt32(cmbAlmacen.SelectedValue)));
-                }
-                lst.Add(new ClsParametros("@NOMBRE", txtNombreArt.Text));
+               
+                lst.Add(new ClsParametros("@NOMBRE", TxtNombre.Text));
                 lst.Add(new ClsParametros("@TPROCESO_ID",cmbTProceso.SelectedIndex));
-                lst.Add(new ClsParametros("@CANTIDAD", Convert.ToDouble(txtProCanti.Text)));
                 lst.Add(new ClsParametros("@COSTO_TOTAL", CostoTotal));
-                if (chekGenArt.Checked == false)
-                {
-                    lst.Add(new ClsParametros("@RESERVASTOCK", 0));
-                }
-                else
-                {
+             
                     lst.Add(new ClsParametros("@RESERVASTOCK", 1));
-                }
+             
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
                 M.EjecutarSP("sp_alta_ProcesoH", ref lst);              
@@ -594,22 +651,9 @@ namespace TRAZAAR
 
         private void dg_resultado()
         {
-
-            dgResultado.Rows.Clear();
-            dgResultado.Rows.Add(1);
-            if (chekGenArt.Checked == false)
-            {
-               dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = txtCodProceso.Text;
-            }
-            else
-            {  
-               dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = txtBuscar.Text;
-            }
-
-            
-            dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value =txtNombreArt.Text;
-            dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = txtProCanti.Text;
-
+            //dgResultado.Rows.Clear();
+            //dgResultado.Rows.Add(1);
+            //dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value =TxtNombre.Text;
         }
 
         private void btnMenosMQ_Click(object sender, EventArgs e)
@@ -632,6 +676,52 @@ namespace TRAZAAR
             {
 
                 dgRecursoH.Rows.RemoveAt(dgRecursoH.CurrentRow.Index);
+                treresumen();
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un Item para Eliminar.", "SystemCenter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnMasR_Click(object sender, EventArgs e)
+        {
+            FrmAgregarItem _FrmAgregarItem = new FrmAgregarItem
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                Grilla = "MATERIAPRIMA"
+            };
+            if (_FrmAgregarItem.ShowDialog() == DialogResult.OK)
+            {
+                for (int i = 0; i < dgResultado.RowCount; i++)
+                {
+                    if (_FrmAgregarItem.Codigo == dgResultado.Rows[i].Cells[1].Value.ToString())
+                    {
+                        MessageBox.Show("Código ya ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+
+                }
+
+                dgResultado.Rows.Add(1);
+                dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = 0;
+                dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
+                dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value = _FrmAgregarItem.Descrip;
+                dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = _FrmAgregarItem.Cantidad;
+                // dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
+                //dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value.ToString())* Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value.ToString());
+                dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = _FrmAgregarItem.id;
+
+            }
+            treresumen();
+        }
+
+        private void btnMenosR_Click(object sender, EventArgs e)
+        {
+            if (dgResultado.SelectedRows.Count > 0)
+            {
+
+                dgResultado.Rows.RemoveAt(dgResultado.CurrentRow.Index);
                 treresumen();
             }
             else

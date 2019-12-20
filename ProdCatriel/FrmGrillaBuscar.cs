@@ -44,7 +44,7 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@combo", _combo));
                 lst.Add(new ClsParametros("@filtro",filtro));
                 //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
-                dt = M.Listado("sp_CargaCombos2", lst);
+                dt = M.Listado("sp_CargaCombos", lst);
                 Dgprincipal.DataSource = dt;
                 //DgIngreso.AutoResizeColumns(Fill);
 

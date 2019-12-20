@@ -29,7 +29,6 @@ namespace TRAZAAR
             //Tipo = this.Text;
             Tipo = this.Text.Split()[0];
             id = Convert.ToInt32(this.Text.Split()[2]);
-            Cargarcombo("TIPOALMACEN", cmbTipo);
             Inicio();
 
         }
@@ -37,14 +36,7 @@ namespace TRAZAAR
             
             TxtCodigo.Text = "";
             TxtDescripcion.Text = "";
-            TxtUbicacion.Text = "";
             TxtObs.Text = "";
-            TxtKgMax.Text = "";
-            cmbTipo.SelectedValue = 1;
-            TxtTMin.Text= "";
-            TxtTMax.Text= "";
-            TxtHMin.Text= "";
-            TxtHMax.Text= "";
         }
 
 
@@ -55,18 +47,20 @@ namespace TRAZAAR
                 id = 0;
                 limpiarObjetos();
                 chekActivo.Checked = true;
-
+                groupBox1.Enabled = true;
             }
             if (Tipo == "MODIFICAR")
             {
+                groupBox1.Enabled = true;
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "ALMACENES"));
+                    lst.Add(new ClsParametros("@listado", "TIPOPRODUCTO"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@DeBaja", ""));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
                     dt = M.Listado("SP_LISTADOS_PRODUCCION", lst);
@@ -75,22 +69,15 @@ namespace TRAZAAR
                        
                        TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
                        TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                       TxtUbicacion.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
+                       TxtObs.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
                        TxtObs.Text= dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
-                       TxtKgMax.Text= dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
-                       cmbTipo.SelectedValue= dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                       TxtTMin.Text= dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                       TxtTMax.Text= dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                       TxtHMin.Text= dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                       TxtHMax.Text= dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
-
-                        if (dt.Rows[0][10].ToString() == "N")
+                        if (dt.Rows[0][4].ToString() == "N")
                         {
-                            chekActivo.Checked = false;
+                            chekActivo.Checked = true;
                         }
                         else
                         {
-                            chekActivo.Checked = true;
+                            chekActivo.Checked = false;
                         }
                     }
                 }
@@ -107,9 +94,10 @@ namespace TRAZAAR
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "ALMACENES"));
+                    lst.Add(new ClsParametros("@listado", "TIPOPRODUCTO"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@DeBaja", ""));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
                     dt = M.Listado("SP_LISTADOS_PRODUCCION", lst);
@@ -117,22 +105,15 @@ namespace TRAZAAR
                     {
                         TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
                         TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                        TxtUbicacion.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
-                        TxtObs.Text = dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
-                        TxtKgMax.Text = dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
-                        cmbTipo.SelectedValue = dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                        TxtTMin.Text = dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                        TxtTMax.Text = dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                        TxtHMin.Text = dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                        TxtHMax.Text = dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
-
-                        if (dt.Rows[0][10].ToString() == "N")
+                        TxtObs.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
+                        
+                        if (dt.Rows[0][4].ToString() == "N")
                         {
-                            chekActivo.Checked = false;
+                            chekActivo.Checked = true;
                         }
                         else
                         {
-                            chekActivo.Checked = true;
+                            chekActivo.Checked = false;
                         }
                     }
                 }
@@ -140,7 +121,7 @@ namespace TRAZAAR
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
+                groupBox1.Enabled = false;
             }
         }
         private void Cargarcombo(string combo, ComboBox _combo)
@@ -175,37 +156,19 @@ namespace TRAZAAR
 
             if (TxtCodigo.Text == "")
             {
-                MessageBox.Show("El Campo Nombre NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo Codigo NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtCodigo.Focus();
                 return false;
             }
 
             if (TxtDescripcion.Text == "")
             {
-                MessageBox.Show("El Campo Apellido NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Campo Descripcion NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 TxtDescripcion.Focus();
                 return false;
             }
-            if (cmbTipo.SelectedIndex == 0)
-            {
-                MessageBox.Show("Hay Datos Sin completar (Perfil)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                cmbTipo.Focus();
-                return false;
-            }
-            if (TxtUbicacion.Text == "")
-            {
-                MessageBox.Show("El Campo Nombre de Usuario NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                TxtDescripcion.Focus();
-                return false;
-            }
-            if (TxtTMin.Text == "")
-            {
-                MessageBox.Show("El Campo Contraseña NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                TxtDescripcion.Focus();
-                return false;
-            }
-
-            return true;
+           
+             return true;
 
         }
         private String[] AbmUser(string tipo)
@@ -218,32 +181,25 @@ namespace TRAZAAR
             {
                 //cabecera PROCPRODH Convert.ToInt32(cmbPerfil.SelectedValue)
                 lst.Add(new ClsParametros("@Tipo", Tipo));
-                lst.Add(new ClsParametros("@ALMACEN_ID", id));
-                lst.Add(new ClsParametros("@ALMACEN_CODIGO", TxtCodigo.Text));
-                lst.Add(new ClsParametros("@ALMACEN_DESCRIPCION", TxtDescripcion.Text));
-                lst.Add(new ClsParametros("@ALMACEN_DOMICILIO", TxtUbicacion.Text));
-                lst.Add(new ClsParametros("@ALMACEN_OBS", TxtObs.Text));
-                lst.Add(new ClsParametros("@ALMACEN_CAPACIDADPESO", Convert.ToDouble(TxtKgMax.Text)));
-                lst.Add(new ClsParametros("@ALMACENTIPO_CODIGO", cmbTipo.SelectedValue));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMIN", Convert.ToDouble(TxtTMin.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMAX", Convert.ToDouble(TxtTMax.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMIN", Convert.ToDouble(TxtHMin.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMAX", Convert.ToDouble(TxtHMax.Text)));
+                lst.Add(new ClsParametros("@ID", id));
+                lst.Add(new ClsParametros("@CODIGO", TxtCodigo.Text));
+                lst.Add(new ClsParametros("@DESCRIPCION", TxtDescripcion.Text));
+                lst.Add(new ClsParametros("@OBS", TxtObs.Text));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 if (chekActivo.Checked == true)
                 { 
-                    lst.Add(new ClsParametros("@ALMACEN_DEBAJA", "N"));
+                    lst.Add(new ClsParametros("@DEBAJA", "N"));
                 }
                 else
                 {
-                    lst.Add(new ClsParametros("@ALMACEN_DEBAJA", "S"));
+                    lst.Add(new ClsParametros("@DEBAJA", "S"));
                 }
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("sp_AbmAlmacen", ref lst);
+                M.EjecutarSP("sp_AddTipoproducto", ref lst);
                 msj = new string[2];
-                msj[0] = lst[14].Valor.ToString();
-                msj[1] = lst[15].Valor.ToString();
+                msj[0] = lst[7].Valor.ToString();
+                msj[1] = lst[8].Valor.ToString();
             }
 
             catch (Exception ex)

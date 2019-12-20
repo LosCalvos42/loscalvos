@@ -88,19 +88,19 @@ namespace TRAZAAR
 
         private void Dgprincipal_DoubleClick(object sender, EventArgs e)
         {
-            FrmDefinicionProcesosDetalle _FrmDefinicionProcesosDetalle =new FrmDefinicionProcesosDetalle();
+            FrmAddProcesos _FrmDefinicionProcesosDetalle =new FrmAddProcesos();
             _FrmDefinicionProcesosDetalle.StartPosition = FormStartPosition.CenterScreen;
             //_FrmInformeDespostada.ParentForm;
-            _FrmDefinicionProcesosDetalle.ID= Dgprincipal.CurrentRow.Cells[7].Value.ToString();
+            _FrmDefinicionProcesosDetalle.id= Convert.ToInt32(Dgprincipal.CurrentRow.Cells[7].Value);
             _FrmDefinicionProcesosDetalle.ShowDialog();
         }
 
         private void mnuevo_Click(object sender, EventArgs e)
         {
-            FrmDefinicionProcesosDetalle _FrmDefinicionProcesosDetalle = new FrmDefinicionProcesosDetalle();
+            FrmAddProcesos _FrmDefinicionProcesosDetalle = new FrmAddProcesos();
 
             _FrmDefinicionProcesosDetalle.StartPosition = FormStartPosition.CenterScreen;
-            _FrmDefinicionProcesosDetalle.MODO = "NUEVO";
+            _FrmDefinicionProcesosDetalle.Tipo = "NUEVO";
             _FrmDefinicionProcesosDetalle.ShowDialog();
             
         }

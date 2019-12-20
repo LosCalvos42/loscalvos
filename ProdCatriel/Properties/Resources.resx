@@ -139,6 +139,9 @@
   <data name="cmd-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cmd-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tbuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tbuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="Configuracion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Configuracion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tmenos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tmenos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="camionblanco2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\camionblanco2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +220,8 @@
   <data name="aceptar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aceptar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buscar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trabajos-elabotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imagenes\32\trabajos-elabotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoLosCalvosGris" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoLosCalvosGris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,8 +247,8 @@
   <data name="search-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inicioTra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inicioTra.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="small-load" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\small-load.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,6 +274,9 @@
   <data name="Perfiles-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Perfiles-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logoUI2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoUI21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -289,20 +298,20 @@
   <data name="pdf32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pdf32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-soporte-informático-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-soporte-informático-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="gargando2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gargando2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="goto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\goto.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gargando4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gargando4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ProductosB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ProductosB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="edit--32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit--32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="buscar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,8 +340,8 @@
   <data name="icons8-shutdown-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-shutdown-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-automation-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-automation-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Normal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-unchecked-checkbox-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-unchecked-checkbox-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,8 +355,8 @@
   <data name="aceptarBlanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aceptarBlanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dispositivos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dispositivos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gargando4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gargando4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="devices-96" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\devices-96.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -375,6 +384,9 @@
   </data>
   <data name="KG" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-automation-32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-automation-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gargando3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gargando3.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -409,6 +421,9 @@
   <data name="trans2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\imagenes\32\trans2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="edit--32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit--32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="permisos32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\permisos32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -436,14 +451,14 @@
   <data name="logoLosCalvosGris3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoLosCalvosGris3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trabajos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\imagenes\32\trabajos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new logo6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Procesos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Procesos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -451,11 +466,11 @@
   <data name="ping" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ping.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tmas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tmas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8-soporte-informático-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-soporte-informático-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="INICIOGIF1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\INICIOGIF1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -526,8 +541,11 @@
   <data name="connect_established" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\connect_established.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Normal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="trabajos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imagenes\32\trabajos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cargandotrazaar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cargandotrazaar.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="macaroons-icon32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\imagenes\32\macaroons-icon32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -535,8 +553,11 @@
   <data name="icons8-print-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-print-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trabajos-elabotros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\imagenes\32\trabajos-elabotros.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8-soporte-informático-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-soporte-informático-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mercaderia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mercaderia.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -580,8 +601,8 @@
   <data name="maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maximize1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-soporte-informático-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-soporte-informático-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dispositivos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dispositivos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-work-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-work-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -592,7 +613,7 @@
   <data name="merma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\merma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="estado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\estado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tsearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tsearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

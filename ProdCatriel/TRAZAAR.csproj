@@ -150,17 +150,17 @@
     <Compile Include="FrmAddTipoProducto.designer.cs">
       <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddFamilia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAddFamilia.designer.cs">
-      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAddGrupoFamilia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAddGrupoFamilia.designer.cs">
       <DependentUpon>FrmAddGrupoFamilia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddFamilia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddFamilia.designer.cs">
+      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddGrupoPruducto.cs">
       <SubType>Form</SubType>
@@ -318,11 +318,11 @@
     <Compile Include="FrmDefinicionProcesos.Designer.cs">
       <DependentUpon>FrmDefinicionProcesos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDefinicionProcesosDetalle.cs">
+    <Compile Include="FrmAddProcesos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDefinicionProcesosDetalle.Designer.cs">
-      <DependentUpon>FrmDefinicionProcesosDetalle.cs</DependentUpon>
+    <Compile Include="FrmAddProcesos.Designer.cs">
+      <DependentUpon>FrmAddProcesos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEntrada.cs">
       <SubType>Form</SubType>
@@ -515,11 +515,11 @@
     <EmbeddedResource Include="FrmAddTipoProducto.resx">
       <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddFamilia.resx">
-      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddGrupoFamilia.resx">
       <DependentUpon>FrmAddGrupoFamilia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddFamilia.resx">
+      <DependentUpon>FrmAddFamilia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddGrupoPruducto.resx">
       <DependentUpon>FrmAddGrupoPruducto.cs</DependentUpon>
@@ -603,8 +603,8 @@
       <DependentUpon>FrmDefinicionProcesos.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDefinicionProcesosDetalle.resx">
-      <DependentUpon>FrmDefinicionProcesosDetalle.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddProcesos.resx">
+      <DependentUpon>FrmAddProcesos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEntrada.resx">
       <DependentUpon>FrmEntrada.cs</DependentUpon>
@@ -854,6 +854,13 @@
     <None Include="Resources\gargando3.gif" />
     <None Include="Resources\gargando4.gif" />
     <None Include="Resources\estado.png" />
+    <None Include="Resources\inicioTra.gif" />
+    <None Include="Resources\Procesos.png" />
+    <Content Include="Resources\cargandotrazaar.gif" />
+    <None Include="Resources\Tmas.png" />
+    <None Include="Resources\Tmenos.png" />
+    <None Include="Resources\Tbuscar.png" />
+    <None Include="Resources\Tsearch.png" />
     <Content Include="TRACING.ico" />
     <None Include="Resources\pdf32.png" />
     <None Include="Resources\pdf2.png" />

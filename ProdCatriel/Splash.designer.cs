@@ -44,7 +44,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.INICIOGIF1;
+            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.cargandotrazaar;
             this.pictureBox1.Location = new System.Drawing.Point(-13, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(526, 303);
@@ -54,7 +54,7 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(169)))), ((int)(((byte)(244)))));
+            this.btncerrar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btncerrar.Image = ((System.Drawing.Image)(resources.GetObject("btncerrar.Image")));
             this.btncerrar.Location = new System.Drawing.Point(481, 5);
@@ -86,9 +86,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer tmr;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btncerrar;
     }
 }
