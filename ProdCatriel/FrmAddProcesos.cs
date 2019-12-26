@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -49,115 +50,203 @@ namespace TRAZAAR
             dgMaquinas.Rows.Clear();
             dgRecursoH.Rows.Clear();
             dgResultado.Rows.Clear();
+            groupBox1.Enabled = true;
+            btnMasMP.Enabled = true;
+            btnMenosMP.Enabled = true;
+            btnMasMQ.Enabled = true;
+            btnMenosMQ.Enabled = true;
+            btnMasOP.Enabled = true;
+            btnMenosOP.Enabled = true;
+            btnMasR.Enabled = true;
+            btnMenosR.Enabled = true;
+            BtnMasC.Enabled = true;
+            BtnMenosC.Enabled = true;
+            tbProcesoDetalle.SelectedTab = recursos;
         }
         private void inicio()
         {
-            switch (Tipo)
+            if (Tipo == "NUEVO")
             {
-                case "NUEVO":
-                    
-                    id = 0;
-                    Console.WriteLine("One");
-                    break;
-                case "MODIFICAR":
-                    ClsManejador M = new ClsManejador();
-                    DataTable dt = new DataTable();
-                    List<ClsParametros> lst = new List<ClsParametros>();
-                    try
+
+                id = 0;
+                ChekActivo.Checked = true;
+            }
+            if (Tipo == "MODIFICAR")
+            {
+                ClsManejador M = new ClsManejador();
+                DataTable dt = new DataTable();
+                List<ClsParametros> lst = new List<ClsParametros>();
+                try
+                {
+                    lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@tipo", "CABECERA"));
+                    //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
+                    //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
+                    dt = M.Listado("SP_ListadoProcesos", lst);
+                    if (dt.Rows.Count > 0)
                     {
-                        lst.Add(new ClsParametros("@id", id));
-                        lst.Add(new ClsParametros("@tipo", "CABECERA"));
-                        //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
-                        //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
-                        dt = M.Listado("SP_ListadoProcesos", lst);
-                        if (dt.Rows.Count > 0)
+                        txtCodProceso.Text = dt.Rows[0][1].ToString();
+                        TxtNombre.Text = dt.Rows[0][2].ToString();
+                        cmbTProceso.SelectedValue = dt.Rows[0][3].ToString();
+                        cmbAlmacen.SelectedValue = dt.Rows[0][4].ToString();
+                        if (dt.Rows[0][5].ToString() == "S")
                         {
-                            txtCodProceso.Text = dt.Rows[0][1].ToString();
-                            TxtNombre.Text = dt.Rows[0][2].ToString();
-                            cmbTProceso.SelectedValue = dt.Rows[0][3].ToString();
-                            cmbAlmacen.SelectedValue = dt.Rows[0][4].ToString();
-                            if (dt.Rows[0][5].ToString() == "S")
+                            ChekCtMerma.Checked = true;
+                        }
+                        else
+                        {
+                            ChekCtMerma.Checked = false;
+                        }
+                        CmbEstado.SelectedValue = dt.Rows[0][6].ToString();
+                        TxtOsb.Text = dt.Rows[0][7].ToString();
+                        if (dt.Rows[0][8].ToString() == "N")
+                        {
+                            ChekActivo.Checked = true;
+                        }
+                        else
+                        {
+                            ChekActivo.Checked = false;
+                        }
+                    }
+                    lst.Clear();
+                    lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@tipo", "DETALLE"));
+                    //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
+                    //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
+                    dt = M.Listado("SP_ListadoProcesos", lst);
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "E")
                             {
-                                ChekCtMerma.Checked = true;
+                                dgMPrima.Rows.Add(1);
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
                             }
-                            else
+                            if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "S")
                             {
-                                ChekCtMerma.Checked = false;
+                                dgResultado.Rows.Add(1);
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
                             }
-                            CmbEstado.SelectedValue = dt.Rows[0][6].ToString();
-                            TxtOsb.Text = dt.Rows[0][7].ToString();
-                            if (dt.Rows[0][8].ToString() == "N")
+                            if (dt.Rows[i][5].ToString() == "MAQ")
                             {
-                                ChekActivo.Checked = true;
-                            }
-                            else
-                            {
-                                ChekActivo.Checked = false;
+                                dgMaquinas.Rows.Add(1);
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
                             }
                         }
-                        lst.Clear();
-                        lst.Add(new ClsParametros("@id", id));
-                        lst.Add(new ClsParametros("@tipo", "DETALLE"));
-                        //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
-                        //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
-                        dt = M.Listado("SP_ListadoProcesos", lst);
-                        if (dt.Rows.Count > 0)
-                        {
-                            for (int i = 0; i < dt.Rows.Count; i++)
-                            {
-                                if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString()=="E")
-                                {
-                                    dgMPrima.Rows.Add(1);
-                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
-                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
-                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
-                                    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
-                                }
-                                if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "S")
-                                {
-                                    dgResultado.Rows.Add(1);
-                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
-                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
-                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
-                                    dgResultado.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
-                                }
-                                if (dt.Rows[i][5].ToString() == "MAQ")
-                                {
-                                    dgMaquinas.Rows.Add(1);
-                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
-                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
-                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
-                                    dgMaquinas.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
-                                }
-
-                                //if (dt.Rows[i][4].ToString() == "MP")
-                                //{
-                                //    dgMPrima.Rows.Add(1);
-                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
-                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
-                                //    dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
-
-                                //}
-
-
-                            }
-
-                        }
-
-                        treresumen();
                     }
-                    catch (Exception ex)
+                    treresumen();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (Tipo == "CONSULTAR")
+            {
+                ClsManejador M = new ClsManejador();
+                DataTable dt = new DataTable();
+                List<ClsParametros> lst = new List<ClsParametros>();
+                try
+                {
+                    lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@tipo", "CABECERA"));
+                    //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
+                    //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
+                    dt = M.Listado("SP_ListadoProcesos", lst);
+                    if (dt.Rows.Count > 0)
                     {
-                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtCodProceso.Text = dt.Rows[0][1].ToString();
+                        TxtNombre.Text = dt.Rows[0][2].ToString();
+                        cmbTProceso.SelectedValue = dt.Rows[0][3].ToString();
+                        cmbAlmacen.SelectedValue = dt.Rows[0][4].ToString();
+                        if (dt.Rows[0][5].ToString() == "S")
+                        {
+                            ChekCtMerma.Checked = true;
+                        }
+                        else
+                        {
+                            ChekCtMerma.Checked = false;
+                        }
+                        CmbEstado.SelectedValue = dt.Rows[0][6].ToString();
+                        TxtOsb.Text = dt.Rows[0][7].ToString();
+                        if (dt.Rows[0][8].ToString() == "N")
+                        {
+                            ChekActivo.Checked = true;
+                        }
+                        else
+                        {
+                            ChekActivo.Checked = false;
+                        }
                     }
-
-                    break;
-                case "CONSULTAR":
-                    Console.WriteLine("Other");
-                    break;
+                    lst.Clear();
+                    lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@tipo", "DETALLE"));
+                    dt = M.Listado("SP_ListadoProcesos", lst);
+                    if (dt.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dt.Rows.Count; i++)
+                        {
+                            if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "E")
+                            {
+                                dgMPrima.Rows.Add(1);
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                            }
+                            if (dt.Rows[i][5].ToString() == "MP" && dt.Rows[i][6].ToString() == "S")
+                            {
+                                dgResultado.Rows.Add(1);
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                            }
+                            if (dt.Rows[i][5].ToString() == "MAQ")
+                            {
+                                dgMaquinas.Rows.Add(1);
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[0].Value = dt.Rows[i][0].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[1].Value = dt.Rows[i][2].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[2].Value = dt.Rows[i][3].ToString();
+                                dgMaquinas.Rows[dgMaquinas.RowCount - 1].Cells[3].Value = dt.Rows[i][4].ToString();
+                            }
+                        }
+                    }
+                    treresumen();
+                    groupBox1.Enabled = false;
+                    DesabilitarBotones();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
-
+        private void DesabilitarBotones()
+        {
+            groupBox1.Enabled = false;
+            btnMasMP.Enabled = false;
+            btnMenosMP.Enabled = false;
+            btnMasMQ.Enabled = false;
+            btnMenosMQ.Enabled = false;
+            btnMasOP.Enabled = false;
+            btnMenosOP.Enabled = false;
+            btnMasR.Enabled = false;
+            btnMenosR.Enabled = false;
+            BtnMasC.Enabled = false;
+            BtnMenosC.Enabled = false;
+        }
 
         private void Cargarcombo(string combo,ComboBox _combo)
         {
@@ -168,8 +257,6 @@ namespace TRAZAAR
             {
                 lst.Add(new ClsParametros("@combo", combo));
                 lst.Add(new ClsParametros("@filtro", ""));
-                //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
-                //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
                 dt = M.Listado("sp_CargaCombos", lst);
                 _combo.DataSource = dt;
                 _combo.DisplayMember = "NOMBRE";
@@ -289,17 +376,13 @@ namespace TRAZAAR
                     }
                     
                 }
-
-
+                
                 dgMPrima.Rows.Add(1);
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = 0;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[2].Value = _FrmAgregarItem.Descrip;
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value = _FrmAgregarItem.Cantidad;
-               // dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
-                //dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value.ToString())* Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value.ToString());
                 dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[0].Value = _FrmAgregarItem.id;
-
             }
             treresumen();
         }
@@ -444,32 +527,14 @@ namespace TRAZAAR
                 return false;
             }
             
-            //if (chekGenArt.Checked == false)
-            //{
-            //    if (txtCodProceso.Text == "")
-            //    {
-            //        MessageBox.Show("Hay Datos Sin completar (Codigo de Proceso)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //        txtCodProceso.Focus();
-            //        return false;
-            //    }
-
-            //}
             else
             {
-                //if (txtBuscar.Text == "")
-                //{
-                //    MessageBox.Show("Hay Datos Sin completar (Codigo de Producto)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                //    txtBuscar.Focus();
-                //    return false;
-                //}
-
                 if (cmbAlmacen.SelectedIndex == 0)
                 {
                     MessageBox.Show("Hay Datos Sin completar (Almacen De Resultado)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     cmbAlmacen.Focus();
                     return false;
                 }
-
             }
             if (TxtNombre.Text == "")
             {
@@ -477,8 +542,6 @@ namespace TRAZAAR
                 TxtNombre.Focus();
                 return false;
             }
-            
-
             if (dgMPrima.RowCount==0 && dgMaquinas.RowCount==0 && dgRecursoH.RowCount == 0)
             {
                 //if (MessageBox.Show("¿Confirma Que Desea Grabar el Proceso sin ningún RECURSO?", "Grabar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -494,152 +557,124 @@ namespace TRAZAAR
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            switch (Tipo)
+
+            if (Tipo == "MODIFICAR")
             {
-                case "NUEVO": 
-                    if (valido() == true)
+                if (MessageBox.Show("¿Confirma que desea Modificar El Registro?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            if (Tipo == "CONSULTAR")
+            {
+                DialogResult = DialogResult.No;
+                this.Close();
+                return;
+            }
+            try
+            {
+                if (valido() == true)
+                {
+                    string[] msg = ABMPROCESO(Tipo);
+
+                    if (msg[0] == "0")
                     {
-                        string[] msg=alta();
 
-                        if (msg[0]=="0")
-                        {
-
-                            MessageBox.Show(msg[1], "Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                        }
-                        else
-                        {
-                            
-                            MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-                            this.Close();
-                            return;
-                        }
+                        MessageBox.Show(msg[1], "Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                        return;
                     }
                     else
                     {
+
+                        MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                        DialogResult = DialogResult.Yes;
+                        this.Close();
                         return;
                     }
-                    break;
-                case "MODIFICACION":
-                    Console.WriteLine("Two");
-                    Console.WriteLine("Two");
-                    break;
-                case "ELIMINAR":
-                    Console.WriteLine("Other");
-                    break;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private String[] alta()
+        private String[] ABMPROCESO(string tipo)
         {
             ClsManejador M = new ClsManejador();
             string[] msj;
             List<ClsParametros> lst = new List<ClsParametros>();
+            List<ClsParametros> lst2 = new List<ClsParametros>();
             try
             {
-                //cabecera PROCPRODH
-            
-                  lst.Add(new ClsParametros("@CODIGO", cmbTProceso.Text));
-                  lst.Add(new ClsParametros("@GENARTICULO", 1));
-                  lst.Add(new ClsParametros("@RESULTADO_ALMACEN_ID", Convert.ToInt32(cmbAlmacen.SelectedValue)));
-               
-                lst.Add(new ClsParametros("@NOMBRE", TxtNombre.Text));
-                lst.Add(new ClsParametros("@TPROCESO_ID",cmbTProceso.SelectedIndex));
-                lst.Add(new ClsParametros("@COSTO_TOTAL", CostoTotal));
-             
-                    lst.Add(new ClsParametros("@RESERVASTOCK", 1));
-             
+                //cabecera PROCPRODH 
+                lst.Add(new ClsParametros("@Tipo", tipo));
+                lst.Add(new ClsParametros("@ID",id));
+                lst.Add(new ClsParametros("@CODIGO", txtCodProceso.Text));
+                lst.Add(new ClsParametros("@DESCRIPCION",TxtNombre.Text));
+                lst.Add(new ClsParametros("@TIPOPROCESO",cmbTProceso.SelectedValue));
+                lst.Add(new ClsParametros("@ALMACEN", cmbAlmacen.SelectedValue));
+                if (ChekCtMerma.Checked)
+                {
+                    lst.Add(new ClsParametros("@CTRLMERMA", "S"));
+                }
+                else
+                {
+                    lst.Add(new ClsParametros("@CTRLMERMA", "N"));
+                }
+                lst.Add(new ClsParametros("@ESTADO", CmbEstado.SelectedValue));
+                lst.Add(new ClsParametros("@OBSERVACION",TxtOsb.Text));
+                lst.Add(new ClsParametros("@USR_ID", Program.IDUSER));
+                if (ChekActivo.Checked)
+                {
+                    lst.Add(new ClsParametros("@DEBAJA", "N"));
+                }
+                else
+                {
+                    lst.Add(new ClsParametros("@DEBAJA", "S"));
+                }
+                //detalle 
+                var DtDetalle = new DataTable();
+                DtDetalle.Columns.Add("CODIGOPROC",typeof(string));
+                DtDetalle.Columns.Add("CODIGO", typeof(string));
+                DtDetalle.Columns.Add("TIPO", typeof(string));
+                DtDetalle.Columns.Add("DIRECCION", typeof(string));
+
+                for (int i = 0; i < dgMPrima.Rows.Count; i++)
+                {
+                    DtDetalle.Rows.Add(txtCodProceso.Text, dgMPrima.Rows[i].Cells[1].Value, "MP", "E");
+                }
+                for (int i = 0; i < dgMaquinas.Rows.Count; i++)
+                {
+                    DtDetalle.Rows.Add(txtCodProceso.Text, dgMaquinas.Rows[i].Cells[1].Value, "MAQ", "E");
+                }
+                for (int i = 0; i < dgResultado.Rows.Count; i++)
+                {
+                    DtDetalle.Rows.Add(txtCodProceso.Text, dgResultado.Rows[i].Cells[1].Value, "MP", "S");
+                    
+                }
+                String d = DtDetalle.Rows[0][1].ToString();
+                lst.Add(new ClsParametros("@PROCESODETALLE", DtDetalle,SqlDbType.Structured, ParameterDirection.Input));
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("sp_alta_ProcesoH", ref lst);              
+                M.ExecuteSqlTransaction("sp_AddProceso",  lst);
                 msj = new string[2];
-                msj[0] = lst[9].Valor.ToString();
-                msj[1] = lst[10].Valor.ToString();
-
-                ///////
-                /// Lieneas PROCPRODI
-                int idProceso = Convert.ToInt32(msj[0]);
-                if (msj[0] != "0") {
-                    for (int i = 0; i <= dgMPrima.Rows.Count - 1; i++)
-                    {
-                        lst.Clear();
-                        lst.Add(new ClsParametros("@PROCPRODH_ID", idProceso));
-                        lst.Add(new ClsParametros("@PROCRECURSO_ID", "MTPC"));
-                        lst.Add(new ClsParametros("@RECURSO_ID", Convert.ToInt32(dgMPrima.Rows[i].Cells[0].Value.ToString())));
-                        lst.Add(new ClsParametros("@CANTIDAD", Convert.ToDouble(dgMPrima.Rows[i].Cells[3].Value.ToString())));
-                        lst.Add(new ClsParametros("@PRECIO", Convert.ToDouble(dgMPrima.Rows[i].Cells[4].Value.ToString())));
-                        lst.Add(new ClsParametros("@IMPORTE", Convert.ToDouble(dgMPrima.Rows[i].Cells[5].Value.ToString())));
-                        lst.Add(new ClsParametros("@RESULTADO", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
-                        lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));//msj = lst[2].Valor.ToString();
-                        M.EjecutarSP("sp_alta_ProcesoI", ref lst);
-                        //msj = new string[2];
-                        msj[0] = lst[6].Valor.ToString();
-                        msj[1] = lst[7].Valor.ToString();
-                    }
-
-                    for (int i = 0; i <= dgMaquinas.Rows.Count - 1; i++)
-                    {
-                        lst.Clear();
-                        lst.Add(new ClsParametros("@PROCPRODH_ID", idProceso));
-                        lst.Add(new ClsParametros("@PROCRECURSO_ID", "MQ"));
-                        lst.Add(new ClsParametros("@RECURSO_ID", Convert.ToInt32(dgMaquinas.Rows[i].Cells[0].Value.ToString())));
-                        lst.Add(new ClsParametros("@CANTIDAD", Convert.ToDouble(dgMaquinas.Rows[i].Cells[3].Value.ToString())));
-                        lst.Add(new ClsParametros("@PRECIO", Convert.ToDouble(dgMaquinas.Rows[i].Cells[4].Value.ToString())));
-                        lst.Add(new ClsParametros("@IMPORTE", Convert.ToDouble(dgMaquinas.Rows[i].Cells[5].Value.ToString())));
-                        lst.Add(new ClsParametros("@RESULTADO", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
-                        lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));//msj = lst[2].Valor.ToString();
-                        M.EjecutarSP("sp_alta_ProcesoI", ref lst);
-                        //msj = new string[2];
-                        msj[0] = lst[6].Valor.ToString();
-                        msj[1] = lst[7].Valor.ToString();
-                    }
-
-
-                    for (int i = 0; i <= dgRecursoH.Rows.Count - 1; i++)
-                    {
-                        lst.Clear();
-                        lst.Add(new ClsParametros("@PROCPRODH_ID", idProceso));
-                        lst.Add(new ClsParametros("@PROCRECURSO_ID", "RH"));
-                        lst.Add(new ClsParametros("@RECURSO_ID", Convert.ToInt32(dgRecursoH.Rows[i].Cells[0].Value.ToString())));
-                        lst.Add(new ClsParametros("@CANTIDAD", Convert.ToDouble(dgRecursoH.Rows[i].Cells[3].Value.ToString())));
-                        lst.Add(new ClsParametros("@PRECIO", Convert.ToDouble(dgRecursoH.Rows[i].Cells[4].Value.ToString())));
-                        lst.Add(new ClsParametros("@IMPORTE", Convert.ToDouble(dgRecursoH.Rows[i].Cells[5].Value.ToString())));
-                        lst.Add(new ClsParametros("@RESULTADO", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
-                        lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));//msj = lst[2].Valor.ToString();
-                        M.EjecutarSP("sp_alta_ProcesoI", ref lst);
-                        //msj = new string[2];
-                        msj[0] = lst[6].Valor.ToString();
-                        msj[1] = lst[7].Valor.ToString();
-                    }
-                    /// Resultado
-                    lst.Clear();
-                    lst.Add(new ClsParametros("@PROCPRODH_ID", idProceso));
-                    lst.Add(new ClsParametros("@CODIGO", dgResultado.Rows[0].Cells[1].Value.ToString()));
-                    lst.Add(new ClsParametros("@DESCRIPCION", dgResultado.Rows[0].Cells[2].Value.ToString()));
-                    lst.Add(new ClsParametros("@CANTIDAD", Convert.ToDouble(dgResultado.Rows[0].Cells[3].Value.ToString())));
-                    lst.Add(new ClsParametros("@PRECIO", Convert.ToDouble(dgResultado.Rows[0].Cells[4].Value.ToString())));
-                    lst.Add(new ClsParametros("@IMPORTE", Convert.ToDouble(dgResultado.Rows[0].Cells[5].Value.ToString())));
-                    lst.Add(new ClsParametros("@RESULTADO", "", SqlDbType.VarChar, ParameterDirection.Output, 100));
-                    lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                    M.EjecutarSP("sp_alta_ProcesoR", ref lst);
-                    msj[0] = lst[6].Valor.ToString();
-                    msj[1] = lst[7].Valor.ToString();
-                }
+                msj[0] =lst[12].Valor.ToString();
+                msj[1] = lst[13].Valor.ToString();
             }
+
             catch (Exception ex)
             {
                 msj = new string[2];
                 msj[0] = "0";
                 msj[1] = ex.Message;
-
             }
             return msj;
         }
-
         private void btnMenosMP_Click(object sender, EventArgs e)
         {
             if (dgMPrima.SelectedRows.Count > 0)
             {
-
                 dgMPrima.Rows.RemoveAt(dgMPrima.CurrentRow.Index);
                 treresumen();
             }
@@ -648,14 +683,12 @@ namespace TRAZAAR
                 MessageBox.Show("Por favor seleccione un Item para Eliminar.", "SystemCenter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void dg_resultado()
         {
             //dgResultado.Rows.Clear();
             //dgResultado.Rows.Add(1);
             //dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value =TxtNombre.Text;
         }
-
         private void btnMenosMQ_Click(object sender, EventArgs e)
         {
             if (dgMaquinas.SelectedRows.Count > 0)
@@ -669,12 +702,10 @@ namespace TRAZAAR
                 MessageBox.Show("Por favor seleccione un Item para Eliminar.", "SystemCenter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnMenosOP_Click(object sender, EventArgs e)
         {
             if (dgRecursoH.SelectedRows.Count > 0)
             {
-
                 dgRecursoH.Rows.RemoveAt(dgRecursoH.CurrentRow.Index);
                 treresumen();
             }
@@ -683,7 +714,6 @@ namespace TRAZAAR
                 MessageBox.Show("Por favor seleccione un Item para Eliminar.", "SystemCenter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnMasR_Click(object sender, EventArgs e)
         {
             FrmAgregarItem _FrmAgregarItem = new FrmAgregarItem
@@ -700,27 +730,20 @@ namespace TRAZAAR
                         MessageBox.Show("Código ya ingresado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
-
                 }
-
                 dgResultado.Rows.Add(1);
                 dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = 0;
                 dgResultado.Rows[dgResultado.RowCount - 1].Cells[1].Value = _FrmAgregarItem.Codigo;
                 dgResultado.Rows[dgResultado.RowCount - 1].Cells[2].Value = _FrmAgregarItem.Descrip;
                 dgResultado.Rows[dgResultado.RowCount - 1].Cells[3].Value = _FrmAgregarItem.Cantidad;
-                // dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value = _FrmAgregarItem.Costo;
-                //dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[5].Value = Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[3].Value.ToString())* Convert.ToDecimal(dgMPrima.Rows[dgMPrima.RowCount - 1].Cells[4].Value.ToString());
                 dgResultado.Rows[dgResultado.RowCount - 1].Cells[0].Value = _FrmAgregarItem.id;
-
             }
             treresumen();
         }
-
         private void btnMenosR_Click(object sender, EventArgs e)
         {
             if (dgResultado.SelectedRows.Count > 0)
             {
-
                 dgResultado.Rows.RemoveAt(dgResultado.CurrentRow.Index);
                 treresumen();
             }

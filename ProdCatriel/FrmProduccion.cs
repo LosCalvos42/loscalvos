@@ -311,7 +311,7 @@ namespace TRAZAAR
             CheckForIllegalCrossThreadCalls = false;
             FrmListados _FrmListados = new FrmListados();
             FrmAddProcesos _FrmAddProcesos = new FrmAddProcesos();
-            _FrmListados.Tabla = "PROCESOS";
+            _FrmListados.Tabla = "PROCESO";
             _FrmListados.Listado = "PROCESOS";
             _FrmListados.TituloListado = "Listado de Procesos Productivos";
             _FrmListados.Abm = _FrmAddProcesos;

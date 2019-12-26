@@ -20,6 +20,14 @@ namespace Datos
             Valor = objValor;
             Direccion = ParameterDirection.Input;
         }
+        public ClsParametros(String objNombre, Object objValor, SqlDbType objTipoDato, ParameterDirection objDireccion)
+        {
+            Nombre = objNombre;
+            Valor = objValor;
+            TipoDato = objTipoDato;
+            Direccion = objDireccion;
+        }
+
         public ClsParametros(String objNombre, Object objValor, SqlDbType objTipoDato, ParameterDirection objDireccion, int objTamaño)
         {
             Nombre = objNombre;

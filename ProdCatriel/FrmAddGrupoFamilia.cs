@@ -53,7 +53,7 @@ namespace TRAZAAR
             }
             if (Tipo == "MODIFICAR")
             {
-                groupBox1.Enabled = false;
+                groupBox1.Enabled = true;
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
                 List<ClsParametros> lst = new List<ClsParametros>();

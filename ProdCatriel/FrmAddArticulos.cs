@@ -267,21 +267,7 @@ namespace TRAZAAR
             {
                 if (valido() == true)
                 {
-                    //id = id;
-                    //TxtID.Text = dt.Rows[0][0].ToString(); //A.[ALMACEN_ID] ID
-                    //TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
-                    //TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                    //TxtUbicacion.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
-                    //TxtObs.Text = dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
-                    //TxtKgMax.Text = dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
-                    //cmbTipo.SelectedItem = dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                    //TxtTMin.Text = dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                    //TxtTMax.Text = dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                    //TxtHMin.Text = dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                    //TxtHMax.Text = dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
-                    //Perfil = Convert.ToInt32(cmbPerfil.SelectedValue);
                     string[] msg = AbmUser(Tipo);
-
 
                     if (msg[0] == "0")
                     {

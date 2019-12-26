@@ -132,6 +132,57 @@ namespace Datos
             Desconectar();
             return dt;
         }
+        public void ExecuteSqlTransaction(String NombreSP, List<ClsParametros> lstCabecera)
+        {
+            SqlCommand cmd;
+            SqlTransaction transaction;
 
+            Conectar();
+            cmd = new SqlCommand(NombreSP, conexion);
+            transaction = conexion.BeginTransaction("SampleTransaction");
+            try
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                if (lstCabecera != null)
+                {
+                    for (int i = 0; i < lstCabecera.Count; i++)
+                    {
+                        if (lstCabecera[i].Direccion == ParameterDirection.Input)
+                            cmd.Parameters.AddWithValue(lstCabecera[i].Nombre, lstCabecera[i].Valor);
+                        if (lstCabecera[i].Direccion == ParameterDirection.Output)
+                            cmd.Parameters.Add(lstCabecera[i].Nombre, lstCabecera[i].TipoDato, lstCabecera[i].Tamaño).Direction = ParameterDirection.Output;
+                    }
+                    cmd.Transaction = transaction;
+                    cmd.ExecuteNonQuery();
+                    for (int i = 0; i < lstCabecera.Count; i++)
+                    {
+                        if (cmd.Parameters[i].Direction == ParameterDirection.Output)
+                            lstCabecera[i].Valor = cmd.Parameters[i].Value;
+                    }
+                    transaction.Commit();
+                }
+                Desconectar();
+            }
+            catch (Exception ex)
+            {
+                try
+                {
+                    transaction.Rollback();
+                }
+                catch (Exception ex2)
+                {
+                    // This catch block will handle any errors that may have occurred
+                    // on the server that would cause the rollback to fail, such as
+                    // a closed connection.
+                    Console.WriteLine("Rollback Exception Type: {0}", ex2.GetType());
+                    Console.WriteLine("  Message: {0}", ex2.Message);
+                }
+                throw ex;
+            }
+        }
+                    
     }
 }
+
+    
+
