@@ -84,7 +84,7 @@ namespace TRAZAAR
                 cmbtipojamon.Focus();
                 gh.Enabled = true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Selecciones otro puerto", "Puerto no disponible");
   //MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

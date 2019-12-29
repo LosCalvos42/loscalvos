@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduccion));
             this.menuForm = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Pmaestros = new System.Windows.Forms.ToolStripMenuItem();
             this.PProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.Productos = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +43,8 @@
             this.almacenesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeAlmacenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.procesosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.PProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.PDProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.POdTrabajo = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,8 +56,7 @@
             this.PRecepcion = new System.Windows.Forms.ToolStripMenuItem();
             this.PStock = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procesosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,18 +76,6 @@
             this.menuForm.Size = new System.Drawing.Size(800, 28);
             this.menuForm.TabIndex = 2;
             this.menuForm.Text = "Menu";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 422);
-            this.panel1.TabIndex = 21;
             // 
             // Pmaestros
             // 
@@ -233,6 +221,27 @@
             this.estadosToolStripMenuItem.Text = "&Estados";
             this.estadosToolStripMenuItem.Click += new System.EventHandler(this.estadosToolStripMenuItem_Click);
             // 
+            // procesosToolStripMenuItem
+            // 
+            this.procesosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.procesosToolStripMenuItem1});
+            this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.procesosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.Procesos;
+            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
+            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procesosToolStripMenuItem.Text = "&Procesos";
+            // 
+            // procesosToolStripMenuItem1
+            // 
+            this.procesosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.procesosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.procesosToolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.Procesos;
+            this.procesosToolStripMenuItem1.Name = "procesosToolStripMenuItem1";
+            this.procesosToolStripMenuItem1.Size = new System.Drawing.Size(230, 22);
+            this.procesosToolStripMenuItem1.Text = "&Definición de Procesos";
+            this.procesosToolStripMenuItem1.Click += new System.EventHandler(this.procesosToolStripMenuItem1_Click);
+            // 
             // PProcesos
             // 
             this.PProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -244,8 +253,8 @@
             this.PProcesos.Image = global::TRAZAAR.Properties.Resources.Procesos;
             this.PProcesos.Name = "PProcesos";
             this.PProcesos.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.PProcesos.Size = new System.Drawing.Size(101, 24);
-            this.PProcesos.Text = "&Procesos";
+            this.PProcesos.Size = new System.Drawing.Size(94, 24);
+            this.PProcesos.Text = "&Trabajos";
             // 
             // PDProcesos
             // 
@@ -347,26 +356,17 @@
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
             // 
-            // procesosToolStripMenuItem
+            // panel1
             // 
-            this.procesosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.procesosToolStripMenuItem1});
-            this.procesosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.procesosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.Procesos;
-            this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
-            this.procesosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.procesosToolStripMenuItem.Text = "&Procesos";
-            // 
-            // procesosToolStripMenuItem1
-            // 
-            this.procesosToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.procesosToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.procesosToolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.Procesos;
-            this.procesosToolStripMenuItem1.Name = "procesosToolStripMenuItem1";
-            this.procesosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.procesosToolStripMenuItem1.Text = "&Procesos";
-            this.procesosToolStripMenuItem1.Click += new System.EventHandler(this.procesosToolStripMenuItem1_Click);
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 422);
+            this.panel1.TabIndex = 21;
             // 
             // FrmProduccion
             // 

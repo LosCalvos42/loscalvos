@@ -41,11 +41,13 @@ namespace Datos
 
        }
 
-       public void EnviarEmail() { 
-       //CORREO
-           MailMessage Correo = new MailMessage();
-           Correo.From = new MailAddress("ronetonline@gmail.com");
-           Correo.To.Add(Email);
+       public void EnviarEmail() {
+            //CORREO
+            MailMessage Correo = new MailMessage
+            {
+                From = new MailAddress("ronetonline@gmail.com")
+            };
+            Correo.To.Add(Email);
            Correo.Subject=("RECUPERAR CONTRASEÑA SYSTEM");
            Correo.Body = "hOLA, "+Nombres+" Usted solicito recuperar contraseña\n Su contraseña es: "+Contraseña+" ";
            Correo.Priority = MailPriority.Normal;
@@ -59,7 +61,8 @@ namespace Datos
            {
                ServerMail.Send(Correo);
            }
-           catch (Exception ex) { 
+           catch (Exception)
+            { 
            
            }
            Correo.Dispose();

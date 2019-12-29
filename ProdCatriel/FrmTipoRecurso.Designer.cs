@@ -70,7 +70,7 @@
             // 
             this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::TRAZAAR.Properties.Resources.icons8_pencil_drawing_96;
+            //this.mmodificar.Image = global::TRAZAAR.Properties.Resources.icons8_pencil_drawing_96;
             this.mmodificar.Name = "mmodificar";
             this.mmodificar.Size = new System.Drawing.Size(97, 22);
             this.mmodificar.Text = "Modificar";

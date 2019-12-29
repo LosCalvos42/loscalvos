@@ -40,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -186,29 +187,11 @@
     <Compile Include="FrmAddUserPerfil.designer.cs">
       <DependentUpon>FrmAddUserPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCarnicosDiferencias.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCarnicosDiferencias.designer.cs">
-      <DependentUpon>FrmCarnicosDiferencias.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConfiguracion.designer.cs">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmConsumidoNoCarnicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmConsumidoNoCarnicos.designer.cs">
-      <DependentUpon>FrmConsumidoNoCarnicos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCarnicosCuentaCorriente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCarnicosCuentaCorriente.designer.cs">
-      <DependentUpon>FrmCarnicosCuentaCorriente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngresoCarnicosCalidad.cs">
       <SubType>Form</SubType>
@@ -216,29 +199,11 @@
     <Compile Include="FrmIngresoCarnicosCalidad.designer.cs">
       <DependentUpon>FrmIngresoCarnicosCalidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmIngresoCarnicosTrazabilidad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmIngresoCarnicosTrazabilidad.designer.cs">
-      <DependentUpon>FrmIngresoCarnicosTrazabilidad.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmUtilidades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmUtilidades.Designer.cs">
       <DependentUpon>FrmUtilidades.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReporteProcesosDetalle.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReporteProcesosDetalle.designer.cs">
-      <DependentUpon>FrmReporteProcesosDetalle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReporteProcesos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReporteProcesos.designer.cs">
-      <DependentUpon>FrmReporteProcesos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporteRemitoSalida.cs">
       <SubType>Form</SubType>
@@ -282,12 +247,6 @@
     <Compile Include="FrmListados.Designer.cs">
       <DependentUpon>FrmListados.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmIngresoCarnicos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmIngresoCarnicos.designer.cs">
-      <DependentUpon>FrmIngresoCarnicos.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmReporteBalanceMateriaPrimaStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,18 +258,6 @@
     </Compile>
     <Compile Include="FrmReporteBalanceMateriaPrimaDetalle.Designer.cs">
       <DependentUpon>FrmReporteBalanceMateriaPrimaDetalle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReporteDespostada.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReporteDespostada.designer.cs">
-      <DependentUpon>FrmReporteDespostada.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReporteBalanceMateriaPrima.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReporteBalanceMateriaPrima.designer.cs">
-      <DependentUpon>FrmReporteBalanceMateriaPrima.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDefinicionProcesos.cs">
       <SubType>Form</SubType>
@@ -533,32 +480,14 @@
     <EmbeddedResource Include="FrmAddUserPerfil.resx">
       <DependentUpon>FrmAddUserPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCarnicosDiferencias.resx">
-      <DependentUpon>FrmCarnicosDiferencias.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmConsumidoNoCarnicos.resx">
-      <DependentUpon>FrmConsumidoNoCarnicos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCarnicosCuentaCorriente.resx">
-      <DependentUpon>FrmCarnicosCuentaCorriente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCarnicosCalidad.resx">
       <DependentUpon>FrmIngresoCarnicosCalidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmIngresoCarnicosTrazabilidad.resx">
-      <DependentUpon>FrmIngresoCarnicosTrazabilidad.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmUtilidades.resx">
       <DependentUpon>FrmUtilidades.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteProcesosDetalle.resx">
-      <DependentUpon>FrmReporteProcesosDetalle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteProcesos.resx">
-      <DependentUpon>FrmReporteProcesos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteRemitoSalida.resx">
       <DependentUpon>FrmReporteRemitoSalida.cs</DependentUpon>
@@ -584,20 +513,11 @@
       <DependentUpon>FrmListados.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmIngresoCarnicos.resx">
-      <DependentUpon>FrmIngresoCarnicos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteBalanceMateriaPrimaStock.resx">
       <DependentUpon>FrmReporteBalanceMateriaPrimaStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteBalanceMateriaPrimaDetalle.resx">
       <DependentUpon>FrmReporteBalanceMateriaPrimaDetalle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteDespostada.resx">
-      <DependentUpon>FrmReporteDespostada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteBalanceMateriaPrima.resx">
-      <DependentUpon>FrmReporteBalanceMateriaPrima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDefinicionProcesos.resx">
       <DependentUpon>FrmDefinicionProcesos.cs</DependentUpon>
@@ -686,8 +606,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="RBatea1.rdlc" />
-    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ReporteBatea.resx">
       <DependentUpon>ReporteBatea.cs</DependentUpon>
       <SubType>Designer</SubType>

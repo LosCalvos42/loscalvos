@@ -89,7 +89,7 @@ namespace TRAZAAR
                
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return;
             }
