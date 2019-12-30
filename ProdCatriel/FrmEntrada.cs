@@ -99,11 +99,13 @@ namespace TRAZAAR
         public class Util
         {
 
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1060:MovePInvokesToNativeMethodsClass")]
             [DllImport("kernel32")]
             public static extern int GetPrivateProfileString(string section,
                      string key, string def, StringBuilder retVal,
                 int size, string filePath);
 
+            [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1060:MovePInvokesToNativeMethodsClass")]
             [DllImport("kernel32")]
             public static extern long WritePrivateProfileString(string section,
                 string key, string val, string filePath);
