@@ -35,6 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CmbProceso = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,7 +48,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.CmbProceso = new System.Windows.Forms.ComboBox();
+            this.CmbProducto = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -124,6 +126,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.CmbProducto);
             this.groupBox1.Controls.Add(this.CmbProceso);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -143,12 +147,21 @@
             this.groupBox1.TabIndex = 101;
             this.groupBox1.TabStop = false;
             // 
+            // CmbProceso
+            // 
+            this.CmbProceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
+            this.CmbProceso.FormattingEnabled = true;
+            this.CmbProceso.Location = new System.Drawing.Point(244, 104);
+            this.CmbProceso.Name = "CmbProceso";
+            this.CmbProceso.Size = new System.Drawing.Size(179, 21);
+            this.CmbProceso.TabIndex = 115;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label6.Location = new System.Drawing.Point(302, 169);
+            this.label6.Location = new System.Drawing.Point(302, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 16);
             this.label6.TabIndex = 113;
@@ -159,7 +172,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label5.Location = new System.Drawing.Point(302, 141);
+            this.label5.Location = new System.Drawing.Point(302, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(20, 16);
             this.label5.TabIndex = 112;
@@ -170,7 +183,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label3.Location = new System.Drawing.Point(180, 169);
+            this.label3.Location = new System.Drawing.Point(180, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 111;
@@ -181,7 +194,7 @@
             this.TxtPMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
             this.TxtPMax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPMax.Location = new System.Drawing.Point(244, 169);
+            this.TxtPMax.Location = new System.Drawing.Point(244, 203);
             this.TxtPMax.MaxLength = 6;
             this.TxtPMax.Name = "TxtPMax";
             this.TxtPMax.Size = new System.Drawing.Size(52, 22);
@@ -207,7 +220,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label4.Location = new System.Drawing.Point(206, 141);
+            this.label4.Location = new System.Drawing.Point(206, 175);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 16);
             this.label4.TabIndex = 107;
@@ -218,7 +231,7 @@
             this.TxtPMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
             this.TxtPMin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPMin.Location = new System.Drawing.Point(244, 135);
+            this.TxtPMin.Location = new System.Drawing.Point(244, 169);
             this.TxtPMin.MaxLength = 6;
             this.TxtPMin.Name = "TxtPMin";
             this.TxtPMin.Size = new System.Drawing.Size(52, 22);
@@ -279,15 +292,25 @@
             this.lblCodigo.TabIndex = 101;
             this.lblCodigo.Text = "Proceso:";
             // 
-            // CmbProceso
+            // CmbProducto
             // 
-            this.CmbProceso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
-            this.CmbProceso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CmbProceso.FormattingEnabled = true;
-            this.CmbProceso.Location = new System.Drawing.Point(244, 104);
-            this.CmbProceso.Name = "CmbProceso";
-            this.CmbProceso.Size = new System.Drawing.Size(179, 21);
-            this.CmbProceso.TabIndex = 115;
+            this.CmbProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
+            this.CmbProducto.FormattingEnabled = true;
+            this.CmbProducto.Location = new System.Drawing.Point(244, 131);
+            this.CmbProducto.Name = "CmbProducto";
+            this.CmbProducto.Size = new System.Drawing.Size(179, 21);
+            this.CmbProducto.TabIndex = 120;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.label7.Location = new System.Drawing.Point(176, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 16);
+            this.label7.TabIndex = 121;
+            this.label7.Text = "Producto:";
             // 
             // FrmAddCategoriaMerma
             // 
@@ -334,5 +357,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox CmbProceso;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox CmbProducto;
     }
 }

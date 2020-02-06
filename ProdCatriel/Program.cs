@@ -30,6 +30,10 @@ namespace TRAZAAR
         public static int perfil;
         public static int IDUSER;
 
+        public static string SerialPC { get; set; }
+        public static string HostName { get; set; }
+        public static string IMPRESORAETIQUETA { get; set; }
+
         [STAThread]
 
         static void Main()

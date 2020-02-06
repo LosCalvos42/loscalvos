@@ -53,6 +53,7 @@
             this.pnlserver = new System.Windows.Forms.StatusBarPanel();
             this.pnluser = new System.Windows.Forms.StatusBarPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PPrint = new System.Windows.Forms.StatusBarPanel();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnluser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -298,7 +300,8 @@
             this.pnlempresa,
             this.pnlsistema,
             this.pnlserver,
-            this.pnluser});
+            this.pnluser,
+            this.PPrint});
             this.statusBar.ShowPanels = true;
             this.statusBar.Size = new System.Drawing.Size(912, 27);
             this.statusBar.SizingGrip = false;
@@ -338,6 +341,11 @@
             this.panel1.Size = new System.Drawing.Size(912, 573);
             this.panel1.TabIndex = 17;
             // 
+            // PPrint
+            // 
+            this.PPrint.Icon = ((System.Drawing.Icon)(resources.GetObject("PPrint.Icon")));
+            this.PPrint.Name = "PPrint";
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,6 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnluser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,5 +409,6 @@
         private System.Windows.Forms.Button BtnConsultas;
         private System.Windows.Forms.Label lblNombresoft;
         private System.Windows.Forms.Button BtnUtilidades;
+        private System.Windows.Forms.StatusBarPanel PPrint;
     }
 }

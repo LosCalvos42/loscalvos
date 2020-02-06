@@ -94,11 +94,11 @@ namespace TRAZAAR
 
         private void PDProcesos_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            FrmDefinicionProcesos _FrmDefinicionProcesos = new FrmDefinicionProcesos();
-            _FrmDefinicionProcesos.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmDefinicionProcesos.ShowDialog();
+            //Cursor.Current = Cursors.WaitCursor;
+            //FrmDefinicionProcesos _FrmDefinicionProcesos = new FrmDefinicionProcesos();
+            //_FrmDefinicionProcesos.StartPosition = FormStartPosition.CenterScreen;
+            ////_FrmInformeDespostada.ParentForm;
+            //_FrmDefinicionProcesos.ShowDialog();
         }
 
         private void POdTrabajo_Click(object sender, EventArgs e)

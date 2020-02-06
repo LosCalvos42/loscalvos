@@ -30,11 +30,6 @@ namespace TRAZAAR
 
         private void PStock_Click(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //FormsegundoPlano _FormsegundoPlano = new FormsegundoPlano();
-            //_FormsegundoPlano.StartPosition = FormStartPosition.CenterScreen;
-            ////_FrmInformeDespostada.ParentForm;
-            //_FormsegundoPlano.ShowDialog();
 
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
@@ -43,13 +38,7 @@ namespace TRAZAAR
             _FormsegundoPlano.StartPosition = FormStartPosition.CenterScreen;
             _FormsegundoPlano.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FormsegundoPlano);
-
-
-
-
         }
-
-       
 
         private void PTRecurso_Click(object sender, EventArgs e)
         {
@@ -114,28 +103,23 @@ namespace TRAZAAR
         private void PDProcesos_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-            FrmDefinicionProcesos _FrmDefinicionProcesos = new FrmDefinicionProcesos();
-            _FrmDefinicionProcesos.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmDefinicionProcesos.ShowDialog();
-        }
-
-        private void POdTrabajo_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            FrmOrdenesProduccion _FrmOrdenesProduccion = new FrmOrdenesProduccion();
-            _FrmOrdenesProduccion.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmOrdenesProduccion.ShowDialog();
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListadosProduccion _FrmListadosProduccion = new FrmListadosProduccion();
+            FrmAddOrdenDeTrabajo _FrmAddOrdenDeTrabajo = new FrmAddOrdenDeTrabajo();
+            _FrmListadosProduccion.Tabla = "OTRESUMEN";
+            _FrmListadosProduccion.Listado = "OTRABAJO";
+            _FrmListadosProduccion.TituloListado = "Listado de Ordenes De Trabajo";
+            _FrmListadosProduccion.Fdesde =(DateTime.Now.AddDays(-1)).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Fhasta = (DateTime.Now.AddDays(1)).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Abm = _FrmAddOrdenDeTrabajo;
+            _FrmListadosProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListadosProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListadosProduccion);
         }
 
         private void PSOTrabajo_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-            FrmSeguimientoOrdenesProduccion _FrmSeguimientoOrdenesProduccion = new FrmSeguimientoOrdenesProduccion();
-            _FrmSeguimientoOrdenesProduccion.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmInformeDespostada.ParentForm;
-            _FrmSeguimientoOrdenesProduccion.ShowDialog();
+            
         }
 
         private void PUMedida_Click(object sender, EventArgs e)
@@ -318,6 +302,30 @@ namespace TRAZAAR
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmListados);
+        }
+        private void Permisos()
+        {
+            if (Program.perfil == 5)
+            { 
+                marchivo.Enabled = false;
+                mConfiguracion.Enabled = false;
+            }
+        }
+
+        private void FrmProduccion_Load(object sender, EventArgs e)
+        {
+            Permisos();
+        }
+
+        private void ImpresíonEtqGancherasMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmEtiqGancheras _FrmEtiqGancheras = new FrmEtiqGancheras();
+            _FrmEtiqGancheras.Listado = "PROCESOS";
+            _FrmEtiqGancheras.StartPosition = FormStartPosition.CenterScreen;
+            _FrmEtiqGancheras.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmEtiqGancheras);
         }
     }
 }

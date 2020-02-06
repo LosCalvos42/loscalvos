@@ -79,6 +79,7 @@ namespace TRAZAAR
                 try
                 {
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@Codigo", ""));
                     lst.Add(new ClsParametros("@tipo", "CABECERA"));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
@@ -110,6 +111,7 @@ namespace TRAZAAR
                     }
                     lst.Clear();
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@Codigo", ""));
                     lst.Add(new ClsParametros("@tipo", "DETALLE"));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
@@ -160,6 +162,7 @@ namespace TRAZAAR
                 try
                 {
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@Codigo", ""));
                     lst.Add(new ClsParametros("@tipo", "CABECERA"));
                     //lst.Add(new ClsParametros("@hasta", dtHasta.Value.ToString("yyyyMMdd")));
                     //lst.Add(new ClsParametros("@tipo", radioButton1.Checked));
@@ -191,6 +194,7 @@ namespace TRAZAAR
                     }
                     lst.Clear();
                     lst.Add(new ClsParametros("@id", id));
+                    lst.Add(new ClsParametros("@Codigo", ""));
                     lst.Add(new ClsParametros("@tipo", "DETALLE"));
                     dt = M.Listado("SP_ListadoProcesos", lst);
                     if (dt.Rows.Count > 0)

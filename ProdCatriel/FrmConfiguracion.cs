@@ -63,9 +63,13 @@ namespace TRAZAAR
             AbrirFormEnPanel(_FrmUserPerfiles);
         }
 
-        private void PProductos_Click(object sender, EventArgs e)
+        private void impresorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmImpresoras _FrmImpresoras = new FrmImpresoras();
+            _FrmImpresoras.StartPosition = FormStartPosition.CenterScreen;
+            AbrirFormEnPanel(_FrmImpresoras);
         }
     }
 }

@@ -84,6 +84,10 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BarcodeLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -145,6 +149,24 @@
     <Compile Include="FrmAddEstados.designer.cs">
       <DependentUpon>FrmAddEstados.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEtiqGancheras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEtiqGancheras.designer.cs">
+      <DependentUpon>FrmEtiqGancheras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImpresoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImpresoras.designer.cs">
+      <DependentUpon>FrmImpresoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddOrdenDeTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddOrdenDeTrabajo.designer.cs">
+      <DependentUpon>FrmAddOrdenDeTrabajo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddTipoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +220,12 @@
     </Compile>
     <Compile Include="FrmIngresoCarnicosCalidad.designer.cs">
       <DependentUpon>FrmIngresoCarnicosCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadosProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadosProduccion.Designer.cs">
+      <DependentUpon>FrmListadosProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUtilidades.cs">
       <SubType>Form</SubType>
@@ -258,12 +286,6 @@
     </Compile>
     <Compile Include="FrmReporteBalanceMateriaPrimaDetalle.Designer.cs">
       <DependentUpon>FrmReporteBalanceMateriaPrimaDetalle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDefinicionProcesos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDefinicionProcesos.Designer.cs">
-      <DependentUpon>FrmDefinicionProcesos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddProcesos.cs">
       <SubType>Form</SubType>
@@ -415,7 +437,6 @@
     <Compile Include="FrmUser.designer.cs">
       <DependentUpon>FrmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -460,6 +481,15 @@
     <EmbeddedResource Include="FrmAddEstados.resx">
       <DependentUpon>FrmAddEstados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEtiqGancheras.resx">
+      <DependentUpon>FrmEtiqGancheras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImpresoras.resx">
+      <DependentUpon>FrmImpresoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddOrdenDeTrabajo.resx">
+      <DependentUpon>FrmAddOrdenDeTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddTipoProducto.resx">
       <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,6 +516,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngresoCarnicosCalidad.resx">
       <DependentUpon>FrmIngresoCarnicosCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadosProduccion.resx">
+      <DependentUpon>FrmListadosProduccion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUtilidades.resx">
       <DependentUpon>FrmUtilidades.cs</DependentUpon>
@@ -519,10 +553,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteBalanceMateriaPrimaDetalle.resx">
       <DependentUpon>FrmReporteBalanceMateriaPrimaDetalle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDefinicionProcesos.resx">
-      <DependentUpon>FrmDefinicionProcesos.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddProcesos.resx">
       <DependentUpon>FrmAddProcesos.cs</DependentUpon>
@@ -775,11 +805,21 @@
     <None Include="Resources\estado.png" />
     <None Include="Resources\inicioTra.gif" />
     <None Include="Resources\Procesos.png" />
+    <None Include="Resources\Buscartrz.png" />
+    <None Include="bin\Debug\imagenes\32\BD Insertar.png" />
+    <None Include="bin\Debug\imagenes\32\utilidades.png" />
     <Content Include="Resources\cargandotrazaar.gif" />
     <None Include="Resources\Tmas.png" />
     <None Include="Resources\Tmenos.png" />
     <None Include="Resources\Tbuscar.png" />
     <None Include="Resources\Tsearch.png" />
+    <None Include="Resources\Trabajos-trz.png" />
+    <None Include="Resources\SeguimientoOT.png" />
+    <None Include="Resources\mas32.png" />
+    <None Include="Resources\mass32.png" />
+    <None Include="Resources\Clasificacion.png" />
+    <None Include="Resources\CodBarra.png" />
+    <None Include="Resources\updateTraza.png" />
     <Content Include="TRACING.ico" />
     <None Include="Resources\pdf32.png" />
     <None Include="Resources\pdf2.png" />

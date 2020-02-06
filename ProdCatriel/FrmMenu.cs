@@ -165,13 +165,29 @@ namespace TRAZAAR
             pnluser.AutoSize = StatusBarPanelAutoSize.Contents;
             permisos();
 
+            ClsManejador M = new ClsManejador();
+            DataTable dt = new DataTable();
+            string ssql = @"select TOP(1) DISPIMPRESORA_NOMBRE FROM[TRAZAARDB].[dbo].[DISPIMPRESORAS] I " +
+                                  "INNER JOIN[TRAZAARDB].[dbo].[DISPOSITIVOS] D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
+                                  "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
+                                  "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "'" +
+                                  "AND I.DISPIMPRESORA_ESTADO = 'ON'";
+            dt = M.lisquery(ssql);
+
+            if (dt.Rows.Count == 1)
+            {
+                Program.IMPRESORAETIQUETA = dt.Rows[0][0].ToString();
+                PPrint.Text = Program.IMPRESORAETIQUETA;
+                PPrint.AutoSize = StatusBarPanelAutoSize.Contents;
+            }
+
         }
 
         private void permisos()
         {
             if (Program.perfil != 1)//administrador
             {
-                Btnproduccion.Enabled = false;
+                Btnproduccion.Enabled = true;
                 BtnConfiguracion.Enabled = false;
             }
         }
@@ -189,6 +205,7 @@ namespace TRAZAAR
         private void FrmMenu_Activated(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(64, 69, 76);
+            PPrint.Text = Program.IMPRESORAETIQUETA;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

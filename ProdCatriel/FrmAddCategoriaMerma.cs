@@ -32,6 +32,7 @@ namespace TRAZAAR
             Tipo = this.Text.Split()[0];
             id = Convert.ToInt32(this.Text.Split()[2]);
             Cargarcombo("PROCESO", CmbProceso);
+            Cargarcombo("ARTICULO", CmbProducto);
             Inicio();
 
         }
@@ -76,11 +77,12 @@ namespace TRAZAAR
                        
                        TxtCodigo.Text = dt.Rows[0][1].ToString();
                        TxtDescripcion.Text = dt.Rows[0][2].ToString();
-                       CmbProceso.SelectedValue= dt.Rows[0][3].ToString();
-                        TxtPMin.Text= dt.Rows[0][4].ToString();
-                       TxtPMax.Text= dt.Rows[0][5].ToString();
+                       CmbProducto.SelectedValue = dt.Rows[0][3].ToString();
+                       CmbProceso.SelectedValue= dt.Rows[0][5].ToString();
+                       TxtPMin.Text= dt.Rows[0][6].ToString();
+                       TxtPMax.Text= dt.Rows[0][7].ToString();
                                              
-                        if (dt.Rows[0][6].ToString() == "N")
+                        if (dt.Rows[0][8].ToString() == "N")
                         {
                             chekActivo.Checked = true;
                         }
@@ -114,11 +116,12 @@ namespace TRAZAAR
                     {
                         TxtCodigo.Text = dt.Rows[0][1].ToString();
                         TxtDescripcion.Text = dt.Rows[0][2].ToString();
-                        CmbProceso.SelectedValue = dt.Rows[0][3].ToString();
-                        TxtPMin.Text = dt.Rows[0][4].ToString();
-                        TxtPMax.Text = dt.Rows[0][5].ToString();
+                        CmbProducto.SelectedValue = dt.Rows[0][3].ToString();
+                        CmbProceso.SelectedValue = dt.Rows[0][5].ToString();
+                        TxtPMin.Text = dt.Rows[0][6].ToString();
+                        TxtPMax.Text = dt.Rows[0][7].ToString();
 
-                        if (dt.Rows[0][6].ToString() == "N")
+                        if (dt.Rows[0][8].ToString() == "N")
                         {
                             chekActivo.Checked = true;
                         }
@@ -214,6 +217,7 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@CODIGO", TxtCodigo.Text));
                 lst.Add(new ClsParametros("@DESCRIPCION", TxtDescripcion.Text));
                 lst.Add(new ClsParametros("@PROCESO", CmbProceso.SelectedValue));
+                lst.Add(new ClsParametros("@ARTICULO", CmbProducto.SelectedValue));
                 lst.Add(new ClsParametros("@PMIN", Convert.ToDouble(TxtPMin.Text)));
                 lst.Add(new ClsParametros("@PMAX", Convert.ToDouble(TxtPMax.Text)));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
@@ -229,8 +233,8 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
                 M.EjecutarSP("sp_AddCategoriaMerma", ref lst);
                 msj = new string[2];
-                msj[0] = lst[9].Valor.ToString();
-                msj[1] = lst[10].Valor.ToString();
+                msj[0] = lst[10].Valor.ToString();
+                msj[1] = lst[11].Valor.ToString();
             }
 
             catch (Exception ex)
