@@ -54,7 +54,7 @@ namespace TRAZAAR
             tmr.Stop();
             FrmMenu _FrmMenu = new FrmMenu();
             this.Hide();
-            _FrmMenu.ShowDialog();
+           _FrmMenu.ShowDialog();
             //this.Close();
             System.Environment.Exit(0);
         }

@@ -47,6 +47,7 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@fecha ", Convert.ToInt32(DtDeste.Value.ToString("yyyyMMdd"))));
                 lst.Add(new ClsParametros("@lote", CmbLote.SelectedValue));
                 lst.Add(new ClsParametros("@NRO_PROC", CmbProdProc.SelectedValue));
+                lst.Add(new ClsParametros("@ARTI", CmbProdProc.SelectedValue));
                 dt = M.Listado("SP_OrigenClasificacionImpGancheras", lst);
                 Dgprincipal.Rows.Clear();
 
@@ -173,8 +174,9 @@ namespace TRAZAAR
                 dt = M.Listado("sp_CargaCombos", lst);
                 _combo.DataSource = dt;
                 _combo.DisplayMember = "NOMBRE";
-                _combo.ValueMember = "CODIGO";
+                _combo.ValueMember = "ID";
                 DataRow topItem = dt.NewRow();
+                topItem[0] = 1;
                 topItem[1] = 1;
                 topItem[2] = "-Select-";
                 dt.Rows.InsertAt(topItem, 0);
@@ -196,6 +198,7 @@ namespace TRAZAAR
                 lst.Add(new ClsParametros("@fecha ", Convert.ToInt32(DtDeste.Value.ToString("yyyyMMdd"))));
                 lst.Add(new ClsParametros("@lote", ""));
                 lst.Add(new ClsParametros("@NRO_PROC", CmbProdProc.SelectedValue));
+                lst.Add(new ClsParametros("@arti", CmbProdProc.SelectedValue));
                 dt = M.Listado("SP_OrigenClasificacionImpGancheras", lst);
                 CmbLote.DataSource = null;
 
@@ -239,7 +242,9 @@ namespace TRAZAAR
 
         private void CmbLote_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             Dgprincipal.Rows.Clear();
+            Dgprincipal.Refresh();
             GrupoCate.Enabled =false;
             if (CmbLote.SelectedIndex != 0)
             { 
@@ -247,6 +252,8 @@ namespace TRAZAAR
                 LblLote.Text = CmbLote.SelectedValue.ToString();
                 
             }
+            this.Cursor = Cursors.Default;
+            Dgprincipal.SelectAll();
         }
 
         private void BtnImprimir_Click(object sender, EventArgs e)
@@ -469,15 +476,18 @@ namespace TRAZAAR
 
         private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            CheFalse();
+            this.Cursor = Cursors.WaitCursor;
             Dgprincipal.Rows.Clear();
+            Dgprincipal.Refresh();
             GrupoCate.Enabled = false;
-            if (CmbLote.SelectedIndex > 0)
+            if (CmbLote.SelectedIndex != 0)
             {
                 LlenarGrid();
                 LblLote.Text = CmbLote.SelectedValue.ToString();
 
             }
+            this.Cursor = Cursors.Default;
+            Dgprincipal.SelectAll();
         }
 
         private void button1_Click(object sender, EventArgs e)

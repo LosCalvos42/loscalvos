@@ -377,8 +377,7 @@ namespace TRAZAAR
                     {
                         MessageBox.Show("Materia Prima ya ingresada", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
-                    }
-                    
+                    }  
                 }
                 
                 dgMPrima.Rows.Add(1);

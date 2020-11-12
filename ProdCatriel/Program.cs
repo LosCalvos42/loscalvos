@@ -33,6 +33,7 @@ namespace TRAZAAR
         public static string SerialPC { get; set; }
         public static string HostName { get; set; }
         public static string IMPRESORAETIQUETA { get; set; }
+        public static string BALANZA { get; set; }
 
         [STAThread]
 

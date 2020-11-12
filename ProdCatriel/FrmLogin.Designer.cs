@@ -48,17 +48,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblErrorAcceso = new System.Windows.Forms.Label();
             this.linkpass = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnverPass = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnminimizar = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
@@ -203,6 +206,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lblEmpresa);
             this.panel1.Controls.Add(this.label10);
@@ -221,14 +226,13 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(49, 58);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(147, 32);
+            this.label9.Size = new System.Drawing.Size(90, 32);
             this.label9.TabIndex = 39;
-            this.label9.Text = "TRAZAAR";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblEmpresa
             // 
@@ -296,16 +300,6 @@
             this.label5.Size = new System.Drawing.Size(110, 23);
             this.label5.TabIndex = 19;
             this.label5.Text = "Gestión de";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::TRAZAAR.Properties.Resources.serververde32;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 245);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 19);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
             // 
             // lblErrorAcceso
             // 
@@ -376,6 +370,19 @@
             this.label4.TabIndex = 32;
             this.label4.Text = "___________________________________________________";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F);
+            this.label11.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label11.Location = new System.Drawing.Point(130, 58);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(0, 32);
+            this.label11.TabIndex = 40;
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // btnverPass
             // 
             this.btnverPass.Cursor = System.Windows.Forms.Cursors.Default;
@@ -390,6 +397,25 @@
             this.btnverPass.UseVisualStyleBackColor = true;
             this.btnverPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnverPass_MouseDown);
             this.btnverPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnverPass_MouseUp);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.TRAZAR;
+            this.pictureBox1.Location = new System.Drawing.Point(21, 58);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(202, 30);
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::TRAZAAR.Properties.Resources.serververde32;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 245);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 19);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
             // btnminimizar
             // 
@@ -446,6 +472,7 @@
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnminimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
@@ -484,5 +511,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lblEmpresa;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label11;
     }
 }

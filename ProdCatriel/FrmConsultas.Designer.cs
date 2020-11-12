@@ -29,17 +29,10 @@
         private void InitializeComponent()
         {
             this.menuForm = new System.Windows.Forms.MenuStrip();
-            this.PArchivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.PBalanceMP = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.procesosProductivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.despostadaCatrielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.despostadaTercerosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.otrosProcesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PStock = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajusteKgMprimaCárnicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Pmaestros = new System.Windows.Forms.ToolStripMenuItem();
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuIngSal = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuForm.SuspendLayout();
@@ -49,134 +42,57 @@
             // 
             this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PArchivo,
-            this.Pmaestros,
+            this.mReportes,
             this.Psalir});
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
             this.menuForm.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuForm.Size = new System.Drawing.Size(800, 28);
+            this.menuForm.Size = new System.Drawing.Size(800, 26);
             this.menuForm.TabIndex = 2;
             this.menuForm.Text = "Menu";
             // 
-            // PArchivo
+            // mReportes
             // 
-            this.PArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PBalanceMP,
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem,
-            this.procesosProductivosToolStripMenuItem,
-            this.PStock,
-            this.ajusteKgMprimaCárnicaToolStripMenuItem});
-            this.PArchivo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PArchivo.ForeColor = System.Drawing.Color.White;
-            this.PArchivo.Image = global::TRAZAAR.Properties.Resources.Catriel;
-            this.PArchivo.Name = "PArchivo";
-            this.PArchivo.Size = new System.Drawing.Size(80, 24);
-            this.PArchivo.Text = "&Catriel";
+            this.mReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuIngSal,
+            this.toolStripMenuItem7,
+            this.toolStripMenuItem1});
+            this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mReportes.ForeColor = System.Drawing.Color.White;
+            this.mReportes.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.mReportes.Name = "mReportes";
+            this.mReportes.Size = new System.Drawing.Size(112, 22);
+            this.mReportes.Text = "Producción";
             // 
-            // PBalanceMP
+            // toolStripMenuItem7
             // 
-            this.PBalanceMP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PBalanceMP.ForeColor = System.Drawing.Color.White;
-            this.PBalanceMP.Image = global::TRAZAAR.Properties.Resources._48px_Crystal_Clear_app_kchart;
-            this.PBalanceMP.Name = "PBalanceMP";
-            this.PBalanceMP.Size = new System.Drawing.Size(362, 24);
-            this.PBalanceMP.Text = "Balance de masa de (M.Prima Cárnica)";
-            this.PBalanceMP.Click += new System.EventHandler(this.PBalanceMP_Click);
+            this.toolStripMenuItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem7.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem7.Image = global::TRAZAAR.Properties.Resources.CodBarra;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(233, 22);
+            this.toolStripMenuItem7.Text = "Seguimiento de CodBar";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
-            // ingresoAPlantaMPCárnicaToolStripMenuItem
+            // MenuIngSal
             // 
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.trans2;
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.Name = "ingresoAPlantaMPCárnicaToolStripMenuItem";
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.Size = new System.Drawing.Size(362, 24);
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.Text = "Ingreso A Planta (MP Cárnica)";
-            this.ingresoAPlantaMPCárnicaToolStripMenuItem.Click += new System.EventHandler(this.ingresoAPlantaMPCárnicaToolStripMenuItem_Click);
+            this.MenuIngSal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.MenuIngSal.ForeColor = System.Drawing.Color.White;
+            this.MenuIngSal.Image = global::TRAZAAR.Properties.Resources.IngresoLote;
+            this.MenuIngSal.Name = "MenuIngSal";
+            this.MenuIngSal.Size = new System.Drawing.Size(233, 22);
+            this.MenuIngSal.Text = "Ingreso a Sal";
+            this.MenuIngSal.Click += new System.EventHandler(this.MenuIngSal_Click);
             // 
-            // procesosProductivosToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.procesosProductivosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.procesosProductivosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.despostadaCatrielToolStripMenuItem,
-            this.despostadaTercerosToolStripMenuItem,
-            this.otrosProcesosToolStripMenuItem});
-            this.procesosProductivosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.procesosProductivosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.macaroons_icon32;
-            this.procesosProductivosToolStripMenuItem.Name = "procesosProductivosToolStripMenuItem";
-            this.procesosProductivosToolStripMenuItem.Size = new System.Drawing.Size(362, 24);
-            this.procesosProductivosToolStripMenuItem.Text = "Procesos Productivos";
-            this.procesosProductivosToolStripMenuItem.Click += new System.EventHandler(this.procesosProductivosToolStripMenuItem_Click);
-            // 
-            // despostadaCatrielToolStripMenuItem
-            // 
-            this.despostadaCatrielToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.despostadaCatrielToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.despostadaCatrielToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.ham_icon32;
-            this.despostadaCatrielToolStripMenuItem.Name = "despostadaCatrielToolStripMenuItem";
-            this.despostadaCatrielToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.despostadaCatrielToolStripMenuItem.Text = "Despostada Catriel";
-            this.despostadaCatrielToolStripMenuItem.Click += new System.EventHandler(this.despostadaCatrielToolStripMenuItem_Click);
-            // 
-            // despostadaTercerosToolStripMenuItem
-            // 
-            this.despostadaTercerosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.despostadaTercerosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.despostadaTercerosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.ham_icon32;
-            this.despostadaTercerosToolStripMenuItem.Name = "despostadaTercerosToolStripMenuItem";
-            this.despostadaTercerosToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.despostadaTercerosToolStripMenuItem.Text = "Despostada terceros";
-            // 
-            // otrosProcesosToolStripMenuItem
-            // 
-            this.otrosProcesosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.otrosProcesosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.otrosProcesosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.macaroons_icon32;
-            this.otrosProcesosToolStripMenuItem.Name = "otrosProcesosToolStripMenuItem";
-            this.otrosProcesosToolStripMenuItem.Size = new System.Drawing.Size(214, 24);
-            this.otrosProcesosToolStripMenuItem.Text = "Otros Procesos";
-            this.otrosProcesosToolStripMenuItem.Click += new System.EventHandler(this.otrosProcesosToolStripMenuItem_Click);
-            // 
-            // PStock
-            // 
-            this.PStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.PStock.ForeColor = System.Drawing.Color.White;
-            this.PStock.Image = global::TRAZAAR.Properties.Resources.stock;
-            this.PStock.Name = "PStock";
-            this.PStock.Size = new System.Drawing.Size(362, 24);
-            this.PStock.Text = "&Cuenta Corriente (MP Cárnica)";
-            this.PStock.Click += new System.EventHandler(this.PStock_Click);
-            // 
-            // ajusteKgMprimaCárnicaToolStripMenuItem
-            // 
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_check_file_48;
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.Name = "ajusteKgMprimaCárnicaToolStripMenuItem";
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.Size = new System.Drawing.Size(362, 24);
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.Text = "Ajuste por Diferencia Kg (M.prima Cárnica)";
-            this.ajusteKgMprimaCárnicaToolStripMenuItem.Click += new System.EventHandler(this.ajusteKgMprimaCárnicaToolStripMenuItem_Click);
-            // 
-            // Pmaestros
-            // 
-            this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem});
-            this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pmaestros.ForeColor = System.Drawing.Color.White;
-            this.Pmaestros.Name = "Pmaestros";
-            this.Pmaestros.Size = new System.Drawing.Size(87, 24);
-            this.Pmaestros.Text = "&TRAZAAR";
-            // 
-            // consumidoporPeriodoNOCarnicosToolStripMenuItem
-            // 
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.btnBuscar;
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.Name = "consumidoporPeriodoNOCarnicosToolStripMenuItem";
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.Size = new System.Drawing.Size(336, 22);
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.Text = "Consumido por Periodo (NO Carnicos)";
-            this.consumidoporPeriodoNOCarnicosToolStripMenuItem.Click += new System.EventHandler(this.consumidoporPeriodoNOCarnicosToolStripMenuItem_Click);
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.SeguimientoOT;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(233, 22);
+            this.toolStripMenuItem1.Text = "Seguimiento De Lote";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // Psalir
             // 
@@ -184,7 +100,7 @@
             this.Psalir.ForeColor = System.Drawing.Color.White;
             this.Psalir.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
             this.Psalir.Name = "Psalir";
-            this.Psalir.Size = new System.Drawing.Size(65, 24);
+            this.Psalir.Size = new System.Drawing.Size(65, 22);
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
             // 
@@ -195,9 +111,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 422);
+            this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 20;
             // 
             // FrmConsultas
@@ -219,18 +135,11 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuForm;
-        private System.Windows.Forms.ToolStripMenuItem Pmaestros;
         private System.Windows.Forms.ToolStripMenuItem Psalir;
-        private System.Windows.Forms.ToolStripMenuItem PArchivo;
-        private System.Windows.Forms.ToolStripMenuItem PBalanceMP;
-        private System.Windows.Forms.ToolStripMenuItem PStock;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem ingresoAPlantaMPCárnicaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem procesosProductivosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem despostadaCatrielToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem despostadaTercerosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem otrosProcesosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consumidoporPeriodoNOCarnicosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajusteKgMprimaCárnicaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mReportes;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem MenuIngSal;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

@@ -149,21 +149,24 @@ namespace TRAZAAR
             //fh.MdiParent=this;
             fh.Show();
         }
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void impresorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
-            FrmUser _FrmUser = new FrmUser();
-
-            AbrirFormEnPanel(_FrmUser);
+            FrmImpresoras _FrmImpresoras = new FrmImpresoras();
+            _FrmImpresoras.StartPosition = FormStartPosition.CenterScreen;
+            AbrirFormEnPanel(_FrmImpresoras);
         }
 
-        private void perfilDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
-            FrmUserPerfiles _FrmUserPerfiles = new FrmUserPerfiles();
-            AbrirFormEnPanel(_FrmUserPerfiles);
+            FrmBalanzas _FrmBalanzas = new FrmBalanzas();
+            _FrmBalanzas.StartPosition = FormStartPosition.CenterScreen;
+            AbrirFormEnPanel(_FrmBalanzas);
         }
     }
 }

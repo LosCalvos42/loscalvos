@@ -39,21 +39,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEtiqGancheras));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DtDeste = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.CmbProdProc = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
-            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROCESO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FRECEPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROVEEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LOTEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cSANITARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TxtSanitario2 = new System.Windows.Forms.Label();
             this.TxtSanitario1 = new System.Windows.Forms.Label();
@@ -79,14 +73,20 @@
             this.GrupoCate = new System.Windows.Forms.GroupBox();
             this.BtnRefresh = new System.Windows.Forms.Button();
             this.BtnImprimir = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FECHA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NPROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROCESO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FRECEPCION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROVEEDOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LOTEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cSANITARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).BeginInit();
             this.panel2.SuspendLayout();
             this.GrupoCate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -99,6 +99,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(856, 23);
             this.panel1.TabIndex = 97;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.utilidades;
+            this.pictureBox1.Location = new System.Drawing.Point(799, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 153;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label10
             // 
@@ -173,6 +184,25 @@
             this.CmbProdProc.Size = new System.Drawing.Size(181, 26);
             this.CmbProdProc.TabIndex = 151;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.AccessibleName = "";
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.Location = new System.Drawing.Point(562, 26);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(80, 25);
+            this.btnBuscar.TabIndex = 148;
+            this.btnBuscar.Tag = "";
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Dgprincipal
             // 
             this.Dgprincipal.AllowUserToAddRows = false;
@@ -219,88 +249,9 @@
             this.Dgprincipal.RowHeadersVisible = false;
             this.Dgprincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.Dgprincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgprincipal.Size = new System.Drawing.Size(852, 139);
+            this.Dgprincipal.Size = new System.Drawing.Size(829, 139);
             this.Dgprincipal.TabIndex = 149;
             this.Dgprincipal.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Dgprincipal_CellMouseUp);
-            // 
-            // FECHA
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.FECHA.DefaultCellStyle = dataGridViewCellStyle3;
-            this.FECHA.Frozen = true;
-            this.FECHA.HeaderText = "FECHA";
-            this.FECHA.Name = "FECHA";
-            this.FECHA.ReadOnly = true;
-            this.FECHA.Width = 70;
-            // 
-            // NPROD
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.NPROD.DefaultCellStyle = dataGridViewCellStyle4;
-            this.NPROD.HeaderText = "NROPROD";
-            this.NPROD.Name = "NPROD";
-            this.NPROD.ReadOnly = true;
-            this.NPROD.Visible = false;
-            this.NPROD.Width = 180;
-            // 
-            // PROCESO
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.PROCESO.DefaultCellStyle = dataGridViewCellStyle5;
-            this.PROCESO.Frozen = true;
-            this.PROCESO.HeaderText = "PROCESO";
-            this.PROCESO.Name = "PROCESO";
-            this.PROCESO.ReadOnly = true;
-            this.PROCESO.Width = 180;
-            // 
-            // lote
-            // 
-            this.lote.Frozen = true;
-            this.lote.HeaderText = "LOTE";
-            this.lote.Name = "lote";
-            this.lote.ReadOnly = true;
-            this.lote.Width = 80;
-            // 
-            // FRECEPCION
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = "0,0";
-            this.FRECEPCION.DefaultCellStyle = dataGridViewCellStyle6;
-            this.FRECEPCION.Frozen = true;
-            this.FRECEPCION.HeaderText = "F.RECEP";
-            this.FRECEPCION.Name = "FRECEPCION";
-            this.FRECEPCION.ReadOnly = true;
-            this.FRECEPCION.Width = 80;
-            // 
-            // PROVEEDOR
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.PROVEEDOR.DefaultCellStyle = dataGridViewCellStyle7;
-            this.PROVEEDOR.Frozen = true;
-            this.PROVEEDOR.HeaderText = "PROVEEDOR";
-            this.PROVEEDOR.Name = "PROVEEDOR";
-            this.PROVEEDOR.ReadOnly = true;
-            this.PROVEEDOR.Width = 180;
-            // 
-            // LOTEP
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.NullValue = null;
-            this.LOTEP.DefaultCellStyle = dataGridViewCellStyle8;
-            this.LOTEP.Frozen = true;
-            this.LOTEP.HeaderText = "LOTE";
-            this.LOTEP.Name = "LOTEP";
-            this.LOTEP.ReadOnly = true;
-            // 
-            // cSANITARIO
-            // 
-            this.cSANITARIO.Frozen = true;
-            this.cSANITARIO.HeaderText = "SANITARIO";
-            this.cSANITARIO.Name = "cSANITARIO";
-            this.cSANITARIO.ReadOnly = true;
             // 
             // panel2
             // 
@@ -705,35 +656,85 @@
             this.BtnImprimir.UseVisualStyleBackColor = false;
             this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
-            // btnBuscar
+            // FECHA
             // 
-            this.btnBuscar.AccessibleName = "";
-            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(562, 26);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(80, 25);
-            this.btnBuscar.TabIndex = 148;
-            this.btnBuscar.Tag = "";
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.FECHA.DefaultCellStyle = dataGridViewCellStyle3;
+            this.FECHA.Frozen = true;
+            this.FECHA.HeaderText = "FECHA";
+            this.FECHA.Name = "FECHA";
+            this.FECHA.ReadOnly = true;
+            this.FECHA.Width = 70;
             // 
-            // pictureBox1
+            // NPROD
             // 
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.utilidades;
-            this.pictureBox1.Location = new System.Drawing.Point(799, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 153;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.NPROD.DefaultCellStyle = dataGridViewCellStyle4;
+            this.NPROD.HeaderText = "NROPROD";
+            this.NPROD.Name = "NPROD";
+            this.NPROD.ReadOnly = true;
+            this.NPROD.Visible = false;
+            this.NPROD.Width = 180;
+            // 
+            // PROCESO
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.PROCESO.DefaultCellStyle = dataGridViewCellStyle5;
+            this.PROCESO.Frozen = true;
+            this.PROCESO.HeaderText = "PROCESO";
+            this.PROCESO.Name = "PROCESO";
+            this.PROCESO.ReadOnly = true;
+            this.PROCESO.Width = 220;
+            // 
+            // lote
+            // 
+            this.lote.Frozen = true;
+            this.lote.HeaderText = "LOTE";
+            this.lote.Name = "lote";
+            this.lote.ReadOnly = true;
+            this.lote.Width = 80;
+            // 
+            // FRECEPCION
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = "0,0";
+            this.FRECEPCION.DefaultCellStyle = dataGridViewCellStyle6;
+            this.FRECEPCION.Frozen = true;
+            this.FRECEPCION.HeaderText = "F.RECEP";
+            this.FRECEPCION.Name = "FRECEPCION";
+            this.FRECEPCION.ReadOnly = true;
+            this.FRECEPCION.Width = 80;
+            // 
+            // PROVEEDOR
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.PROVEEDOR.DefaultCellStyle = dataGridViewCellStyle7;
+            this.PROVEEDOR.Frozen = true;
+            this.PROVEEDOR.HeaderText = "PROVEEDOR";
+            this.PROVEEDOR.Name = "PROVEEDOR";
+            this.PROVEEDOR.ReadOnly = true;
+            this.PROVEEDOR.Width = 220;
+            // 
+            // LOTEP
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.NullValue = null;
+            this.LOTEP.DefaultCellStyle = dataGridViewCellStyle8;
+            this.LOTEP.Frozen = true;
+            this.LOTEP.HeaderText = "LOTE";
+            this.LOTEP.Name = "LOTEP";
+            this.LOTEP.ReadOnly = true;
+            this.LOTEP.Visible = false;
+            // 
+            // cSANITARIO
+            // 
+            this.cSANITARIO.Frozen = true;
+            this.cSANITARIO.HeaderText = "SANITARIO";
+            this.cSANITARIO.Name = "cSANITARIO";
+            this.cSANITARIO.ReadOnly = true;
             // 
             // FrmEtiqGancheras
             // 
@@ -758,6 +759,7 @@
             this.Load += new System.EventHandler(this.FrmAddGrupoFamilia_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).EndInit();
@@ -765,7 +767,6 @@
             this.panel2.PerformLayout();
             this.GrupoCate.ResumeLayout(false);
             this.GrupoCate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,6 +805,9 @@
         private System.Windows.Forms.Label TxtSanitario2;
         private System.Windows.Forms.ComboBox CmbLote;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox GrupoCate;
+        private System.Windows.Forms.Button BtnRefresh;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn FECHA;
         private System.Windows.Forms.DataGridViewTextBoxColumn NPROD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROCESO;
@@ -812,8 +816,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PROVEEDOR;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOTEP;
         private System.Windows.Forms.DataGridViewTextBoxColumn cSANITARIO;
-        private System.Windows.Forms.GroupBox GrupoCate;
-        private System.Windows.Forms.Button BtnRefresh;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

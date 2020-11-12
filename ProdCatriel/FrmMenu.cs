@@ -49,7 +49,7 @@ namespace TRAZAAR
 
         private void selecciónJamonXTexturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmSelecJamon _FrmSelecJamon = new FrmSelecJamon();
+            FrmPesada _FrmSelecJamon = new FrmPesada();
             _FrmSelecJamon.StartPosition = FormStartPosition.CenterScreen;
             _FrmSelecJamon.MdiParent = this;
             _FrmSelecJamon.Show();
@@ -129,9 +129,9 @@ namespace TRAZAAR
 
                 nombreparametroServer = "SERVIDOR_D";
                 try { 
-                    Bitmap bmp = new Bitmap(Application.StartupPath + @"\Imagenes\1.jpg");
-                    this.BackgroundImage = bmp;
-
+                    Bitmap bmp = new Bitmap(Application.StartupPath + @"\Imagenes\DESARROLLO.jpg");
+                    panel1.BackgroundImage = bmp;
+                    panel1.BackgroundImageLayout = ImageLayout.Zoom;
                 }
                 catch
                 {
@@ -167,29 +167,44 @@ namespace TRAZAAR
 
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
-            string ssql = @"select TOP(1) DISPIMPRESORA_NOMBRE FROM[TRAZAARDB].[dbo].[DISPIMPRESORAS] I " +
-                                  "INNER JOIN[TRAZAARDB].[dbo].[DISPOSITIVOS] D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
-                                  "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
-                                  "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "'" +
-                                  "AND I.DISPIMPRESORA_ESTADO = 'ON'";
+            string ssql  = @"select TOP(1) isnull(DISPIMPRESORA_NOMBRE, '') as IMPRESORA, isnull(DISPBALANZAS_NOMBRE, '') AS BALANZA " +
+            "FROM[TRAZAARDB].[dbo].[DISPOSITIVOS] D " +
+            "INNER JOIN[TRAZAARDB].[dbo].[DISPIMPRESORAS] I ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID AND I.DISPIMPRESORA_ESTADO = 'ON' " +
+            "left join[TRAZAARDB].[dbo].[DISPBALANZAS] B on B.DISPOSITIVO_ID = D.DISPOSITIVO_ID AND B.DISPBALANZAS_ESTADO = 'ON' " +
+            "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
+            "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "' ";
+
+
+
             dt = M.lisquery(ssql);
 
             if (dt.Rows.Count == 1)
             {
                 Program.IMPRESORAETIQUETA = dt.Rows[0][0].ToString();
+                Program.BALANZA = dt.Rows[0][1].ToString();
                 PPrint.Text = Program.IMPRESORAETIQUETA;
                 PPrint.AutoSize = StatusBarPanelAutoSize.Contents;
+
+                PBalanza.Text = Program.BALANZA;
+                PBalanza.AutoSize = StatusBarPanelAutoSize.Contents;
+
             }
 
         }
 
         private void permisos()
         {
+            //BtnConsultas.Enabled = false;
+
             if (Program.perfil != 1)//administrador
             {
                 Btnproduccion.Enabled = true;
                 BtnConfiguracion.Enabled = false;
             }
+
+            
+
+
         }
 
 
@@ -206,6 +221,7 @@ namespace TRAZAAR
         {
             this.BackColor = Color.FromArgb(64, 69, 76);
             PPrint.Text = Program.IMPRESORAETIQUETA;
+            PBalanza.Text = Program.BALANZA;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -214,11 +230,11 @@ namespace TRAZAAR
             if (panelMenu.Width == 160)
             {
                 this.tmOcultarMenu.Enabled = true;
-                lblNombresoft.Visible = false;
+                PTrazar.Visible = false;
             }
             else if (panelMenu.Width == 52) { 
                 this.tmMostrarMenu.Enabled = true;
-            lblNombresoft.Visible = true;}
+            PTrazar.Visible = true;}
             //-------SIN EFECTO SLIDE
             //if (panelMenu.Width == 55)
             //{

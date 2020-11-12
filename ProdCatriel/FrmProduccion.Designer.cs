@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProduccion));
             this.menuForm = new System.Windows.Forms.MenuStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.marchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.PProductos = new System.Windows.Forms.ToolStripMenuItem();
             this.Productos = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,15 +47,22 @@
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.PTrabajos = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.POrdenTrabajo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ClasificacionFACMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImpresíonEtqGancherasMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemPSal = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemSSal = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.mConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.PUMedida = new System.Windows.Forms.ToolStripMenuItem();
             this.configuracionDeDispositivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +81,18 @@
             this.menuForm.Size = new System.Drawing.Size(800, 26);
             this.menuForm.TabIndex = 2;
             this.menuForm.Text = "Menu";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 26);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 424);
+            this.panel1.TabIndex = 21;
             // 
             // marchivo
             // 
@@ -242,8 +262,11 @@
             // PTrabajos
             // 
             this.PTrabajos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
             this.POrdenTrabajo,
-            this.ClasificacionFACMenuItem});
+            this.ClasificacionFACMenuItem,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem7});
             this.PTrabajos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PTrabajos.ForeColor = System.Drawing.Color.White;
             this.PTrabajos.Image = global::TRAZAAR.Properties.Resources.Trabajos_trz;
@@ -252,26 +275,48 @@
             this.PTrabajos.Size = new System.Drawing.Size(94, 22);
             this.PTrabajos.Text = "&Trabajos";
             // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem5.Image = global::TRAZAAR.Properties.Resources.calendariook;
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(227, 22);
+            this.toolStripMenuItem5.Text = "&Agenda de Trabajo";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            // 
             // POrdenTrabajo
             // 
             this.POrdenTrabajo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.POrdenTrabajo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
             this.POrdenTrabajo.ForeColor = System.Drawing.Color.White;
             this.POrdenTrabajo.Image = global::TRAZAAR.Properties.Resources.Trabajos_trz;
             this.POrdenTrabajo.Name = "POrdenTrabajo";
-            this.POrdenTrabajo.Size = new System.Drawing.Size(210, 22);
+            this.POrdenTrabajo.Size = new System.Drawing.Size(227, 22);
             this.POrdenTrabajo.Text = "&Ordenes De Trabajo";
-            this.POrdenTrabajo.Click += new System.EventHandler(this.PDProcesos_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.Trabajos_trz;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 22);
+            this.toolStripMenuItem1.Text = "&Trabajos de Elaboración";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // ClasificacionFACMenuItem
             // 
             this.ClasificacionFACMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.ClasificacionFACMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ImpresíonEtqGancherasMenuItem});
+            this.ImpresíonEtqGancherasMenuItem,
+            this.toolStripMenuItem2});
             this.ClasificacionFACMenuItem.ForeColor = System.Drawing.Color.White;
             this.ClasificacionFACMenuItem.Image = global::TRAZAAR.Properties.Resources.Clasificacion;
             this.ClasificacionFACMenuItem.Name = "ClasificacionFACMenuItem";
-            this.ClasificacionFACMenuItem.Size = new System.Drawing.Size(210, 22);
-            this.ClasificacionFACMenuItem.Text = "Clasificacion  (FAC)";
+            this.ClasificacionFACMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.ClasificacionFACMenuItem.Text = "Clasificación  (FAC)";
             // 
             // ImpresíonEtqGancherasMenuItem
             // 
@@ -283,6 +328,69 @@
             this.ImpresíonEtqGancherasMenuItem.Text = "Impresíon Etq. Gancheras";
             this.ImpresíonEtqGancherasMenuItem.Click += new System.EventHandler(this.ImpresíonEtqGancherasMenuItem_Click);
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Image = global::TRAZAAR.Properties.Resources.IngresoLote;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(248, 22);
+            this.toolStripMenuItem2.Text = "Recepcion De Lotes";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemPSal,
+            this.MenuItemSSal,
+            this.toolStripMenuItem4});
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem3.Image = global::TRAZAAR.Properties.Resources.icons8_automation_32;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(227, 22);
+            this.toolStripMenuItem3.Text = "&Salazón segun Agenda";
+            // 
+            // MenuItemPSal
+            // 
+            this.MenuItemPSal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.MenuItemPSal.ForeColor = System.Drawing.Color.White;
+            this.MenuItemPSal.Image = global::TRAZAAR.Properties.Resources.icons8_automation_32;
+            this.MenuItemPSal.Name = "MenuItemPSal";
+            this.MenuItemPSal.Size = new System.Drawing.Size(213, 22);
+            this.MenuItemPSal.Text = "&Ingreso a 1° Salazón";
+            this.MenuItemPSal.Click += new System.EventHandler(this.MenuItemPSal_Click);
+            // 
+            // MenuItemSSal
+            // 
+            this.MenuItemSSal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.MenuItemSSal.ForeColor = System.Drawing.Color.White;
+            this.MenuItemSSal.Image = global::TRAZAAR.Properties.Resources.icons8_automation_32;
+            this.MenuItemSSal.Name = "MenuItemSSal";
+            this.MenuItemSSal.Size = new System.Drawing.Size(213, 22);
+            this.MenuItemSSal.Text = "&Ingreso a 2° Salazón";
+            this.MenuItemSSal.Click += new System.EventHandler(this.MenuItemSSal_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem4.Image = global::TRAZAAR.Properties.Resources.CodBarra;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(213, 22);
+            this.toolStripMenuItem4.Text = "Impresíon Etiq. Bin";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.toolStripMenuItem7.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem7.Image = global::TRAZAAR.Properties.Resources.calendariook;
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(227, 22);
+            this.toolStripMenuItem7.Text = "Bajas De Producción";
+            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            // 
             // mReportes
             // 
             this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,6 +399,7 @@
             this.mReportes.Name = "mReportes";
             this.mReportes.Size = new System.Drawing.Size(97, 22);
             this.mReportes.Text = "Reportes";
+            this.mReportes.Click += new System.EventHandler(this.mReportes_Click);
             // 
             // mConfiguracion
             // 
@@ -330,18 +439,6 @@
             this.Psalir.Size = new System.Drawing.Size(65, 22);
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 26);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 424);
-            this.panel1.TabIndex = 21;
             // 
             // FrmProduccion
             // 
@@ -389,5 +486,13 @@
         private System.Windows.Forms.ToolStripMenuItem configuracionDeDispositivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClasificacionFACMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ImpresíonEtqGancherasMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemPSal;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemSSal;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
     }
 }

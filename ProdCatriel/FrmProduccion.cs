@@ -100,23 +100,6 @@ namespace TRAZAAR
             _FrmRecursoProduccion.ShowDialog();
         }
 
-        private void PDProcesos_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            CheckForIllegalCrossThreadCalls = false;
-            FrmListadosProduccion _FrmListadosProduccion = new FrmListadosProduccion();
-            FrmAddOrdenDeTrabajo _FrmAddOrdenDeTrabajo = new FrmAddOrdenDeTrabajo();
-            _FrmListadosProduccion.Tabla = "OTRESUMEN";
-            _FrmListadosProduccion.Listado = "OTRABAJO";
-            _FrmListadosProduccion.TituloListado = "Listado de Ordenes De Trabajo";
-            _FrmListadosProduccion.Fdesde =(DateTime.Now.AddDays(-1)).ToString("yyyyMMdd");
-            _FrmListadosProduccion.Fhasta = (DateTime.Now.AddDays(1)).ToString("yyyyMMdd");
-            _FrmListadosProduccion.Abm = _FrmAddOrdenDeTrabajo;
-            _FrmListadosProduccion.StartPosition = FormStartPosition.CenterScreen;
-            _FrmListadosProduccion.WindowState = FormWindowState.Maximized;
-            AbrirFormEnPanel(_FrmListadosProduccion);
-        }
-
         private void PSOTrabajo_Click(object sender, EventArgs e)
         {
             
@@ -305,10 +288,16 @@ namespace TRAZAAR
         }
         private void Permisos()
         {
+            mConfiguracion.Enabled = false;
+            mReportes.Enabled = false;
+
+
             if (Program.perfil == 5)
-            { 
+            {
+                toolStripMenuItem5.Enabled = false;
                 marchivo.Enabled = false;
                 mConfiguracion.Enabled = false;
+                toolStripMenuItem2.Enabled = false;
             }
         }
 
@@ -326,6 +315,118 @@ namespace TRAZAAR
             _FrmEtiqGancheras.StartPosition = FormStartPosition.CenterScreen;
             _FrmEtiqGancheras.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmEtiqGancheras);
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmAddRecepcionDeLotes _FrmAddRecepcionDeLotes = new FrmAddRecepcionDeLotes();
+            _FrmAddRecepcionDeLotes.Listado = "PROCESOS";
+            _FrmAddRecepcionDeLotes.StartPosition = FormStartPosition.CenterScreen;
+            _FrmAddRecepcionDeLotes.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmAddRecepcionDeLotes);//FrmAddRecepcionDeLotes
+        }
+
+        private void mReportes_Click(object sender, EventArgs e)
+        {
+            
+
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmOrdenesProduccion _FrmOrdenesProduccion = new FrmOrdenesProduccion();
+
+            _FrmOrdenesProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmOrdenesProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmOrdenesProduccion);//FrmAddRecepcionDeLotes
+
+        }
+
+        private void MenuItemPSal_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmPendientesDeIngSal _FrmPendientesDeIngSal = new FrmPendientesDeIngSal();
+            _FrmPendientesDeIngSal.StartPosition = FormStartPosition.CenterScreen;
+            _FrmPendientesDeIngSal.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmPendientesDeIngSal);//FrmAddRecepcionDeLotes
+        }
+
+        private void MenuItemSSal_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmPendientesDeIng2Sal _FrmPendientesDeIng2Sal = new FrmPendientesDeIng2Sal();
+            _FrmPendientesDeIng2Sal.StartPosition = FormStartPosition.CenterScreen;
+            _FrmPendientesDeIng2Sal.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmPendientesDeIng2Sal);//FrmAddRecepcionDeLotes
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmEtiqSal _FrmEtiqSal = new FrmEtiqSal();
+            _FrmEtiqSal.Listado = "PROCESOS";
+            _FrmEtiqSal.StartPosition = FormStartPosition.CenterScreen;
+            _FrmEtiqSal.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmEtiqSal);
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmAgendaDeTrabajo _FrmAgendaDeTrabajo = new FrmAgendaDeTrabajo();
+            _FrmAgendaDeTrabajo.StartPosition = FormStartPosition.CenterScreen;
+            _FrmAgendaDeTrabajo.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmAgendaDeTrabajo);//FrmAddRecepcionDeLotes
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListadosProduccion _FrmListadosProduccion = new FrmListadosProduccion();
+            FrmAddOrdenDeTrabajo _FrmAddOrdenDeTrabajo = new FrmAddOrdenDeTrabajo();
+            _FrmListadosProduccion.Tabla = "OTRESUMEN";
+            _FrmListadosProduccion.Listado = "OTRABAJO";
+            _FrmListadosProduccion.TituloListado = "Listado de Ordenes De Trabajo";
+            _FrmListadosProduccion.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Abm = _FrmAddOrdenDeTrabajo;
+            _FrmListadosProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListadosProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListadosProduccion);
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListadosProduccion _FrmListadosProduccion = new FrmListadosProduccion();
+            FrmAddOrdenDeTrabajoEstucado _FrmAddOrdenDeTrabajoEstucado = new FrmAddOrdenDeTrabajoEstucado();
+            _FrmListadosProduccion.Tabla = "OTRESUMEN";
+            _FrmListadosProduccion.Listado = "OTRABAJO";
+            _FrmListadosProduccion.TituloListado = "Listado de Ordenes De Trabajo";
+            _FrmListadosProduccion.Fdesde = (DateTime.Now.AddDays(-1)).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Fhasta = (DateTime.Now.AddDays(1)).ToString("yyyyMMdd");
+            _FrmListadosProduccion.Abm = _FrmAddOrdenDeTrabajoEstucado;
+            _FrmListadosProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListadosProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListadosProduccion);
+        }
+
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmBajasDeProduccion _FrmBajasDeProduccion = new FrmBajasDeProduccion();
+            _FrmBajasDeProduccion.StartPosition = FormStartPosition.CenterScreen;
+            //_FrmBajasDeProduccion.WindowState = FormWindowState.Maximized;
+
+            _FrmBajasDeProduccion.ShowDialog();
+            //AbrirFormEnPanel(_FrmBajasDeProduccion);//FrmAddRecepcionDeLotes
         }
     }
 }

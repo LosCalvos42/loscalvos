@@ -46,16 +46,15 @@ namespace TRAZAAR
             fh.Show();
         }
 
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
             FrmUser _FrmUser = new FrmUser();
-
             AbrirFormEnPanel(_FrmUser);
         }
 
-        private void perfilDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
@@ -63,13 +62,14 @@ namespace TRAZAAR
             AbrirFormEnPanel(_FrmUserPerfiles);
         }
 
-        private void impresorasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
-            FrmImpresoras _FrmImpresoras = new FrmImpresoras();
-            _FrmImpresoras.StartPosition = FormStartPosition.CenterScreen;
-            AbrirFormEnPanel(_FrmImpresoras);
+            FrmAgenda _FrmAgenda = new FrmAgenda();
+            _FrmAgenda.StartPosition = FormStartPosition.CenterScreen;
+            _FrmAgenda.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmAgenda);//FrmAddRecepcionDeLotes
         }
     }
 }

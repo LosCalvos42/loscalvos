@@ -120,32 +120,4 @@
   <metadata name="menuForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAhdJREFUWEft
-        lblKQ0EUhiOxUeIGRlwKURAR1EYrS1/A5RXcCivBRisLK0ufxFeIPoJ7aaGi4AKK4nr9/nvPXGMWicmk
-        kXzwQeacmTP33lmSqPGvCIKgAYesqXYfJq1ZXZhoGG/xCOvMYzzDAetWPZikHq9QPOB99DM4x3rr5h+K
-        j2sC3MJCfOIqqs+IDfMDBdvxGa9RPOEK9mAvbuAb6iEu8Q4bbXjlUGwMtc6OZUvFENuMUiHaH/Em9QIF
-        9WnfUW/ZYuEYYoMorizkFwonUQ/wgc0WjiE2gOLCQv6g6BAehuUjliwVQ0z7QOghdzBtqb8TlgFrqq2L
-        R2f/RnF4xGXU5uzENXxFLc8L6k4o7WKiYwp/PC3tEGuG0JzENtxWrgjr2IETNux36KjJ9/AAu3ERd9Gh
-        34oppz7q24/ubXU0pdDl9LeLiAFp3Ndo0Kcrhsup7xxq0h0rozraHzr7oxYqHQZ1oZtAhaawyZxGd/7V
-        p8vGaO37wwLAb23S8i4eBi6g0OVR6Hy3oHuIeQv7g6KZqHYwZaE8yM1EXYKMhSrHCmbTZKk8yDVHXb6x
-        VPlYnWx+ewAtww8sVTnUckswbaE8yM1GXTwugYOibhNqoxXahK14qg5QlU2YfQxPUBtOay715m7y+Bh6
-        g4LlXETl/8nkQrHcq1jLkXsVK5Z9FadsuB9UEEv5M9LX8jt5McLZwZo1anggkfgClqO9qz9O06MAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="PReportes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAXVJREFUWEft
-        lDFOAzEQRbcIJQoNSFQpuEMKGu6QA8AlCJRwjZyBE8ApgCjiCBTUlMj8+f5erZLsru21IiT2SV/2jGfG
-        P5tNqpE/i8vjAzrXiGH4eVmUMeFnOaewF5UHhpvwc7IMrBvrmY7T8TOyDJxC73474En4/nQD2g834Xuz
-        34Ft1iqLR42lDETPqVFfeuMWGvNPDKB8Al0qJBwCFMajvp1GpK603QFnK+gbmitV1gDCBfQD3SpVg9wd
-        FPiCLpQnLEpBfXUjtnPIPp1hJhY6ahozhd//UmeEhSmoj41YZtAnE869auWjloKxJTSFrjkEMAsUxqO+
-        YMAGGy/QEWTftWGmgrEVG0uhoc2v4Aaaam9v+zMUsP2EhaXwc9sfHY6OoTdoA50o3QpqiMJ+VN/ZgGN7
-        N2YKO+EwoLAf1cc39KBxo4HRQLqBRJ4g/h9gvWemmwdetg8V5BBrov3ykuCifSYOc3kAFzZNHPbyAC5+
-        NCkUVfULU1n+Vypu1ZgAAAAASUVORK5CYII=
-</value>
-  </data>
 </root>

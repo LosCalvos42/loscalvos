@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CDEmpleado.cs" />
     <Compile Include="ClsDatosReporteBatea.cs" />
     <Compile Include="ClsManejador.cs" />
     <Compile Include="ClsManejador2.cs" />

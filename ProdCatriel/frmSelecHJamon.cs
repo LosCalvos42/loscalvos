@@ -69,10 +69,10 @@ namespace TRAZAAR
                     return;
                 }
 
-                FrmSelecJamon.nropro = Convert.ToInt32(dtgpro.CurrentRow.Cells[2].Value.ToString());
-                FrmSelecJamon.idtipo = Convert.ToInt32(dtgpro.CurrentRow.Cells[3].Value.ToString());
+                FrmPesada.nropro = Convert.ToInt32(dtgpro.CurrentRow.Cells[2].Value.ToString());
+                FrmPesada.idtipo = Convert.ToInt32(dtgpro.CurrentRow.Cells[3].Value.ToString());
                 //FrmSelecJamon.tipojid = Convert.ToInt32(dtgpro.CurrentRow.Cells[3].Value.ToString());
-                FrmSelecJamon.flag = 1;
+                FrmPesada.flag = 1;
                 this.Close();
             }
             
@@ -80,7 +80,7 @@ namespace TRAZAAR
 
         private void Salir_Click(object sender, EventArgs e)
         {
-            FrmSelecJamon.flag = 0;
+            FrmPesada.flag = 0;
             this.Close();
         }
 

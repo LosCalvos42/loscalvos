@@ -203,9 +203,39 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BALANZA24 {
+            get {
+                object obj = ResourceManager.GetObject("BALANZA24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BD_Insertar {
             get {
                 object obj = ResourceManager.GetObject("BD Insertar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BIN16 {
+            get {
+                object obj = ResourceManager.GetObject("BIN16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bin24 {
+            get {
+                object obj = ResourceManager.GetObject("bin24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -236,6 +266,36 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap Buscartrz {
             get {
                 object obj = ResourceManager.GetObject("Buscartrz", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_31_24 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-31-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_31_32 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-31-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendariook {
+            get {
+                object obj = ResourceManager.GetObject("calendariook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -346,6 +406,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap Catriel {
             get {
                 object obj = ResourceManager.GetObject("Catriel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap checkered_flag {
+            get {
+                object obj = ResourceManager.GetObject("checkered_flag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -713,6 +783,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_baby_calendar_32_2 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-baby-calendar-32-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_check_file_48 {
             get {
                 object obj = ResourceManager.GetObject("icons8-check-file-48", resourceCulture);
@@ -903,6 +983,26 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_rack_16 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-rack-16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_rack_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-rack-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_save_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-save-32", resourceCulture);
@@ -1063,6 +1163,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IngresoLote {
+            get {
+                object obj = ResourceManager.GetObject("IngresoLote", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap INICIOGIF1 {
             get {
                 object obj = ResourceManager.GetObject("INICIOGIF1", resourceCulture);
@@ -1096,6 +1206,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap laboratorio {
             get {
                 object obj = ResourceManager.GetObject("laboratorio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap localizador {
+            get {
+                object obj = ResourceManager.GetObject("localizador", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1573,6 +1693,26 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap searchExcluidos {
+            get {
+                object obj = ResourceManager.GetObject("searchExcluidos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SearchExcluidos24 {
+            get {
+                object obj = ResourceManager.GetObject("SearchExcluidos24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SeguimientoOT {
             get {
                 object obj = ResourceManager.GetObject("SeguimientoOT", resourceCulture);
@@ -1663,6 +1803,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap terminales {
+            get {
+                object obj = ResourceManager.GetObject("terminales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Tmas {
             get {
                 object obj = ResourceManager.GetObject("Tmas", resourceCulture);
@@ -1703,6 +1853,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap trabajos_identindpiezas {
+            get {
+                object obj = ResourceManager.GetObject("trabajos-identindpiezas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Trabajos_trz {
             get {
                 object obj = ResourceManager.GetObject("Trabajos-trz", resourceCulture);
@@ -1726,6 +1886,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap trans2 {
             get {
                 object obj = ResourceManager.GetObject("trans2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TRAZAR {
+            get {
+                object obj = ResourceManager.GetObject("TRAZAR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

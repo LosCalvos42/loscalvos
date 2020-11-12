@@ -90,6 +90,8 @@
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costos = new System.Windows.Forms.TabPage();
+            this.BtnMenosC = new System.Windows.Forms.Button();
+            this.BtnMasC = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tipoCosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,8 +117,6 @@
             this.TxtNombre = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.BtnMenosC = new System.Windows.Forms.Button();
-            this.BtnMasC = new System.Windows.Forms.Button();
             this.tbProcesoDetalle.SuspendLayout();
             this.recursos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgRecursoH)).BeginInit();
@@ -670,6 +670,35 @@
             this.costos.TabIndex = 1;
             this.costos.Text = "Costos";
             // 
+            // BtnMenosC
+            // 
+            this.BtnMenosC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnMenosC.BackColor = System.Drawing.SystemColors.Control;
+            this.BtnMenosC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMenosC.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMenosC.ForeColor = System.Drawing.SystemColors.Control;
+            this.BtnMenosC.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.BtnMenosC.Location = new System.Drawing.Point(527, 67);
+            this.BtnMenosC.Name = "BtnMenosC";
+            this.BtnMenosC.Size = new System.Drawing.Size(31, 31);
+            this.BtnMenosC.TabIndex = 80;
+            this.BtnMenosC.UseVisualStyleBackColor = false;
+            // 
+            // BtnMasC
+            // 
+            this.BtnMasC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnMasC.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMasC.FlatAppearance.BorderSize = 0;
+            this.BtnMasC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMasC.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnMasC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.BtnMasC.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.BtnMasC.Location = new System.Drawing.Point(527, 25);
+            this.BtnMasC.Name = "BtnMasC";
+            this.BtnMasC.Size = new System.Drawing.Size(31, 31);
+            this.BtnMasC.TabIndex = 79;
+            this.BtnMasC.UseVisualStyleBackColor = false;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -754,7 +783,7 @@
             this.resumen.Location = new System.Drawing.Point(4, 22);
             this.resumen.Name = "resumen";
             this.resumen.Padding = new System.Windows.Forms.Padding(3);
-            this.resumen.Size = new System.Drawing.Size(1164, 445);
+            this.resumen.Size = new System.Drawing.Size(1057, 445);
             this.resumen.TabIndex = 3;
             this.resumen.Text = "Resumen";
             // 
@@ -788,7 +817,7 @@
             treeNode1,
             treeNode2,
             treeNode3});
-            this.treResumen.Size = new System.Drawing.Size(1158, 417);
+            this.treResumen.Size = new System.Drawing.Size(1051, 417);
             this.treResumen.TabIndex = 0;
             // 
             // panel1
@@ -1015,35 +1044,6 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // BtnMenosC
-            // 
-            this.BtnMenosC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnMenosC.BackColor = System.Drawing.SystemColors.Control;
-            this.BtnMenosC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMenosC.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMenosC.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnMenosC.Image = global::TRAZAAR.Properties.Resources.Tmenos;
-            this.BtnMenosC.Location = new System.Drawing.Point(527, 67);
-            this.BtnMenosC.Name = "BtnMenosC";
-            this.BtnMenosC.Size = new System.Drawing.Size(31, 31);
-            this.BtnMenosC.TabIndex = 80;
-            this.BtnMenosC.UseVisualStyleBackColor = false;
-            // 
-            // BtnMasC
-            // 
-            this.BtnMasC.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnMasC.BackColor = System.Drawing.Color.Transparent;
-            this.BtnMasC.FlatAppearance.BorderSize = 0;
-            this.BtnMasC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMasC.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMasC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.BtnMasC.Image = global::TRAZAAR.Properties.Resources.Tmas;
-            this.BtnMasC.Location = new System.Drawing.Point(527, 25);
-            this.BtnMasC.Name = "BtnMasC";
-            this.BtnMasC.Size = new System.Drawing.Size(31, 31);
-            this.BtnMasC.TabIndex = 79;
-            this.BtnMasC.UseVisualStyleBackColor = false;
             // 
             // FrmAddProcesos
             // 

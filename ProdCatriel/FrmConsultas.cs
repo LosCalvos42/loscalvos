@@ -18,16 +18,7 @@ namespace TRAZAAR
 
         }
 
-        private void PBalanceMP_Click(object sender, EventArgs e)
-        {
-           // Cursor.Current = Cursors.WaitCursor;
-           // CheckForIllegalCrossThreadCalls = false;
-           // FrmReporteBalanceMateriaPrima _FrmReporteBalanceMateriaPrima = new FrmReporteBalanceMateriaPrima();
-           // _FrmReporteBalanceMateriaPrima.StartPosition = FormStartPosition.CenterScreen;
-           // //_FrmInformeDespostada.ParentForm;
-           ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-           // AbrirFormEnPanel(_FrmReporteBalanceMateriaPrima);
-        }
+       
         private void AbrirFormEnPanel(object formHijo)
         {
             //if (this.panel1.Controls.Count > 0)
@@ -44,22 +35,6 @@ namespace TRAZAAR
             fh.Show();
         }
 
-        private void PStock_Click(object sender, EventArgs e)
-        {
-            //Cursor.Current = Cursors.WaitCursor;
-            //CheckForIllegalCrossThreadCalls = false;
-            //FrmCarnicosCuentaCorriente _FrmCarnicosCuentaCorriente = new FrmCarnicosCuentaCorriente();
-            //_FrmCarnicosCuentaCorriente.Vienede = "CONSULTA";
-            //_FrmCarnicosCuentaCorriente.Periodo = DateTime.Now;
-            //_FrmCarnicosCuentaCorriente.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmCarnicosCuentaCorriente.WindowState= FormWindowState.Maximized;
-            ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-            //AbrirFormEnPanel(_FrmCarnicosCuentaCorriente);
-        }
-
-        
-
-       
 
         private void Psalir_Click(object sender, EventArgs e)
         {
@@ -68,67 +43,37 @@ namespace TRAZAAR
             
         }
 
-        private void despostadaCatrielToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem7_Click(object sender, EventArgs e)
         {
-        //    Cursor.Current = Cursors.WaitCursor;
-        //    CheckForIllegalCrossThreadCalls = false;
-        //    FrmReporteDespostada _FrmReporteDespostada = new FrmReporteDespostada();
-        //    _FrmReporteDespostada.StartPosition = FormStartPosition.CenterScreen;
-        //    //_FrmInformeDespostada.ParentForm;
-        //    //_FrmReporteBalanceMateriaPrima.ShowDialog();
-        //    AbrirFormEnPanel(_FrmReporteDespostada);
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmSeguimientoDeCodigoDeBarra _FrmSeguimientoDeCodigoDeBarra = new FrmSeguimientoDeCodigoDeBarra();
+            _FrmSeguimientoDeCodigoDeBarra.StartPosition = FormStartPosition.CenterScreen;
+            _FrmSeguimientoDeCodigoDeBarra.ShowDialog();
         }
 
-        private void ingresoAPlantaMPCárnicaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MenuIngSal_Click(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //CheckForIllegalCrossThreadCalls = false;
-            //FrmIngresoCarnicos _FrmIngresoCarnicos = new FrmIngresoCarnicos();
-            //_FrmIngresoCarnicos.StartPosition = FormStartPosition.CenterScreen;
-            ////_FrmInformeDespostada.ParentForm;
-            ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-            //AbrirFormEnPanel(_FrmIngresoCarnicos);
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmReporteSalazon _FrmReporteSalazon = new FrmReporteSalazon();
+            _FrmReporteSalazon.Tabla = "OTRESUMEN";
+            _FrmReporteSalazon.Listado = "OTRABAJO";
+            _FrmReporteSalazon.TituloListado = "Listado de Ordenes De Trabajo";
+            _FrmReporteSalazon.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmReporteSalazon.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmReporteSalazon.StartPosition = FormStartPosition.CenterScreen;
+            _FrmReporteSalazon.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmReporteSalazon);
         }
 
-        private void otrosProcesosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //Cursor.Current = Cursors.WaitCursor;
-            //CheckForIllegalCrossThreadCalls = false;
-            //FrmReporteProcesos _FrmReporteProcesos = new FrmReporteProcesos();
-            //_FrmReporteProcesos.StartPosition = FormStartPosition.CenterScreen;
-            ////_FrmInformeDespostada.ParentForm;
-            ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-            //AbrirFormEnPanel(_FrmReporteProcesos);
-        }
-
-        private void consumidoporPeriodoNOCarnicosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Cursor.Current = Cursors.WaitCursor;
-            //CheckForIllegalCrossThreadCalls = false;
-            //FrmConsumidoNoCarnicos _FrmConsumidoNoCarnicos = new FrmConsumidoNoCarnicos();
-            //_FrmConsumidoNoCarnicos.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmConsumidoNoCarnicos.Periodo = DateTime.Now;
-            ////_FrmInformeDespostada.ParentForm;
-            ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-            //AbrirFormEnPanel(_FrmConsumidoNoCarnicos);
-        }
-
-        private void procesosProductivosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ajusteKgMprimaCárnicaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //Cursor.Current = Cursors.WaitCursor;
-            //CheckForIllegalCrossThreadCalls = false;
-            //FrmCarnicosDiferencias _FrmCarnicosDiferencias = new FrmCarnicosDiferencias();
-            //_FrmCarnicosDiferencias.Vienede = "CONSULTA";
-            //_FrmCarnicosDiferencias.Periodo = DateTime.Now;
-            //_FrmCarnicosDiferencias.StartPosition = FormStartPosition.CenterScreen;
-            //_FrmCarnicosDiferencias.WindowState = FormWindowState.Maximized;
-            ////_FrmReporteBalanceMateriaPrima.ShowDialog();
-            //AbrirFormEnPanel(_FrmCarnicosDiferencias);
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmSeguimientoDeLote _FrmSeguimientoDeLote = new FrmSeguimientoDeLote();
+            _FrmSeguimientoDeLote.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmSeguimientoDeLote);
         }
     }
 }
