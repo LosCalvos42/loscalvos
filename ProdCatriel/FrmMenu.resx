@@ -165,26 +165,30 @@
   </metadata>
   <data name="pnlempresa.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAMMOAADDDgAAAAAAAAAA
-        AACJOz//ijo//4s7Pv+IPD7/hzs+/4U9Pv+GPD7/hDw+/4U9P/+HPT3/hz0+/4c9P/+GOz//iTs//406
-        Pv+HPDz/hDw+/4c8Pv+GPD7/iTs+/4c8Pv+IPD7/iDs+/4k7Pv+MPED/ij9C/4U7Pf+ENzn/hTc7/4g9
-        Qf+EPT7/gD49/4g7Pv+HPD7/hDw+/4g7Pv+IPD7/hjs9/4Y9Pv+PP0L/hDI5/3UpLv+DP0H/kU1R/4xF
-        Sf90LzH/gDw9/4k9Pf+IPT3/iDw9/4o7Pv+GPD7/hjw+/4ZAQf+COTz/diou/5BTWf/Irq7/18G+/7GV
-        lP/CoaL/tYqM/342N/+IPD3/iD09/4c9Pf+GPD7/iD5A/4w+Qv96LTL/gEFG/8Orq///////2MzM/3w8
-        Pv96MDP/czE2/69+g/+4j4//ey4w/4w8QP+KQEL/iEFD/382Of91KzH/onJ3//Ho5///////9/Lv/3s/
-        Q/+EMTb/jkFF/4IyOf9sICb/tZua/5dWWf9+MzX/cywu/20tL/+LT1P/072+///////6+/r//////8Ow
-        sP93LjP/jz9D/3w1N/+mcHH/g0NI/6Boa/+xh4b/mnFy/7uVlv+le3z/9O7t///////6+/n/9vb2////
-        //+vkpP/dSww/4M3Of+ZY2H//////86vsf+PTFL/qZGS/7aUl///////3NXV//Xz8//9/f3/+fj4//X3
-        +P//////rZCT/3MsMP+GNjn/nmJi///////ZvsD/j0lR/6eOkf+KTFH/9vHu/6WAg/+mfYH//Pj5////
-        ///5+fn//////8Onqv92LTL/ikBD/340Nv+5lZT/kmNn/5VUWv+skZL/fDo9/4lMTv9/NDn/fCw0/4ZJ
-        Tv+/qKn/+Pj3///////q397/fDc7/4k9QP+GPT//fy80/28lK/+rd3r/sHh5/4Y9P/+GNjn/iD1A/4c+
-        Qv+DNjr/cyku/45YW//czsz//////6eEhP9nIiP/iDs9/4g4Pf9zLjH/wZ6d/45JS/+JOz7/iD0//4c8
-        Pv+DPD7/hD4//4dAQf9+Mzb/ezA1/7CJiv/x6OT/q4WD/4lFR/+NTE//wJSV/592df96MDL/hzw+/4c8
-        Pv+HPD7/iDs+/4k8Pv+HPD7/iT5A/4g8P/92Ki//ikVH/7SNi/+wl5T/tZSU/6BmaP91MTT/iz1A/4Q8
-        Pv+EPD7/gz0+/4g8Pv+JOz7/hzw+/4g7Pv+IPD7/jD9C/4U5O/91LS3/dTMz/3UvMf94MTb/hj1B/4Y8
-        Pv+NOj//gjw//4Y7P/+HPD7/hjw+/4c6Pf+FPD7/hT0+/4Y8Pv+DPT7/i0FB/4k9QP+OPkP/jjxD/4Y6
-        Pv+FPD7/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAA==
+        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
+        AACAAAAAwAAAAMABAADAAwAA+AMAAPwHAAA=
 </value>
   </data>
   <data name="pnlsistema.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -328,7 +332,7 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
+    <value>68</value>
   </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

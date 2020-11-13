@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmAddOrdenDeTrabajoEstucado : Form
     {
@@ -530,7 +530,7 @@ namespace TRAZAAR
                     else
                     {
 
-                        MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                        MessageBox.Show(msg[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         DialogResult = DialogResult.Yes;
                         this.Close();
                         return;
@@ -988,7 +988,7 @@ namespace TRAZAAR
                 }
                 else
                 {
-                    MessageBox.Show(msg[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(msg[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     Dgprincipal.Rows.RemoveAt(Dgprincipal.CurrentRow.Index);
                     cargarDGPrincipal();
                     return;
@@ -996,7 +996,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por favor seleccione un Item para Eliminar.", "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor seleccione un Item para Eliminar.", "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private String[] RemovMovCodBar(string CODBAR, string LOTE, int NroOt)
@@ -1109,11 +1109,11 @@ namespace TRAZAAR
 
                     if (msj[0] == "0")
                     {
-                        MessageBox.Show(msj[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(msj[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("Los Datos se Guardaron Correctamente" + System.Environment.NewLine + msj[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Los Datos se Guardaron Correctamente" + System.Environment.NewLine + msj[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         this.Close();
                         this.Dispose();

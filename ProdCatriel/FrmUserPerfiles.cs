@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Datos;
 using logica;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmUserPerfiles : Form
     {
@@ -137,7 +137,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             inicializar();
 
@@ -167,7 +167,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LlenarGrid("PERFIL", "");
         }
@@ -197,7 +197,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             inicializar();
         }

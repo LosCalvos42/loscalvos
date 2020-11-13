@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmConfiguracion
     {
@@ -62,7 +62,7 @@
             this.toolStripMenuItem5});
             this.produccionToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.produccionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.produccionToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.produccion;
+            this.produccionToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.produccion;
             this.produccionToolStripMenuItem.Name = "produccionToolStripMenuItem";
             this.produccionToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.produccionToolStripMenuItem.Text = "&Producción";
@@ -71,7 +71,7 @@
             // 
             this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Psalir.ForeColor = System.Drawing.Color.White;
-            this.Psalir.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.Psalir.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.Psalir.Name = "Psalir";
             this.Psalir.Size = new System.Drawing.Size(65, 24);
             this.Psalir.Text = "Salir";
@@ -120,7 +120,7 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem2.Image = global::TRAZAAR.Properties.Resources.permisos32;
+            this.toolStripMenuItem2.Image = global::LOSCALVOS.Properties.Resources.permisos32;
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.toolStripMenuItem2.Text = "&Permisos";
@@ -129,7 +129,7 @@
             // 
             this.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem3.Image = global::TRAZAAR.Properties.Resources.usuarios16;
+            this.toolStripMenuItem3.Image = global::LOSCALVOS.Properties.Resources.usuarios16;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(194, 24);
             this.toolStripMenuItem3.Text = "&Usuarios";
@@ -139,7 +139,7 @@
             // 
             this.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem4.Image = global::TRAZAAR.Properties.Resources.Perfiles_32;
+            this.toolStripMenuItem4.Image = global::LOSCALVOS.Properties.Resources.Perfiles_32;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(194, 24);
             this.toolStripMenuItem4.Text = "&Perfil De Usuarios";
@@ -149,7 +149,7 @@
             // 
             this.toolStripMenuItem5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem5.Image = global::TRAZAAR.Properties.Resources.calendariook;
+            this.toolStripMenuItem5.Image = global::LOSCALVOS.Properties.Resources.calendariook;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem5.Text = "&Agenda";

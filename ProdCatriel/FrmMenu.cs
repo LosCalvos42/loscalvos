@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using logica;
 using System.Runtime.InteropServices;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmMenu : Form
     {
@@ -62,42 +62,10 @@ namespace TRAZAAR
             _FrmUser.Show();
         }
 
-        private void sselecciónJamónXTexturaToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FrmReSjamon _FrmReSjamon = new FrmReSjamon();
-            _FrmReSjamon.StartPosition = FormStartPosition.CenterScreen;
-            _FrmReSjamon.MdiParent = this;
-            _FrmReSjamon.Show();
-        }
-
-        private void reporteFrmReSJporFechaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmReSJporFecha _FrmReSJporFecha = new FrmReSJporFecha();
-            _FrmReSJporFecha.StartPosition = FormStartPosition.CenterScreen;
-            _FrmReSJporFecha.MdiParent = this;
-            _FrmReSJporFecha.Show();
-        }
         private int tolerance = 15;
         private const int WM_NCHITTEST = 132;
         private const int HTBOTTOMRIGHT = 17;
         private Rectangle sizeGripRectangle;
-
-        //protected override void WndProc(ref Message m)
-        //{
-        //    switch (m.Msg)
-        //    {
-        //        case WM_NCHITTEST:
-        //            base.WndProc(ref m);
-        //            var hitPoint = this.PointToClient(new Point(m.LParam.ToInt32() & 0xffff, m.LParam.ToInt32() >> 16));
-        //            if (sizeGripRectangle.Contains(hitPoint))
-        //                m.Result = new IntPtr(HTBOTTOMRIGHT);
-        //            break;
-        //        default:
-        //            base.WndProc(ref m);
-        //            break;
-        //    }
-        //}
-
         protected override void OnPaint(PaintEventArgs e)
         {
 
@@ -168,9 +136,9 @@ namespace TRAZAAR
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
             string ssql  = @"select TOP(1) isnull(DISPIMPRESORA_NOMBRE, '') as IMPRESORA, isnull(DISPBALANZAS_NOMBRE, '') AS BALANZA " +
-            "FROM[TRAZAARDB].[dbo].[DISPOSITIVOS] D " +
-            "INNER JOIN[TRAZAARDB].[dbo].[DISPIMPRESORAS] I ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID AND I.DISPIMPRESORA_ESTADO = 'ON' " +
-            "left join[TRAZAARDB].[dbo].[DISPBALANZAS] B on B.DISPOSITIVO_ID = D.DISPOSITIVO_ID AND B.DISPBALANZAS_ESTADO = 'ON' " +
+            "FROM [DISPOSITIVOS] D " +
+            "INNER JOIN [DISPIMPRESORAS] I ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID AND I.DISPIMPRESORA_ESTADO = 'ON' " +
+            "left join [DISPBALANZAS] B on B.DISPOSITIVO_ID = D.DISPOSITIVO_ID AND B.DISPBALANZAS_ESTADO = 'ON' " +
             "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
             "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "' ";
 
@@ -280,10 +248,10 @@ namespace TRAZAAR
         {
             //MostrarFormLogo();
 
-            Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
-            BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
-            BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
-            BtnUtilidades.BackColor = Color.FromArgb(62, 59, 135);
+            Btnproduccion.BackColor = Color.FromArgb(81, 46, 95);
+            BtnConfiguracion.BackColor = Color.FromArgb(81, 46, 95);
+            BtnConsultas.BackColor = Color.FromArgb(81, 46, 95);
+            BtnUtilidades.BackColor = Color.FromArgb(81, 46, 95);
 
             //btnListaClientes.BackColor = Color.FromArgb(29, 34, 39);
 
@@ -307,11 +275,11 @@ namespace TRAZAAR
         }
         private void HabilitarBotones(Button b)
         {
-            Btnproduccion.BackColor = Color.FromArgb(62, 59, 135);
-            BtnConfiguracion.BackColor = Color.FromArgb(62, 59, 135);
-            BtnConsultas.BackColor = Color.FromArgb(62, 59, 135);
-            BtnUtilidades.BackColor = Color.FromArgb(62, 59, 135);
-            b.BackColor = Color.FromArgb(35, 155, 86);
+            Btnproduccion.BackColor = Color.FromArgb(81, 46, 95);
+            BtnConfiguracion.BackColor = Color.FromArgb(81, 46, 95);
+            BtnConsultas.BackColor = Color.FromArgb(81, 46, 95);
+            BtnUtilidades.BackColor = Color.FromArgb(81, 46, 95);
+            b.BackColor = Color.FromArgb(211, 84, 0);
 
         }
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmTipoProceso : Form
     {

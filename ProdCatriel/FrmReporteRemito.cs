@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmReporteRemito : Form
     {

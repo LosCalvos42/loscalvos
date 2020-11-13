@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmProduccion : Form
     {
@@ -294,10 +294,9 @@ namespace TRAZAAR
 
             if (Program.perfil == 5)
             {
-                toolStripMenuItem5.Enabled = false;
+                
                 marchivo.Enabled = false;
                 mConfiguracion.Enabled = false;
-                toolStripMenuItem2.Enabled = false;
             }
         }
 

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7A677B5B-1EA2-4237-85D2-090708A13F47}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TRAZAAR</RootNamespace>
-    <AssemblyName>TRAZAR</AssemblyName>
+    <RootNamespace>LOSCALVOS</RootNamespace>
+    <AssemblyName>LOSCALVOS</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -263,12 +263,6 @@
     <Compile Include="FrmAgenda.designer.cs">
       <DependentUpon>FrmAgenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddAgenda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAddAgenda.designer.cs">
-      <DependentUpon>FrmAddAgenda.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAddLote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -515,18 +509,6 @@
     <Compile Include="FrmRecursoProduccion.Designer.cs">
       <DependentUpon>FrmRecursoProduccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmReSjamon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReSjamon.Designer.cs">
-      <DependentUpon>FrmReSjamon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReSJporFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReSJporFecha.Designer.cs">
-      <DependentUpon>FrmReSJporFecha.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmSeguimientoOrdenesProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -593,18 +575,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteBatea.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteBatea.Designer.cs">
-      <DependentUpon>ReporteBatea.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteFrmReSJporFecha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteFrmReSJporFecha.Designer.cs">
-      <DependentUpon>ReporteFrmReSJporFecha.cs</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -684,9 +654,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAgenda.resx">
       <DependentUpon>FrmAgenda.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddAgenda.resx">
-      <DependentUpon>FrmAddAgenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddLote.resx">
       <DependentUpon>FrmAddLote.cs</DependentUpon>
@@ -817,14 +784,6 @@
     <EmbeddedResource Include="FrmRecursoProduccion.resx">
       <DependentUpon>FrmRecursoProduccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReSjamon.resx">
-      <DependentUpon>FrmReSjamon.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReSJporFecha.resx">
-      <DependentUpon>FrmReSJporFecha.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSeguimientoOrdenesProduccion.resx">
       <DependentUpon>FrmSeguimientoOrdenesProduccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -858,14 +817,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteBatea.resx">
-      <DependentUpon>ReporteBatea.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteFrmReSJporFecha.resx">
-      <DependentUpon>ReporteFrmReSJporFecha.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
@@ -993,6 +944,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TRAZAR.png" />
+    <None Include="Resources\los calvos.jpg" />
+    <None Include="Resources\logoLC.JPG" />
+    <None Include="Resources\LoscalvosLogoTri.png" />
+    <None Include="Resources\iniciandoclaro.gif" />
+    <None Include="Resources\iniciandoorcuro.gif" />
+    <None Include="Resources\iniciandotrazar.gif" />
+    <None Include="Resources\GifInicioLosCalvos.gif" />
     <Content Include="TRAZAR48.ico" />
     <None Include="Resources\BALANZA24.png" />
     <None Include="Resources\icons8-rack-24.png" />

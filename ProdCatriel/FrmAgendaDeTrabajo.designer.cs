@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmAgendaDeTrabajo
     {
@@ -150,7 +150,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.button1.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(527, 63);
             this.button1.Name = "button1";
@@ -186,7 +186,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.gargando4;
+            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.gargando4;
             this.pictureBox1.Location = new System.Drawing.Point(441, 278);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 38);
@@ -252,7 +252,7 @@
             // 
             this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.mimprimir.Name = "mimprimir";
             this.mimprimir.Size = new System.Drawing.Size(89, 22);
             this.mimprimir.Text = "Imprimir";
@@ -262,7 +262,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.salirToolStripMenuItem.Text = "Salir";

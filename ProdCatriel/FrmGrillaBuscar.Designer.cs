@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmGrillaBuscar
     {
@@ -113,7 +113,7 @@
             // 
             this.pBuscar.BackColor = System.Drawing.Color.Transparent;
             this.pBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pBuscar.Image = global::TRAZAAR.Properties.Resources.Tsearch;
+            this.pBuscar.Image = global::LOSCALVOS.Properties.Resources.Tsearch;
             this.pBuscar.Location = new System.Drawing.Point(390, -2);
             this.pBuscar.Name = "pBuscar";
             this.pBuscar.Size = new System.Drawing.Size(26, 25);

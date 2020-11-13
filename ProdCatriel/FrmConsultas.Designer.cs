@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmConsultas
     {
@@ -59,7 +59,7 @@
             this.toolStripMenuItem1});
             this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mReportes.ForeColor = System.Drawing.Color.White;
-            this.mReportes.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.mReportes.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.mReportes.Name = "mReportes";
             this.mReportes.Size = new System.Drawing.Size(112, 22);
             this.mReportes.Text = "Producción";
@@ -68,7 +68,7 @@
             // 
             this.toolStripMenuItem7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem7.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem7.Image = global::TRAZAAR.Properties.Resources.CodBarra;
+            this.toolStripMenuItem7.Image = global::LOSCALVOS.Properties.Resources.CodBarra;
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
             this.toolStripMenuItem7.Size = new System.Drawing.Size(233, 22);
             this.toolStripMenuItem7.Text = "Seguimiento de CodBar";
@@ -78,7 +78,7 @@
             // 
             this.MenuIngSal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.MenuIngSal.ForeColor = System.Drawing.Color.White;
-            this.MenuIngSal.Image = global::TRAZAAR.Properties.Resources.IngresoLote;
+            this.MenuIngSal.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
             this.MenuIngSal.Name = "MenuIngSal";
             this.MenuIngSal.Size = new System.Drawing.Size(233, 22);
             this.MenuIngSal.Text = "Ingreso a Sal";
@@ -88,7 +88,7 @@
             // 
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.SeguimientoOT;
+            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.SeguimientoOT;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(233, 22);
             this.toolStripMenuItem1.Text = "Seguimiento De Lote";
@@ -98,7 +98,7 @@
             // 
             this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Psalir.ForeColor = System.Drawing.Color.White;
-            this.Psalir.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.Psalir.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.Psalir.Name = "Psalir";
             this.Psalir.Size = new System.Drawing.Size(65, 22);
             this.Psalir.Text = "Salir";

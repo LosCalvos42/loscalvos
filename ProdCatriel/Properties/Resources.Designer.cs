@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TRAZAAR.Properties {
+namespace LOSCALVOS.Properties {
     using System;
     
     
@@ -19,7 +19,7 @@ namespace TRAZAAR.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -39,7 +39,7 @@ namespace TRAZAAR.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TRAZAAR.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("LOSCALVOS.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -383,9 +383,9 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cargandotrazaar {
+        internal static System.Drawing.Bitmap cargandoLOSCALVOS {
             get {
-                object obj = ResourceManager.GetObject("cargandotrazaar", resourceCulture);
+                object obj = ResourceManager.GetObject("cargandoLOSCALVOS", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -686,6 +686,16 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap gfamilia {
             get {
                 object obj = ResourceManager.GetObject("gfamilia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GifInicioLosCalvos {
+            get {
+                object obj = ResourceManager.GetObject("GifInicioLosCalvos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1173,6 +1183,36 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iniciandoclaro {
+            get {
+                object obj = ResourceManager.GetObject("iniciandoclaro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iniciandoorcuro {
+            get {
+                object obj = ResourceManager.GetObject("iniciandoorcuro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iniciandotrazar {
+            get {
+                object obj = ResourceManager.GetObject("iniciandotrazar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap INICIOGIF1 {
             get {
                 object obj = ResourceManager.GetObject("INICIOGIF1", resourceCulture);
@@ -1233,6 +1273,16 @@ namespace TRAZAAR.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoLC {
+            get {
+                object obj = ResourceManager.GetObject("logoLC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoLosCalvosGris {
             get {
                 object obj = ResourceManager.GetObject("logoLosCalvosGris", resourceCulture);
@@ -1276,6 +1326,26 @@ namespace TRAZAAR.Properties {
         internal static System.Drawing.Bitmap logoUI2 {
             get {
                 object obj = ResourceManager.GetObject("logoUI2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap los_calvos {
+            get {
+                object obj = ResourceManager.GetObject("los calvos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LoscalvosLogoTri {
+            get {
+                object obj = ResourceManager.GetObject("LoscalvosLogoTri", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

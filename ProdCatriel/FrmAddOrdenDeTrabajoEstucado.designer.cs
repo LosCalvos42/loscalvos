@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmAddOrdenDeTrabajoEstucado
     {
@@ -921,7 +921,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.button1.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(349, 250);
             this.button1.Name = "button1";
@@ -939,7 +939,7 @@
             this.BtnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBorrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBorrar.ForeColor = System.Drawing.Color.White;
-            this.BtnBorrar.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.BtnBorrar.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.BtnBorrar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnBorrar.Location = new System.Drawing.Point(924, 670);
             this.BtnBorrar.Name = "BtnBorrar";
@@ -957,7 +957,7 @@
             this.BtnRacks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRacks.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRacks.ForeColor = System.Drawing.Color.White;
-            this.BtnRacks.Image = global::TRAZAAR.Properties.Resources.icons8_rack_16;
+            this.BtnRacks.Image = global::LOSCALVOS.Properties.Resources.icons8_rack_16;
             this.BtnRacks.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnRacks.Location = new System.Drawing.Point(462, 670);
             this.BtnRacks.Name = "BtnRacks";
@@ -974,7 +974,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(349, 216);
             this.btnCancel.Name = "btnCancel";
@@ -992,7 +992,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(349, 183);
             this.btnAceptar.Name = "btnAceptar";

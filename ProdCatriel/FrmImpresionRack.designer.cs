@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmImpresionRack
     {
@@ -99,7 +99,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(338, 492);
             this.btnCancel.Name = "btnCancel";
@@ -123,7 +123,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.utilidades;
+            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.utilidades;
             this.pictureBox1.Location = new System.Drawing.Point(714, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 23);
@@ -705,7 +705,7 @@
             this.BtnPrint1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnPrint1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrint1.ForeColor = System.Drawing.Color.White;
-            this.BtnPrint1.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.BtnPrint1.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.BtnPrint1.Location = new System.Drawing.Point(762, 492);
             this.BtnPrint1.Name = "BtnPrint1";
             this.BtnPrint1.Size = new System.Drawing.Size(55, 24);

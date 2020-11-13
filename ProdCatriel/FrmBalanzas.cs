@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmBalanzas : Form
     {
@@ -136,20 +136,20 @@ namespace TRAZAAR
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
                 string ssql = @"SELECT * "+
-                                " FROM [TRAZAARDB].[dbo].[DISPOSITIVOS] "+
+                                " FROM DISPOSITIVOS "+
                                 " WHERE DISPOSITIVO_NROSERIE = '"+TxtSerialNumber.Text+ "' " +
                                 " AND DISPOSITIVO_NOMBRE= '"+TxtHostName.Text+"'";
                 dt = M.lisquery(ssql);
 
                 //if (dt.Rows.Count==0)
                 //{
-                //    M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPOSITIVOS]  " +
+                //    M.Ejecutarquery("INSERT [LOSCALVOSDB].[dbo].[DISPOSITIVOS]  " +
                 //    "(DISPOSITIVO_TIPO, DISPOSITIVO_NROSERIE, DISPOSITIVO_NOMBRE,DISPOSITIVO_DEBAJA) " +
                 //    "VALUES( '"+Tipodispositivo+"','"+TxtSerialNumber.Text+"','"+TxtHostName.Text+"','N')");
                 //}
 
                ssql = @"SELECT DISPOSITIVO_ID "+
-                        "FROM [TRAZAARDB].[dbo].[DISPOSITIVOS] " +
+                        "FROM [DISPOSITIVOS] " +
                         "WHERE DISPOSITIVO_NROSERIE ='" + TxtSerialNumber.Text + "' " +
                         "AND DISPOSITIVO_NOMBRE='" + TxtHostName.Text+"'";
                 dt = M.lisquery(ssql);
@@ -158,24 +158,24 @@ namespace TRAZAAR
                 {
                     int DispositivoID = Convert.ToInt32(dt.Rows[0][0].ToString());
 
-                    M.Ejecutarquery("DELETE [TRAZAARDB].[dbo].[DISPBALANZAS]  " +
+                    M.Ejecutarquery("DELETE [DISPBALANZAS]  " +
                     "WHERE DISPOSITIVO_ID= " + DispositivoID);
 
                     if (CmbNombre1.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPBALANZAS]  " +
+                        M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
                         "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
                         "VALUES( " + DispositivoID + "," + 1 + ",'" + CmbNombre1.Text + "','" + CmbTipo1.Text + "','" + r1.Text + "')");
                     }
                     if (CmbNombre2.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPBALANZAS]  " +
+                        M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
                         "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
                         "VALUES( " + DispositivoID + "," + 2 + ",'" + CmbNombre2.Text + "','" + CmbTipo2.Text + "','" + r2.Text + "')");
                     }
                     
                     ssql = @"SELECT DISPBALANZAS_NOMBRE " +
-                        "FROM [TRAZAARDB].[dbo].[DISPBALANZAS] " +
+                        "FROM [DISPBALANZAS] " +
                         "WHERE DISPOSITIVO_ID=" + DispositivoID +
                         " AND DISPBALANZAS_ESTADO='ON'";
                     dt = M.lisquery(ssql);

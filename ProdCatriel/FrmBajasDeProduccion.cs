@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmBajasDeProduccion : Form
     {
@@ -156,11 +156,11 @@ namespace TRAZAAR
 
                 if (msj[0] == "0" || msj[0] == "")
                 {
-                    MessageBox.Show(msj[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(msj[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Los Datos se Guardaron Correctamente" + System.Environment.NewLine + msj[1], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Los Datos se Guardaron Correctamente" + System.Environment.NewLine + msj[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     this.Close();
                     this.Dispose();

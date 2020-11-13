@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmListadosProduccion
     {
@@ -77,7 +77,7 @@
             // 
             this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::TRAZAAR.Properties.Resources.alta32;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
             this.mnuevo.Name = "mnuevo";
             this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
             this.mnuevo.Size = new System.Drawing.Size(79, 22);
@@ -88,7 +88,7 @@
             // 
             this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::TRAZAAR.Properties.Resources.modificar32;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
             this.mmodificar.Name = "mmodificar";
             this.mmodificar.Size = new System.Drawing.Size(97, 22);
             this.mmodificar.Text = "Modificar";
@@ -107,7 +107,7 @@
             // 
             this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::TRAZAAR.Properties.Resources.eliminar32;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
             this.meliminar.Name = "meliminar";
             this.meliminar.Size = new System.Drawing.Size(89, 22);
             this.meliminar.Text = "Eliminar";
@@ -118,7 +118,7 @@
             this.mimprimir.Enabled = false;
             this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.mimprimir.Name = "mimprimir";
             this.mimprimir.Size = new System.Drawing.Size(89, 22);
             this.mimprimir.Text = "Imprimir";
@@ -127,7 +127,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -293,7 +293,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
+            this.btnBuscar.Image = global::LOSCALVOS.Properties.Resources.icons8_search_property_22__3_;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.Location = new System.Drawing.Point(436, 46);
             this.btnBuscar.Name = "btnBuscar";
@@ -310,7 +310,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.gargando4;
+            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.gargando4;
             this.pictureBox1.Location = new System.Drawing.Point(385, 258);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(166, 38);

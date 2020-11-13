@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmPesada
     {
@@ -87,7 +87,7 @@
             // 
             // PicGIF
             // 
-            this.PicGIF.Image = global::TRAZAAR.Properties.Resources.gargando4;
+            this.PicGIF.Image = global::LOSCALVOS.Properties.Resources.gargando4;
             this.PicGIF.Location = new System.Drawing.Point(97, 17);
             this.PicGIF.Name = "PicGIF";
             this.PicGIF.Size = new System.Drawing.Size(45, 38);

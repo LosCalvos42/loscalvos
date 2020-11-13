@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmUser
     {
@@ -84,7 +84,7 @@
             // 
             this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::TRAZAAR.Properties.Resources.alta32;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
             this.mnuevo.Name = "mnuevo";
             this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
             this.mnuevo.Size = new System.Drawing.Size(79, 22);
@@ -95,7 +95,7 @@
             // 
             this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::TRAZAAR.Properties.Resources.modificar32;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
             this.mmodificar.Name = "mmodificar";
             this.mmodificar.Size = new System.Drawing.Size(97, 22);
             this.mmodificar.Text = "Modificar";
@@ -105,7 +105,7 @@
             // 
             this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::TRAZAAR.Properties.Resources.eliminar32;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
             this.meliminar.Name = "meliminar";
             this.meliminar.Size = new System.Drawing.Size(89, 22);
             this.meliminar.Text = "Eliminar";
@@ -116,7 +116,7 @@
             this.mimprimir.Enabled = false;
             this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.mimprimir.Name = "mimprimir";
             this.mimprimir.Size = new System.Drawing.Size(89, 22);
             this.mimprimir.Text = "Imprimir";
@@ -125,7 +125,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -224,7 +224,7 @@
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.button1.Image = global::TRAZAAR.Properties.Resources.search;
+            this.button1.Image = global::LOSCALVOS.Properties.Resources.search;
             this.button1.Location = new System.Drawing.Point(210, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 24);

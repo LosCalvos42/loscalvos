@@ -55,7 +55,6 @@
     <Compile Include="ClsTipo.cs" />
     <Compile Include="ClsTipoJamon.cs" />
     <Compile Include="ClsTWingresos.cs" />
-    <Compile Include="CNEmpleado.cs" />
     <Compile Include="ExportarDesp.cs" />
     <Compile Include="Exportar.cs" />
     <Compile Include="User.cs" />

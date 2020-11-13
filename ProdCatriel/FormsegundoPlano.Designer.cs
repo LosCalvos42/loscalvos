@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FormsegundoPlano
     {
@@ -63,7 +63,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(191, 92);
             this.btnCancel.Name = "btnCancel";
@@ -81,7 +81,7 @@
             this.btnStar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStar.ForeColor = System.Drawing.Color.White;
-            this.btnStar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.btnStar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnStar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStar.Location = new System.Drawing.Point(69, 92);
             this.btnStar.Name = "btnStar";

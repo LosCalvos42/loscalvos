@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmAddGrupoFamilia
     {
@@ -54,7 +54,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(310, 208);
             this.btnCancel.Name = "btnCancel";
@@ -72,7 +72,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(207, 208);
             this.btnAceptar.Name = "btnAceptar";

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using logica;
 using Datos;
 using Excel = Microsoft.Office.Interop.Excel;
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmTwinsIngresoXproveedor : Form
     {

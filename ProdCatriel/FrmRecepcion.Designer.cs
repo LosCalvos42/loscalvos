@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmRecepcion
     {
@@ -70,7 +70,7 @@
             // 
             this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::TRAZAAR.Properties.Resources.icons8_add_folder_64;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.icons8_add_folder_64;
             this.mnuevo.Name = "mnuevo";
             this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
             this.mnuevo.Size = new System.Drawing.Size(79, 22);
@@ -80,7 +80,7 @@
             // 
             this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::TRAZAAR.Properties.Resources.icons8_pencil_drawing_96;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.icons8_pencil_drawing_96;
             this.mmodificar.Name = "mmodificar";
             this.mmodificar.Size = new System.Drawing.Size(97, 22);
             this.mmodificar.Text = "Modificar";
@@ -89,7 +89,7 @@
             // 
             this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::TRAZAAR.Properties.Resources.icons8_delete_file_128;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.icons8_delete_file_128;
             this.meliminar.Name = "meliminar";
             this.meliminar.Size = new System.Drawing.Size(89, 22);
             this.meliminar.Text = "Eliminar";
@@ -98,7 +98,7 @@
             // 
             this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::TRAZAAR.Properties.Resources.icons8_print_48;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.icons8_print_48;
             this.mimprimir.Name = "mimprimir";
             this.mimprimir.Size = new System.Drawing.Size(89, 22);
             this.mimprimir.Text = "Imprimir";
@@ -107,7 +107,7 @@
             // 
             this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
             this.salirToolStripMenuItem.Text = "Salir";
@@ -190,7 +190,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
+            this.btnBuscar.Image = global::LOSCALVOS.Properties.Resources.icons8_search_property_22__3_;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Location = new System.Drawing.Point(383, 55);
             this.btnBuscar.Name = "btnBuscar";

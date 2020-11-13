@@ -12,7 +12,7 @@ using logica;
 using Datos;
 using System.Text.RegularExpressions;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmPesada : Form
     {

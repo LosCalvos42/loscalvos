@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmImpresoras : Form
     {
@@ -58,8 +58,8 @@ namespace TRAZAAR
 
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
-            string ssql = @"select DISPIMPRESORA_nro, DISPIMPRESORA_NOMBRE,DISPIMPRESORA_TIPO,DISPIMPRESORA_ESTADO FROM[TRAZAARDB].[dbo].[DISPIMPRESORAS] I " +
-                                  "INNER JOIN[TRAZAARDB].[dbo].[DISPOSITIVOS] D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
+            string ssql = @"select DISPIMPRESORA_nro, DISPIMPRESORA_NOMBRE,DISPIMPRESORA_TIPO,DISPIMPRESORA_ESTADO FROM [DISPIMPRESORAS] I " +
+                                  "INNER JOIN [DISPOSITIVOS] D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
                                   "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
                                   "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "'";
                                   //"AND I.DISPIMPRESORA_ESTADO = 'ON'";
@@ -205,20 +205,20 @@ namespace TRAZAAR
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
                 string ssql = @"SELECT * "+
-                                " FROM [TRAZAARDB].[dbo].[DISPOSITIVOS] "+
+                                " FROM [DISPOSITIVOS] "+
                                 " WHERE DISPOSITIVO_NROSERIE = '"+TxtSerialNumber.Text+ "' " +
                                 " AND DISPOSITIVO_NOMBRE= '"+TxtHostName.Text+"'";
                 dt = M.lisquery(ssql);
 
                 if (dt.Rows.Count==0)
                 {
-                    M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPOSITIVOS]  " +
+                    M.Ejecutarquery("INSERT [DISPOSITIVOS]  " +
                     "(DISPOSITIVO_TIPO, DISPOSITIVO_NROSERIE, DISPOSITIVO_NOMBRE,DISPOSITIVO_DEBAJA) " +
                     "VALUES( '"+Tipodispositivo+"','"+TxtSerialNumber.Text+"','"+TxtHostName.Text+"','N')");
                 }
 
                ssql = @"SELECT DISPOSITIVO_ID "+
-                        "FROM [TRAZAARDB].[dbo].[DISPOSITIVOS] " +
+                        "FROM [DISPOSITIVOS] " +
                         "WHERE DISPOSITIVO_NROSERIE ='" + TxtSerialNumber.Text + "' " +
                         "AND DISPOSITIVO_NOMBRE='" + TxtHostName.Text+"'";
                 dt = M.lisquery(ssql);
@@ -227,24 +227,24 @@ namespace TRAZAAR
                 {
                     int DispositivoID = Convert.ToInt32(dt.Rows[0][0].ToString());
 
-                    M.Ejecutarquery("DELETE [TRAZAARDB].[dbo].[DISPIMPRESORAS]  " +
+                    M.Ejecutarquery("DELETE [DISPIMPRESORAS]  " +
                     "WHERE DISPOSITIVO_ID= " + DispositivoID);
 
                     if (CmbNombre1.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPIMPRESORAS]  " +
+                        M.Ejecutarquery("INSERT [DISPIMPRESORAS]  " +
                         "(DISPOSITIVO_ID, DISPIMPRESORA_NRO, DISPIMPRESORA_NOMBRE,DISPIMPRESORA_TIPO,DISPIMPRESORA_ESTADO) " +
                         "VALUES( " + DispositivoID + "," + 1 + ",'" + CmbNombre1.Text + "','" + CmbTipo1.Text + "','" + r1.Text + "')");
                     }
                     if (CmbNombre2.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [TRAZAARDB].[dbo].[DISPIMPRESORAS]  " +
+                        M.Ejecutarquery("INSERT [DISPIMPRESORAS]  " +
                         "(DISPOSITIVO_ID, DISPIMPRESORA_NRO, DISPIMPRESORA_NOMBRE,DISPIMPRESORA_TIPO,DISPIMPRESORA_ESTADO) " +
                         "VALUES( " + DispositivoID + "," + 2 + ",'" + CmbNombre2.Text + "','" + CmbTipo2.Text + "','" + r2.Text + "')");
                     }
                     
                     ssql = @"SELECT DISPIMPRESORA_NOMBRE "+
-                        "FROM [TRAZAARDB].[dbo].[DISPIMPRESORAS] " +
+                        "FROM [DISPIMPRESORAS] " +
                         "WHERE DISPOSITIVO_ID=" + DispositivoID +
                         " AND DISPIMPRESORA_ESTADO='ON'";
                     dt = M.lisquery(ssql);

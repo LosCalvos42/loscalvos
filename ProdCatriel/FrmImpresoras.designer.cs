@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmImpresoras
     {
@@ -61,7 +61,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(309, 235);
             this.btnCancel.Name = "btnCancel";
@@ -79,7 +79,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(200, 235);
             this.btnAceptar.Name = "btnAceptar";
@@ -310,7 +310,7 @@
             this.BtnPrint1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnPrint1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrint1.ForeColor = System.Drawing.Color.White;
-            this.BtnPrint1.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.BtnPrint1.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.BtnPrint1.Location = new System.Drawing.Point(455, 163);
             this.BtnPrint1.Name = "BtnPrint1";
             this.BtnPrint1.Size = new System.Drawing.Size(55, 24);
@@ -326,7 +326,7 @@
             this.BtnPrint2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnPrint2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPrint2.ForeColor = System.Drawing.Color.White;
-            this.BtnPrint2.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.BtnPrint2.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.BtnPrint2.Location = new System.Drawing.Point(455, 192);
             this.BtnPrint2.Name = "BtnPrint2";
             this.BtnPrint2.Size = new System.Drawing.Size(55, 24);

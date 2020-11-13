@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmListadosProduccion : Form
     {
@@ -202,7 +202,7 @@ namespace TRAZAAR
 
                 if (Dgprincipal.CurrentRow.Cells[2].Value.ToString() == "TERMINADO" || Dgprincipal.CurrentRow.Cells[2].Value.ToString() == "ENPROCESO")
                 {
-                    MessageBox.Show("El Trabajo está Terminado O en Proceso, NO puede continuar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El Trabajo está Terminado O en Proceso, NO puede continuar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (Dgprincipal.SelectedRows.Count > 0)
@@ -230,7 +230,7 @@ namespace TRAZAAR
                 }
                 else
                 {
-                    MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 inicializar();
             }
@@ -266,7 +266,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LLENAR();
         }
@@ -311,7 +311,7 @@ namespace TRAZAAR
             {
                 if (Dgprincipal.CurrentRow.Cells[2].Value.ToString() == "CERRADO")
                 {
-                    MessageBox.Show("El Trabajo está Terminado, NO puede continuar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El Trabajo está Terminado, NO puede continuar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -338,7 +338,7 @@ namespace TRAZAAR
             }
             else
             {
-                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "TRAZAAR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por Favor Seleccione Una Fila Para Operar.", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

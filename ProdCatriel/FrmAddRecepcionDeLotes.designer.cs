@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmAddRecepcionDeLotes
     {
@@ -405,7 +405,7 @@
             this.BtnBuscar.Enabled = false;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.BtnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
+            this.BtnBuscar.Image = global::LOSCALVOS.Properties.Resources.icons8_search_property_22__3_;
             this.BtnBuscar.Location = new System.Drawing.Point(361, 16);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(76, 22);
@@ -455,7 +455,7 @@
             this.Btn.Enabled = false;
             this.Btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn.ForeColor = System.Drawing.Color.White;
-            this.Btn.Image = global::TRAZAAR.Properties.Resources.SearchExcluidos24;
+            this.Btn.Image = global::LOSCALVOS.Properties.Resources.SearchExcluidos24;
             this.Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn.Location = new System.Drawing.Point(8, 582);
             this.Btn.Name = "Btn";
@@ -473,7 +473,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.checkered_flag;
+            this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.checkered_flag;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(312, 583);
             this.btnAceptar.Name = "btnAceptar";

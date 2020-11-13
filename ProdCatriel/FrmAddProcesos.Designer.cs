@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmAddProcesos
     {
@@ -176,7 +176,7 @@
             this.btnMenosOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosOP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosOP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosOP.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.btnMenosOP.Image = global::LOSCALVOS.Properties.Resources.Tmenos;
             this.btnMenosOP.Location = new System.Drawing.Point(950, 269);
             this.btnMenosOP.Name = "btnMenosOP";
             this.btnMenosOP.Size = new System.Drawing.Size(31, 31);
@@ -191,7 +191,7 @@
             this.btnMasOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasOP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasOP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMasOP.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.btnMasOP.Image = global::LOSCALVOS.Properties.Resources.Tmas;
             this.btnMasOP.Location = new System.Drawing.Point(950, 224);
             this.btnMasOP.Name = "btnMasOP";
             this.btnMasOP.Size = new System.Drawing.Size(31, 31);
@@ -206,7 +206,7 @@
             this.btnMenosMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosMQ.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosMQ.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.btnMenosMQ.Image = global::LOSCALVOS.Properties.Resources.Tmenos;
             this.btnMenosMQ.Location = new System.Drawing.Point(950, 76);
             this.btnMenosMQ.Name = "btnMenosMQ";
             this.btnMenosMQ.Size = new System.Drawing.Size(31, 31);
@@ -221,7 +221,7 @@
             this.btnMasMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasMQ.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMasMQ.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.btnMasMQ.Image = global::LOSCALVOS.Properties.Resources.Tmas;
             this.btnMasMQ.Location = new System.Drawing.Point(950, 34);
             this.btnMasMQ.Name = "btnMasMQ";
             this.btnMasMQ.Size = new System.Drawing.Size(31, 31);
@@ -236,7 +236,7 @@
             this.btnMenosMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosMP.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosMP.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosMP.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.btnMenosMP.Image = global::LOSCALVOS.Properties.Resources.Tmenos;
             this.btnMenosMP.Location = new System.Drawing.Point(406, 76);
             this.btnMenosMP.Name = "btnMenosMP";
             this.btnMenosMP.Size = new System.Drawing.Size(31, 31);
@@ -252,7 +252,7 @@
             this.btnMasMP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasMP.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasMP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.btnMasMP.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.btnMasMP.Image = global::LOSCALVOS.Properties.Resources.Tmas;
             this.btnMasMP.Location = new System.Drawing.Point(406, 34);
             this.btnMasMP.Name = "btnMasMP";
             this.btnMasMP.Size = new System.Drawing.Size(31, 31);
@@ -544,7 +544,7 @@
             this.btnMenosR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenosR.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenosR.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMenosR.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.btnMenosR.Image = global::LOSCALVOS.Properties.Resources.Tmenos;
             this.btnMenosR.Location = new System.Drawing.Point(731, 68);
             this.btnMenosR.Name = "btnMenosR";
             this.btnMenosR.Size = new System.Drawing.Size(31, 31);
@@ -560,7 +560,7 @@
             this.btnMasR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMasR.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMasR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.btnMasR.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.btnMasR.Image = global::LOSCALVOS.Properties.Resources.Tmas;
             this.btnMasR.Location = new System.Drawing.Point(731, 26);
             this.btnMasR.Name = "btnMasR";
             this.btnMasR.Size = new System.Drawing.Size(31, 31);
@@ -677,7 +677,7 @@
             this.BtnMenosC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMenosC.Font = new System.Drawing.Font("Arial", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMenosC.ForeColor = System.Drawing.SystemColors.Control;
-            this.BtnMenosC.Image = global::TRAZAAR.Properties.Resources.Tmenos;
+            this.BtnMenosC.Image = global::LOSCALVOS.Properties.Resources.Tmenos;
             this.BtnMenosC.Location = new System.Drawing.Point(527, 67);
             this.BtnMenosC.Name = "BtnMenosC";
             this.BtnMenosC.Size = new System.Drawing.Size(31, 31);
@@ -692,7 +692,7 @@
             this.BtnMasC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMasC.Font = new System.Drawing.Font("Arial Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMasC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.BtnMasC.Image = global::TRAZAAR.Properties.Resources.Tmas;
+            this.BtnMasC.Image = global::LOSCALVOS.Properties.Resources.Tmas;
             this.BtnMasC.Location = new System.Drawing.Point(527, 25);
             this.BtnMasC.Name = "BtnMasC";
             this.BtnMasC.Size = new System.Drawing.Size(31, 31);
@@ -1015,7 +1015,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = global::TRAZAAR.Properties.Resources.cancel1;
+            this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancel.Location = new System.Drawing.Point(547, 630);
             this.btnCancel.Name = "btnCancel";
@@ -1034,7 +1034,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = global::TRAZAAR.Properties.Resources.aceptarBlanco;
+            this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAceptar.Location = new System.Drawing.Point(439, 630);
             this.btnAceptar.Name = "btnAceptar";

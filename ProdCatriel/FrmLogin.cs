@@ -16,10 +16,10 @@ using System.Xml;
 using System.Reflection;
 using Microsoft.VisualBasic.Devices;
 using System.Diagnostics;
-using CapaLogicaNegocio;
+
 using System.Data.SqlClient;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmLogin : Form
     {

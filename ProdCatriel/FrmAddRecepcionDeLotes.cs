@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmAddRecepcionDeLotes : Form
     {
@@ -355,7 +355,7 @@ namespace TRAZAAR
             
             ////////////////////////////////////////////////////
             node = treResumen.Nodes.Add("CATEGORIAS");
-            node.ForeColor = Color.Blue;// Color.FromArgb(62; 59; 135);
+            node.ForeColor = Color.Blue;// Color.FromArgb(205; 97; 85);
 
             for (int i = 0; i < DtCategorias.Rows.Count; i++)
             {

@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmUtilidades
     {
@@ -57,7 +57,7 @@
             this.Pmaestros});
             this.produccionToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.produccionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.produccionToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.produccion;
+            this.produccionToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.produccion;
             this.produccionToolStripMenuItem.Name = "produccionToolStripMenuItem";
             this.produccionToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.produccionToolStripMenuItem.Text = "&Producción";
@@ -70,7 +70,7 @@
             this.toolStripMenuItem1});
             this.Pmaestros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pmaestros.ForeColor = System.Drawing.Color.White;
-            this.Pmaestros.Image = global::TRAZAAR.Properties.Resources.Trabajos_trz;
+            this.Pmaestros.Image = global::LOSCALVOS.Properties.Resources.Trabajos_trz;
             this.Pmaestros.Name = "Pmaestros";
             this.Pmaestros.Size = new System.Drawing.Size(180, 22);
             this.Pmaestros.Text = "&Dispositivos";
@@ -79,7 +79,7 @@
             // 
             this.impresorasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.impresorasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.impresorasToolStripMenuItem.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.impresorasToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.impresorasToolStripMenuItem.Name = "impresorasToolStripMenuItem";
             this.impresorasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.impresorasToolStripMenuItem.Text = "&Impresoras";
@@ -89,7 +89,7 @@
             // 
             this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Psalir.ForeColor = System.Drawing.Color.White;
-            this.Psalir.Image = global::TRAZAAR.Properties.Resources.icons8_shutdown_30;
+            this.Psalir.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
             this.Psalir.Name = "Psalir";
             this.Psalir.Size = new System.Drawing.Size(65, 22);
             this.Psalir.Text = "Salir";
@@ -111,7 +111,7 @@
             // 
             this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Image = global::TRAZAAR.Properties.Resources.merma;
+            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.merma;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "&Balanzas";

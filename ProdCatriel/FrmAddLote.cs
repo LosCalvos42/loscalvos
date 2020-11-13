@@ -10,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmAddLote : Form
     {
@@ -133,7 +133,7 @@ namespace TRAZAAR
                 }
                 else
                 {
-                    MessageBox.Show(msg[0], "TRAZAAR.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    MessageBox.Show(msg[0], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                     DialogResult = DialogResult.Yes;
                     this.Close();
                 }

@@ -15,7 +15,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using Cursor = System.Windows.Forms.Cursor;
 using System.Drawing.Printing;
 
-namespace TRAZAAR
+namespace LOSCALVOS
 {
     public partial class FrmPendientesDeIng2Sal: Form
     {

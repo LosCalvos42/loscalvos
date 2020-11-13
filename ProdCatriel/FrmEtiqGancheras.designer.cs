@@ -1,4 +1,4 @@
-﻿namespace TRAZAAR
+﻿namespace LOSCALVOS
 {
     partial class FrmEtiqGancheras
     {
@@ -102,7 +102,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::TRAZAAR.Properties.Resources.utilidades;
+            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.utilidades;
             this.pictureBox1.Location = new System.Drawing.Point(799, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 23);
@@ -191,7 +191,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::TRAZAAR.Properties.Resources.icons8_search_property_22__3_;
+            this.btnBuscar.Image = global::LOSCALVOS.Properties.Resources.icons8_search_property_22__3_;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnBuscar.Location = new System.Drawing.Point(562, 26);
             this.btnBuscar.Name = "btnBuscar";
@@ -629,7 +629,7 @@
             this.BtnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnRefresh.ForeColor = System.Drawing.Color.White;
-            this.BtnRefresh.Image = global::TRAZAAR.Properties.Resources.updateTraza;
+            this.BtnRefresh.Image = global::LOSCALVOS.Properties.Resources.updateTraza;
             this.BtnRefresh.Location = new System.Drawing.Point(343, 108);
             this.BtnRefresh.Name = "BtnRefresh";
             this.BtnRefresh.Size = new System.Drawing.Size(39, 29);
@@ -647,7 +647,7 @@
             this.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnImprimir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnImprimir.ForeColor = System.Drawing.Color.White;
-            this.BtnImprimir.Image = global::TRAZAAR.Properties.Resources.imprimir32;
+            this.BtnImprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.BtnImprimir.Location = new System.Drawing.Point(299, 550);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(90, 41);
