@@ -273,6 +273,16 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Buscartrz1 {
+            get {
+                object obj = ResourceManager.GetObject("Buscartrz1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_31_24 {
             get {
                 object obj = ResourceManager.GetObject("calendar-31-24", resourceCulture);
@@ -756,6 +766,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap icono_laboratorio {
             get {
                 object obj = ResourceManager.GetObject("icono-laboratorio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IconoLosCalvos {
+            get {
+                object obj = ResourceManager.GetObject("IconoLosCalvos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1746,6 +1766,26 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_24 {
+            get {
+                object obj = ResourceManager.GetObject("search-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_30 {
+            get {
+                object obj = ResourceManager.GetObject("search-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

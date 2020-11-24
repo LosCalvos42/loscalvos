@@ -26,6 +26,14 @@ namespace LOSCALVOS
 
         private void FrmListados_Load(object sender, EventArgs e)
         {
+
+            if (Abm.Name == "FrmAddArticulos")  // Esto es para que no abra el ABM 
+            {
+                Reliminados.Enabled = false;
+                Ractivos.Enabled = false;
+            }
+
+
             Filtro = "";
             this.Text = "SP_LISTADOS_PRODUCCION: " + Listado;
             LblTituloListado.Text=TituloListado;
@@ -100,6 +108,11 @@ namespace LOSCALVOS
 
         private void mnuevo_Click(object sender, EventArgs e)
         {
+            if (Abm.Name == "FrmAddArticulos")  // Esto es para que no abra el ABM 
+            {
+                MessageBox.Show("Los Artículos se modifican solo en el sistema NETPAK.\nConsulte con el Administrador ", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             Form _Formulario = Abm as Form;
             _Formulario.StartPosition = FormStartPosition.CenterScreen;
             _Formulario.Text = "NUEVO - 0";
@@ -126,6 +139,12 @@ namespace LOSCALVOS
 
             if (Dgprincipal.SelectedRows.Count > 0)
             {
+                if (Abm.Name == "FrmAddArticulos")  // Esto es para que no abra el ABM 
+                {
+                    MessageBox.Show("Los Artículos se modifican solo en el sistema NETPAK.\nConsulte con el Administrador ", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Form _Formulario = Abm as Form;
                 _Formulario.StartPosition = FormStartPosition.CenterScreen;
                 _Formulario.Text = "MODIFICAR" +" - "+ Dgprincipal.CurrentRow.Cells[0].Value.ToString();
@@ -146,6 +165,14 @@ namespace LOSCALVOS
 
         private void meliminar_Click(object sender, EventArgs e)
         {
+            if (Abm.Name == "FrmAddArticulos")  // Esto es para que no abra el ABM 
+            {
+                MessageBox.Show("Los Artículos se modifican solo en el sistema NETPAK.\nConsulte con el Administrador ", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
             if (Dgprincipal.SelectedRows.Count > 0)
             {
                 int id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
@@ -176,6 +203,12 @@ namespace LOSCALVOS
 
         private void Dgprincipal_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (Abm.Name == "FrmAddArticulos")  // Esto es para que no abra el ABM 
+            {
+                MessageBox.Show("Los Artículos se modifican solo en el sistema NETPAK.\nConsulte con el Administrador ", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             Form _Formulario = Abm as Form;
             _Formulario.StartPosition = FormStartPosition.CenterScreen;
             _Formulario.Text = "CONSULTAR" + " - " + Dgprincipal.CurrentRow.Cells[0].Value.ToString();

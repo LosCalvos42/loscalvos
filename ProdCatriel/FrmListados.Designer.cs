@@ -34,20 +34,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListados));
             this.menuForm = new System.Windows.Forms.MenuStrip();
+            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
             this.LblTituloListado = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.LblPorcentaje = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
-            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Reliminados = new System.Windows.Forms.RadioButton();
             this.Ractivos = new System.Windows.Forms.RadioButton();
             this.menuForm.SuspendLayout();
@@ -58,7 +58,7 @@
             // 
             // menuForm
             // 
-            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(46)))), ((int)(((byte)(95)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuevo,
             this.mmodificar,
@@ -68,9 +68,60 @@
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
             this.menuForm.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuForm.Size = new System.Drawing.Size(800, 26);
+            this.menuForm.Size = new System.Drawing.Size(800, 28);
             this.menuForm.TabIndex = 36;
             this.menuForm.Text = "Menu";
+            // 
+            // mnuevo
+            // 
+            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuevo.ForeColor = System.Drawing.Color.White;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
+            this.mnuevo.Name = "mnuevo";
+            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.mnuevo.Size = new System.Drawing.Size(82, 24);
+            this.mnuevo.Text = "Nuevo";
+            this.mnuevo.Click += new System.EventHandler(this.mnuevo_Click);
+            // 
+            // mmodificar
+            // 
+            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mmodificar.ForeColor = System.Drawing.Color.White;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
+            this.mmodificar.Name = "mmodificar";
+            this.mmodificar.Size = new System.Drawing.Size(101, 24);
+            this.mmodificar.Text = "Modificar";
+            this.mmodificar.Click += new System.EventHandler(this.mmodificar_Click);
+            // 
+            // meliminar
+            // 
+            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meliminar.ForeColor = System.Drawing.Color.White;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
+            this.meliminar.Name = "meliminar";
+            this.meliminar.Size = new System.Drawing.Size(93, 24);
+            this.meliminar.Text = "Eliminar";
+            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
+            // 
+            // mimprimir
+            // 
+            this.mimprimir.Enabled = false;
+            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mimprimir.ForeColor = System.Drawing.Color.White;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
+            this.mimprimir.Name = "mimprimir";
+            this.mimprimir.Size = new System.Drawing.Size(93, 24);
+            this.mimprimir.Text = "Imprimir";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -94,6 +145,22 @@
             this.txtBuscar.TabIndex = 10;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.AccessibleName = "";
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.button1.Image = global::LOSCALVOS.Properties.Resources.search;
+            this.button1.Location = new System.Drawing.Point(210, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 24);
+            this.button1.TabIndex = 41;
+            this.button1.Tag = "";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lblBuscar
             // 
             this.lblBuscar.AutoSize = true;
@@ -115,12 +182,13 @@
             this.Dgprincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dgprincipal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.Dgprincipal.BackgroundColor = System.Drawing.SystemColors.Control;
             this.Dgprincipal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgprincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgprincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(46)))), ((int)(((byte)(95)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
@@ -150,7 +218,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Dgprincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgprincipal.RowHeadersVisible = false;
-            this.Dgprincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Dgprincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Dgprincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgprincipal.Size = new System.Drawing.Size(788, 342);
             this.Dgprincipal.TabIndex = 43;
@@ -161,7 +229,7 @@
             this.LblTituloListado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LblTituloListado.AutoSize = true;
-            this.LblTituloListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.LblTituloListado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(46)))), ((int)(((byte)(95)))));
             this.LblTituloListado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblTituloListado.ForeColor = System.Drawing.Color.White;
             this.LblTituloListado.Location = new System.Drawing.Point(496, 1);
@@ -204,81 +272,15 @@
             this.pictureBox1.TabIndex = 82;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.AccessibleName = "";
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.button1.Image = global::LOSCALVOS.Properties.Resources.search;
-            this.button1.Location = new System.Drawing.Point(210, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 24);
-            this.button1.TabIndex = 41;
-            this.button1.Tag = "";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mnuevo
-            // 
-            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
-            this.mnuevo.Name = "mnuevo";
-            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.mnuevo.Size = new System.Drawing.Size(79, 22);
-            this.mnuevo.Text = "Nuevo";
-            this.mnuevo.Click += new System.EventHandler(this.mnuevo_Click);
-            // 
-            // mmodificar
-            // 
-            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
-            this.mmodificar.Name = "mmodificar";
-            this.mmodificar.Size = new System.Drawing.Size(97, 22);
-            this.mmodificar.Text = "Modificar";
-            this.mmodificar.Click += new System.EventHandler(this.mmodificar_Click);
-            // 
-            // meliminar
-            // 
-            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
-            this.meliminar.Name = "meliminar";
-            this.meliminar.Size = new System.Drawing.Size(89, 22);
-            this.meliminar.Text = "Eliminar";
-            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
-            // 
-            // mimprimir
-            // 
-            this.mimprimir.Enabled = false;
-            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
-            this.mimprimir.Name = "mimprimir";
-            this.mimprimir.Size = new System.Drawing.Size(89, 22);
-            this.mimprimir.Text = "Imprimir";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // Reliminados
             // 
             this.Reliminados.AutoSize = true;
             this.Reliminados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Reliminados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Reliminados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Reliminados.Location = new System.Drawing.Point(436, 53);
             this.Reliminados.Name = "Reliminados";
-            this.Reliminados.Size = new System.Drawing.Size(74, 17);
+            this.Reliminados.Size = new System.Drawing.Size(92, 20);
             this.Reliminados.TabIndex = 83;
             this.Reliminados.Text = "Eliminados";
             this.Reliminados.UseVisualStyleBackColor = true;
@@ -289,10 +291,11 @@
             this.Ractivos.AutoSize = true;
             this.Ractivos.Checked = true;
             this.Ractivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ractivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ractivos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
             this.Ractivos.Location = new System.Drawing.Point(341, 53);
             this.Ractivos.Name = "Ractivos";
-            this.Ractivos.Size = new System.Drawing.Size(59, 17);
+            this.Ractivos.Size = new System.Drawing.Size(69, 20);
             this.Ractivos.TabIndex = 84;
             this.Ractivos.TabStop = true;
             this.Ractivos.Text = "Activos";

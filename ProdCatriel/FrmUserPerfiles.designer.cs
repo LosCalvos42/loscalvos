@@ -35,12 +35,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserPerfiles));
             this.menuForm = new System.Windows.Forms.MenuStrip();
-            this.lblNombrePantalla = new System.Windows.Forms.Label();
             this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
             this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
             this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblNombrePantalla = new System.Windows.Forms.Label();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
             this.mtid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mtcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,7 +52,7 @@
             // 
             // menuForm
             // 
-            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuevo,
             this.mmodificar,
@@ -65,19 +65,6 @@
             this.menuForm.Size = new System.Drawing.Size(820, 26);
             this.menuForm.TabIndex = 35;
             this.menuForm.Text = "Menu";
-            // 
-            // lblNombrePantalla
-            // 
-            this.lblNombrePantalla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombrePantalla.AutoSize = true;
-            this.lblNombrePantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.lblNombrePantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombrePantalla.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePantalla.Location = new System.Drawing.Point(658, 3);
-            this.lblNombrePantalla.Name = "lblNombrePantalla";
-            this.lblNombrePantalla.Size = new System.Drawing.Size(146, 18);
-            this.lblNombrePantalla.TabIndex = 41;
-            this.lblNombrePantalla.Text = "Perfil De Usuarios";
             // 
             // mnuevo
             // 
@@ -130,6 +117,19 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // lblNombrePantalla
+            // 
+            this.lblNombrePantalla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombrePantalla.AutoSize = true;
+            this.lblNombrePantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.lblNombrePantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombrePantalla.ForeColor = System.Drawing.Color.White;
+            this.lblNombrePantalla.Location = new System.Drawing.Point(658, 3);
+            this.lblNombrePantalla.Name = "lblNombrePantalla";
+            this.lblNombrePantalla.Size = new System.Drawing.Size(146, 18);
+            this.lblNombrePantalla.TabIndex = 41;
+            this.lblNombrePantalla.Text = "Perfil De Usuarios";
+            // 
             // Dgprincipal
             // 
             this.Dgprincipal.AllowUserToAddRows = false;
@@ -146,7 +146,7 @@
             this.Dgprincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgprincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
@@ -163,7 +163,7 @@
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgprincipal.DefaultCellStyle = dataGridViewCellStyle5;

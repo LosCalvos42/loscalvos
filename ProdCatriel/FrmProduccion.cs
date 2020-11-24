@@ -186,10 +186,10 @@ namespace LOSCALVOS
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
             FrmListados _FrmListados = new FrmListados();
-            FrmAddTipoProducto _FrmAddTipoProducto = new FrmAddTipoProducto();
-            _FrmListados.Tabla = "TIPOPRODUCTO";
-            _FrmListados.Listado = "TIPOPRODUCTO";
-            _FrmListados.TituloListado = "Listado de Tipo de Productos";
+            FrmAddSectoresProductivos _FrmAddTipoProducto = new FrmAddSectoresProductivos();
+            _FrmListados.Tabla = "SECTOR";
+            _FrmListados.Listado = "SECTORESPRODUCTIVOS";
+            _FrmListados.TituloListado = "Listado de Sectores Productivos";
             _FrmListados.Abm = _FrmAddTipoProducto;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
@@ -426,6 +426,30 @@ namespace LOSCALVOS
 
             _FrmBajasDeProduccion.ShowDialog();
             //AbrirFormEnPanel(_FrmBajasDeProduccion);//FrmAddRecepcionDeLotes
+        }
+
+        private void PProductos_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmAddArticulos _FrmAddArticulos = new FrmAddArticulos();
+            _FrmListados.Tabla = "ARTI";
+            _FrmListados.Listado = "ARTI";
+            _FrmListados.TituloListado = "Listado de Productos";
+            _FrmListados.Abm = _FrmAddArticulos;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void BarraPesaje_Click(object sender, EventArgs e)
+        {
+             Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmControlDeProduccion _FrmControlDeProduccion = new FrmControlDeProduccion();
+            _FrmControlDeProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmControlDeProduccion.ShowDialog();
         }
     }
 }

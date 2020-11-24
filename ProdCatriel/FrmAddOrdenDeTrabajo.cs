@@ -1161,7 +1161,6 @@ namespace LOSCALVOS
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void BtnAddlotes_Click(object sender, EventArgs e)
         {
             if (Convert.ToString(CmbProceso.SelectedValue) == "ESTU")
@@ -1173,7 +1172,6 @@ namespace LOSCALVOS
                 _FrmBuscarEnBodega.ShowDialog();
                 tipoimp = 0;
             }
-
         }
 
         private void BtnEtiPendientes_Click(object sender, EventArgs e)

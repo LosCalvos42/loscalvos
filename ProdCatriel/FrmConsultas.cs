@@ -43,37 +43,19 @@ namespace LOSCALVOS
             
         }
 
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            CheckForIllegalCrossThreadCalls = false;
-            FrmSeguimientoDeCodigoDeBarra _FrmSeguimientoDeCodigoDeBarra = new FrmSeguimientoDeCodigoDeBarra();
-            _FrmSeguimientoDeCodigoDeBarra.StartPosition = FormStartPosition.CenterScreen;
-            _FrmSeguimientoDeCodigoDeBarra.ShowDialog();
-        }
-
         private void MenuIngSal_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
-            FrmReporteSalazon _FrmReporteSalazon = new FrmReporteSalazon();
-            _FrmReporteSalazon.Tabla = "OTRESUMEN";
-            _FrmReporteSalazon.Listado = "OTRABAJO";
-            _FrmReporteSalazon.TituloListado = "Listado de Ordenes De Trabajo";
-            _FrmReporteSalazon.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
-            _FrmReporteSalazon.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
-            _FrmReporteSalazon.StartPosition = FormStartPosition.CenterScreen;
-            _FrmReporteSalazon.WindowState = FormWindowState.Maximized;
-            AbrirFormEnPanel(_FrmReporteSalazon);
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            CheckForIllegalCrossThreadCalls = false;
-            FrmSeguimientoDeLote _FrmSeguimientoDeLote = new FrmSeguimientoDeLote();
-            _FrmSeguimientoDeLote.WindowState = FormWindowState.Maximized;
-            AbrirFormEnPanel(_FrmSeguimientoDeLote);
+            FrmReporteDeProduccion _FrmReporteDeProduccion = new FrmReporteDeProduccion();
+            _FrmReporteDeProduccion.Tabla = "PRODUCCION";
+            _FrmReporteDeProduccion.Listado = "PRODUCCION";
+            _FrmReporteDeProduccion.TituloListado = "Listado de Ordenes De Trabajo";
+            _FrmReporteDeProduccion.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmReporteDeProduccion.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmReporteDeProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmReporteDeProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmReporteDeProduccion);
         }
     }
 }

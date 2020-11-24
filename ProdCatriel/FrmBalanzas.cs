@@ -54,8 +54,8 @@ namespace LOSCALVOS
 
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
-            string ssql = @"select DISPBALANZAS_nro, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO FROM[TRAZAARDB].[dbo].[DISPBALANZAS] I " +
-                                  "INNER JOIN[TRAZAARDB].[dbo].[DISPOSITIVOS] D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
+            string ssql = @"select DISPBALANZAS_nro, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO FROM DISPBALANZAS I " +
+                                  "INNER JOIN DISPOSITIVOS  D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
                                   "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
                                   "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "'";
                                   //"AND I.DISPIMPRESORA_ESTADO = 'ON'";

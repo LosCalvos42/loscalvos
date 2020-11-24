@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace LOSCALVOS
 {
-    public partial class FrmAddTipoProducto : Form
+    public partial class FrmAddSectoresProductivos : Form
     {
-        public FrmAddTipoProducto()
+        public FrmAddSectoresProductivos()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace LOSCALVOS
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "TIPOPRODUCTO"));
+                    lst.Add(new ClsParametros("@listado", "SECTORESPRODUCTIVOS"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
                     lst.Add(new ClsParametros("@DeBaja", ""));
@@ -70,7 +70,7 @@ namespace LOSCALVOS
                        TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
                        TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
                        TxtObs.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
-                       TxtObs.Text= dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
+                       
                         if (dt.Rows[0][4].ToString() == "N")
                         {
                             chekActivo.Checked = true;
@@ -94,7 +94,7 @@ namespace LOSCALVOS
                 List<ClsParametros> lst = new List<ClsParametros>();
                 try
                 {
-                    lst.Add(new ClsParametros("@listado", "TIPOPRODUCTO"));
+                    lst.Add(new ClsParametros("@listado", "SECTORESPRODUCTIVOS"));
                     lst.Add(new ClsParametros("@Filtro", ""));
                     lst.Add(new ClsParametros("@id", id));
                     lst.Add(new ClsParametros("@DeBaja", ""));
@@ -196,7 +196,7 @@ namespace LOSCALVOS
                 }
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("sp_AddTipoproducto", ref lst);
+                M.EjecutarSP("sp_AddSectoresProductivos", ref lst);
                 msj = new string[2];
                 msj[0] = lst[7].Valor.ToString();
                 msj[1] = lst[8].Valor.ToString();

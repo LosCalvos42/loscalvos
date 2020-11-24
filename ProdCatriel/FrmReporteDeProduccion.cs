@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace LOSCALVOS
 {
-    public partial class FrmReporteSeguimientoLote : Form
+    public partial class FrmReporteDeProduccion : Form
     {
-        public FrmReporteSeguimientoLote()
+        public FrmReporteDeProduccion()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace LOSCALVOS
             LblPorcentaje.Visible = false;
 
             Filtro = "";
-            this.Text = "SP_ConsultaSalazon";  // nombre del SP
+            this.Text = "SP_ConsultaDeProduccion";  // nombre del SP
             desde = DateTime.Now;//.AddDays(-1);
             hasta = DateTime.Now;
             DtDeste.Value= PrimerDia(desde);
@@ -95,7 +95,7 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@Fechadesde", fdesde));
                 lst.Add(new ClsParametros("@Fechahasta", fhasta));
                 lst.Add(new ClsParametros("@FILTRO", ""));
-                dt = M.Listado("SP_ConsultaSalazon", lst);
+                dt = M.Listado("SP_ConsultaDeProduccion", lst);
 
                 if (dt.Rows.Count > 1)
                 {
@@ -128,7 +128,7 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@Fechadesde", DtDeste.Value.ToString("yyyyMMdd")));
                 lst.Add(new ClsParametros("@FechaHASTA", DtHasta.Value.ToString("yyyyMMdd")));
                 lst.Add(new ClsParametros("@FILTRO", CmbProducto.SelectedValue));
-                setDataSource(dt = M.Listado("SP_ConsultaSalazon", lst));    //SP del reporte
+                setDataSource(dt = M.Listado("SP_ConsultaDeProduccion", lst));    //SP del reporte
             }
 
             catch (Exception ex)
@@ -158,15 +158,16 @@ namespace LOSCALVOS
         private void EstadoGrilla()
         {
  
-            Dgprincipal.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Dgprincipal.Columns[Dgprincipal.Columns.Count - 1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            Dgprincipal.Columns[Dgprincipal.Columns.Count - 1].DefaultCellStyle.Format = "N2";
+            Dgprincipal.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Dgprincipal.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            Dgprincipal.Columns[8].DefaultCellStyle.Format = "N2";
             using (Font font = new Font(
                     Dgprincipal.DefaultCellStyle.Font.FontFamily, 8, FontStyle.Underline))
             {
-                Dgprincipal.Columns[5].DefaultCellStyle.Font = font;
-                Dgprincipal.Columns[5].DefaultCellStyle.ForeColor = Color.FromArgb(191, 54, 12);
+                Dgprincipal.Columns[6].DefaultCellStyle.Font = font;
+                Dgprincipal.Columns[6].DefaultCellStyle.ForeColor = Color.FromArgb(191, 54, 12);
             }
+
             if (CmbProducto.SelectedValue.ToString() != "0")
             {
                 int totalU = 0;
@@ -174,13 +175,14 @@ namespace LOSCALVOS
                 for (int i = 0; i < Dgprincipal.Rows.Count; i++)
                 {
 
-                    totalU = totalU + Convert.ToInt32(Dgprincipal.Rows[i].Cells[6].Value);
-                    totalK = totalK + Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value);
+                    totalU = totalU + Convert.ToInt32(Dgprincipal.Rows[i].Cells[7].Value);
+                    totalK = totalK + Convert.ToDecimal(Dgprincipal.Rows[i].Cells[8].Value);
 
                 }
                 LblTotal.Text = "TOTAL: " + totalU.ToString("N0")+" Unidades       " + totalK.ToString("N2")+" Kilos";
                 LblTotal.Visible = true;
             }
+                
         }
 
 
@@ -266,13 +268,13 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@Fechadesde", DtDeste.Value.ToString("yyyyMMdd")));
                 lst.Add(new ClsParametros("@FechaHASTA", DtHasta.Value.ToString("yyyyMMdd")));
                 lst.Add(new ClsParametros("@FILTRO", CmbProducto.SelectedValue));
-                dtr = M.Listado("SP_ConsultaSalazon", lst);//SP del reporte
+                dtr = M.Listado("SP_ConsultaDeProduccion", lst);//SP del reporte
 
                 if (dtr.Rows.Count > 0)
                 {
                    
                     ReportDocument reporte = new ReportDocument();
-                    reporte.Load(Application.StartupPath + @"\Reportes\Salazon.rpt");
+                    reporte.Load(Application.StartupPath + @"\Reportes\Produccion.rpt");
                     reporte.SetDataSource(dtr);
                     FrmReporte _FrmReporte = new FrmReporte();
                     _FrmReporte.StartPosition = FormStartPosition.CenterScreen;

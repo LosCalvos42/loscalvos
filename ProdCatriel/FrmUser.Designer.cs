@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUser));
             this.menuForm = new System.Windows.Forms.MenuStrip();
             this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,20 +45,20 @@
             this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
+            this.mtid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtcantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtcosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblNombrePantalla = new System.Windows.Forms.Label();
-            this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mttotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtcosto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtcantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdPerfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtnombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtcodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mtid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             // menuForm
             // 
-            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuevo,
             this.mmodificar,
@@ -147,7 +147,7 @@
             this.Dgprincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgprincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
@@ -169,7 +169,7 @@
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(174)))), ((int)(((byte)(214)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgprincipal.DefaultCellStyle = dataGridViewCellStyle9;
@@ -184,6 +184,86 @@
             this.Dgprincipal.Size = new System.Drawing.Size(788, 258);
             this.Dgprincipal.TabIndex = 38;
             this.Dgprincipal.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgprincipal_CellContentDoubleClick);
+            // 
+            // mtid
+            // 
+            this.mtid.HeaderText = "CODIGO";
+            this.mtid.Name = "mtid";
+            this.mtid.ReadOnly = true;
+            this.mtid.Visible = false;
+            // 
+            // mtcodigo
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.mtcodigo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mtcodigo.HeaderText = "NOMBRE";
+            this.mtcodigo.Name = "mtcodigo";
+            this.mtcodigo.ReadOnly = true;
+            this.mtcodigo.Width = 180;
+            // 
+            // mtnombre
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.mtnombre.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mtnombre.HeaderText = "APELLIDO";
+            this.mtnombre.Name = "mtnombre";
+            this.mtnombre.ReadOnly = true;
+            this.mtnombre.Width = 200;
+            // 
+            // IdPerfil
+            // 
+            this.IdPerfil.HeaderText = "CODIGO PERFIL";
+            this.IdPerfil.Name = "IdPerfil";
+            this.IdPerfil.ReadOnly = true;
+            this.IdPerfil.Visible = false;
+            // 
+            // mtcantidad
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = "0,0";
+            this.mtcantidad.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mtcantidad.HeaderText = "PERFIL";
+            this.mtcantidad.Name = "mtcantidad";
+            this.mtcantidad.ReadOnly = true;
+            // 
+            // mtcosto
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = "0,00";
+            this.mtcosto.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mtcosto.HeaderText = "USUARIO";
+            this.mtcosto.Name = "mtcosto";
+            this.mtcosto.ReadOnly = true;
+            // 
+            // mttotal
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle7.NullValue = null;
+            this.mttotal.DefaultCellStyle = dataGridViewCellStyle7;
+            this.mttotal.HeaderText = "Pass";
+            this.mttotal.Name = "mttotal";
+            this.mttotal.ReadOnly = true;
+            this.mttotal.Visible = false;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle8.NullValue = "*****";
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column1.HeaderText = "CONTRASEÑA";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 120;
+            // 
+            // Activo
+            // 
+            this.Activo.HeaderText = "ACTIVO";
+            this.Activo.Name = "Activo";
+            this.Activo.ReadOnly = true;
+            this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Activo.Width = 70;
             // 
             // lblBuscar
             // 
@@ -237,94 +317,14 @@
             // 
             this.lblNombrePantalla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombrePantalla.AutoSize = true;
-            this.lblNombrePantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.lblNombrePantalla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.lblNombrePantalla.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombrePantalla.ForeColor = System.Drawing.Color.White;
-            this.lblNombrePantalla.Location = new System.Drawing.Point(742, 3);
+            this.lblNombrePantalla.Location = new System.Drawing.Point(695, 4);
             this.lblNombrePantalla.Name = "lblNombrePantalla";
             this.lblNombrePantalla.Size = new System.Drawing.Size(76, 18);
             this.lblNombrePantalla.TabIndex = 41;
             this.lblNombrePantalla.Text = "Usuarios";
-            // 
-            // Activo
-            // 
-            this.Activo.HeaderText = "ACTIVO";
-            this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
-            this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Activo.Width = 70;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle8.NullValue = "*****";
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column1.HeaderText = "CONTRASEÑA";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 120;
-            // 
-            // mttotal
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle7.NullValue = null;
-            this.mttotal.DefaultCellStyle = dataGridViewCellStyle7;
-            this.mttotal.HeaderText = "Pass";
-            this.mttotal.Name = "mttotal";
-            this.mttotal.ReadOnly = true;
-            this.mttotal.Visible = false;
-            // 
-            // mtcosto
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = "0,00";
-            this.mtcosto.DefaultCellStyle = dataGridViewCellStyle6;
-            this.mtcosto.HeaderText = "USUARIO";
-            this.mtcosto.Name = "mtcosto";
-            this.mtcosto.ReadOnly = true;
-            // 
-            // mtcantidad
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0,0";
-            this.mtcantidad.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mtcantidad.HeaderText = "PERFIL";
-            this.mtcantidad.Name = "mtcantidad";
-            this.mtcantidad.ReadOnly = true;
-            // 
-            // IdPerfil
-            // 
-            this.IdPerfil.HeaderText = "CODIGO PERFIL";
-            this.IdPerfil.Name = "IdPerfil";
-            this.IdPerfil.ReadOnly = true;
-            this.IdPerfil.Visible = false;
-            // 
-            // mtnombre
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.mtnombre.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mtnombre.HeaderText = "APELLIDO";
-            this.mtnombre.Name = "mtnombre";
-            this.mtnombre.ReadOnly = true;
-            this.mtnombre.Width = 200;
-            // 
-            // mtcodigo
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.mtcodigo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mtcodigo.HeaderText = "NOMBRE";
-            this.mtcodigo.Name = "mtcodigo";
-            this.mtcodigo.ReadOnly = true;
-            this.mtcodigo.Width = 180;
-            // 
-            // mtid
-            // 
-            this.mtid.HeaderText = "CODIGO";
-            this.mtid.Name = "mtid";
-            this.mtid.ReadOnly = true;
-            this.mtid.Visible = false;
             // 
             // FrmUser
             // 

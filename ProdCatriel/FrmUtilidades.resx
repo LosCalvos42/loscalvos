@@ -120,4 +120,29 @@
   <metadata name="menuForm.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAPAKAADwCgAAAAAAAAAA
+        AABHC1P/RQlS/0YKUv9ECFD/SA1U/0YLU/9RHFz/YTNr/2g8cv9dK2j/RgxT/0QIUP9IDVT/RQlS/0UJ
+        Uv9ECFH/YjZt/2c9cv9lO3D/cEZ6/1sqZv98XIL/sJ+z/8W3x/+6prz/u6i+/62Vsf9wQ3n/XS9o/2pB
+        dP9nPHH/bEB2/4dtjv/u7+r/9/bz/8O5xv+nman/x7fI/+Hb4P/n5OT/7Onp/+7q7f/SxNP/3NDd/7+z
+        wv/d2dr//f75/6GIqP9GDVP/yb7K/+LZ4v+nmqn/8fDv/9za2/+wnrT/vazA/7qnvv+ihqj/vKvA/+/t
+        7f/w6vD/w7fF/9nP2/9LE1j/QgVO/3ZOgP+uobH/4d/f/+He4f/i3+D/bD94/3BJe/9fNGv/aD9y/4tv
+        kv/j4eL/9PTz/9vS3v9rQHb/RQlR/04WWv9DB1H/loKa/////v+1pLn/a0J3/2AybP+ReZb/kHGY/5qE
+        n/////3/7+ns/+Xl5P/r5Ov/UBlc/0sRV/9OFVr/RAlR/6ubrf/3+PT/083S/3ZQgP+qmK7/xrzH/+Tc
+        4/9MF1n/taO3//z6+P/b2dv/9PHz/2Ata/9HDFP/ThZa/0MHUP+fiqL/+vz5/+nr5/98VIb/eFOA/7Gd
+        tv+eh6T/ooap/0gTVP/j4uH/5OTj/+zm7P9VH2D/SRBW/04WWv9DB1D/e1eC/+Lc4f/j3uP/po2r/0QP
+        Uf+vnbL/Zjlx/1kmZf9pQXP/y8bM/9bO1v/JuM3/QQVO/04WWv9ME1j/SxJX/00VWf+nkav/2s7b/9nP
+        2v/CuMP/+vr3/9nO2v+tm7H/ysTL/7WmuP/WyNf/bkF4/0UJUf9OFVr/TBNY/00VWf9HDFP/Xy5p/9PI
+        1P/GtMn/2s7a/87Bz//Z0dn/zsTP/7imuv/Wydf/jGeT/0IGT/9OFlr/TBNY/0wTWP9ME1j/ThZa/0UK
+        Uv9VIGH/rpSy/9LD1P+ulbP/v6vC/8GuxP+6o77/dkt//0EFTv9OFVr/TBNY/0wTWP9ME1j/TBNY/0wT
+        WP9OFVr/ShBW/zwASv+Nc5T/0MjQ/8/G0P+iian/QgdP/0QJUf9OFlr/TBNY/0wTWP9ME1j/TBNY/0wT
+        WP9ME1j/TBNY/04WWv9LEFf/WChk/+Hd3v/39PX/YjNu/0cMU/9PF1v/TBNY/0wTWP9ME1j/TBNY/0wT
+        WP9ME1j/TBNY/0wTWP9ME1j/Txda/z4AS/+Yfp7/po2s/z0ASv9PF1v/TBNY/0wTWP9ME1j/TBNY/0wT
+        WP9ME1j/TBNY/0wTWP9ME1j/TBNY/0wTWP9KEVb/Uhxe/1EbXf9LEVb/TBNY/0wTWP9ME1j/TBNY/0wT
+        WP9ME1j/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
+  </data>
 </root>

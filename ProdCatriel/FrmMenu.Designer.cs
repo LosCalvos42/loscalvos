@@ -31,7 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnUtilidades = new System.Windows.Forms.Button();
+            this.BtnConsultas = new System.Windows.Forms.Button();
+            this.BtnConfiguracion = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnMenu = new System.Windows.Forms.PictureBox();
+            this.PTrazar = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Btnproduccion = new System.Windows.Forms.Button();
             this.tmMostrarMenu = new System.Windows.Forms.Timer(this.components);
             this.tmOcultarMenu = new System.Windows.Forms.Timer(this.components);
             this.BarraTitulo = new System.Windows.Forms.Panel();
@@ -43,27 +55,8 @@
             this.PPrint = new System.Windows.Forms.StatusBarPanel();
             this.PBalanza = new System.Windows.Forms.StatusBarPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnUtilidades = new System.Windows.Forms.Button();
-            this.BtnConsultas = new System.Windows.Forms.Button();
-            this.BtnConfiguracion = new System.Windows.Forms.Button();
-            this.btnMenu = new System.Windows.Forms.PictureBox();
-            this.PTrazar = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Btnproduccion = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlempresa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnluser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBalanza)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PTrazar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -72,11 +65,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlempresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnluser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBalanza)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(46)))), ((int)(((byte)(95)))));
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.BtnUtilidades);
             this.panelMenu.Controls.Add(this.BtnConsultas);
             this.panelMenu.Controls.Add(this.BtnConfiguracion);
@@ -93,99 +93,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(160, 600);
             this.panelMenu.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(46)))), ((int)(((byte)(95)))));
-            this.panel2.Controls.Add(this.btnMenu);
-            this.panel2.Controls.Add(this.PTrazar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 40);
-            this.panel2.TabIndex = 13;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // tmMostrarMenu
-            // 
-            this.tmMostrarMenu.Tick += new System.EventHandler(this.tmMostrarMenu_Tick);
-            // 
-            // tmOcultarMenu
-            // 
-            this.tmOcultarMenu.Tick += new System.EventHandler(this.tmOcultarMenu_Tick);
-            // 
-            // BarraTitulo
-            // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
-            this.BarraTitulo.Controls.Add(this.statusBar);
-            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BarraTitulo.Location = new System.Drawing.Point(160, 573);
-            this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(912, 27);
-            this.BarraTitulo.TabIndex = 14;
-            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
-            // 
-            // statusBar
-            // 
-            this.statusBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.statusBar.Location = new System.Drawing.Point(0, 0);
-            this.statusBar.Name = "statusBar";
-            this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
-            this.pnlempresa,
-            this.pnlsistema,
-            this.pnlserver,
-            this.pnluser,
-            this.PPrint,
-            this.PBalanza});
-            this.statusBar.ShowPanels = true;
-            this.statusBar.Size = new System.Drawing.Size(912, 27);
-            this.statusBar.SizingGrip = false;
-            this.statusBar.TabIndex = 12;
-            // 
-            // pnlempresa
-            // 
-            this.pnlempresa.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlempresa.Icon")));
-            this.pnlempresa.Name = "pnlempresa";
-            this.pnlempresa.Width = 50;
-            // 
-            // pnlsistema
-            // 
-            this.pnlsistema.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlsistema.Icon")));
-            this.pnlsistema.Name = "pnlsistema";
-            // 
-            // pnlserver
-            // 
-            this.pnlserver.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlserver.Icon")));
-            this.pnlserver.Name = "pnlserver";
-            // 
-            // pnluser
-            // 
-            this.pnluser.Icon = ((System.Drawing.Icon)(resources.GetObject("pnluser.Icon")));
-            this.pnluser.Name = "pnluser";
-            // 
-            // PPrint
-            // 
-            this.PPrint.Icon = ((System.Drawing.Icon)(resources.GetObject("PPrint.Icon")));
-            this.PPrint.Name = "PPrint";
-            // 
-            // PBalanza
-            // 
-            this.PBalanza.Icon = ((System.Drawing.Icon)(resources.GetObject("PBalanza.Icon")));
-            this.PBalanza.Name = "PBalanza";
-            // 
-            // panel1
-            // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.BackgroundImage = global::LOSCALVOS.Properties.Resources.logoLosCalvosGris3;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(160, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(912, 573);
-            this.panel1.TabIndex = 17;
             // 
             // BtnUtilidades
             // 
@@ -253,6 +160,18 @@
             this.BtnConfiguracion.UseVisualStyleBackColor = true;
             this.BtnConfiguracion.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.panel2.Controls.Add(this.btnMenu);
+            this.panel2.Controls.Add(this.PTrazar);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(160, 40);
+            this.panel2.TabIndex = 13;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
             // btnMenu
             // 
             this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -268,10 +187,10 @@
             // 
             // PTrazar
             // 
-            this.PTrazar.Image = global::LOSCALVOS.Properties.Resources.logoLC;
-            this.PTrazar.Location = new System.Drawing.Point(46, 9);
+            this.PTrazar.Image = global::LOSCALVOS.Properties.Resources.IconoLosCalvos;
+            this.PTrazar.Location = new System.Drawing.Point(46, 8);
             this.PTrazar.Name = "PTrazar";
-            this.PTrazar.Size = new System.Drawing.Size(36, 29);
+            this.PTrazar.Size = new System.Drawing.Size(42, 31);
             this.PTrazar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PTrazar.TabIndex = 42;
             this.PTrazar.TabStop = false;
@@ -354,6 +273,87 @@
             this.Btnproduccion.UseVisualStyleBackColor = true;
             this.Btnproduccion.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tmMostrarMenu
+            // 
+            this.tmMostrarMenu.Tick += new System.EventHandler(this.tmMostrarMenu_Tick);
+            // 
+            // tmOcultarMenu
+            // 
+            this.tmOcultarMenu.Tick += new System.EventHandler(this.tmOcultarMenu_Tick);
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(116)))), ((int)(((byte)(166)))));
+            this.BarraTitulo.Controls.Add(this.statusBar);
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BarraTitulo.Location = new System.Drawing.Point(160, 573);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(912, 27);
+            this.BarraTitulo.TabIndex = 14;
+            this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // statusBar
+            // 
+            this.statusBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusBar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.statusBar.Location = new System.Drawing.Point(0, 0);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
+            this.pnlempresa,
+            this.pnlsistema,
+            this.pnlserver,
+            this.pnluser,
+            this.PPrint,
+            this.PBalanza});
+            this.statusBar.ShowPanels = true;
+            this.statusBar.Size = new System.Drawing.Size(912, 27);
+            this.statusBar.SizingGrip = false;
+            this.statusBar.TabIndex = 12;
+            // 
+            // pnlempresa
+            // 
+            this.pnlempresa.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlempresa.Icon")));
+            this.pnlempresa.Name = "pnlempresa";
+            this.pnlempresa.Width = 50;
+            // 
+            // pnlsistema
+            // 
+            this.pnlsistema.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlsistema.Icon")));
+            this.pnlsistema.Name = "pnlsistema";
+            // 
+            // pnlserver
+            // 
+            this.pnlserver.Icon = ((System.Drawing.Icon)(resources.GetObject("pnlserver.Icon")));
+            this.pnlserver.Name = "pnlserver";
+            // 
+            // pnluser
+            // 
+            this.pnluser.Icon = ((System.Drawing.Icon)(resources.GetObject("pnluser.Icon")));
+            this.pnluser.Name = "pnluser";
+            // 
+            // PPrint
+            // 
+            this.PPrint.Icon = ((System.Drawing.Icon)(resources.GetObject("PPrint.Icon")));
+            this.PPrint.Name = "PPrint";
+            // 
+            // PBalanza
+            // 
+            this.PBalanza.Icon = ((System.Drawing.Icon)(resources.GetObject("PBalanza.Icon")));
+            this.PBalanza.Name = "PBalanza";
+            // 
+            // panel1
+            // 
+            this.panel1.AutoSize = true;
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel1.BackgroundImage = global::LOSCALVOS.Properties.Resources.logoLosCalvosGris3;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(160, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(912, 573);
+            this.panel1.TabIndex = 17;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,13 +374,6 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.BarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pnlempresa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnluser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PBalanza)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PTrazar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -389,6 +382,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlempresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlsistema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlserver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pnluser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PPrint)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBalanza)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

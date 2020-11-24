@@ -248,10 +248,10 @@ namespace LOSCALVOS
         {
             //MostrarFormLogo();
 
-            Btnproduccion.BackColor = Color.FromArgb(81, 46, 95);
-            BtnConfiguracion.BackColor = Color.FromArgb(81, 46, 95);
-            BtnConsultas.BackColor = Color.FromArgb(81, 46, 95);
-            BtnUtilidades.BackColor = Color.FromArgb(81, 46, 95);
+            Btnproduccion.BackColor = Color.FromArgb(88, 19, 76);
+            BtnConfiguracion.BackColor = Color.FromArgb(88, 19, 76);
+            BtnConsultas.BackColor = Color.FromArgb(88, 19, 76);
+            BtnUtilidades.BackColor = Color.FromArgb(88, 19, 76);
 
             //btnListaClientes.BackColor = Color.FromArgb(29, 34, 39);
 
@@ -275,10 +275,10 @@ namespace LOSCALVOS
         }
         private void HabilitarBotones(Button b)
         {
-            Btnproduccion.BackColor = Color.FromArgb(81, 46, 95);
-            BtnConfiguracion.BackColor = Color.FromArgb(81, 46, 95);
-            BtnConsultas.BackColor = Color.FromArgb(81, 46, 95);
-            BtnUtilidades.BackColor = Color.FromArgb(81, 46, 95);
+            Btnproduccion.BackColor = Color.FromArgb(88, 19, 76);
+            BtnConfiguracion.BackColor = Color.FromArgb(88, 19, 76);
+            BtnConsultas.BackColor = Color.FromArgb(88, 19, 76);
+            BtnUtilidades.BackColor = Color.FromArgb(88, 19, 76);
             b.BackColor = Color.FromArgb(211, 84, 0);
 
         }

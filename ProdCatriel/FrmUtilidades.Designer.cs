@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUtilidades));
             this.menuForm = new System.Windows.Forms.MenuStrip();
             this.produccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Pmaestros = new System.Windows.Forms.ToolStripMenuItem();
             this.impresorasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuForm
             // 
-            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.produccionToolStripMenuItem,
             this.Psalir});
@@ -64,7 +65,7 @@
             // 
             // Pmaestros
             // 
-            this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.Pmaestros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.Pmaestros.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.impresorasToolStripMenuItem,
             this.toolStripMenuItem1});
@@ -77,13 +78,23 @@
             // 
             // impresorasToolStripMenuItem
             // 
-            this.impresorasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.impresorasToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.impresorasToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.impresorasToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.impresorasToolStripMenuItem.Name = "impresorasToolStripMenuItem";
             this.impresorasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.impresorasToolStripMenuItem.Text = "&Impresoras";
             this.impresorasToolStripMenuItem.Click += new System.EventHandler(this.impresorasToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.merma;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "&Balanzas";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // Psalir
             // 
@@ -107,16 +118,6 @@
             this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 19;
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.merma;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem1.Text = "&Balanzas";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // FrmUtilidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +125,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmUtilidades";
             this.Text = "FrmProduccion";
             this.menuForm.ResumeLayout(false);

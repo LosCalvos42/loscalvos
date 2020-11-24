@@ -52,7 +52,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>TRAZAR48.ico</ApplicationIcon>
+    <ApplicationIcon>IconoLosCalvos %282%29.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>EE081E56ECC9398F838ECE3685992BF8090B3B39</ManifestCertificateThumbprint>
@@ -143,6 +143,12 @@
     <Compile Include="FrmAddOrdenDeTrabajoEstucado.designer.cs">
       <DependentUpon>FrmAddOrdenDeTrabajoEstucado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmControlDeProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControlDeProduccion.designer.cs">
+      <DependentUpon>FrmControlDeProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmControlDeRacks.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,29 +167,17 @@
     <Compile Include="FrmReporte.designer.cs">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmReporteSeguimientoLote.cs">
+    <Compile Include="FrmReporteDeProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReporteSeguimientoLote.Designer.cs">
-      <DependentUpon>FrmReporteSeguimientoLote.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmReporteSalazon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmReporteSalazon.Designer.cs">
-      <DependentUpon>FrmReporteSalazon.cs</DependentUpon>
+    <Compile Include="FrmReporteDeProduccion.Designer.cs">
+      <DependentUpon>FrmReporteDeProduccion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporteEJEMPLO.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmReporteEJEMPLO.Designer.cs">
       <DependentUpon>FrmReporteEJEMPLO.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSeguimientoDeLote.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSeguimientoDeLote.Designer.cs">
-      <DependentUpon>FrmSeguimientoDeLote.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSeguimientoDeCodigoDeBarra.cs">
       <SubType>Form</SubType>
@@ -323,11 +317,11 @@
     <Compile Include="FrmAddOrdenDeTrabajo.designer.cs">
       <DependentUpon>FrmAddOrdenDeTrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAddTipoProducto.cs">
+    <Compile Include="FrmAddSectoresProductivos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAddTipoProducto.designer.cs">
-      <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
+    <Compile Include="FrmAddSectoresProductivos.designer.cs">
+      <DependentUpon>FrmAddSectoresProductivos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAddGrupoFamilia.cs">
       <SubType>Form</SubType>
@@ -592,6 +586,9 @@
     <EmbeddedResource Include="FrmAddOrdenDeTrabajoEstucado.resx">
       <DependentUpon>FrmAddOrdenDeTrabajoEstucado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmControlDeProduccion.resx">
+      <DependentUpon>FrmControlDeProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmControlDeRacks.resx">
       <DependentUpon>FrmControlDeRacks.cs</DependentUpon>
     </EmbeddedResource>
@@ -601,20 +598,13 @@
     <EmbeddedResource Include="FrmReporte.resx">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteSeguimientoLote.resx">
-      <DependentUpon>FrmReporteSeguimientoLote.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmReporteSalazon.resx">
-      <DependentUpon>FrmReporteSalazon.cs</DependentUpon>
+    <EmbeddedResource Include="FrmReporteDeProduccion.resx">
+      <DependentUpon>FrmReporteDeProduccion.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteEJEMPLO.resx">
       <DependentUpon>FrmReporteEJEMPLO.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSeguimientoDeLote.resx">
-      <DependentUpon>FrmSeguimientoDeLote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSeguimientoDeCodigoDeBarra.resx">
       <DependentUpon>FrmSeguimientoDeCodigoDeBarra.cs</DependentUpon>
@@ -685,8 +675,8 @@
     <EmbeddedResource Include="FrmAddOrdenDeTrabajo.resx">
       <DependentUpon>FrmAddOrdenDeTrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAddTipoProducto.resx">
-      <DependentUpon>FrmAddTipoProducto.cs</DependentUpon>
+    <EmbeddedResource Include="FrmAddSectoresProductivos.resx">
+      <DependentUpon>FrmAddSectoresProductivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddGrupoFamilia.resx">
       <DependentUpon>FrmAddGrupoFamilia.cs</DependentUpon>
@@ -951,6 +941,11 @@
     <None Include="Resources\iniciandoorcuro.gif" />
     <None Include="Resources\iniciandotrazar.gif" />
     <None Include="Resources\GifInicioLosCalvos.gif" />
+    <Content Include="IconoLosCalvos %282%29.ico" />
+    <None Include="Resources\IconoLosCalvos.jpg" />
+    <None Include="Resources\search-24.png" />
+    <None Include="Resources\Buscartrz1.png" />
+    <None Include="Resources\search-30.png" />
     <Content Include="TRAZAR48.ico" />
     <None Include="Resources\BALANZA24.png" />
     <None Include="Resources\icons8-rack-24.png" />
