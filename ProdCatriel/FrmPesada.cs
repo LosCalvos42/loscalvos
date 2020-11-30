@@ -24,12 +24,9 @@ namespace LOSCALVOS
         public int ulnumerolote;
         public string Pesotext { get; set; }
         public decimal Pesodecimal { get; set; }
-        
-        //string es_nuevo; 
-        //Clsproceso P = new Clsproceso();
-        //ClsProcesoBatea b = new ClsProcesoBatea();
-        //ClsTipoJamon C = new ClsTipoJamon();
-        //ClsSJamones S = new ClsSJamones();
+
+        public string Test { get; set; }
+        public string BalTest { get; set; }
         public FrmPesada()
         {
             InitializeComponent();
@@ -37,26 +34,25 @@ namespace LOSCALVOS
 
         private void FrmSelecJamon_Load(object sender, EventArgs e)
         {
-
             Control.CheckForIllegalCrossThreadCalls = false;
             inicontroles();
-            Pesar();
+            if (Test == "SI")
+            {
+                Pesar(BalTest); 
+            }
+            else
+            {
+                Pesar(Program.BALANZA);
+            }
         }
         private void inicontroles()
         {
-            //serialPort1.Close();
-            //serialPort1.Dispose();
-            //serialPort1.PortName = "COM7";
 
-            //if (serialPort1.IsOpen == true)
-            //{
-            //    serialPort1.Close();
-            //}
         }
         
-        private void Pesar()
+        private void Pesar(string BALANZA)
         {
-            serialPort1.PortName = Program.BALANZA;
+            serialPort1.PortName = BALANZA;
             if (serialPort1.IsOpen == true)
             {
                 serialPort1.Close();
@@ -71,21 +67,12 @@ namespace LOSCALVOS
             }
             catch (Exception ex)
             {
-                Pesar();
+                Pesar(BALANZA);
                 //MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
                 lblespe.Visible = true;
         }
-        //////////////////private void puertosDisponibles()
-        ////////////////{
-        ////////////////    foreach (string puertoDis in System.IO.Ports.SerialPort.GetPortNames())
-        ////////////////    {
-        ////////////////        cmbPuertos.Items.Add(puertoDis);
-                
-        ////////////////    }
-        ////////////////}
-        
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             if (lblespe.Visible == true)
@@ -110,8 +97,6 @@ namespace LOSCALVOS
                 serialPort1.DiscardInBuffer();
                 serialPort1.Close();
                 System.Threading.Thread.Sleep(500);
-                
-                
                 this.Close();
             }
         }
@@ -145,33 +130,33 @@ namespace LOSCALVOS
         {
             try
             {
-                try
+                if (serialPort1.IsOpen == true)
                 {
-                    if (serialPort1.IsOpen == true)
-                    {
-                        serialPort1.Close();
-                    }
-                    serialPort1.Open();
+                    serialPort1.Close();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                lblespe.Visible = true;
-
+                serialPort1.Open();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            lblespe.Visible = true;            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            decimal peso = Convert.ToDecimal(textBox1.Text.ToString().Replace(".", ","));
-            Pesodecimal = peso;
-            this.Close();
+            try
+            {
+                decimal peso = Convert.ToDecimal(textBox1.Text.ToString().Replace(".", ","));
+                Pesotext = Convert.ToString(peso);
+                Pesodecimal = peso;
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

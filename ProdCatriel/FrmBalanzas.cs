@@ -41,6 +41,10 @@ namespace LOSCALVOS
             {
                 CmbNombre1.Items.Add(puertoDis);
                 CmbNombre2.Items.Add(puertoDis);
+                CmbNombre3.Items.Add(puertoDis);
+                CmbNombre4.Items.Add(puertoDis);
+                CmbNombre5.Items.Add(puertoDis);
+                CmbNombre6.Items.Add(puertoDis);
             }
         }
 
@@ -54,53 +58,214 @@ namespace LOSCALVOS
 
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
-            string ssql = @"select DISPBALANZAS_nro, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO FROM DISPBALANZAS I " +
+            string ssql = @"select DISPBALANZAS_nro, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO FROM DISPBALANZAS I " +
                                   "INNER JOIN DISPOSITIVOS  D ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID " +
                                   "WHERE D.DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
                                   "AND D.DISPOSITIVO_NOMBRE = '" + Program.HostName + "'";
-                                  //"AND I.DISPIMPRESORA_ESTADO = 'ON'";
+            //"AND I.DISPIMPRESORA_ESTADO = 'ON'";
             dt = M.lisquery(ssql);
 
-            if (dt.Rows.Count >0)
+            if (dt.Rows.Count > 0)
             {
-
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 1)
                     {
-                        CmbNombre1.Text = dt.Rows[i][1].ToString();
-                        CmbTipo1.SelectedItem = dt.Rows[i][2].ToString();
-                        if (dt.Rows[i][3].ToString() == "ON")
+
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
                         {
-                            r1.Checked = true;
+                            CmbNombre1.Text = dt.Rows[i][1].ToString();
+                            CmbTipo1.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r1.Checked = true;
+                            }
+                            else
+                            {
+                                r1.Checked = false;
+                            }
+                            TxtPuerto1.Text = dt.Rows[i][4].ToString();
                         }
                         else
                         {
-
-                            r1.Checked = false;
+                            TxtDesc1.Text = dt.Rows[i][1].ToString();
+                            CmbTipo1.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r1.Checked = true;
+                            }
+                            else
+                            {
+                                r1.Checked = false;
+                            }
+                            TxtPuerto1.Text = dt.Rows[i][4].ToString();
                         }
                     }
                     if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 2)
                     {
-                        CmbNombre2.Text = dt.Rows[i][1].ToString();
-                        CmbTipo2.SelectedItem = dt.Rows[i][2].ToString();
-                        if (dt.Rows[i][3].ToString() == "ON")
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
                         {
-                            r2.Checked = true;
+                            CmbNombre2.Text = dt.Rows[i][1].ToString();
+                            CmbTipo2.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r2.Checked = true;
+                            }
+                            else
+                            {
+                                r2.Checked = false;
+                            }
+                            TxtPuerto2.Text = dt.Rows[i][4].ToString();
                         }
                         else
                         {
-                            r2.Checked = false;
+                            TxtDesc2.Text = dt.Rows[i][1].ToString();
+                            CmbTipo2.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r2.Checked = true;
+                            }
+                            else
+                            {
+                                r2.Checked = false;
+                            }
+                            TxtPuerto2.Text = dt.Rows[i][4].ToString();
                         }
                     }
-                    
+                    if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 3)
+                    {
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
+                        {
+                            CmbNombre3.Text = dt.Rows[i][1].ToString();
+                            CmbTipo3.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r3.Checked = true;
+                            }
+                            else
+                            {
+                                r3.Checked = false;
+                            }
+                            TxtPuerto3.Text = dt.Rows[i][4].ToString();
+                        }
+                        else
+                        {
+                            TxtDesc3.Text = dt.Rows[i][1].ToString();
+                            CmbTipo3.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r3.Checked = true;
+                            }
+                            else
+                            {
+                                r3.Checked = false;
+                            }
+                            TxtPuerto3.Text = dt.Rows[i][4].ToString();
+                        }
+
+                    }
+                    if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 4)
+                    {
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
+                        {
+                            CmbNombre4.Text = dt.Rows[i][1].ToString();
+                            CmbTipo4.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r4.Checked = true;
+                            }
+                            else
+                            {
+                                r4.Checked = false;
+                            }
+                            TxtPuerto4.Text = dt.Rows[i][4].ToString();
+                        }
+                        else
+                        {
+                            TxtDesc4.Text = dt.Rows[i][1].ToString();
+                            CmbTipo4.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r4.Checked = true;
+                            }
+                            else
+                            {
+                                r4.Checked = false;
+                            }
+                            TxtPuerto4.Text = dt.Rows[i][4].ToString();
+                        }
+                    }
+                    if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 5)
+                    {
+
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
+                        {
+                            CmbNombre5.Text = dt.Rows[i][1].ToString();
+                            CmbTipo5.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r5.Checked = true;
+                            }
+                            else
+                            {
+                                r5.Checked = false;
+                            }
+                            TxtPuerto5.Text = dt.Rows[i][4].ToString();
+                        }
+                        else
+                        {
+                            TxtDesc5.Text = dt.Rows[i][1].ToString();
+                            CmbTipo5.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r5.Checked = true;
+                            }
+                            else
+                            {
+                                r5.Checked = false;
+                            }
+                            TxtPuerto5.Text = dt.Rows[i][4].ToString();
+                        }
+                    }
+                    if (Convert.ToInt32(dt.Rows[i][0].ToString()) == 6)
+                    {
+                        if (dt.Rows[i][2].ToString() == "COM (RS232)")
+                        {
+                            CmbNombre6.Text = dt.Rows[i][1].ToString();
+                            CmbTipo6.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r6.Checked = true;
+                            }
+                            else
+                            {
+                                r6.Checked = false;
+                            }
+                            TxtPuerto6.Text = dt.Rows[i][4].ToString();
+                        }
+                        else
+                        {
+                            TxtDesc6.Text = dt.Rows[i][1].ToString();
+                            CmbTipo6.SelectedItem = dt.Rows[i][2].ToString();
+                            if (dt.Rows[i][3].ToString() == "ON")
+                            {
+                                r6.Checked = true;
+                            }
+                            else
+                            {
+                                r6.Checked = false;
+                            }
+                            TxtPuerto6.Text = dt.Rows[i][4].ToString();
+                        }
+                    }
+
                 }
-            }  
+            }
         }
-       
+
 
         //funcion que se encarga de imprimir
-        
+
 
         private bool valido()
         {
@@ -135,10 +300,10 @@ namespace LOSCALVOS
                 //}
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
-                string ssql = @"SELECT * "+
-                                " FROM DISPOSITIVOS "+
-                                " WHERE DISPOSITIVO_NROSERIE = '"+TxtSerialNumber.Text+ "' " +
-                                " AND DISPOSITIVO_NOMBRE= '"+TxtHostName.Text+"'";
+                string ssql = @"SELECT * " +
+                                " FROM DISPOSITIVOS " +
+                                " WHERE DISPOSITIVO_NROSERIE = '" + TxtSerialNumber.Text + "' " +
+                                " AND DISPOSITIVO_NOMBRE= '" + TxtHostName.Text + "'";
                 dt = M.lisquery(ssql);
 
                 //if (dt.Rows.Count==0)
@@ -148,10 +313,10 @@ namespace LOSCALVOS
                 //    "VALUES( '"+Tipodispositivo+"','"+TxtSerialNumber.Text+"','"+TxtHostName.Text+"','N')");
                 //}
 
-               ssql = @"SELECT DISPOSITIVO_ID "+
-                        "FROM [DISPOSITIVOS] " +
-                        "WHERE DISPOSITIVO_NROSERIE ='" + TxtSerialNumber.Text + "' " +
-                        "AND DISPOSITIVO_NOMBRE='" + TxtHostName.Text+"'";
+                ssql = @"SELECT DISPOSITIVO_ID " +
+                         "FROM [DISPOSITIVOS] " +
+                         "WHERE DISPOSITIVO_NROSERIE ='" + TxtSerialNumber.Text + "' " +
+                         "AND DISPOSITIVO_NOMBRE='" + TxtHostName.Text + "'";
                 dt = M.lisquery(ssql);
 
                 if (dt.Rows.Count == 1)
@@ -161,20 +326,99 @@ namespace LOSCALVOS
                     M.Ejecutarquery("DELETE [DISPBALANZAS]  " +
                     "WHERE DISPOSITIVO_ID= " + DispositivoID);
 
-                    if (CmbNombre1.Text != "")
+                    if (CmbTipo1.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
-                        "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
-                        "VALUES( " + DispositivoID + "," + 1 + ",'" + CmbNombre1.Text + "','" + CmbTipo1.Text + "','" + r1.Text + "')");
+                        if (CmbTipo1.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 1 + ",'" + CmbNombre1.Text + "','" + CmbTipo1.Text + "','" + r1.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 1 + ",'" + TxtDesc1.Text + "','" + CmbTipo1.Text + "','" + r1.Text + "','" + TxtPuerto1.Text + "')");
+                        }
+
                     }
-                    if (CmbNombre2.Text != "")
+                    if (CmbTipo2.Text != "")
                     {
-                        M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
-                        "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
-                        "VALUES( " + DispositivoID + "," + 2 + ",'" + CmbNombre2.Text + "','" + CmbTipo2.Text + "','" + r2.Text + "')");
+                        if (CmbTipo2.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 2 + ",'" + CmbNombre2.Text + "','" + CmbTipo2.Text + "','" + r2.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 2 + ",'" + TxtDesc2.Text + "','" + CmbTipo2.Text + "','" + r2.Text + "','" + TxtPuerto2.Text + "')");
+                        }
                     }
-                    
-                    ssql = @"SELECT DISPBALANZAS_NOMBRE " +
+                    if (CmbTipo3.Text != "")
+                    {
+                        if (CmbTipo3.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 3 + ",'" + CmbNombre3.Text + "','" + CmbTipo3.Text + "','" + r3.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 3 + ",'" + TxtDesc3.Text + "','" + CmbTipo3.Text + "','" + r3.Text + "','" + TxtPuerto3.Text + "')");
+                        }
+                    }
+                    if (CmbTipo4.Text != "")
+                    {
+                        if (CmbTipo4.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 4 + ",'" + CmbNombre4.Text + "','" + CmbTipo4.Text + "','" + r4.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 4 + ",'" + TxtDesc4.Text + "','" + CmbTipo4.Text + "','" + r4.Text + "','" + TxtPuerto4.Text + "')");
+                        }
+                    }
+                    if (CmbTipo5.Text != "")
+                    {
+                        if (CmbTipo5.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 5 + ",'" + CmbNombre5.Text + "','" + CmbTipo5.Text + "','" + r5.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 5 + ",'" + TxtDesc5.Text + "','" + CmbTipo5.Text + "','" + r5.Text + "','" + TxtPuerto5.Text + "')");
+                        }
+                    }
+                    if (CmbTipo6.Text != "")
+                    {
+                        if (CmbTipo6.Text == "COM (RS232)")
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO) " +
+                            "VALUES( " + DispositivoID + "," + 6 + ",'" + CmbNombre6.Text + "','" + CmbTipo6.Text + "','" + r6.Text + "')");
+                        }
+                        else
+                        {
+                            M.Ejecutarquery("INSERT [DISPBALANZAS]  " +
+                            "(DISPOSITIVO_ID, DISPBALANZAS_NRO, DISPBALANZAS_NOMBRE,DISPBALANZAS_TIPO,DISPBALANZAS_ESTADO,DISPBALANZAS_PUERTO) " +
+                            "VALUES( " + DispositivoID + "," + 6 + ",'" + TxtDesc6.Text + "','" + CmbTipo6.Text + "','" + r6.Text + "','" + TxtPuerto6.Text + "')");
+                        }
+                    }
+
+                    ssql = @"SELECT DISPBALANZAS_NOMBRE,DISPBALANZAS_PUERTO " +
                         "FROM [DISPBALANZAS] " +
                         "WHERE DISPOSITIVO_ID=" + DispositivoID +
                         " AND DISPBALANZAS_ESTADO='ON'";
@@ -183,11 +427,12 @@ namespace LOSCALVOS
                     if (dt.Rows.Count == 1)
                     {
                         Program.BALANZA = dt.Rows[0][0].ToString();
+                        Program.BALANZAPUERTO = dt.Rows[0][1].ToString();
                         MessageBox.Show("Los Datos se Guardaron Correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else
-                    { 
+                    {
                         MessageBox.Show("NO Hay Balanzas configuradas para este Dispositivo", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
@@ -206,18 +451,18 @@ namespace LOSCALVOS
         {
             DialogResult = DialogResult.Cancel;
             this.Close();
-            
+
         }
 
-       
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
-                if (MessageBox.Show("¿Confirma que desea Modificar El Registro?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    return;
-                }
-            
+
+            if (MessageBox.Show("¿Confirma que desea Modificar El Registro?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
             try
             {
                 if (valido() == true)
@@ -263,43 +508,101 @@ namespace LOSCALVOS
 
         private void BtnPrint1_Click(object sender, EventArgs e)
         {
-            FrmPesada _FrmPesada = new FrmPesada
-            {
-                StartPosition = FormStartPosition.CenterScreen,
 
-            };
-            _FrmPesada.ShowDialog();
-            if (_FrmPesada.Pesotext !=null)
+            if (CmbTipo1.Text == "COM (RS232)")
             {
-                MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre1.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
-                MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc1.Text;
+                _FrmPesada.Puerto = TxtPuerto1.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void BtnPrint2_Click(object sender, EventArgs e)
         {
-            FrmPesada _FrmPesada = new FrmPesada
+            if (CmbTipo2.Text == "COM (RS232)")
             {
-                StartPosition = FormStartPosition.CenterScreen,
 
-            };
-            _FrmPesada.ShowDialog();
-            if (_FrmPesada.Pesotext != null)
-            {
-                MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre2.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
             else
             {
-                MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc2.Text;
+                _FrmPesada.Puerto = TxtPuerto2.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void CmbTipo1_SelectedValueChanged(object sender, EventArgs e)
         {
-            if(CmbTipo1.Text== "COM (RS232)")
+            if (CmbTipo1.Text == "COM (RS232)")
             {
                 CmbNombre1.Visible = true;
                 TxtDesc1.Visible = false;
@@ -322,6 +625,282 @@ namespace LOSCALVOS
             {
                 CmbNombre2.Visible = false;
                 TxtDesc2.Visible = true;
+            }
+        }
+
+        private void CmbTipo3_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbTipo3.Text == "COM (RS232)")
+            {
+                CmbNombre3.Visible = true;
+                TxtDesc3.Visible = false;
+            }
+            else
+            {
+                CmbNombre3.Visible = false;
+                TxtDesc3.Visible = true;
+            }
+        }
+
+        private void CmbTipo4_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbTipo4.Text == "COM (RS232)")
+            {
+                CmbNombre4.Visible = true;
+                TxtDesc4.Visible = false;
+            }
+            else
+            {
+                CmbNombre4.Visible = false;
+                TxtDesc4.Visible = true;
+            }
+        }
+
+        private void CmbTipo5_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbTipo5.Text == "COM (RS232)")
+            {
+                CmbNombre5.Visible = true;
+                TxtDesc5.Visible = false;
+            }
+            else
+            {
+                CmbNombre5.Visible = false;
+                TxtDesc5.Visible = true;
+            }
+        }
+
+        private void CmbTipo6_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbTipo6.Text == "COM (RS232)")
+            {
+                CmbNombre6.Visible = true;
+                TxtDesc6.Visible = false;
+            }
+            else
+            {
+                CmbNombre6.Visible = false;
+                TxtDesc6.Visible = true;
+            }
+        }
+
+        private void r3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (r3.Checked)
+            {
+                r3.Text = "ON";
+            }
+            else
+            {
+                r3.Text = "OFF";
+            }
+        }
+
+        private void r4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (r4.Checked)
+            {
+                r4.Text = "ON";
+            }
+            else
+            {
+                r4.Text = "OFF";
+            }
+        }
+
+        private void r5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (r5.Checked)
+            {
+                r5.Text = "ON";
+            }
+            else
+            {
+                r5.Text = "OFF";
+            }
+        }
+
+        private void BtnPrint3_Click(object sender, EventArgs e)
+        {
+            if (CmbTipo3.Text == "COM (RS232)")
+            {
+
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre3.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc3.Text;
+                _FrmPesada.Puerto = TxtPuerto3.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BtnPrint4_Click(object sender, EventArgs e)
+        {
+            if (CmbTipo4.Text == "COM (RS232)")
+            {
+
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre4.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc4.Text;
+                _FrmPesada.Puerto = TxtPuerto4.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BtnPrint5_Click(object sender, EventArgs e)
+        {
+            if (CmbTipo5.Text == "COM (RS232)")
+            {
+
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre5.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc5.Text;
+                _FrmPesada.Puerto = TxtPuerto5.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BtnPrint6_Click(object sender, EventArgs e)
+        {
+            if (CmbTipo6.Text == "COM (RS232)")
+            {
+
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+                    Test = "SI",
+                    BalTest = CmbNombre6.Text
+
+                };
+
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+            else
+            {
+                FrmPesadaIP _FrmPesada = new FrmPesadaIP
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.Ip = TxtDesc6.Text;
+                _FrmPesada.Puerto = TxtPuerto6.Text;
+                _FrmPesada.Test = "Si";
+                _FrmPesada.ShowDialog();
+                if (_FrmPesada.Pesotext != null)
+                {
+                    MessageBox.Show("Peso detectado correctamente", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Intentar obtener Peso. Probar otro puerto o consulte con el Administrador", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

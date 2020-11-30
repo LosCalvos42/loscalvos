@@ -141,9 +141,9 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@CODPROD", TxtCodProd.Text));
                 lst.Add(new ClsParametros("@LOTE", TxtLote.Text));
                 lst.Add(new ClsParametros("@CANTIDAD", Convert.ToInt32(TxtCantidad.Text)));
-                lst.Add(new ClsParametros("@BRUTO", Convert.ToInt32(TxtKBruto.Text)));
-                lst.Add(new ClsParametros("@TARA", Convert.ToInt32(TxtTara.Text)));
-                lst.Add(new ClsParametros("@NETO", Convert.ToInt32(TxtkNeto.Text)));
+                lst.Add(new ClsParametros("@BRUTO", Convert.ToString(Convert.ToDecimal(TxtKBruto.Text)).Replace(",", ".")));
+                lst.Add(new ClsParametros("@TARA", Convert.ToString(Convert.ToDecimal(TxtTara.Text)).Replace(",", ".")));
+                lst.Add(new ClsParametros("@NETO", Convert.ToString(Convert.ToDecimal(TxtkNeto.Text)).Replace(",", ".")));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 lst.Add(new ClsParametros("@DEBAJA","N"));
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 20));
@@ -485,7 +485,7 @@ namespace LOSCALVOS
 
         private void TxtTara_KeyUp(object sender, KeyEventArgs e)
         {
-            int Neto = Convert.ToInt32(TxtKBruto.Text) - Convert.ToInt32(TxtTara.Text);
+            decimal Neto = Convert.ToDecimal(TxtKBruto.Text) - Convert.ToDecimal(TxtTara.Text);
             TxtkNeto.Text = Convert.ToString(Neto);
         }
         private void TxtTara_TextChanged(object sender, EventArgs e)
@@ -631,6 +631,34 @@ namespace LOSCALVOS
                 }
             }
             
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            if( Program.BALANZA.Length>4) { 
+            
+            FrmPesadaIP _FrmPesada = new FrmPesadaIP
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+            };
+                _FrmPesada.ShowDialog();
+                TxtKBruto.Text = Convert.ToString(Convert.ToDecimal(Math.Round(_FrmPesada.Pesodecimal)).ToString("N2"));
+                decimal Neto = Convert.ToDecimal(TxtKBruto.Text) - Convert.ToDecimal(TxtTara.Text);
+                TxtkNeto.Text = Convert.ToString(Neto);
+            }
+            else
+            {
+                FrmPesada _FrmPesada = new FrmPesada
+                {
+                    StartPosition = FormStartPosition.CenterScreen,
+
+                };
+                _FrmPesada.ShowDialog();
+
+                TxtKBruto.Text = Convert.ToString(Convert.ToDecimal(Math.Round(_FrmPesada.Pesodecimal)).ToString("N2"));
+                decimal Neto = Convert.ToDecimal(TxtKBruto.Text) - Convert.ToDecimal(TxtTara.Text);
+                TxtkNeto.Text = Convert.ToString(Neto);
+            }
         }
     }
 }

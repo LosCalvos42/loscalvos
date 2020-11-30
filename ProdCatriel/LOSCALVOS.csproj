@@ -25,8 +25,8 @@
     <UpdateUrl>http://vm-catriel/LC42_EXE/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>20</ApplicationRevision>
-    <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>2.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -109,9 +109,14 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -160,6 +165,12 @@
     </Compile>
     <Compile Include="FrmLoteItems.designer.cs">
       <DependentUpon>FrmLoteItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPesadaIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPesadaIP.Designer.cs">
+      <DependentUpon>FrmPesadaIP.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReporte.cs">
       <SubType>Form</SubType>
@@ -595,6 +606,10 @@
     <EmbeddedResource Include="FrmLoteItems.resx">
       <DependentUpon>FrmLoteItems.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPesadaIP.resx">
+      <DependentUpon>FrmPesadaIP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporte.resx">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -941,11 +956,16 @@
     <None Include="Resources\iniciandoorcuro.gif" />
     <None Include="Resources\iniciandotrazar.gif" />
     <None Include="Resources\GifInicioLosCalvos.gif" />
+    <None Include="bin\Debug\imagenes\32\Balance.png" />
     <Content Include="IconoLosCalvos %282%29.ico" />
     <None Include="Resources\IconoLosCalvos.jpg" />
     <None Include="Resources\search-24.png" />
     <None Include="Resources\Buscartrz1.png" />
     <None Include="Resources\search-30.png" />
+    <None Include="Resources\balanzas-48.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\balanzaaaaaagif.gif" />
+    <None Include="Resources\Spotify-Loading-Animation_2.gif" />
     <Content Include="TRAZAR48.ico" />
     <None Include="Resources\BALANZA24.png" />
     <None Include="Resources\icons8-rack-24.png" />

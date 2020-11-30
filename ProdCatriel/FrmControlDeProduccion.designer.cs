@@ -39,11 +39,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlDeProduccion));
             this.label5 = new System.Windows.Forms.Label();
             this.menuForm = new System.Windows.Forms.MenuStrip();
-            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
-            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtLote = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -82,9 +77,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.TxtCodProd = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.BtnBuscarProd = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnBuscarProd = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).BeginInit();
@@ -118,55 +119,6 @@
             this.menuForm.Size = new System.Drawing.Size(1028, 26);
             this.menuForm.TabIndex = 130;
             this.menuForm.Text = "Menu";
-            // 
-            // mnuevo
-            // 
-            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
-            this.mnuevo.Name = "mnuevo";
-            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.mnuevo.Size = new System.Drawing.Size(79, 22);
-            this.mnuevo.Text = "Nuevo";
-            // 
-            // mmodificar
-            // 
-            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
-            this.mmodificar.Name = "mmodificar";
-            this.mmodificar.Size = new System.Drawing.Size(97, 22);
-            this.mmodificar.Text = "Modificar";
-            this.mmodificar.Visible = false;
-            // 
-            // meliminar
-            // 
-            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
-            this.meliminar.Name = "meliminar";
-            this.meliminar.Size = new System.Drawing.Size(89, 22);
-            this.meliminar.Text = "Eliminar";
-            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
-            // 
-            // mimprimir
-            // 
-            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
-            this.mimprimir.Name = "mimprimir";
-            this.mimprimir.Size = new System.Drawing.Size(89, 22);
-            this.mimprimir.Text = "Imprimir";
-            this.mimprimir.Click += new System.EventHandler(this.mimprimir_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // label1
             // 
@@ -240,7 +192,7 @@
             this.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtCantidad.Location = new System.Drawing.Point(8, 78);
+            this.TxtCantidad.Location = new System.Drawing.Point(8, 66);
             this.TxtCantidad.Name = "TxtCantidad";
             this.TxtCantidad.Size = new System.Drawing.Size(51, 24);
             this.TxtCantidad.TabIndex = 137;
@@ -253,7 +205,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 48);
+            this.label6.Location = new System.Drawing.Point(9, 36);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 20);
             this.label6.TabIndex = 138;
@@ -264,7 +216,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(70, 49);
+            this.label7.Location = new System.Drawing.Point(70, 37);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 20);
             this.label7.TabIndex = 140;
@@ -275,7 +227,7 @@
             this.TxtKBruto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtKBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtKBruto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtKBruto.Location = new System.Drawing.Point(66, 78);
+            this.TxtKBruto.Location = new System.Drawing.Point(66, 66);
             this.TxtKBruto.Name = "TxtKBruto";
             this.TxtKBruto.Size = new System.Drawing.Size(87, 24);
             this.TxtKBruto.TabIndex = 139;
@@ -291,7 +243,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(256, 48);
+            this.label8.Location = new System.Drawing.Point(256, 36);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(70, 20);
             this.label8.TabIndex = 142;
@@ -302,7 +254,7 @@
             this.TxtkNeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtkNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtkNeto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtkNeto.Location = new System.Drawing.Point(252, 78);
+            this.TxtkNeto.Location = new System.Drawing.Point(252, 66);
             this.TxtkNeto.Name = "TxtkNeto";
             this.TxtkNeto.ReadOnly = true;
             this.TxtkNeto.Size = new System.Drawing.Size(87, 24);
@@ -315,7 +267,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(168, 49);
+            this.label9.Location = new System.Drawing.Point(168, 37);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 20);
             this.label9.TabIndex = 144;
@@ -326,7 +278,7 @@
             this.TxtTara.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtTara.Location = new System.Drawing.Point(159, 78);
+            this.TxtTara.Location = new System.Drawing.Point(159, 66);
             this.TxtTara.Name = "TxtTara";
             this.TxtTara.Size = new System.Drawing.Size(87, 24);
             this.TxtTara.TabIndex = 143;
@@ -363,6 +315,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.ChekFUni);
             this.groupBox1.Controls.Add(this.ChekManual);
             this.groupBox1.Controls.Add(this.ChekFTara);
@@ -377,9 +330,9 @@
             this.groupBox1.Controls.Add(this.TxtTara);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(5, 397);
+            this.groupBox1.Location = new System.Drawing.Point(5, 388);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 160);
+            this.groupBox1.Size = new System.Drawing.Size(347, 164);
             this.groupBox1.TabIndex = 147;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BALANZA";
@@ -389,7 +342,7 @@
             this.ChekFUni.AutoSize = true;
             this.ChekFUni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChekFUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChekFUni.Location = new System.Drawing.Point(46, 54);
+            this.ChekFUni.Location = new System.Drawing.Point(46, 42);
             this.ChekFUni.Name = "ChekFUni";
             this.ChekFUni.Size = new System.Drawing.Size(12, 11);
             this.ChekFUni.TabIndex = 152;
@@ -411,7 +364,7 @@
             this.ChekFTara.AutoSize = true;
             this.ChekFTara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChekFTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChekFTara.Location = new System.Drawing.Point(216, 55);
+            this.ChekFTara.Location = new System.Drawing.Point(216, 43);
             this.ChekFTara.Name = "ChekFTara";
             this.ChekFTara.Size = new System.Drawing.Size(12, 11);
             this.ChekFTara.TabIndex = 150;
@@ -421,14 +374,14 @@
             // BtnBalanzaAceptar
             // 
             this.BtnBalanzaAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnBalanzaAceptar.BackColor = System.Drawing.Color.White;
+            this.BtnBalanzaAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.BtnBalanzaAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBalanzaAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBalanzaAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBalanzaAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.BtnBalanzaAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
-            this.BtnBalanzaAceptar.Location = new System.Drawing.Point(95, 126);
+            this.BtnBalanzaAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBalanzaAceptar.Location = new System.Drawing.Point(159, 96);
             this.BtnBalanzaAceptar.Name = "BtnBalanzaAceptar";
-            this.BtnBalanzaAceptar.Size = new System.Drawing.Size(157, 28);
+            this.BtnBalanzaAceptar.Size = new System.Drawing.Size(180, 57);
             this.BtnBalanzaAceptar.TabIndex = 148;
             this.BtnBalanzaAceptar.Text = "&Aceptar";
             this.BtnBalanzaAceptar.UseVisualStyleBackColor = false;
@@ -638,23 +591,17 @@
             this.TxtCodProd.TabIndex = 157;
             this.TxtCodProd.Visible = false;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::LOSCALVOS.Properties.Resources.search_30;
-            this.button1.Location = new System.Drawing.Point(151, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 29);
-            this.button1.TabIndex = 129;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.utilidades;
+            this.pictureBox1.Location = new System.Drawing.Point(977, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 159;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // BtnBuscarProd
             // 
@@ -672,17 +619,89 @@
             this.BtnBuscarProd.UseVisualStyleBackColor = false;
             this.BtnBuscarProd.Click += new System.EventHandler(this.BtnBuscarProd_Click);
             // 
-            // pictureBox1
+            // button2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.pictureBox1.Image = global::LOSCALVOS.Properties.Resources.utilidades;
-            this.pictureBox1.Location = new System.Drawing.Point(977, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 159;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.Image = global::LOSCALVOS.Properties.Resources.balanzas_48;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(8, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 56);
+            this.button2.TabIndex = 160;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // mnuevo
+            // 
+            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuevo.ForeColor = System.Drawing.Color.White;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
+            this.mnuevo.Name = "mnuevo";
+            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.mnuevo.Size = new System.Drawing.Size(79, 22);
+            this.mnuevo.Text = "Nuevo";
+            // 
+            // mmodificar
+            // 
+            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mmodificar.ForeColor = System.Drawing.Color.White;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
+            this.mmodificar.Name = "mmodificar";
+            this.mmodificar.Size = new System.Drawing.Size(97, 22);
+            this.mmodificar.Text = "Modificar";
+            this.mmodificar.Visible = false;
+            // 
+            // meliminar
+            // 
+            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meliminar.ForeColor = System.Drawing.Color.White;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
+            this.meliminar.Name = "meliminar";
+            this.meliminar.Size = new System.Drawing.Size(89, 22);
+            this.meliminar.Text = "Eliminar";
+            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
+            // 
+            // mimprimir
+            // 
+            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mimprimir.ForeColor = System.Drawing.Color.White;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
+            this.mimprimir.Name = "mimprimir";
+            this.mimprimir.Size = new System.Drawing.Size(89, 22);
+            this.mimprimir.Text = "Imprimir";
+            this.mimprimir.Click += new System.EventHandler(this.mimprimir_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // button1
+            // 
+            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::LOSCALVOS.Properties.Resources.search_30;
+            this.button1.Location = new System.Drawing.Point(151, 83);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 29);
+            this.button1.TabIndex = 129;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmControlDeProduccion
             // 
@@ -779,5 +798,6 @@
         private System.Windows.Forms.TextBox TxtCodProd;
         private System.Windows.Forms.Button BtnBuscarProd;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

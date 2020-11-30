@@ -743,15 +743,16 @@ namespace LOSCALVOS
                 decimal Pesodecimal = 0;
                 //decimal mermamin = 0;
                 //decimal mermamax= 0;
-                if (ChekCtMerma.Checked == true) { 
-                FrmPesada _FrmPesada = new FrmPesada
-                {
+                if (ChekCtMerma.Checked == true) 
+                { 
+                    FrmPesada _FrmPesada = new FrmPesada
+                    {
                     StartPosition = FormStartPosition.CenterScreen,
 
-                };
+                    };
                     _FrmPesada.ShowDialog();
 
-                Pesodecimal = _FrmPesada.Pesodecimal;
+                    Pesodecimal = _FrmPesada.Pesodecimal;
                 }
                 else
                 {

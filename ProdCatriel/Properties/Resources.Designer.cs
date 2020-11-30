@@ -203,9 +203,39 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Balance {
+            get {
+                object obj = ResourceManager.GetObject("Balance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BALANZA24 {
             get {
                 object obj = ResourceManager.GetObject("BALANZA24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balanzaaaaaagif {
+            get {
+                object obj = ResourceManager.GetObject("balanzaaaaaagif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap balanzas_48 {
+            get {
+                object obj = ResourceManager.GetObject("balanzas-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1273,6 +1303,16 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap loading {
+            get {
+                object obj = ResourceManager.GetObject("loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap localizador {
             get {
                 object obj = ResourceManager.GetObject("localizador", resourceCulture);
@@ -1886,6 +1926,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap small_load {
             get {
                 object obj = ResourceManager.GetObject("small-load", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spotify_Loading_Animation_2 {
+            get {
+                object obj = ResourceManager.GetObject("Spotify-Loading-Animation_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
