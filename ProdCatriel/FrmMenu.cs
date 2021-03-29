@@ -136,6 +136,7 @@ namespace LOSCALVOS
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
             string ssql  = @"select TOP(1) isnull(DISPIMPRESORA_NOMBRE, '') as IMPRESORA, isnull(DISPBALANZAS_NOMBRE, '') AS BALANZA " +
+            ",isnull(DISPBALANZAS_PUERTO, '') AS PUERTO " +
             "FROM [DISPOSITIVOS] D " +
             "INNER JOIN [DISPIMPRESORAS] I ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID AND I.DISPIMPRESORA_ESTADO = 'ON' " +
             "left join [DISPBALANZAS] B on B.DISPOSITIVO_ID = D.DISPOSITIVO_ID AND B.DISPBALANZAS_ESTADO = 'ON' " +
@@ -150,6 +151,7 @@ namespace LOSCALVOS
             {
                 Program.IMPRESORAETIQUETA = dt.Rows[0][0].ToString();
                 Program.BALANZA = dt.Rows[0][1].ToString();
+                Program.BALANZAPUERTO= dt.Rows[0][2].ToString();
                 PPrint.Text = Program.IMPRESORAETIQUETA;
                 PPrint.AutoSize = StatusBarPanelAutoSize.Contents;
 

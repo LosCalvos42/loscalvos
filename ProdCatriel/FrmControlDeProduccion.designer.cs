@@ -39,6 +39,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmControlDeProduccion));
             this.label5 = new System.Windows.Forms.Label();
             this.menuForm = new System.Windows.Forms.MenuStrip();
+            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
+            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtLote = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,6 +61,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.CmbAlmacen = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.ChekFUni = new System.Windows.Forms.CheckBox();
             this.ChekManual = new System.Windows.Forms.CheckBox();
             this.ChekFTara = new System.Windows.Forms.CheckBox();
@@ -79,12 +85,6 @@
             this.TxtCodProd = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BtnBuscarProd = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.mnuevo = new System.Windows.Forms.ToolStripMenuItem();
-            this.mmodificar = new System.Windows.Forms.ToolStripMenuItem();
-            this.meliminar = new System.Windows.Forms.ToolStripMenuItem();
-            this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.menuForm.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -119,6 +119,55 @@
             this.menuForm.Size = new System.Drawing.Size(1028, 26);
             this.menuForm.TabIndex = 130;
             this.menuForm.Text = "Menu";
+            // 
+            // mnuevo
+            // 
+            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuevo.ForeColor = System.Drawing.Color.White;
+            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
+            this.mnuevo.Name = "mnuevo";
+            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.mnuevo.Size = new System.Drawing.Size(79, 22);
+            this.mnuevo.Text = "Nuevo";
+            // 
+            // mmodificar
+            // 
+            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mmodificar.ForeColor = System.Drawing.Color.White;
+            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
+            this.mmodificar.Name = "mmodificar";
+            this.mmodificar.Size = new System.Drawing.Size(97, 22);
+            this.mmodificar.Text = "Modificar";
+            this.mmodificar.Visible = false;
+            // 
+            // meliminar
+            // 
+            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meliminar.ForeColor = System.Drawing.Color.White;
+            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
+            this.meliminar.Name = "meliminar";
+            this.meliminar.Size = new System.Drawing.Size(89, 22);
+            this.meliminar.Text = "Eliminar";
+            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
+            // 
+            // mimprimir
+            // 
+            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mimprimir.ForeColor = System.Drawing.Color.White;
+            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
+            this.mimprimir.Name = "mimprimir";
+            this.mimprimir.Size = new System.Drawing.Size(89, 22);
+            this.mimprimir.Text = "Imprimir";
+            this.mimprimir.Click += new System.EventHandler(this.mimprimir_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // label1
             // 
@@ -337,6 +386,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "BALANZA";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.Image = global::LOSCALVOS.Properties.Resources.balanzas_48;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(8, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 56);
+            this.button2.TabIndex = 160;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // ChekFUni
             // 
             this.ChekFUni.AutoSize = true;
@@ -358,6 +424,7 @@
             this.ChekManual.TabIndex = 151;
             this.ChekManual.Text = "Manual";
             this.ChekManual.UseVisualStyleBackColor = true;
+            this.ChekManual.CheckedChanged += new System.EventHandler(this.ChekManual_CheckedChanged);
             // 
             // ChekFTara
             // 
@@ -618,72 +685,6 @@
             this.BtnBuscarProd.Tag = "";
             this.BtnBuscarProd.UseVisualStyleBackColor = false;
             this.BtnBuscarProd.Click += new System.EventHandler(this.BtnBuscarProd_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.button2.Image = global::LOSCALVOS.Properties.Resources.balanzas_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(8, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 56);
-            this.button2.TabIndex = 160;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // mnuevo
-            // 
-            this.mnuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mnuevo.ForeColor = System.Drawing.Color.White;
-            this.mnuevo.Image = global::LOSCALVOS.Properties.Resources.alta32;
-            this.mnuevo.Name = "mnuevo";
-            this.mnuevo.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.mnuevo.Size = new System.Drawing.Size(79, 22);
-            this.mnuevo.Text = "Nuevo";
-            // 
-            // mmodificar
-            // 
-            this.mmodificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mmodificar.ForeColor = System.Drawing.Color.White;
-            this.mmodificar.Image = global::LOSCALVOS.Properties.Resources.modificar32;
-            this.mmodificar.Name = "mmodificar";
-            this.mmodificar.Size = new System.Drawing.Size(97, 22);
-            this.mmodificar.Text = "Modificar";
-            this.mmodificar.Visible = false;
-            // 
-            // meliminar
-            // 
-            this.meliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meliminar.ForeColor = System.Drawing.Color.White;
-            this.meliminar.Image = global::LOSCALVOS.Properties.Resources.eliminar32;
-            this.meliminar.Name = "meliminar";
-            this.meliminar.Size = new System.Drawing.Size(89, 22);
-            this.meliminar.Text = "Eliminar";
-            this.meliminar.Click += new System.EventHandler(this.meliminar_Click);
-            // 
-            // mimprimir
-            // 
-            this.mimprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mimprimir.ForeColor = System.Drawing.Color.White;
-            this.mimprimir.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
-            this.mimprimir.Name = "mimprimir";
-            this.mimprimir.Size = new System.Drawing.Size(89, 22);
-            this.mimprimir.Text = "Imprimir";
-            this.mimprimir.Click += new System.EventHandler(this.mimprimir_Click);
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.salirToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.icons8_shutdown_30;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // button1
             // 

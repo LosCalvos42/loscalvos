@@ -34,6 +34,7 @@
             this.MenuIngSal = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MENUSeguimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,8 @@
             // mReportes
             // 
             this.mReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuIngSal});
+            this.MenuIngSal,
+            this.MENUSeguimiento});
             this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mReportes.ForeColor = System.Drawing.Color.White;
             this.mReportes.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
@@ -67,7 +69,7 @@
             this.MenuIngSal.ForeColor = System.Drawing.Color.White;
             this.MenuIngSal.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
             this.MenuIngSal.Name = "MenuIngSal";
-            this.MenuIngSal.Size = new System.Drawing.Size(180, 22);
+            this.MenuIngSal.Size = new System.Drawing.Size(213, 22);
             this.MenuIngSal.Text = "&Produccion";
             this.MenuIngSal.Click += new System.EventHandler(this.MenuIngSal_Click);
             // 
@@ -93,6 +95,16 @@
             this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 20;
             // 
+            // MENUSeguimiento
+            // 
+            this.MENUSeguimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.MENUSeguimiento.ForeColor = System.Drawing.Color.White;
+            this.MENUSeguimiento.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
+            this.MENUSeguimiento.Name = "MENUSeguimiento";
+            this.MENUSeguimiento.Size = new System.Drawing.Size(213, 22);
+            this.MENUSeguimiento.Text = "&Seguimiento CodBar";
+            this.MENUSeguimiento.Click += new System.EventHandler(this.MENUSeguimiento_Click);
+            // 
             // FrmConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,5 +129,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem mReportes;
         private System.Windows.Forms.ToolStripMenuItem MenuIngSal;
+        private System.Windows.Forms.ToolStripMenuItem MENUSeguimiento;
     }
 }

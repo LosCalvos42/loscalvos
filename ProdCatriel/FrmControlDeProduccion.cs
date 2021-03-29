@@ -457,6 +457,12 @@ namespace LOSCALVOS
         }
         private void TxtKBruto_KeyUp(object sender, KeyEventArgs e)
         {
+            if (TxtKBruto.Text == ""|| TxtKBruto.Text == "0,00")
+            {
+                TxtKBruto.Text = "0";
+                
+            }
+
             int Neto = Convert.ToInt32(TxtKBruto.Text) - Convert.ToInt32(TxtTara.Text);
             TxtkNeto.Text = Convert.ToString(Neto);
         }
@@ -658,6 +664,18 @@ namespace LOSCALVOS
                 TxtKBruto.Text = Convert.ToString(Convert.ToDecimal(Math.Round(_FrmPesada.Pesodecimal)).ToString("N2"));
                 decimal Neto = Convert.ToDecimal(TxtKBruto.Text) - Convert.ToDecimal(TxtTara.Text);
                 TxtkNeto.Text = Convert.ToString(Neto);
+            }
+        }
+
+        private void ChekManual_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChekManual.Checked == true)
+            {
+                TxtKBruto.ReadOnly = false;
+            }
+            else
+            {
+                TxtKBruto.ReadOnly = true;
             }
         }
     }

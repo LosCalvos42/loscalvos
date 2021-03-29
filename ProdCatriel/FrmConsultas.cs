@@ -57,6 +57,19 @@ namespace LOSCALVOS
             _FrmReporteDeProduccion.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmReporteDeProduccion);
         }
+
+        private void MENUSeguimiento_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmSeguimientoDeCodigoDeBarra _FrmReporteDeProduccion = new FrmSeguimientoDeCodigoDeBarra();
+
+    
+            _FrmReporteDeProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmReporteDeProduccion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmReporteDeProduccion);
+            
+        }
     }
 }
 
