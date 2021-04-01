@@ -36,7 +36,7 @@ namespace LOSCALVOS
             Cargarcombo("PROCESO", CmdProceso, "");  
                     CmdProceso.SelectedValue = "SALIDA01";///Provisorio
             Cargarcombo("SECTOR", CmdSector, "");   
-                    CmdSector.SelectedValue = "JM001";///Provisorio
+                    //CmdSector.SelectedValue = "JM001";///Provisorio
             Inicio();
 
         }
@@ -124,6 +124,31 @@ namespace LOSCALVOS
         private void Inicio()
         {
            limpiarObjetos();
+            ClsManejador M = new ClsManejador();
+            DataTable dt = new DataTable();
+            string ssql = @"SELECT DISPOSITIVO_SECTOR" +
+                            " FROM [DISPOSITIVOS] " +
+                            " WHERE DISPOSITIVO_NROSERIE = '" + Program.SerialPC + "' " +
+                            " AND DISPOSITIVO_NOMBRE= '" + Program.HostName + "'";
+            dt = M.lisquery(ssql);
+
+            if (dt.Rows.Count > 0)
+            {
+                CmdSector.SelectedValue = dt.Rows[0][0].ToString();
+            }
+            else
+            {
+                MessageBox.Show("El Sector No esta Configurado.", "Sector", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Cursor.Current = Cursors.WaitCursor;
+                CheckForIllegalCrossThreadCalls = false;
+                FrmAddDispositivo _FrmAddDispositivo = new FrmAddDispositivo();
+                _FrmAddDispositivo.StartPosition = FormStartPosition.CenterScreen;
+                
+                if (_FrmAddDispositivo.ShowDialog() == DialogResult.OK)
+                {
+                    Inicio();
+                }
+            }
         }
         private String[] AbmUser(string tipo)
         {
@@ -420,23 +445,22 @@ namespace LOSCALVOS
 
         private void TxtCantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                try
-                {
-                    if (TxtCantidad.Text != "")
-                    {
-                        double n = Convert.ToDouble(TxtCantidad.Text.Replace(".", ","));
-                        TxtCantidad.Text = string.Format("{0:n}", n);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                e.Handled = true;
-                //btnMasMP.PerformClick();
-            }
+            //if (e.KeyChar == (char)Keys.Enter)
+            //{
+            //    try
+            //    {
+            //        if (TxtCantidad.Text != "")
+            //        {
+            //            double n = Convert.ToDouble(TxtCantidad.Text.Replace(".", ","));
+            //            TxtCantidad.Text = string.Format("{0:n}", n);
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //    e.Handled = true;
+            //}
 
             if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)13))
             {
@@ -677,6 +701,11 @@ namespace LOSCALVOS
             {
                 TxtKBruto.ReadOnly = true;
             }
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -168,6 +168,15 @@ namespace LOSCALVOS
             _FrmBalanzas.StartPosition = FormStartPosition.CenterScreen;
             AbrirFormEnPanel(_FrmBalanzas);
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmAddDispositivo _FrmAddDispositivo = new FrmAddDispositivo();
+            _FrmAddDispositivo.StartPosition = FormStartPosition.CenterScreen;
+            AbrirFormEnPanel(_FrmAddDispositivo);
+        }
     }
 }
 

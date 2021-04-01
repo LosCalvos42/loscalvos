@@ -449,6 +449,7 @@ namespace LOSCALVOS
             CheckForIllegalCrossThreadCalls = false;
             FrmControlDeProduccion _FrmControlDeProduccion = new FrmControlDeProduccion();
             _FrmControlDeProduccion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmControlDeProduccion.WindowState = FormWindowState.Maximized;
             _FrmControlDeProduccion.ShowDialog();
         }
     }

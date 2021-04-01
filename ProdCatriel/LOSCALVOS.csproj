@@ -26,7 +26,7 @@
     <UpdateUrl>http://vm-catriel/LC42_EXE/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>30</ApplicationRevision>
+    <ApplicationRevision>32</ApplicationRevision>
     <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -160,6 +160,12 @@
     </Compile>
     <Compile Include="FrmControlDeRacks.designer.cs">
       <DependentUpon>FrmControlDeRacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddDispositivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddDispositivo.designer.cs">
+      <DependentUpon>FrmAddDispositivo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLoteItems.cs">
       <SubType>Form</SubType>
@@ -603,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmControlDeRacks.resx">
       <DependentUpon>FrmControlDeRacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddDispositivo.resx">
+      <DependentUpon>FrmAddDispositivo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLoteItems.resx">
       <DependentUpon>FrmLoteItems.cs</DependentUpon>

@@ -36,6 +36,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             this.menuForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.produccionToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.Psalir});
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
@@ -74,7 +76,7 @@
             this.Pmaestros.Image = global::LOSCALVOS.Properties.Resources.Trabajos_trz;
             this.Pmaestros.Name = "Pmaestros";
             this.Pmaestros.Size = new System.Drawing.Size(180, 22);
-            this.Pmaestros.Text = "&Dispositivos";
+            this.Pmaestros.Text = "&Recursos";
             // 
             // impresorasToolStripMenuItem
             // 
@@ -118,6 +120,17 @@
             this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 19;
             // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem2.Image = global::LOSCALVOS.Properties.Resources.Configuracion;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.toolStripMenuItem2.Text = "&Dispositivo";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            // 
             // FrmUtilidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -144,5 +157,6 @@
         private System.Windows.Forms.ToolStripMenuItem Pmaestros;
         private System.Windows.Forms.ToolStripMenuItem impresorasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }
