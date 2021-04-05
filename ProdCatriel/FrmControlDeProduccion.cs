@@ -171,12 +171,13 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@NETO", Convert.ToString(Convert.ToDecimal(TxtkNeto.Text)).Replace(",", ".")));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 lst.Add(new ClsParametros("@DEBAJA","N"));
+                lst.Add(new ClsParametros("@FECHAVTO", DtVto.Value.ToString("yyyyMMdd")));
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 20));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("SP_AddProduccion", ref lst);
+                M.EjecutarSP("SP_AddControlProduccion", ref lst);
                 msj = new string[2];
-                msj[0] = lst[13].Valor.ToString();
-                msj[1] = lst[14].Valor.ToString();
+                msj[0] = lst[14].Valor.ToString();
+                msj[1] = lst[15].Valor.ToString();
             }
 
             catch (Exception ex)
@@ -346,16 +347,17 @@ namespace LOSCALVOS
                     tsw.WriteLine(@"^LS0");
                     tsw.WriteLine(@"^FT47,158^A0N,88,50^FH\^FD" + dt.Rows[0][2].ToString() + "^FS");
                     tsw.WriteLine(@"^FT46,71^A0N,62,67^FH\^FDCODIGO:^FS");
-                    tsw.WriteLine(@"^FT102,261^A0N,42,33^FH\^FD" + dt.Rows[0][6].ToString() + "^FS");
-                    tsw.WriteLine(@"^FT101,211^A0N,46,33^FH\^FD"+ dt.Rows[0][5].ToString() +"^FS");
-                    tsw.WriteLine(@"^FT23,264^A0N,44,28^FH\^FDTara:^FS");
-                    tsw.WriteLine(@"^FT469,288^A0N,111,64^FH\^FD" + dt.Rows[0][7].ToString() + " kg^FS");
+                    tsw.WriteLine(@"^FT115,261^A0N,42,33^FH\^FD" + dt.Rows[0][6].ToString() + "^FS");
+                    tsw.WriteLine(@"^FT115,211^A0N,46,33^FH\^FD"+ dt.Rows[0][5].ToString() +"^FS");
+                    tsw.WriteLine(@"^FT40,264^A0N,44,28^FH\^FDTara:^FS");
+                    tsw.WriteLine(@"^FT469,260^A0N,111,64^FH\^FD" + dt.Rows[0][7].ToString() + " kg^FS");
                     tsw.WriteLine(@"^FT357,246^A0N,56,45^FH\^FD" + dt.Rows[0][4].ToString() + "^FS");
-                    tsw.WriteLine(@"^FT25,211^A0N,44,28^FH\^FDBruto:^FS");
+                    tsw.WriteLine(@"^FT40,211^A0N,44,28^FH\^FDBruto:^FS");
                     tsw.WriteLine(@"^FT221,245^A0N,56,62^FH\^FDCant:^FS");
-                    tsw.WriteLine(@"^FT464,381^A0N,28,30^FH\^FDFecha: " + dt.Rows[0][9].ToString() + "^FS");
-                    tsw.WriteLine(@"^FT524,350^A0N,30,38^FH\^FD" + dt.Rows[0][3].ToString() + "^FS");
-                    tsw.WriteLine(@"^FT463,347^A0N,23,26^FH\^FDLote:^FS");
+                    tsw.WriteLine(@"^FT464,350^A0N,28,30^FH\^FDFecha: " + dt.Rows[0][9].ToString() + "^FS");
+                    tsw.WriteLine(@"^FT464,385^A0N,28,30^FH\^FD  Vto.:" + dt.Rows[0][10].ToString() + "^FS");
+                    tsw.WriteLine(@"^FT524,315^A0N,30,38^FH\^FD" + dt.Rows[0][3].ToString() + "^FS");
+                    tsw.WriteLine(@"^FT463,315^A0N,23,26^FH\^FDLote:^FS");
                     tsw.WriteLine(@"^FT75,392^A0N,36,45^FH\^FD" + dt.Rows[0][8].ToString() + "^FS");
                     tsw.WriteLine(@"^FT284,72^A0N,74,67^FH\^FD"+ dt.Rows[0][1].ToString() + "^FS");
                     tsw.WriteLine(@"^BY2,3,86^FT35,360^BCN,,N,N");
