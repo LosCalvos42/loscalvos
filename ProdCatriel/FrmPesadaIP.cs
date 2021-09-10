@@ -33,11 +33,7 @@ namespace LOSCALVOS
 
         public string Ip { get; set; }
         public string Puerto { get; set; }
-        //string es_nuevo; 
-        //Clsproceso P = new Clsproceso();
-        //ClsProcesoBatea b = new ClsProcesoBatea();
-        //ClsTipoJamon C = new ClsTipoJamon();
-        //ClsSJamones S = new ClsSJamones();
+
         public FrmPesadaIP()
         {
             InitializeComponent();
@@ -50,24 +46,23 @@ namespace LOSCALVOS
             lblespe.Visible = true;
             inicontroles();
             try 
-            { 
-                if (Test == "Si")
-                {
-                    pesarip(Ip, Convert.ToInt32(Puerto));
-                    this.Close();
-                }
-                else { 
+            {
+                    if (Test == "Si")
+                    {
+                        pesarip(Ip, Convert.ToInt32(Puerto));
+                        this.Close();
+                    }
+                    else 
+                    { 
                     pesarip(Program.BALANZA, Convert.ToInt32(Program.BALANZAPUERTO));
                     this.Close();
-                }
+                    }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
       
         public  void pesarip(string host, int port)
         {
@@ -98,12 +93,9 @@ namespace LOSCALVOS
                     lblKg.Visible = true;
                     _client.Close();
                     _netStream.Close();
-
-                    //this.Close();
                 };
                 this.Refresh();
                 System.Threading.Thread.Sleep(500);
-
             }
 
             catch (Exception ex)
@@ -115,14 +107,6 @@ namespace LOSCALVOS
         private void inicontroles()
         {
             this.Update();
-            //serialPort1.Close();
-            //serialPort1.Dispose();
-            //serialPort1.PortName = "COM7";
-
-            //if (serialPort1.IsOpen == true)
-            //{
-            //    serialPort1.Close();
-            //}
         }
         
         private void Pesar()
@@ -148,14 +132,6 @@ namespace LOSCALVOS
             }
                  lblespe.Visible = true;
         }
-        //////////////////private void puertosDisponibles()
-        ////////////////{
-        ////////////////    foreach (string puertoDis in System.IO.Ports.SerialPort.GetPortNames())
-        ////////////////    {
-        ////////////////        cmbPuertos.Items.Add(puertoDis);
-                
-        ////////////////    }
-        ////////////////}
         
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -233,13 +209,6 @@ namespace LOSCALVOS
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //decimal peso = Convert.ToDecimal(textBox1.Text.ToString().Replace(".", ","));
-            //Pesodecimal = peso;
-            this.Close();
         }
     }
 }

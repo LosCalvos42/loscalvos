@@ -50,22 +50,8 @@
             this.CmdProceso = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CmdSector = new System.Windows.Forms.ComboBox();
-            this.TxtCantidad = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtKBruto = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtkNeto = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TxtTara = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.CmbAlmacen = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.ChekFUni = new System.Windows.Forms.CheckBox();
-            this.ChekManual = new System.Windows.Forms.CheckBox();
-            this.ChekFTara = new System.Windows.Forms.CheckBox();
-            this.BtnBalanzaAceptar = new System.Windows.Forms.Button();
             this.ChekFLote = new System.Windows.Forms.CheckBox();
             this.DtProduccion = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,11 +74,25 @@
             this.button1 = new System.Windows.Forms.Button();
             this.DtVto = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
+            this.TxtTara = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtkNeto = new System.Windows.Forms.TextBox();
+            this.TxtCantidad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TxtKBruto = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BtnBalanzaAceptar = new System.Windows.Forms.Button();
+            this.ChekFTara = new System.Windows.Forms.CheckBox();
+            this.ChekManual = new System.Windows.Forms.CheckBox();
+            this.ChekFUni = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuForm.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -239,108 +239,6 @@
             this.CmdSector.Size = new System.Drawing.Size(348, 24);
             this.CmdSector.TabIndex = 135;
             // 
-            // TxtCantidad
-            // 
-            this.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtCantidad.Location = new System.Drawing.Point(8, 66);
-            this.TxtCantidad.Name = "TxtCantidad";
-            this.TxtCantidad.Size = new System.Drawing.Size(51, 24);
-            this.TxtCantidad.TabIndex = 137;
-            this.TxtCantidad.Text = "0";
-            this.TxtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidad_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 36);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 20);
-            this.label6.TabIndex = 138;
-            this.label6.Text = "Uni";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(70, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 20);
-            this.label7.TabIndex = 140;
-            this.label7.Text = "KG Bruto";
-            // 
-            // TxtKBruto
-            // 
-            this.TxtKBruto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtKBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtKBruto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtKBruto.Location = new System.Drawing.Point(66, 66);
-            this.TxtKBruto.Name = "TxtKBruto";
-            this.TxtKBruto.Size = new System.Drawing.Size(87, 24);
-            this.TxtKBruto.TabIndex = 139;
-            this.TxtKBruto.Text = "0";
-            this.TxtKBruto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtKBruto.Click += new System.EventHandler(this.TxtKBruto_Click);
-            this.TxtKBruto.TextChanged += new System.EventHandler(this.TxtKBruto_TextChanged);
-            this.TxtKBruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKBruto_KeyPress);
-            this.TxtKBruto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtKBruto_KeyUp);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(256, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 20);
-            this.label8.TabIndex = 142;
-            this.label8.Text = "KG Neto";
-            // 
-            // TxtkNeto
-            // 
-            this.TxtkNeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtkNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtkNeto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtkNeto.Location = new System.Drawing.Point(252, 66);
-            this.TxtkNeto.Name = "TxtkNeto";
-            this.TxtkNeto.ReadOnly = true;
-            this.TxtkNeto.Size = new System.Drawing.Size(87, 24);
-            this.TxtkNeto.TabIndex = 141;
-            this.TxtkNeto.Text = "0";
-            this.TxtkNeto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(168, 37);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 20);
-            this.label9.TabIndex = 144;
-            this.label9.Text = "Tara";
-            // 
-            // TxtTara
-            // 
-            this.TxtTara.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.TxtTara.Location = new System.Drawing.Point(159, 66);
-            this.TxtTara.Name = "TxtTara";
-            this.TxtTara.Size = new System.Drawing.Size(87, 24);
-            this.TxtTara.TabIndex = 143;
-            this.TxtTara.Text = "0";
-            this.TxtTara.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TxtTara.Click += new System.EventHandler(this.TxtTara_Click);
-            this.TxtTara.TextChanged += new System.EventHandler(this.TxtTara_TextChanged);
-            this.TxtTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTara_KeyPress);
-            this.TxtTara.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtTara_KeyUp);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -363,99 +261,6 @@
             this.CmbAlmacen.Name = "CmbAlmacen";
             this.CmbAlmacen.Size = new System.Drawing.Size(348, 24);
             this.CmbAlmacen.TabIndex = 145;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.ChekFUni);
-            this.groupBox1.Controls.Add(this.ChekManual);
-            this.groupBox1.Controls.Add(this.ChekFTara);
-            this.groupBox1.Controls.Add(this.BtnBalanzaAceptar);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.TxtKBruto);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.TxtCantidad);
-            this.groupBox1.Controls.Add(this.TxtkNeto);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.TxtTara);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(5, 388);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(347, 164);
-            this.groupBox1.TabIndex = 147;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "BALANZA";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.button2.Image = global::LOSCALVOS.Properties.Resources.balanzas_48;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(8, 96);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 56);
-            this.button2.TabIndex = 160;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // ChekFUni
-            // 
-            this.ChekFUni.AutoSize = true;
-            this.ChekFUni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChekFUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChekFUni.Location = new System.Drawing.Point(46, 42);
-            this.ChekFUni.Name = "ChekFUni";
-            this.ChekFUni.Size = new System.Drawing.Size(12, 11);
-            this.ChekFUni.TabIndex = 152;
-            this.ChekFUni.UseVisualStyleBackColor = true;
-            this.ChekFUni.CheckedChanged += new System.EventHandler(this.ChekFUni_CheckedChanged);
-            // 
-            // ChekManual
-            // 
-            this.ChekManual.AutoSize = true;
-            this.ChekManual.Location = new System.Drawing.Point(282, 14);
-            this.ChekManual.Name = "ChekManual";
-            this.ChekManual.Size = new System.Drawing.Size(61, 17);
-            this.ChekManual.TabIndex = 151;
-            this.ChekManual.Text = "Manual";
-            this.ChekManual.UseVisualStyleBackColor = true;
-            this.ChekManual.CheckedChanged += new System.EventHandler(this.ChekManual_CheckedChanged);
-            // 
-            // ChekFTara
-            // 
-            this.ChekFTara.AutoSize = true;
-            this.ChekFTara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChekFTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChekFTara.Location = new System.Drawing.Point(216, 43);
-            this.ChekFTara.Name = "ChekFTara";
-            this.ChekFTara.Size = new System.Drawing.Size(12, 11);
-            this.ChekFTara.TabIndex = 150;
-            this.ChekFTara.UseVisualStyleBackColor = true;
-            this.ChekFTara.CheckedChanged += new System.EventHandler(this.ChekFTara_CheckedChanged);
-            // 
-            // BtnBalanzaAceptar
-            // 
-            this.BtnBalanzaAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnBalanzaAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.BtnBalanzaAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBalanzaAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBalanzaAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.BtnBalanzaAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnBalanzaAceptar.Location = new System.Drawing.Point(159, 96);
-            this.BtnBalanzaAceptar.Name = "BtnBalanzaAceptar";
-            this.BtnBalanzaAceptar.Size = new System.Drawing.Size(180, 57);
-            this.BtnBalanzaAceptar.TabIndex = 148;
-            this.BtnBalanzaAceptar.Text = "&Aceptar";
-            this.BtnBalanzaAceptar.UseVisualStyleBackColor = false;
-            this.BtnBalanzaAceptar.Click += new System.EventHandler(this.BtnBalanzaAceptar_Click);
             // 
             // ChekFLote
             // 
@@ -729,6 +534,201 @@
             this.label11.TabIndex = 161;
             this.label11.Text = "Vto.:";
             // 
+            // TxtTara
+            // 
+            this.TxtTara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTara.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.TxtTara.Location = new System.Drawing.Point(159, 66);
+            this.TxtTara.Name = "TxtTara";
+            this.TxtTara.Size = new System.Drawing.Size(87, 24);
+            this.TxtTara.TabIndex = 143;
+            this.TxtTara.Text = "0";
+            this.TxtTara.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtTara.Click += new System.EventHandler(this.TxtTara_Click);
+            this.TxtTara.TextChanged += new System.EventHandler(this.TxtTara_TextChanged);
+            this.TxtTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTara_KeyPress);
+            this.TxtTara.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtTara_KeyUp);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(256, 36);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 20);
+            this.label8.TabIndex = 142;
+            this.label8.Text = "KG Neto";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(168, 37);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 20);
+            this.label9.TabIndex = 144;
+            this.label9.Text = "Tara";
+            // 
+            // TxtkNeto
+            // 
+            this.TxtkNeto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtkNeto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtkNeto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.TxtkNeto.Location = new System.Drawing.Point(252, 66);
+            this.TxtkNeto.Name = "TxtkNeto";
+            this.TxtkNeto.ReadOnly = true;
+            this.TxtkNeto.Size = new System.Drawing.Size(87, 24);
+            this.TxtkNeto.TabIndex = 141;
+            this.TxtkNeto.Text = "0";
+            this.TxtkNeto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtCantidad
+            // 
+            this.TxtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.TxtCantidad.Location = new System.Drawing.Point(8, 66);
+            this.TxtCantidad.Name = "TxtCantidad";
+            this.TxtCantidad.Size = new System.Drawing.Size(51, 24);
+            this.TxtCantidad.TabIndex = 137;
+            this.TxtCantidad.Text = "0";
+            this.TxtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCantidad_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 20);
+            this.label6.TabIndex = 138;
+            this.label6.Text = "Uni";
+            // 
+            // TxtKBruto
+            // 
+            this.TxtKBruto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtKBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtKBruto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.TxtKBruto.Location = new System.Drawing.Point(66, 66);
+            this.TxtKBruto.Name = "TxtKBruto";
+            this.TxtKBruto.Size = new System.Drawing.Size(87, 24);
+            this.TxtKBruto.TabIndex = 139;
+            this.TxtKBruto.Text = "0";
+            this.TxtKBruto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TxtKBruto.Click += new System.EventHandler(this.TxtKBruto_Click);
+            this.TxtKBruto.TextChanged += new System.EventHandler(this.TxtKBruto_TextChanged);
+            this.TxtKBruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKBruto_KeyPress);
+            this.TxtKBruto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtKBruto_KeyUp);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(70, 37);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 20);
+            this.label7.TabIndex = 140;
+            this.label7.Text = "KG Bruto";
+            // 
+            // BtnBalanzaAceptar
+            // 
+            this.BtnBalanzaAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnBalanzaAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnBalanzaAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBalanzaAceptar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBalanzaAceptar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.BtnBalanzaAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnBalanzaAceptar.Location = new System.Drawing.Point(159, 96);
+            this.BtnBalanzaAceptar.Name = "BtnBalanzaAceptar";
+            this.BtnBalanzaAceptar.Size = new System.Drawing.Size(180, 57);
+            this.BtnBalanzaAceptar.TabIndex = 148;
+            this.BtnBalanzaAceptar.Text = "&Aceptar";
+            this.BtnBalanzaAceptar.UseVisualStyleBackColor = false;
+            this.BtnBalanzaAceptar.Click += new System.EventHandler(this.BtnBalanzaAceptar_Click);
+            // 
+            // ChekFTara
+            // 
+            this.ChekFTara.AutoSize = true;
+            this.ChekFTara.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChekFTara.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChekFTara.Location = new System.Drawing.Point(216, 43);
+            this.ChekFTara.Name = "ChekFTara";
+            this.ChekFTara.Size = new System.Drawing.Size(12, 11);
+            this.ChekFTara.TabIndex = 150;
+            this.ChekFTara.UseVisualStyleBackColor = true;
+            this.ChekFTara.CheckedChanged += new System.EventHandler(this.ChekFTara_CheckedChanged);
+            // 
+            // ChekManual
+            // 
+            this.ChekManual.AutoSize = true;
+            this.ChekManual.Location = new System.Drawing.Point(282, 14);
+            this.ChekManual.Name = "ChekManual";
+            this.ChekManual.Size = new System.Drawing.Size(61, 17);
+            this.ChekManual.TabIndex = 151;
+            this.ChekManual.Text = "Manual";
+            this.ChekManual.UseVisualStyleBackColor = true;
+            this.ChekManual.CheckedChanged += new System.EventHandler(this.ChekManual_CheckedChanged);
+            // 
+            // ChekFUni
+            // 
+            this.ChekFUni.AutoSize = true;
+            this.ChekFUni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChekFUni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChekFUni.Location = new System.Drawing.Point(46, 42);
+            this.ChekFUni.Name = "ChekFUni";
+            this.ChekFUni.Size = new System.Drawing.Size(12, 11);
+            this.ChekFUni.TabIndex = 152;
+            this.ChekFUni.UseVisualStyleBackColor = true;
+            this.ChekFUni.CheckedChanged += new System.EventHandler(this.ChekFUni_CheckedChanged);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.Image = global::LOSCALVOS.Properties.Resources.balanzas_48;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(8, 96);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(145, 56);
+            this.button2.TabIndex = 160;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.ChekFUni);
+            this.groupBox1.Controls.Add(this.ChekManual);
+            this.groupBox1.Controls.Add(this.ChekFTara);
+            this.groupBox1.Controls.Add(this.BtnBalanzaAceptar);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.TxtKBruto);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.TxtCantidad);
+            this.groupBox1.Controls.Add(this.TxtkNeto);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.TxtTara);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(5, 388);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(347, 164);
+            this.groupBox1.TabIndex = 147;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "BALANZA";
+            // 
             // FrmControlDeProduccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -766,12 +766,12 @@
             this.Load += new System.EventHandler(this.FrmAddGrupoFamilia_Load);
             this.menuForm.ResumeLayout(false);
             this.menuForm.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgprincipal)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,20 +792,8 @@
         private System.Windows.Forms.ComboBox CmdProceso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox CmdSector;
-        private System.Windows.Forms.TextBox TxtCantidad;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtKBruto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtkNeto;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtTara;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox CmbAlmacen;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox ChekManual;
-        private System.Windows.Forms.CheckBox ChekFTara;
-        private System.Windows.Forms.Button BtnBalanzaAceptar;
         private System.Windows.Forms.CheckBox ChekFLote;
         private System.Windows.Forms.DateTimePicker DtProduccion;
         private System.Windows.Forms.Label label3;
@@ -819,15 +807,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Kilos;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn codbar;
-        private System.Windows.Forms.CheckBox ChekFUni;
         private System.Windows.Forms.CheckBox ChekFprod;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.TextBox TxtCodProd;
         private System.Windows.Forms.Button BtnBuscarProd;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker DtVto;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TxtTara;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox TxtkNeto;
+        private System.Windows.Forms.TextBox TxtCantidad;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TxtKBruto;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnBalanzaAceptar;
+        private System.Windows.Forms.CheckBox ChekFTara;
+        private System.Windows.Forms.CheckBox ChekManual;
+        private System.Windows.Forms.CheckBox ChekFUni;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

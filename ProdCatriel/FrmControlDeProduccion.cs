@@ -691,7 +691,7 @@ namespace LOSCALVOS
             }
         }
 
-        private void ChekManual_CheckedChanged(object sender, EventArgs e)
+            private void ChekManual_CheckedChanged(object sender, EventArgs e)
         {
             if (ChekManual.Checked == true)
             {
