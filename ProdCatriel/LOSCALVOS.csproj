@@ -143,6 +143,18 @@
     <Compile Include="FormsegundoPlano.Designer.cs">
       <DependentUpon>FormsegundoPlano.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddSalidaExpedicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSalidaExpedicion.designer.cs">
+      <DependentUpon>FrmAddSalidaExpedicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddEntradaAcamara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddEntradaAcamara.designer.cs">
+      <DependentUpon>FrmAddEntradaAcamara.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddOrdenDeTrabajoEstucado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -600,6 +612,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsegundoPlano.resx">
       <DependentUpon>FormsegundoPlano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSalidaExpedicion.resx">
+      <DependentUpon>FrmAddSalidaExpedicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddEntradaAcamara.resx">
+      <DependentUpon>FrmAddEntradaAcamara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddOrdenDeTrabajoEstucado.resx">
       <DependentUpon>FrmAddOrdenDeTrabajoEstucado.cs</DependentUpon>

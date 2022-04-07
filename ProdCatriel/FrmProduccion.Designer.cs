@@ -38,6 +38,8 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.PTrabajos = new System.Windows.Forms.ToolStripMenuItem();
             this.BarraPesaje = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
@@ -136,7 +138,9 @@
             // PTrabajos
             // 
             this.PTrabajos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BarraPesaje});
+            this.BarraPesaje,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4});
             this.PTrabajos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PTrabajos.ForeColor = System.Drawing.Color.White;
             this.PTrabajos.Image = global::LOSCALVOS.Properties.Resources.Trabajos_trz;
@@ -154,6 +158,26 @@
             this.BarraPesaje.Size = new System.Drawing.Size(228, 22);
             this.BarraPesaje.Text = "Control De Producción";
             this.BarraPesaje.Click += new System.EventHandler(this.BarraPesaje_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem3.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem3.Text = "Ingreso a Cámara";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem4.Image = global::LOSCALVOS.Properties.Resources.edit__32;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem4.Text = "Salida A Expedición";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click_1);
             // 
             // mReportes
             // 
@@ -264,5 +288,7 @@
         private System.Windows.Forms.ToolStripMenuItem BarraPesaje;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
     }
 }

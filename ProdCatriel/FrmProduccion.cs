@@ -452,6 +452,22 @@ namespace LOSCALVOS
             _FrmControlDeProduccion.WindowState = FormWindowState.Maximized;
             _FrmControlDeProduccion.ShowDialog();
         }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmAddEntradaAcamara _FrmAddEntradaAcamara = new FrmAddEntradaAcamara();
+            _FrmAddEntradaAcamara.ShowDialog();
+        }
+
+        private void toolStripMenuItem4_Click_1(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmAddSalidaExpedicion _FrmAddSalidaExpedicion = new FrmAddSalidaExpedicion();
+            _FrmAddSalidaExpedicion.ShowDialog();
+        }
     }
 }
 

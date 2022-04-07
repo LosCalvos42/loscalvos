@@ -57,6 +57,7 @@ namespace LOSCALVOS
                     DgOrigen.Rows[1].DefaultCellStyle.Font = font;
                 }
                 DgOrigen.ClearSelection();
+                TxtCodBar.Focus();
             }
             catch (Exception ex)
             {
@@ -76,8 +77,7 @@ namespace LOSCALVOS
             {
                
                 CargarDatosOrigen();
-              
-           
+                TxtCodBar.Text = "";
             }
         }
 
