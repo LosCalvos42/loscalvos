@@ -26,7 +26,7 @@
     <UpdateUrl>http://vm-catriel/LC42_EXE/</UpdateUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>36</ApplicationRevision>
     <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -197,6 +197,12 @@
     <Compile Include="FrmReporte.designer.cs">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaDeStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaDeStock.Designer.cs">
+      <DependentUpon>FrmConsultaDeStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReporteDeProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,11 +263,11 @@
     <Compile Include="FrmBalanzas.designer.cs">
       <DependentUpon>FrmBalanzas.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEtiPendientes.cs">
+    <Compile Include="FrmDetalleDeStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEtiPendientes.designer.cs">
-      <DependentUpon>FrmEtiPendientes.cs</DependentUpon>
+    <Compile Include="FrmDetalleDeStock.designer.cs">
+      <DependentUpon>FrmDetalleDeStock.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPendientesDeIng2Sal.cs">
       <SubType>Form</SubType>
@@ -641,6 +647,10 @@
     <EmbeddedResource Include="FrmReporte.resx">
       <DependentUpon>FrmReporte.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaDeStock.resx">
+      <DependentUpon>FrmConsultaDeStock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmReporteDeProduccion.resx">
       <DependentUpon>FrmReporteDeProduccion.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -673,8 +683,8 @@
     <EmbeddedResource Include="FrmBalanzas.resx">
       <DependentUpon>FrmBalanzas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEtiPendientes.resx">
-      <DependentUpon>FrmEtiPendientes.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDetalleDeStock.resx">
+      <DependentUpon>FrmDetalleDeStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPendientesDeIng2Sal.resx">
       <DependentUpon>FrmPendientesDeIng2Sal.cs</DependentUpon>

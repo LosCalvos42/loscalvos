@@ -227,10 +227,10 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@ALMACEN_OBS", TxtObs.Text));
                 lst.Add(new ClsParametros("@ALMACEN_CAPACIDADPESO", Convert.ToDouble(TxtKgMax.Text)));
                 lst.Add(new ClsParametros("@ALMACENTIPO_CODIGO", cmbTipo.SelectedValue));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMIN", Convert.ToDouble(TxtTMin.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMAX", Convert.ToDouble(TxtTMax.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMIN", Convert.ToDouble(TxtHMin.Text)));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMAX", Convert.ToDouble(TxtHMax.Text)));
+                lst.Add(new ClsParametros("@ALMACEN_TEMPMIN", Convert.ToDouble(TxtTMin.Text.Replace(".", ","))));
+                lst.Add(new ClsParametros("@ALMACEN_TEMPMAX", Convert.ToDouble(TxtTMax.Text.Replace(".", ","))));
+                lst.Add(new ClsParametros("@ALMACEN_HUMEMIN", Convert.ToDouble(TxtHMin.Text.Replace(".", ","))));
+                lst.Add(new ClsParametros("@ALMACEN_HUMEMAX", Convert.ToDouble(TxtHMax.Text.Replace(".", ","))));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 if (chekActivo.Checked == true)
                 { 

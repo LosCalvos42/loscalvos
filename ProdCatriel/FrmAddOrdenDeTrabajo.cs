@@ -1178,12 +1178,12 @@ namespace LOSCALVOS
         {
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
-            FrmEtiPendientes _FrmEtiPendientes = new FrmEtiPendientes();
-            _FrmEtiPendientes.CATEGORIA = CATEGORIAOT;
-            _FrmEtiPendientes.NROOT = Convert.ToInt32(TxtNroOT.Text);
-            _FrmEtiPendientes.LOTE = lotes;
-            _FrmEtiPendientes.StartPosition = FormStartPosition.CenterScreen;
-            _FrmEtiPendientes.ShowDialog();
+            FrmDetalleDeStock _FrmEtiPendientes = new FrmDetalleDeStock();
+            //_FrmEtiPendientes.CATEGORIA = CATEGORIAOT;
+            //_FrmEtiPendientes.NROOT = Convert.ToInt32(TxtNroOT.Text);
+            //_FrmEtiPendientes.LOTE = lotes;
+            //_FrmEtiPendientes.StartPosition = FormStartPosition.CenterScreen;
+            //_FrmEtiPendientes.ShowDialog();
         }
 
         private void CmbAlmacen_SelectedIndexChanged(object sender, EventArgs e)

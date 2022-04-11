@@ -70,6 +70,21 @@ namespace LOSCALVOS
             AbrirFormEnPanel(_FrmReporteDeProduccion);
             
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmConsultaDeStock _FrmConsultaDeStock = new FrmConsultaDeStock();
+            _FrmConsultaDeStock.Tabla = "PRODUCCION";
+            _FrmConsultaDeStock.Listado = "PRODUCCION";
+            _FrmConsultaDeStock.TituloListado = "SP_ConsultaDeStock";
+            _FrmConsultaDeStock.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmConsultaDeStock.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmConsultaDeStock.StartPosition = FormStartPosition.CenterScreen;
+            _FrmConsultaDeStock.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmConsultaDeStock);
+        }
     }
 }
 

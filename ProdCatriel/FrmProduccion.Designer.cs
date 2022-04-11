@@ -62,7 +62,7 @@
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
             this.menuForm.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuForm.Size = new System.Drawing.Size(800, 26);
+            this.menuForm.Size = new System.Drawing.Size(800, 32);
             this.menuForm.TabIndex = 2;
             this.menuForm.Text = "Menu";
             // 
@@ -73,21 +73,21 @@
             this.PProductos,
             this.PAlmacenes,
             this.toolStripMenuItem2});
-            this.marchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.marchivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.marchivo.ForeColor = System.Drawing.Color.White;
             this.marchivo.Image = global::LOSCALVOS.Properties.Resources.Archivero1;
             this.marchivo.Name = "marchivo";
-            this.marchivo.Size = new System.Drawing.Size(85, 22);
+            this.marchivo.Size = new System.Drawing.Size(102, 28);
             this.marchivo.Text = "&Archivo";
             // 
             // PProductos
             // 
             this.PProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.PProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PProductos.ForeColor = System.Drawing.Color.White;
             this.PProductos.Image = global::LOSCALVOS.Properties.Resources.ProductosB;
             this.PProductos.Name = "PProductos";
-            this.PProductos.Size = new System.Drawing.Size(217, 22);
+            this.PProductos.Size = new System.Drawing.Size(256, 28);
             this.PProductos.Text = "&Productos";
             this.PProductos.Click += new System.EventHandler(this.PProductos_Click);
             // 
@@ -97,11 +97,11 @@
             this.PAlmacenes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.almacenesToolStripMenuItem,
             this.tipoDeAlmacenToolStripMenuItem});
-            this.PAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PAlmacenes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PAlmacenes.ForeColor = System.Drawing.Color.White;
             this.PAlmacenes.Image = global::LOSCALVOS.Properties.Resources.AlmacenBC;
             this.PAlmacenes.Name = "PAlmacenes";
-            this.PAlmacenes.Size = new System.Drawing.Size(217, 22);
+            this.PAlmacenes.Size = new System.Drawing.Size(256, 28);
             this.PAlmacenes.Text = "&Almacenes";
             // 
             // almacenesToolStripMenuItem
@@ -110,7 +110,7 @@
             this.almacenesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.almacenesToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.AlmacenBC;
             this.almacenesToolStripMenuItem.Name = "almacenesToolStripMenuItem";
-            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.almacenesToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
             this.almacenesToolStripMenuItem.Text = "&Almacenes";
             this.almacenesToolStripMenuItem.Click += new System.EventHandler(this.almacenesToolStripMenuItem_Click);
             // 
@@ -120,18 +120,18 @@
             this.tipoDeAlmacenToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.tipoDeAlmacenToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.Perfiles_32;
             this.tipoDeAlmacenToolStripMenuItem.Name = "tipoDeAlmacenToolStripMenuItem";
-            this.tipoDeAlmacenToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.tipoDeAlmacenToolStripMenuItem.Size = new System.Drawing.Size(225, 28);
             this.tipoDeAlmacenToolStripMenuItem.Text = "&Tipo de Almacen";
             this.tipoDeAlmacenToolStripMenuItem.Click += new System.EventHandler(this.TipoDeAlmacenToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.toolStripMenuItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem2.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(217, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(256, 28);
             this.toolStripMenuItem2.Text = "&Sectores productivos";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.TipoProductoItem_Click);
             // 
@@ -141,12 +141,12 @@
             this.BarraPesaje,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
-            this.PTrabajos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PTrabajos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PTrabajos.ForeColor = System.Drawing.Color.White;
             this.PTrabajos.Image = global::LOSCALVOS.Properties.Resources.Trabajos_trz;
             this.PTrabajos.Name = "PTrabajos";
             this.PTrabajos.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
-            this.PTrabajos.Size = new System.Drawing.Size(94, 22);
+            this.PTrabajos.Size = new System.Drawing.Size(111, 28);
             this.PTrabajos.Text = "&Trabajos";
             // 
             // BarraPesaje
@@ -155,7 +155,7 @@
             this.BarraPesaje.ForeColor = System.Drawing.Color.White;
             this.BarraPesaje.Image = global::LOSCALVOS.Properties.Resources.calendariook;
             this.BarraPesaje.Name = "BarraPesaje";
-            this.BarraPesaje.Size = new System.Drawing.Size(228, 22);
+            this.BarraPesaje.Size = new System.Drawing.Size(271, 28);
             this.BarraPesaje.Text = "Control De Producción";
             this.BarraPesaje.Click += new System.EventHandler(this.BarraPesaje_Click);
             // 
@@ -165,7 +165,7 @@
             this.toolStripMenuItem3.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem3.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(271, 28);
             this.toolStripMenuItem3.Text = "Ingreso a Cámara";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -175,7 +175,7 @@
             this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem4.Image = global::LOSCALVOS.Properties.Resources.edit__32;
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(271, 28);
             this.toolStripMenuItem4.Text = "Salida A Expedición";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click_1);
             // 
@@ -183,11 +183,11 @@
             // 
             this.mReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mReportes.ForeColor = System.Drawing.Color.White;
             this.mReportes.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
             this.mReportes.Name = "mReportes";
-            this.mReportes.Size = new System.Drawing.Size(97, 22);
+            this.mReportes.Size = new System.Drawing.Size(114, 28);
             this.mReportes.Text = "Reportes";
             this.mReportes.Click += new System.EventHandler(this.mReportes_Click);
             // 
@@ -197,7 +197,7 @@
             this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.calendariook;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(271, 28);
             this.toolStripMenuItem1.Text = "Control De Producción";
             // 
             // mConfiguracion
@@ -205,11 +205,11 @@
             this.mConfiguracion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PUMedida,
             this.configuracionDeDispositivosToolStripMenuItem});
-            this.mConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mConfiguracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mConfiguracion.ForeColor = System.Drawing.Color.White;
             this.mConfiguracion.Image = global::LOSCALVOS.Properties.Resources.Procesos;
             this.mConfiguracion.Name = "mConfiguracion";
-            this.mConfiguracion.Size = new System.Drawing.Size(128, 22);
+            this.mConfiguracion.Size = new System.Drawing.Size(155, 28);
             this.mConfiguracion.Text = "Configuracion";
             // 
             // PUMedida
@@ -217,7 +217,7 @@
             this.PUMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.PUMedida.ForeColor = System.Drawing.Color.White;
             this.PUMedida.Name = "PUMedida";
-            this.PUMedida.Size = new System.Drawing.Size(270, 22);
+            this.PUMedida.Size = new System.Drawing.Size(325, 28);
             this.PUMedida.Text = "&Unidad De Medida";
             this.PUMedida.Click += new System.EventHandler(this.PUMedida_Click);
             // 
@@ -226,16 +226,16 @@
             this.configuracionDeDispositivosToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
             this.configuracionDeDispositivosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.configuracionDeDispositivosToolStripMenuItem.Name = "configuracionDeDispositivosToolStripMenuItem";
-            this.configuracionDeDispositivosToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.configuracionDeDispositivosToolStripMenuItem.Size = new System.Drawing.Size(325, 28);
             this.configuracionDeDispositivosToolStripMenuItem.Text = "&Configuracion de dispositivos";
             // 
             // Psalir
             // 
-            this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Psalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Psalir.ForeColor = System.Drawing.Color.White;
             this.Psalir.Image = global::LOSCALVOS.Properties.Resources.cancel;
             this.Psalir.Name = "Psalir";
-            this.Psalir.Size = new System.Drawing.Size(65, 22);
+            this.Psalir.Size = new System.Drawing.Size(74, 28);
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
             // 
@@ -247,9 +247,9 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 26);
+            this.panel1.Location = new System.Drawing.Point(0, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 424);
+            this.panel1.Size = new System.Drawing.Size(800, 418);
             this.panel1.TabIndex = 21;
             // 
             // FrmProduccion
