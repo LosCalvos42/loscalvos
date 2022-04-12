@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace LOSCALVOS
 {
-    public partial class FrmAddUser : Form
+    public partial class FrmCambioPassword : Form
     {
-        public FrmAddUser()
+        public FrmCambioPassword()
         {
             InitializeComponent();
         }
@@ -35,14 +34,6 @@ namespace LOSCALVOS
         }
         private void Inicio()
         {
-            if (Tipo == "CAMBIOPASS")
-            {
-
-                LlenarGrid("CAMBIOPASS",Convert.ToString(id));
-
-            }
-
-
             if (Tipo == "NUEVO")
             {
                 id = 0;
@@ -69,6 +60,7 @@ namespace LOSCALVOS
             if (Tipo == "CONSULTAR")
             {
                 txtNombre.Text = Nombre; txtNombre.ReadOnly = true;
+
                 txtApellido.Text = Apellido; txtApellido.ReadOnly = true;
                 txtpass.Text = DesEncriptar(Pass); txtpass.ReadOnly = true;
                 txtUser.Text = User; txtUser.ReadOnly = true;
@@ -87,47 +79,6 @@ namespace LOSCALVOS
                 
             }
 
-        }
-
-        private void LlenarGrid(string Combo, string Filtro)
-        {
-
-
-            ClsManejador M = new ClsManejador();
-            DataTable dt = new DataTable();
-            List<ClsParametros> lst = new List<ClsParametros>();
-            try
-            {
-                lst.Add(new ClsParametros("@combo", Combo));
-                lst.Add(new ClsParametros("@filtro", id));
-                dt = M.Listado("sp_CargaCombos", lst);
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    txtNombre.Text = dt.Rows[i][1].ToString(); txtNombre.ReadOnly = true;
-                    txtApellido.Text = dt.Rows[i][2].ToString(); txtApellido.ReadOnly = true;
-                    txtpass.Text = DesEncriptar(dt.Rows[i][6].ToString());
-                    txtUser.Text = dt.Rows[i][5].ToString(); txtUser.ReadOnly = true;
-                    txtRpass.Text = DesEncriptar(dt.Rows[i][6].ToString());
-                    cmbPerfil.SelectedValue = dt.Rows[i][3].ToString(); cmbPerfil.Enabled = false;
-                    chekActivo.Enabled = false;
-                    if (dt.Rows[i][7].ToString() == "N")
-                    {
-                        chekActivo.Checked = true;
-                    }
-
-                    else
-                    {
-                        chekActivo.Checked = false;
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
         }
         private void Cargarcombo(string combo, ComboBox _combo)
         {
@@ -269,14 +220,6 @@ namespace LOSCALVOS
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (Tipo == "CAMBIOPASS")
-            {
-                if (MessageBox.Show("¿Confirma que desea Modificar La Contraseña?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    return;
-                }
-            }
-
             if (Tipo == "MODIFICAR")
             {
                 if (MessageBox.Show("¿Confirma que desea Modificar El Registro?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
@@ -314,31 +257,19 @@ namespace LOSCALVOS
 
                         MessageBox.Show(msg[1], "LOSCALVOS.", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                         DialogResult = DialogResult.Yes;
-
-                        if (Tipo == "CAMBIOPASS")
-                        {
-                            //foreach (Process proceso in Process.GetProcesses())
-                            //{
-                            //    if (proceso.ProcessName == "LOSCALVOS")
-                            //    {
-                            //        proceso.Kill();
-                            //        Process.Start(Application.StartupPath + @"\LOSCALVOS.exe");
-                            //    }
-                            //}
-                            Program.ForzarCierre = "SI";
-                            Application.Exit();
-                            this.Close();
-                            Process.Start(Application.StartupPath + @"\LOSCALVOS.exe");
-                        }
                         this.Close();
                         return;
                     }
+
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+
         }
     }
 }

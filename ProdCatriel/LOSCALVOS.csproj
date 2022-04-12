@@ -161,6 +161,12 @@
     <Compile Include="FrmAddOrdenDeTrabajoEstucado.designer.cs">
       <DependentUpon>FrmAddOrdenDeTrabajoEstucado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCambioPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCambioPassword.designer.cs">
+      <DependentUpon>FrmCambioPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmControlDeProduccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -627,6 +633,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAddOrdenDeTrabajoEstucado.resx">
       <DependentUpon>FrmAddOrdenDeTrabajoEstucado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCambioPassword.resx">
+      <DependentUpon>FrmCambioPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmControlDeProduccion.resx">
       <DependentUpon>FrmControlDeProduccion.cs</DependentUpon>

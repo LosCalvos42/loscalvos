@@ -166,11 +166,11 @@ namespace LOSCALVOS
         {
             //BtnConsultas.Enabled = false;
 
-            if (Program.perfil != 1)//administrador
-            {
-                Btnproduccion.Enabled = true;
-                BtnConfiguracion.Enabled = false;
-            }
+            //if (Program.perfil != 1)//administrador
+            //{
+            //    Btnproduccion.Enabled = true;
+            //    BtnConfiguracion.Enabled = false;
+            //}
 
             
 
@@ -341,6 +341,12 @@ namespace LOSCALVOS
 
         private void FrmMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (Program.ForzarCierre == "SI")
+            {
+                e.Cancel = false;
+                return;
+            }
+            
             if (MessageBox.Show("¿Está seguro de cerrar la Aplicación?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 e.Cancel = false;

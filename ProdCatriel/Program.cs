@@ -30,6 +30,8 @@ namespace LOSCALVOS
         public static int perfil;
         public static int IDUSER;
 
+        public static string ForzarCierre;
+
         public static string SerialPC { get; set; }
         public static string HostName { get; set; }
         public static string IMPRESORAETIQUETA { get; set; }

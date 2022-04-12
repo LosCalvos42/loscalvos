@@ -15,7 +15,11 @@ namespace LOSCALVOS
         public FrmConfiguracion()
         {
             InitializeComponent();
+            if (Program.perfil != 1)//administrador
+            {
+                MenuPermisos.Enabled = false;
 
+            }
         }
 
         private void Psalir_Click(object sender, EventArgs e)
@@ -70,6 +74,17 @@ namespace LOSCALVOS
             _FrmAgenda.StartPosition = FormStartPosition.CenterScreen;
             _FrmAgenda.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmAgenda);//FrmAddRecepcionDeLotes
+        }
+
+        private void toolStripMenuItem5_Click_1(object sender, EventArgs e)
+        {
+            FrmAddUser _FrmAddUser = new FrmAddUser();
+            _FrmAddUser.StartPosition = FormStartPosition.CenterScreen;
+            _FrmAddUser.Tipo = "CONSULTAR";
+            _FrmAddUser.id = Program.IDUSER;
+            _FrmAddUser.Tipo = "CAMBIOPASS";
+            _FrmAddUser.ShowDialog();
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace LOSCALVOS
 {
-    partial class FrmAddUser
+    partial class FrmCambioPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -55,7 +55,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Image = global::LOSCALVOS.Properties.Resources.cancel1;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(273, 234);
+            this.btnCancel.Location = new System.Drawing.Point(273, 228);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(97, 28);
             this.btnCancel.TabIndex = 76;
@@ -73,7 +73,7 @@
             this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.Image = global::LOSCALVOS.Properties.Resources.aceptarBlanco;
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(170, 234);
+            this.btnAceptar.Location = new System.Drawing.Point(170, 228);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(97, 28);
             this.btnAceptar.TabIndex = 75;
@@ -159,7 +159,7 @@
             this.txtpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.Location = new System.Drawing.Point(86, 185);
+            this.txtpass.Location = new System.Drawing.Point(86, 179);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(181, 22);
             this.txtpass.TabIndex = 81;
@@ -181,7 +181,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(83, 164);
+            this.label4.Location = new System.Drawing.Point(83, 158);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 83;
@@ -192,7 +192,7 @@
             this.txtRpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(242)))), ((int)(((byte)(233)))));
             this.txtRpass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRpass.Location = new System.Drawing.Point(273, 185);
+            this.txtRpass.Location = new System.Drawing.Point(273, 178);
             this.txtRpass.Name = "txtRpass";
             this.txtRpass.Size = new System.Drawing.Size(189, 22);
             this.txtRpass.TabIndex = 85;
@@ -203,7 +203,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(270, 164);
+            this.label5.Location = new System.Drawing.Point(270, 158);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 16);
             this.label5.TabIndex = 86;
@@ -214,7 +214,7 @@
             this.lblErrorPass.AutoSize = true;
             this.lblErrorPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorPass.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorPass.Location = new System.Drawing.Point(171, 210);
+            this.lblErrorPass.Location = new System.Drawing.Point(171, 204);
             this.lblErrorPass.Name = "lblErrorPass";
             this.lblErrorPass.Size = new System.Drawing.Size(212, 17);
             this.lblErrorPass.TabIndex = 87;
@@ -239,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 289);
+            this.ClientSize = new System.Drawing.Size(541, 266);
             this.Controls.Add(this.chekActivo);
             this.Controls.Add(this.lblErrorPass);
             this.Controls.Add(this.label5);
