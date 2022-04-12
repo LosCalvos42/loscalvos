@@ -66,7 +66,7 @@ namespace LOSCALVOS
                 DataRow topItem = dt.NewRow();
                 //topItem[1] = 1;
                 //topItem[2] = "TODOS";
-                dt.Rows.InsertAt(topItem, 0);
+                //dt.Rows.InsertAt(topItem, 0);
                 _combo.SelectedValue ="TODOS";
             }
             catch (Exception ex)
@@ -231,7 +231,7 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@Tipo", "REPORTE"));
                 lst.Add(new ClsParametros("@FILTRO", CmbAlmacen.SelectedValue.ToString()));
                 lst.Add(new ClsParametros("@ARTICODIGO", CmbProducto.SelectedValue));
-                setDataSource(dtr = M.Listado("SP_ConsultaDeStock", lst));    //SP del reporte
+                dtr = M.Listado("SP_ConsultaDeStock", lst);    //SP del reporte
 
                 if (dtr.Rows.Count > 0)
                 {
