@@ -43,6 +43,12 @@ namespace LOSCALVOS
                 limpiarObjetos();
                 Limpio();
             }
+            if (Tipo == "SALIDA")
+            {
+                id = 0;
+                limpiarObjetos();
+                Limpio();
+            }
             if (Tipo == "MODIFICAR")
             {
                 
