@@ -80,12 +80,9 @@ namespace LOSCALVOS
                        TxtObs.Text= dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
                        TxtKgMax.Text= dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
                        cmbTipo.SelectedValue= dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                       TxtTMin.Text= dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                       TxtTMax.Text= dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                       TxtHMin.Text= dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                       TxtHMax.Text= dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
 
-                        if (dt.Rows[0][10].ToString() == "N")
+
+                        if (dt.Rows[0][7].ToString() == "N")
                         {
                             chekActivo.Checked = false;
                         }
@@ -123,12 +120,9 @@ namespace LOSCALVOS
                         TxtObs.Text = dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
                         TxtKgMax.Text = dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
                         cmbTipo.SelectedValue = dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                        TxtTMin.Text = dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                        TxtTMax.Text = dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                        TxtHMin.Text = dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                        TxtHMax.Text = dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
+               
 
-                        if (dt.Rows[0][10].ToString() == "N")
+                        if (dt.Rows[0][7].ToString() == "N")
                         {
                             chekActivo.Checked = false;
                         }
@@ -227,10 +221,10 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@ALMACEN_OBS", TxtObs.Text));
                 lst.Add(new ClsParametros("@ALMACEN_CAPACIDADPESO", Convert.ToDouble(TxtKgMax.Text)));
                 lst.Add(new ClsParametros("@ALMACENTIPO_CODIGO", cmbTipo.SelectedValue));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMIN", Convert.ToDouble(TxtTMin.Text.Replace(".", ","))));
-                lst.Add(new ClsParametros("@ALMACEN_TEMPMAX", Convert.ToDouble(TxtTMax.Text.Replace(".", ","))));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMIN", Convert.ToDouble(TxtHMin.Text.Replace(".", ","))));
-                lst.Add(new ClsParametros("@ALMACEN_HUMEMAX", Convert.ToDouble(TxtHMax.Text.Replace(".", ","))));
+                lst.Add(new ClsParametros("@ALMACEN_TEMPMIN",0));
+                lst.Add(new ClsParametros("@ALMACEN_TEMPMAX",0));
+                lst.Add(new ClsParametros("@ALMACEN_HUMEMIN",0));
+                lst.Add(new ClsParametros("@ALMACEN_HUMEMAX",0));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 if (chekActivo.Checked == true)
                 { 
@@ -281,7 +275,7 @@ namespace LOSCALVOS
         }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (Tipo == "MODIFICAR")
+           if (Tipo == "MODIFICAR")
             {
                 if (MessageBox.Show("¿Confirma que desea Modificar El Registro?", "Modificar.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
@@ -298,25 +292,9 @@ namespace LOSCALVOS
             {
                 if (valido() == true)
                 {
-                    //id = id;
-                    //TxtID.Text = dt.Rows[0][0].ToString(); //A.[ALMACEN_ID] ID
-                    //TxtCodigo.Text = dt.Rows[0][1].ToString();//,A.[ALMACEN_CODIGO] CODIGO
-                    //TxtDescripcion.Text = dt.Rows[0][2].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
-                    //TxtUbicacion.Text = dt.Rows[0][3].ToString(); //,A.[ALMACEN_DOMICILIO] UBICACION
-                    //TxtObs.Text = dt.Rows[0][4].ToString();//,A.[ALMACEN_OBS] OBS
-                    //TxtKgMax.Text = dt.Rows[0][5].ToString();//,A.[ALMACEN_CAPACIDADPESO][KG MAX]
-                    //cmbTipo.SelectedItem = dt.Rows[0][6].ToString();//,TI.ALMACENTIPO_DESCRIPCION TIPO
-                    //TxtTMin.Text = dt.Rows[0][7].ToString();//, A.[ALMACEN_TEMPMIN] [T° MIN]
-                    //TxtTMax.Text = dt.Rows[0][8].ToString();//,A.[ALMACEN_TEMPMAX][T° MAX]
-                    //TxtHMin.Text = dt.Rows[0][9].ToString();//,A.[ALMACEN_HUMEMIN][H MIN]	
-                    //TxtHMax.Text = dt.Rows[0][10].ToString();//,A.[ALMACEN_HUMEMAX][H MAX]
-                    //Perfil = Convert.ToInt32(cmbPerfil.SelectedValue);
                     string[] msg = AbmUser(Tipo);
-
-
                     if (msg[0] == "0")
                     {
-
                         MessageBox.Show(msg[1], "Advertencia.", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                         return;
                     }
@@ -336,8 +314,223 @@ namespace LOSCALVOS
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+        }
 
+        private void TxtKgMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    if (TxtKgMax.Text != "")
+                    {
+
+                        double n = Convert.ToDouble(TxtKgMax.Text.Replace(".", ","));
+                        TxtKgMax.Text = string.Format("{0:n}", n);
+                    }
+                    //sivalido = 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                e.Handled = true;
+            }
+
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back)  && (e.KeyChar != (char)13))
+            {
+                MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtTMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    if (TxtTMin.Text != "")
+                    {
+
+                        double n = Convert.ToDouble(TxtTMin.Text.Replace(".", ","));
+                        TxtTMin.Text = string.Format("{0:n}", n);
+                    }
+                    //sivalido = 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                e.Handled = true;
+            }
+
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46) && (e.KeyChar != (char)13))
+            {
+                MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtTMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    if (TxtTMax.Text != "")
+                    {
+
+                        double n = Convert.ToDouble(TxtTMax.Text.Replace(".", ","));
+                        TxtTMax.Text = string.Format("{0:n}", n);
+                    }
+                    //sivalido = 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                e.Handled = true;
+            }
+
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46) && (e.KeyChar != (char)13))
+            {
+                MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtHMin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    if (TxtHMin.Text != "")
+                    {
+
+                        double n = Convert.ToDouble(TxtHMin.Text.Replace(".", ","));
+                        TxtHMin.Text = string.Format("{0:n}", n);
+                    }
+                    //sivalido = 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                e.Handled = true;
+            }
+
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46) && (e.KeyChar != (char)13))
+            {
+                MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtHMax_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                try
+                {
+                    if (TxtHMax.Text != "")
+                    {
+
+                        double n = Convert.ToDouble(TxtHMax.Text.Replace(".", ","));
+                        TxtHMax.Text = string.Format("{0:n}", n);
+                    }
+                    //sivalido = 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                e.Handled = true;
+            }
+
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46) && (e.KeyChar != (char)13))
+            {
+                MessageBox.Show("Solo se permiten Números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void TxtTMin_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtTMin.Text != "")
+                {
+
+                    double n = Convert.ToDouble(TxtTMin.Text.Replace(".", ","));
+                    TxtTMin.Text = string.Format("{0:n}", n);
+                }
+                //sivalido = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtTMax_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtTMax.Text != "")
+                {
+
+                    double n = Convert.ToDouble(TxtTMax.Text.Replace(".", ","));
+                    TxtTMax.Text = string.Format("{0:n}", n);
+                }
+                //sivalido = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtHMin_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtHMin.Text != "")
+                {
+
+                    double n = Convert.ToDouble(TxtHMin.Text.Replace(".", ","));
+                    TxtHMin.Text = string.Format("{0:n}", n);
+                }
+                //sivalido = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TxtHMax_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TxtHMax.Text != "")
+                {
+
+                    double n = Convert.ToDouble(TxtHMax.Text.Replace(".", ","));
+                    TxtHMax.Text = string.Format("{0:n}", n);
+                }
+                //sivalido = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

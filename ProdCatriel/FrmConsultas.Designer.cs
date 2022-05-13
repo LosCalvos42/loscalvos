@@ -33,9 +33,10 @@
             this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuIngSal = new System.Windows.Forms.ToolStripMenuItem();
             this.MENUSeguimiento = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnMConsultaExpedicion = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,8 @@
             this.mReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MenuIngSal,
             this.MENUSeguimiento,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.BtnMConsultaExpedicion});
             this.mReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mReportes.ForeColor = System.Drawing.Color.White;
             this.mReportes.Image = global::LOSCALVOS.Properties.Resources.imprimir32;
@@ -71,7 +73,7 @@
             this.MenuIngSal.ForeColor = System.Drawing.Color.White;
             this.MenuIngSal.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
             this.MenuIngSal.Name = "MenuIngSal";
-            this.MenuIngSal.Size = new System.Drawing.Size(213, 22);
+            this.MenuIngSal.Size = new System.Drawing.Size(231, 22);
             this.MenuIngSal.Text = "&Produccion";
             this.MenuIngSal.Click += new System.EventHandler(this.MenuIngSal_Click);
             // 
@@ -81,9 +83,29 @@
             this.MENUSeguimiento.ForeColor = System.Drawing.Color.White;
             this.MENUSeguimiento.Image = global::LOSCALVOS.Properties.Resources.IngresoLote;
             this.MENUSeguimiento.Name = "MENUSeguimiento";
-            this.MENUSeguimiento.Size = new System.Drawing.Size(213, 22);
+            this.MENUSeguimiento.Size = new System.Drawing.Size(231, 22);
             this.MENUSeguimiento.Text = "&Seguimiento CodBar";
             this.MENUSeguimiento.Click += new System.EventHandler(this.MENUSeguimiento_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.produccion;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(231, 22);
+            this.toolStripMenuItem1.Text = "&Consulta de Stock";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // BtnMConsultaExpedicion
+            // 
+            this.BtnMConsultaExpedicion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.BtnMConsultaExpedicion.ForeColor = System.Drawing.Color.White;
+            this.BtnMConsultaExpedicion.Image = global::LOSCALVOS.Properties.Resources.venta;
+            this.BtnMConsultaExpedicion.Name = "BtnMConsultaExpedicion";
+            this.BtnMConsultaExpedicion.Size = new System.Drawing.Size(231, 22);
+            this.BtnMConsultaExpedicion.Text = "&Consulta de Expedicion";
+            this.BtnMConsultaExpedicion.Click += new System.EventHandler(this.BtnMConsultaExpedicion_Click);
             // 
             // Psalir
             // 
@@ -106,16 +128,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 20;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.toolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem1.Image = global::LOSCALVOS.Properties.Resources.produccion;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(213, 22);
-            this.toolStripMenuItem1.Text = "&Consulta de Stock";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // FrmConsultas
             // 
@@ -143,5 +155,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuIngSal;
         private System.Windows.Forms.ToolStripMenuItem MENUSeguimiento;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem BtnMConsultaExpedicion;
     }
 }

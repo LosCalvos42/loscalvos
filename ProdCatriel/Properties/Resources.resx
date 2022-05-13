@@ -241,6 +241,9 @@
   <data name="icons8-edit-row-80 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-edit-row-80 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Spotify-Loading-Animation_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Spotify-Loading-Animation_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Membresia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Membresia1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -441,6 +444,9 @@
   </data>
   <data name="balanzaaaaaagif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\balanzaaaaaagif.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Papelera" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Papelera.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="new logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new logo11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -742,7 +748,7 @@
   <data name="merma" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\merma.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Spotify-Loading-Animation_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Spotify-Loading-Animation_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="venta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\venta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

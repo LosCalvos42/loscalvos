@@ -176,6 +176,8 @@
             this.TxtTMin.Name = "TxtTMin";
             this.TxtTMin.Size = new System.Drawing.Size(48, 22);
             this.TxtTMin.TabIndex = 81;
+            this.TxtTMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTMin_KeyPress);
+            this.TxtTMin.Leave += new System.EventHandler(this.TxtTMin_Leave);
             // 
             // label3
             // 
@@ -218,11 +220,11 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label6.Location = new System.Drawing.Point(95, 262);
+            this.label6.Location = new System.Drawing.Point(123, 262);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 16);
+            this.label6.Size = new System.Drawing.Size(78, 16);
             this.label6.TabIndex = 90;
-            this.label6.Text = "Capacidad Max:";
+            this.label6.Text = "Posiciones:";
             // 
             // TxtKgMax
             // 
@@ -234,6 +236,8 @@
             this.TxtKgMax.Name = "TxtKgMax";
             this.TxtKgMax.Size = new System.Drawing.Size(95, 22);
             this.TxtKgMax.TabIndex = 89;
+            this.TxtKgMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtKgMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKgMax_KeyPress);
             // 
             // label7
             // 
@@ -256,6 +260,8 @@
             this.TxtTMax.Name = "TxtTMax";
             this.TxtTMax.Size = new System.Drawing.Size(48, 22);
             this.TxtTMax.TabIndex = 91;
+            this.TxtTMax.TextChanged += new System.EventHandler(this.TxtTMax_TextChanged);
+            this.TxtTMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTMax_KeyPress);
             // 
             // label8
             // 
@@ -278,6 +284,8 @@
             this.TxtHMax.Name = "TxtHMax";
             this.TxtHMax.Size = new System.Drawing.Size(48, 22);
             this.TxtHMax.TabIndex = 95;
+            this.TxtHMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHMax_KeyPress);
+            this.TxtHMax.Leave += new System.EventHandler(this.TxtHMax_Leave);
             // 
             // label9
             // 
@@ -300,6 +308,8 @@
             this.TxtHMin.Name = "TxtHMin";
             this.TxtHMin.Size = new System.Drawing.Size(48, 22);
             this.TxtHMin.TabIndex = 93;
+            this.TxtHMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHMin_KeyPress);
+            this.TxtHMin.Leave += new System.EventHandler(this.TxtHMin_Leave);
             // 
             // panel1
             // 

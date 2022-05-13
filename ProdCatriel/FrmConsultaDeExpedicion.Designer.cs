@@ -1,6 +1,6 @@
 ﻿namespace LOSCALVOS
 {
-    partial class FrmReporteDeProduccion
+    partial class FrmConsultaDeExpedicion
     {
         /// <summary>
         /// Required designer variable.
@@ -32,18 +32,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReporteDeProduccion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultaDeExpedicion));
             this.menuForm = new System.Windows.Forms.MenuStrip();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.LblPorcentaje = new System.Windows.Forms.Label();
-            this.DtDeste = new System.Windows.Forms.DateTimePicker();
-            this.DtHasta = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.CmbProducto = new System.Windows.Forms.ComboBox();
             this.LblTotal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DtHasta = new System.Windows.Forms.DateTimePicker();
+            this.DtDeste = new System.Windows.Forms.DateTimePicker();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mimprimir = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,7 +117,6 @@
             this.Dgprincipal.Size = new System.Drawing.Size(915, 312);
             this.Dgprincipal.TabIndex = 43;
             this.Dgprincipal.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgprincipal_CellContentDoubleClick);
-            this.Dgprincipal.CellMouseMove += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.Dgprincipal_CellMouseMove);
             // 
             // progressBar
             // 
@@ -140,54 +139,12 @@
             this.LblPorcentaje.TabIndex = 81;
             this.LblPorcentaje.Text = "Cargando...";
             // 
-            // DtDeste
-            // 
-            this.DtDeste.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtDeste.Location = new System.Drawing.Point(15, 56);
-            this.DtDeste.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.DtDeste.Name = "DtDeste";
-            this.DtDeste.Size = new System.Drawing.Size(95, 20);
-            this.DtDeste.TabIndex = 85;
-            this.DtDeste.ValueChanged += new System.EventHandler(this.DtDeste_ValueChanged);
-            // 
-            // DtHasta
-            // 
-            this.DtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtHasta.Location = new System.Drawing.Point(135, 56);
-            this.DtHasta.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.DtHasta.Name = "DtHasta";
-            this.DtHasta.Size = new System.Drawing.Size(95, 20);
-            this.DtHasta.TabIndex = 86;
-            this.DtHasta.ValueChanged += new System.EventHandler(this.DtHasta_ValueChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label1.Location = new System.Drawing.Point(12, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
-            this.label1.TabIndex = 87;
-            this.label1.Text = "F. Prod Desde:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label2.Location = new System.Drawing.Point(132, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 16);
-            this.label2.TabIndex = 88;
-            this.label2.Text = "F. Prod Hasta:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.label5.Location = new System.Drawing.Point(248, 38);
+            this.label5.Location = new System.Drawing.Point(225, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 16);
             this.label5.TabIndex = 129;
@@ -198,7 +155,7 @@
             this.CmbProducto.DropDownWidth = 300;
             this.CmbProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbProducto.FormattingEnabled = true;
-            this.CmbProducto.Location = new System.Drawing.Point(251, 53);
+            this.CmbProducto.Location = new System.Drawing.Point(227, 59);
             this.CmbProducto.Name = "CmbProducto";
             this.CmbProducto.Size = new System.Drawing.Size(233, 23);
             this.CmbProducto.TabIndex = 130;
@@ -207,11 +164,54 @@
             // 
             this.LblTotal.AutoSize = true;
             this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
-            this.LblTotal.Location = new System.Drawing.Point(644, 58);
+            this.LblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.LblTotal.Location = new System.Drawing.Point(17, 88);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(0, 20);
             this.LblTotal.TabIndex = 131;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.label2.Location = new System.Drawing.Point(118, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 16);
+            this.label2.TabIndex = 137;
+            this.label2.Text = "F. Prod Hasta:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(59)))), ((int)(((byte)(135)))));
+            this.label3.Location = new System.Drawing.Point(12, 43);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 16);
+            this.label3.TabIndex = 136;
+            this.label3.Text = "F. Prod Desde:";
+            // 
+            // DtHasta
+            // 
+            this.DtHasta.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtHasta.Location = new System.Drawing.Point(121, 61);
+            this.DtHasta.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.DtHasta.Name = "DtHasta";
+            this.DtHasta.Size = new System.Drawing.Size(95, 21);
+            this.DtHasta.TabIndex = 135;
+            // 
+            // DtDeste
+            // 
+            this.DtDeste.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtDeste.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtDeste.Location = new System.Drawing.Point(15, 61);
+            this.DtDeste.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.DtDeste.Name = "DtDeste";
+            this.DtDeste.Size = new System.Drawing.Size(95, 21);
+            this.DtDeste.TabIndex = 134;
             // 
             // btnBuscar
             // 
@@ -222,7 +222,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::LOSCALVOS.Properties.Resources.icons8_search_property_22__3_;
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.Location = new System.Drawing.Point(508, 51);
+            this.btnBuscar.Location = new System.Drawing.Point(471, 57);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(80, 25);
             this.btnBuscar.TabIndex = 89;
@@ -265,28 +265,28 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // FrmReporteDeProduccion
+            // FrmConsultaDeExpedicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(927, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.DtHasta);
+            this.Controls.Add(this.DtDeste);
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.CmbProducto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DtHasta);
-            this.Controls.Add(this.DtDeste);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LblPorcentaje);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.Dgprincipal);
             this.Controls.Add(this.menuForm);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmReporteDeProduccion";
-            this.Text = "Listados";
+            this.Name = "FrmConsultaDeExpedicion";
+            this.Text = "Listado Expedición";
             this.Load += new System.EventHandler(this.FrmListados_Load);
             this.menuForm.ResumeLayout(false);
             this.menuForm.PerformLayout();
@@ -305,13 +305,13 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label LblPorcentaje;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DateTimePicker DtDeste;
-        private System.Windows.Forms.DateTimePicker DtHasta;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox CmbProducto;
         private System.Windows.Forms.Label LblTotal;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker DtHasta;
+        private System.Windows.Forms.DateTimePicker DtDeste;
     }
 }

@@ -40,6 +40,7 @@
             this.BarraPesaje = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.BtnMenuVaciar = new System.Windows.Forms.ToolStripMenuItem();
             this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,7 +141,8 @@
             this.PTrabajos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BarraPesaje,
             this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
+            this.toolStripMenuItem4,
+            this.BtnMenuVaciar});
             this.PTrabajos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PTrabajos.ForeColor = System.Drawing.Color.White;
             this.PTrabajos.Image = global::LOSCALVOS.Properties.Resources.Trabajos_trz;
@@ -178,6 +180,16 @@
             this.toolStripMenuItem4.Size = new System.Drawing.Size(271, 28);
             this.toolStripMenuItem4.Text = "Salida A Expedición";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click_1);
+            // 
+            // BtnMenuVaciar
+            // 
+            this.BtnMenuVaciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.BtnMenuVaciar.ForeColor = System.Drawing.Color.White;
+            this.BtnMenuVaciar.Image = global::LOSCALVOS.Properties.Resources.Papelera;
+            this.BtnMenuVaciar.Name = "BtnMenuVaciar";
+            this.BtnMenuVaciar.Size = new System.Drawing.Size(271, 28);
+            this.BtnMenuVaciar.Text = "Vaciar Camara";
+            this.BtnMenuVaciar.Click += new System.EventHandler(this.BtnMenuVaciar_Click);
             // 
             // mReportes
             // 
@@ -290,5 +302,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem BtnMenuVaciar;
     }
 }

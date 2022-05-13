@@ -15,9 +15,8 @@ namespace LOSCALVOS
         public FrmProduccion()
         {
             InitializeComponent();
-
         }
-
+        
         private void PRecepcion_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
@@ -291,12 +290,29 @@ namespace LOSCALVOS
             mConfiguracion.Enabled = false;
             mReportes.Enabled = false;
 
-
-            if (Program.perfil == 5)
+            switch (Program.perfil)
             {
-                
-                marchivo.Enabled = false;
-                mConfiguracion.Enabled = false;
+                case 1:
+                    BtnMenuVaciar.Enabled = true;
+                    marchivo.Enabled = true;
+                    mConfiguracion.Enabled = false;
+                    break;
+                case 4:
+                    BtnMenuVaciar.Enabled = true;
+                    marchivo.Enabled = true;
+                    mConfiguracion.Enabled = false;
+                    break;
+                case 6:
+                    BtnMenuVaciar.Enabled = true;
+                    marchivo.Enabled = true;
+                    mConfiguracion.Enabled = false;
+                    break;
+                default:
+                    BtnMenuVaciar.Enabled = false;
+                    marchivo.Enabled = false;
+                    mConfiguracion.Enabled = false;
+                    break;
+
             }
         }
 
@@ -467,6 +483,16 @@ namespace LOSCALVOS
             CheckForIllegalCrossThreadCalls = false;
             FrmAddSalidaExpedicion _FrmAddSalidaExpedicion = new FrmAddSalidaExpedicion();
             _FrmAddSalidaExpedicion.ShowDialog();
+        }
+
+        private void BtnMenuVaciar_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmVaciarCamara _FrmVaciarCamara = new FrmVaciarCamara();
+            _FrmVaciarCamara.StartPosition = FormStartPosition.CenterScreen;
+            _FrmVaciarCamara.ShowDialog();
+            Cursor.Current = Cursors.Default;
         }
     }
 }

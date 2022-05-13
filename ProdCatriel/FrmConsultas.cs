@@ -85,6 +85,21 @@ namespace LOSCALVOS
             _FrmConsultaDeStock.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmConsultaDeStock);
         }
+
+        private void BtnMConsultaExpedicion_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmConsultaDeExpedicion _FrmConsultaDeExpedicion = new FrmConsultaDeExpedicion();
+            _FrmConsultaDeExpedicion.Tabla = "PRODUCCION";
+            _FrmConsultaDeExpedicion.Listado = "PRODUCCION";
+            _FrmConsultaDeExpedicion.TituloListado = "SP_ConsultaDeStock";
+            _FrmConsultaDeExpedicion.Fdesde = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmConsultaDeExpedicion.Fhasta = (DateTime.Now).ToString("yyyyMMdd");
+            _FrmConsultaDeExpedicion.StartPosition = FormStartPosition.CenterScreen;
+            _FrmConsultaDeExpedicion.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmConsultaDeExpedicion);
+        }
     }
 }
 
