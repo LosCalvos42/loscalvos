@@ -21,8 +21,11 @@ namespace LOSCALVOS
         public string Codigo { get; set; }
         public string nombre { get; set; }
         public double Costo{ get; set; }
+
+        public string Unimed { get; set; }
         public int id { get; set; }
-        
+
+        public string tipo_F { get; set; }
 
         private void FrmGrillaBuscar_Load(object sender, EventArgs e)
         {
@@ -90,12 +93,25 @@ namespace LOSCALVOS
         {
             if (Dgprincipal.Rows.Count > 0)
             {
-                Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
-                nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
-                id =Convert.ToInt32( Dgprincipal.CurrentRow.Cells[2].Value.ToString());
-                DialogResult = DialogResult.OK;
-                this.Close();
-                
+                if(combo== "COMPONENTEBUSCAR") 
+                { 
+                    id =Convert.ToInt32( Dgprincipal.CurrentRow.Cells[0].Value.ToString());
+                    Codigo = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                    nombre = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+                    Unimed = Dgprincipal.CurrentRow.Cells[3].Value.ToString();
+                    Costo = Convert.ToDouble(Dgprincipal.CurrentRow.Cells[4].Value.ToString());
+                    tipo_F= Dgprincipal.CurrentRow.Cells[5].Value.ToString();
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
+                    nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                    id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[2].Value.ToString());
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
         }
 

@@ -281,6 +281,7 @@ namespace LOSCALVOS
             BtnConfiguracion.BackColor = Color.FromArgb(88, 19, 76);
             BtnConsultas.BackColor = Color.FromArgb(88, 19, 76);
             BtnUtilidades.BackColor = Color.FromArgb(88, 19, 76);
+            BtnFormulas.BackColor = Color.FromArgb(88, 19, 76);
             b.BackColor = Color.FromArgb(211, 84, 0);
 
         }
@@ -391,6 +392,7 @@ namespace LOSCALVOS
             Program._FrmConsultas = false;
             Program._FrmConfiguracion = false;
             Program._FrmUtilidades = false;
+            Program._FrmFormulas = false;
             formHijo = true;
         }
 
@@ -410,6 +412,20 @@ namespace LOSCALVOS
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnFormulas_Click(object sender, EventArgs e)
+        {
+            if (Program._FrmFormulas == false)
+            {
+                HabilitarBotones(BtnFormulas);
+                FrmFormulas fm = new FrmFormulas();
+
+                fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+                AbrirFormEnPanel(fm);
+                botones(Program._FrmFormulas);
+                Program._FrmFormulas = true;
+            }
         }
     }
 }

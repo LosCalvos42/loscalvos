@@ -350,9 +350,6 @@ namespace LOSCALVOS
                 return new Version(verlocal);
             }
         }
-
-
-
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             try

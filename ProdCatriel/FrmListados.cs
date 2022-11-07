@@ -143,9 +143,20 @@ namespace LOSCALVOS
                 {
                     MessageBox.Show("Los Artículos se modifican solo en el sistema NETPAK.\nConsulte con el Administrador ", "LOSCALVOS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
+                } 
+
+                if (Abm.Name == "FrmForAddFormulas")
+                {
+                    FrmForAddFormulas _FrmForAddFormulas = new FrmForAddFormulas();
+                    _FrmForAddFormulas.StartPosition = FormStartPosition.CenterScreen;
+                    _FrmForAddFormulas.Text = "MODIFICAR" + " - " + Dgprincipal.CurrentRow.Cells[0].Value.ToString()
+                    ;
+                    _FrmForAddFormulas.Show();
+                    inicializar();
+                    return;
                 }
 
-                Form _Formulario = Abm as Form;
+                 Form _Formulario = Abm as Form;
                 _Formulario.StartPosition = FormStartPosition.CenterScreen;
                 _Formulario.Text = "MODIFICAR" +" - "+ Dgprincipal.CurrentRow.Cells[0].Value.ToString();
                 _Formulario.ShowDialog();

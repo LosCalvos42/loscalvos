@@ -313,6 +313,16 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calculadora26 {
+            get {
+                object obj = ResourceManager.GetObject("calculadora26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendar_31_24 {
             get {
                 object obj = ResourceManager.GetObject("calendar-31-24", resourceCulture);
@@ -686,6 +696,56 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap FONDOTRAZAAR {
             get {
                 object obj = ResourceManager.GetObject("FONDOTRAZAAR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Formilas24 {
+            get {
+                object obj = ResourceManager.GetObject("Formilas24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Formilas32 {
+            get {
+                object obj = ResourceManager.GetObject("Formilas32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Formulas32 {
+            get {
+                object obj = ResourceManager.GetObject("Formulas32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Formulas36 {
+            get {
+                object obj = ResourceManager.GetObject("Formulas36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Formulas40 {
+            get {
+                object obj = ResourceManager.GetObject("Formulas40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1443,6 +1503,16 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap masLC {
+            get {
+                object obj = ResourceManager.GetObject("masLC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mass32 {
             get {
                 object obj = ResourceManager.GetObject("mass32", resourceCulture);
@@ -1496,6 +1566,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap menos {
             get {
                 object obj = ResourceManager.GetObject("menos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menosLC {
+            get {
+                object obj = ResourceManager.GetObject("menosLC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

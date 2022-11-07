@@ -143,6 +143,36 @@
     <Compile Include="FormsegundoPlano.Designer.cs">
       <DependentUpon>FormsegundoPlano.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmForAddFormulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForAddFormulas.designer.cs">
+      <DependentUpon>FrmForAddFormulas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForAddComponentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForAddComponentes.designer.cs">
+      <DependentUpon>FrmForAddComponentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForAddUniMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForAddUniMed.designer.cs">
+      <DependentUpon>FrmForAddUniMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForAddTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForAddTipo.designer.cs">
+      <DependentUpon>FrmForAddTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForAddClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForAddClasificacion.designer.cs">
+      <DependentUpon>FrmForAddClasificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAddSalidaExpedicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,11 +203,23 @@
     <Compile Include="FrmConsultaDeExpedicion.Designer.cs">
       <DependentUpon>FrmConsultaDeExpedicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmConsultaUltimaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultaUltimaCompra.Designer.cs">
+      <DependentUpon>FrmConsultaUltimaCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetalleDeExpedicion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDetalleDeExpedicion.designer.cs">
       <DependentUpon>FrmDetalleDeExpedicion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormulas.Designer.cs">
+      <DependentUpon>FrmFormulas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVaciarCamara.cs">
       <SubType>Form</SubType>
@@ -643,6 +685,21 @@
     <EmbeddedResource Include="FormsegundoPlano.resx">
       <DependentUpon>FormsegundoPlano.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmForAddFormulas.resx">
+      <DependentUpon>FrmForAddFormulas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForAddComponentes.resx">
+      <DependentUpon>FrmForAddComponentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForAddUniMed.resx">
+      <DependentUpon>FrmForAddUniMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForAddTipo.resx">
+      <DependentUpon>FrmForAddTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForAddClasificacion.resx">
+      <DependentUpon>FrmForAddClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAddSalidaExpedicion.resx">
       <DependentUpon>FrmAddSalidaExpedicion.cs</DependentUpon>
     </EmbeddedResource>
@@ -659,8 +716,15 @@
       <DependentUpon>FrmConsultaDeExpedicion.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultaUltimaCompra.resx">
+      <DependentUpon>FrmConsultaUltimaCompra.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDetalleDeExpedicion.resx">
       <DependentUpon>FrmDetalleDeExpedicion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormulas.resx">
+      <DependentUpon>FrmFormulas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVaciarCamara.resx">
       <DependentUpon>FrmVaciarCamara.cs</DependentUpon>
@@ -1044,6 +1108,14 @@
     <None Include="Resources\Spotify-Loading-Animation_2.gif" />
     <None Include="Resources\Papelera.png" />
     <None Include="Resources\venta.png" />
+    <None Include="Resources\Formilas24.png" />
+    <None Include="Resources\Formilas32.png" />
+    <None Include="Resources\Formulas32.png" />
+    <None Include="Resources\Formulas40.png" />
+    <None Include="Resources\Formulas36.png" />
+    <None Include="Resources\calculadora26.png" />
+    <None Include="Resources\masLC.png" />
+    <None Include="Resources\menosLC.png" />
     <Content Include="TRAZAR48.ico" />
     <None Include="Resources\BALANZA24.png" />
     <None Include="Resources\icons8-rack-24.png" />

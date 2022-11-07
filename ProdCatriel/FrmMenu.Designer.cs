@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.BtnFormulas = new System.Windows.Forms.Button();
             this.BtnUtilidades = new System.Windows.Forms.Button();
             this.BtnConsultas = new System.Windows.Forms.Button();
             this.BtnConfiguracion = new System.Windows.Forms.Button();
@@ -77,6 +78,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.panelMenu.Controls.Add(this.BtnFormulas);
             this.panelMenu.Controls.Add(this.BtnUtilidades);
             this.panelMenu.Controls.Add(this.BtnConsultas);
             this.panelMenu.Controls.Add(this.BtnConfiguracion);
@@ -93,6 +95,28 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(160, 600);
             this.panelMenu.TabIndex = 13;
+            // 
+            // BtnFormulas
+            // 
+            this.BtnFormulas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnFormulas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.BtnFormulas.FlatAppearance.BorderSize = 0;
+            this.BtnFormulas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.BtnFormulas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
+            this.BtnFormulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFormulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnFormulas.ForeColor = System.Drawing.Color.White;
+            this.BtnFormulas.Image = global::LOSCALVOS.Properties.Resources.Formulas36;
+            this.BtnFormulas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFormulas.Location = new System.Drawing.Point(6, 264);
+            this.BtnFormulas.Name = "BtnFormulas";
+            this.BtnFormulas.Size = new System.Drawing.Size(150, 40);
+            this.BtnFormulas.TabIndex = 17;
+            this.BtnFormulas.Text = " &Fórmulas";
+            this.BtnFormulas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnFormulas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnFormulas.UseVisualStyleBackColor = true;
+            this.BtnFormulas.Click += new System.EventHandler(this.BtnFormulas_Click);
             // 
             // BtnUtilidades
             // 
@@ -213,7 +237,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(3, 40);
             this.pictureBox6.TabIndex = 9;
             this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
             // 
             // pictureBox3
             // 
@@ -420,5 +443,6 @@
         private System.Windows.Forms.StatusBarPanel PPrint;
         private System.Windows.Forms.StatusBarPanel PBalanza;
         private System.Windows.Forms.PictureBox PTrazar;
+        private System.Windows.Forms.Button BtnFormulas;
     }
 }

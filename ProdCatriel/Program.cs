@@ -23,6 +23,7 @@ namespace LOSCALVOS
         public static bool _FrmProductos = false;
         public static bool _FrmUser = false;
         public static bool _FrmProduccion=false;
+        public static bool _FrmFormulas = false;
         public static bool _FrmConsultas = false;
         public static bool _FrmUtilidades = false; 
 

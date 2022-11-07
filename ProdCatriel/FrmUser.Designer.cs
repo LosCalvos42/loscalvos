@@ -176,7 +176,6 @@
             this.Dgprincipal.EnableHeadersVisualStyles = false;
             this.Dgprincipal.Location = new System.Drawing.Point(12, 103);
             this.Dgprincipal.Name = "Dgprincipal";
-            this.Dgprincipal.ReadOnly = true;
             this.Dgprincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Dgprincipal.RowHeadersVisible = false;
             this.Dgprincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -189,7 +188,6 @@
             // 
             this.mtid.HeaderText = "CODIGO";
             this.mtid.Name = "mtid";
-            this.mtid.ReadOnly = true;
             this.mtid.Visible = false;
             // 
             // mtcodigo
@@ -198,7 +196,6 @@
             this.mtcodigo.DefaultCellStyle = dataGridViewCellStyle3;
             this.mtcodigo.HeaderText = "NOMBRE";
             this.mtcodigo.Name = "mtcodigo";
-            this.mtcodigo.ReadOnly = true;
             this.mtcodigo.Width = 180;
             // 
             // mtnombre
@@ -207,14 +204,12 @@
             this.mtnombre.DefaultCellStyle = dataGridViewCellStyle4;
             this.mtnombre.HeaderText = "APELLIDO";
             this.mtnombre.Name = "mtnombre";
-            this.mtnombre.ReadOnly = true;
             this.mtnombre.Width = 200;
             // 
             // IdPerfil
             // 
             this.IdPerfil.HeaderText = "CODIGO PERFIL";
             this.IdPerfil.Name = "IdPerfil";
-            this.IdPerfil.ReadOnly = true;
             this.IdPerfil.Visible = false;
             // 
             // mtcantidad
@@ -225,7 +220,6 @@
             this.mtcantidad.DefaultCellStyle = dataGridViewCellStyle5;
             this.mtcantidad.HeaderText = "PERFIL";
             this.mtcantidad.Name = "mtcantidad";
-            this.mtcantidad.ReadOnly = true;
             // 
             // mtcosto
             // 
@@ -235,7 +229,6 @@
             this.mtcosto.DefaultCellStyle = dataGridViewCellStyle6;
             this.mtcosto.HeaderText = "USUARIO";
             this.mtcosto.Name = "mtcosto";
-            this.mtcosto.ReadOnly = true;
             // 
             // mttotal
             // 
@@ -244,7 +237,6 @@
             this.mttotal.DefaultCellStyle = dataGridViewCellStyle7;
             this.mttotal.HeaderText = "Pass";
             this.mttotal.Name = "mttotal";
-            this.mttotal.ReadOnly = true;
             this.mttotal.Visible = false;
             // 
             // Column1
@@ -253,14 +245,12 @@
             this.Column1.DefaultCellStyle = dataGridViewCellStyle8;
             this.Column1.HeaderText = "CONTRASEÑA";
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 120;
             // 
             // Activo
             // 
             this.Activo.HeaderText = "ACTIVO";
             this.Activo.Name = "Activo";
-            this.Activo.ReadOnly = true;
             this.Activo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Activo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Activo.Width = 70;
