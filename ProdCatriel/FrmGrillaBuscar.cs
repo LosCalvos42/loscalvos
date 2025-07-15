@@ -23,7 +23,9 @@ namespace LOSCALVOS
         public double Costo{ get; set; }
 
         public string Unimed { get; set; }
+        public string version { get; set; }
         public int id { get; set; }
+        public int minutos { get; set; }
 
         public string tipo_F { get; set; }
 
@@ -91,30 +93,51 @@ namespace LOSCALVOS
 
         private void Dgprincipal_DoubleClick(object sender, EventArgs e)
         {
-            if (Dgprincipal.Rows.Count > 0)
+            if(combo== "COMPONENTEBUSCAR") 
+            { 
+                id =Convert.ToInt32( Dgprincipal.CurrentRow.Cells[0].Value.ToString());
+                Codigo = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                nombre = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+                Unimed = Dgprincipal.CurrentRow.Cells[3].Value.ToString();
+                Costo = Convert.ToDouble(Dgprincipal.CurrentRow.Cells[4].Value.ToString());     
+                tipo_F= Dgprincipal.CurrentRow.Cells[5].Value.ToString();
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (combo == "PTERMINADOS")
             {
-                if(combo== "COMPONENTEBUSCAR") 
-                { 
-                    id =Convert.ToInt32( Dgprincipal.CurrentRow.Cells[0].Value.ToString());
-                    Codigo = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
-                    nombre = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
-                    Unimed = Dgprincipal.CurrentRow.Cells[3].Value.ToString();
-                    Costo = Convert.ToDouble(Dgprincipal.CurrentRow.Cells[4].Value.ToString());
-                    tipo_F= Dgprincipal.CurrentRow.Cells[5].Value.ToString();
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
-                else
-                {
-                    Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
-                    nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
-                    id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[2].Value.ToString());
-                    DialogResult = DialogResult.OK;
-                    this.Close();
-                }
+                Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
+                nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (combo == "COMPONENTE_CARNICO_BUSCAR")
+            {
+                Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
+                nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                Unimed = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else if (combo == "BUSCAR_FORMULAS")
+            {
+                id= Convert.ToInt32(Dgprincipal.CurrentRow.Cells[0].Value.ToString());
+                Codigo = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                nombre = Dgprincipal.CurrentRow.Cells[2].Value.ToString();
+                version = Dgprincipal.CurrentRow.Cells[3].Value.ToString();
+                minutos= Convert.ToInt32(Dgprincipal.CurrentRow.Cells[4].Value.ToString());
+                DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                Codigo = Dgprincipal.CurrentRow.Cells[0].Value.ToString();
+                nombre = Dgprincipal.CurrentRow.Cells[1].Value.ToString();
+                id = Convert.ToInt32(Dgprincipal.CurrentRow.Cells[2].Value.ToString());
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
         }
-
         private void Dgprincipal_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -124,38 +147,28 @@ namespace LOSCALVOS
                 e.Handled = true;
             }
         }
-
         private void Dgprincipal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)'\r')
             {
                 Dgprincipal_DoubleClick(Dgprincipal, e);
-                return;
-                
+                return;   
             }
             if (e.KeyChar == 27)
             {
-
-                
-
                 this.Close();
                 return;
-
             }
-
             if (e.KeyChar != 8)
             {
                 txtBuscar.Text = txtBuscar.Text + e.KeyChar.ToString();
             }
-            
             else
             {
-                
                 if (txtBuscar.Text.Count() > 0)
                 {
                     txtBuscar.Text = txtBuscar.Text.Substring(0, txtBuscar.Text.Count() - 1);
-                }
-               
+                }  
             }
         }
     }

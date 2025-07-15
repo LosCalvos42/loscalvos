@@ -1,15 +1,10 @@
 ﻿using Datos;
+using logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using logica;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace LOSCALVOS
 {
@@ -31,14 +26,14 @@ namespace LOSCALVOS
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
-        
+
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLogin _FrmLogin = new FrmLogin();
             _FrmLogin.Show();
             this.Hide();
-            
+
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,7 +49,7 @@ namespace LOSCALVOS
             _FrmSelecJamon.MdiParent = this;
             _FrmSelecJamon.Show();
         }
-        
+
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmUser _FrmUser = new FrmUser();
@@ -91,12 +86,13 @@ namespace LOSCALVOS
         {
             this.Location = Screen.PrimaryScreen.WorkingArea.Location;
             this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            
+
             if (ClsManejador.ip == "DESARROLLO")
             {
 
                 nombreparametroServer = "SERVIDOR_D";
-                try { 
+                try
+                {
                     Bitmap bmp = new Bitmap(Application.StartupPath + @"\Imagenes\DESARROLLO.jpg");
                     panel1.BackgroundImage = bmp;
                     panel1.BackgroundImageLayout = ImageLayout.Zoom;
@@ -124,18 +120,18 @@ namespace LOSCALVOS
             DT = LP.BuscarParametro();
             pnlserver.Text = DT.Rows[0][0].ToString();
             pnlserver.AutoSize = StatusBarPanelAutoSize.Contents;
-            
+
             LP.m_parametro = "NOMBRESOFT";
             DT = LP.BuscarParametro();
-            pnlsistema.Text ="Sistema: "+ DT.Rows[0][0].ToString() + "       Version: " + FrmLogin.verlocal;
+            pnlsistema.Text = "Sistema: " + DT.Rows[0][0].ToString() + "       Version: " + FrmLogin.verlocal;
             pnlsistema.AutoSize = StatusBarPanelAutoSize.Contents;
-            pnluser.Text = "Usuario: " +FrmLogin.user;
+            pnluser.Text = "Usuario: " + FrmLogin.user;
             pnluser.AutoSize = StatusBarPanelAutoSize.Contents;
             permisos();
 
             ClsManejador M = new ClsManejador();
             DataTable dt = new DataTable();
-            string ssql  = @"select TOP(1) isnull(DISPIMPRESORA_NOMBRE, '') as IMPRESORA, isnull(DISPBALANZAS_NOMBRE, '') AS BALANZA " +
+            string ssql = @"select TOP(1) isnull(DISPIMPRESORA_NOMBRE, '') as IMPRESORA, isnull(DISPBALANZAS_NOMBRE, '') AS BALANZA " +
             ",isnull(DISPBALANZAS_PUERTO, '') AS PUERTO " +
             "FROM [DISPOSITIVOS] D " +
             "INNER JOIN [DISPIMPRESORAS] I ON D.DISPOSITIVO_ID = I.DISPOSITIVO_ID AND I.DISPIMPRESORA_ESTADO = 'ON' " +
@@ -151,7 +147,7 @@ namespace LOSCALVOS
             {
                 Program.IMPRESORAETIQUETA = dt.Rows[0][0].ToString();
                 Program.BALANZA = dt.Rows[0][1].ToString();
-                Program.BALANZAPUERTO= dt.Rows[0][2].ToString();
+                Program.BALANZAPUERTO = dt.Rows[0][2].ToString();
                 PPrint.Text = Program.IMPRESORAETIQUETA;
                 PPrint.AutoSize = StatusBarPanelAutoSize.Contents;
 
@@ -172,19 +168,9 @@ namespace LOSCALVOS
             //    BtnConfiguracion.Enabled = false;
             //}
 
-            
-
-
-        }
 
 
 
-        private void ingresoXProveedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmTwinsIngresoXproveedor _FrmTwinsIngresoXproveedor = new FrmTwinsIngresoXproveedor();
-            _FrmTwinsIngresoXproveedor.StartPosition = FormStartPosition.CenterScreen;
-            _FrmTwinsIngresoXproveedor.MdiParent = this;
-            _FrmTwinsIngresoXproveedor.Show();
         }
 
         private void FrmMenu_Activated(object sender, EventArgs e)
@@ -202,9 +188,11 @@ namespace LOSCALVOS
                 this.tmOcultarMenu.Enabled = true;
                 PTrazar.Visible = false;
             }
-            else if (panelMenu.Width == 52) { 
+            else if (panelMenu.Width == 52)
+            {
                 this.tmMostrarMenu.Enabled = true;
-            PTrazar.Visible = true;}
+                PTrazar.Visible = true;
+            }
             //-------SIN EFECTO SLIDE
             //if (panelMenu.Width == 55)
             //{
@@ -217,10 +205,10 @@ namespace LOSCALVOS
 
         private void BarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
-            
-                ReleaseCapture();
-                SendMessage(this.Handle, 0x112, 0xf012, 0);
-           
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -241,7 +229,7 @@ namespace LOSCALVOS
 
                 fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
                 AbrirFormEnPanel(fm);
-                botones (Program._FrmProduccion);
+                botones(Program._FrmProduccion);
                 Program._FrmProduccion = true;
             }
 
@@ -259,7 +247,7 @@ namespace LOSCALVOS
 
         }
 
-        
+
 
 
         private void AbrirFormEnPanel(object formHijo)
@@ -288,7 +276,7 @@ namespace LOSCALVOS
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Confirma Que Desea Salir de la Aplicacion?", "Salir", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Confirma Que Desea Salir de la Aplicacion?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -347,14 +335,14 @@ namespace LOSCALVOS
                 e.Cancel = false;
                 return;
             }
-            
+
             if (MessageBox.Show("¿Está seguro de cerrar la Aplicación?", "Cerrar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 e.Cancel = false;
                 //System.Environment.Exit(0);
             }
             else
-            { 
+            {
                 e.Cancel = true;
             }
         }

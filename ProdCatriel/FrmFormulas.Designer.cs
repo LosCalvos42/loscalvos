@@ -35,11 +35,13 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.MFormula = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.mReportes = new System.Windows.Forms.ToolStripMenuItem();
             this.MmUltimaCompra = new System.Windows.Forms.ToolStripMenuItem();
             this.Psalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarPreciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.MFormula = new System.Windows.Forms.ToolStripMenuItem();
             this.menuForm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,9 @@
             this.menuForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.marchivo,
             this.MFormula,
+            this.toolStripMenuItem4,
             this.mReportes,
+            this.actualizarPreciosToolStripMenuItem,
             this.Psalir});
             this.menuForm.Location = new System.Drawing.Point(0, 0);
             this.menuForm.Name = "menuForm";
@@ -118,6 +122,26 @@
             this.toolStripMenuItem3.Text = "&Unidad De Medida";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click_1);
             // 
+            // MFormula
+            // 
+            this.MFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MFormula.ForeColor = System.Drawing.Color.White;
+            this.MFormula.Image = global::LOSCALVOS.Properties.Resources.Formulas36;
+            this.MFormula.Name = "MFormula";
+            this.MFormula.Size = new System.Drawing.Size(99, 22);
+            this.MFormula.Text = "&Formulas";
+            this.MFormula.Click += new System.EventHandler(this.MFormula_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem4.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuItem4.Image = global::LOSCALVOS.Properties.Resources.Procesos;
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(151, 22);
+            this.toolStripMenuItem4.Text = "&Orden de Trabajo";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click_2);
+            // 
             // mReportes
             // 
             this.mReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -150,28 +174,28 @@
             this.Psalir.Text = "Salir";
             this.Psalir.Click += new System.EventHandler(this.Psalir_Click);
             // 
+            // actualizarPreciosToolStripMenuItem
+            // 
+            this.actualizarPreciosToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.actualizarPreciosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.actualizarPreciosToolStripMenuItem.Image = global::LOSCALVOS.Properties.Resources.report_32;
+            this.actualizarPreciosToolStripMenuItem.Name = "actualizarPreciosToolStripMenuItem";
+            this.actualizarPreciosToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.actualizarPreciosToolStripMenuItem.Text = "Actualizar Precios";
+            this.actualizarPreciosToolStripMenuItem.Click += new System.EventHandler(this.actualizarPreciosToolStripMenuItem_Click);
+            // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 26);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 424);
             this.panel1.TabIndex = 21;
-            // 
-            // MFormula
-            // 
-            this.MFormula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MFormula.ForeColor = System.Drawing.Color.White;
-            this.MFormula.Image = global::LOSCALVOS.Properties.Resources.Formulas36;
-            this.MFormula.Name = "MFormula";
-            this.MFormula.Size = new System.Drawing.Size(99, 22);
-            this.MFormula.Text = "&Formulas";
-            this.MFormula.Click += new System.EventHandler(this.MFormula_Click);
             // 
             // FrmFormulas
             // 
@@ -204,5 +228,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem MFormula;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem actualizarPreciosToolStripMenuItem;
     }
 }

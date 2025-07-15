@@ -19,7 +19,7 @@ namespace LOSCALVOS.Properties {
     // a través de una herramienta como ResGen o Visual Studio.
     // Para agregar o quitar un miembro, edite el archivo .ResX y, a continuación, vuelva a ejecutar ResGen
     // con la opción /str o recompile su proyecto de VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -76,6 +76,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap _48px_Crystal_Clear_app_kchart {
             get {
                 object obj = ResourceManager.GetObject("48px-Crystal_Clear_app_kchart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4964195 {
+            get {
+                object obj = ResourceManager.GetObject("4964195", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +176,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap alta32 {
             get {
                 object obj = ResourceManager.GetObject("alta32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap anterior_24 {
+            get {
+                object obj = ResourceManager.GetObject("anterior-24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -816,6 +836,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap ham_icon32 {
             get {
                 object obj = ResourceManager.GetObject("ham-icon32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HD_wallpaper_abstraction_pattern_light_blue_paper_edges {
+            get {
+                object obj = ResourceManager.GetObject("HD-wallpaper-abstraction-pattern-light-blue-paper-edges", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1493,6 +1523,26 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap más_24 {
+            get {
+                object obj = ResourceManager.GetObject("más-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MAS_26 {
+            get {
+                object obj = ResourceManager.GetObject("MAS-26", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mas32 {
             get {
                 object obj = ResourceManager.GetObject("mas32", resourceCulture);
@@ -1566,6 +1616,16 @@ namespace LOSCALVOS.Properties {
         internal static System.Drawing.Bitmap menos {
             get {
                 object obj = ResourceManager.GetObject("menos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menos_26 {
+            get {
+                object obj = ResourceManager.GetObject("menos-26", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2013,9 +2073,39 @@ namespace LOSCALVOS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap siguiente_24 {
+            get {
+                object obj = ResourceManager.GetObject("siguiente-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap small_load {
             get {
                 object obj = ResourceManager.GetObject("small-load", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smooth_gradients_background_effects_pale_baby_pink_free_photo {
+            get {
+                object obj = ResourceManager.GetObject("smooth-gradients-background-effects-pale-baby-pink-free-photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap smooth_gradients_background_effects_pale_baby_pink_free_photo__1_ {
+            get {
+                object obj = ResourceManager.GetObject("smooth-gradients-background-effects-pale-baby-pink-free-photo (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

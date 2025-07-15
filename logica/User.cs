@@ -8,7 +8,7 @@ using Datos;
 
 namespace logica
 {
-    public partial class User
+    public  class User
     {
         public String m_ACCION { get; set; }
         public int m_ID { get; set; }

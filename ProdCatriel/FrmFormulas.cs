@@ -539,14 +539,44 @@ namespace LOSCALVOS
             Cursor.Current = Cursors.WaitCursor;
             CheckForIllegalCrossThreadCalls = false;
             FrmListados _FrmListados = new FrmListados();
-            FrmForAddFormulas _FrmForAddFormulas = new FrmForAddFormulas();
+            FrmForAddFormulasCarnicas _FrmForAddFormulasCarnicas = new FrmForAddFormulasCarnicas();
             _FrmListados.Tabla = "FOR_FORMULAH";
             _FrmListados.Listado = "FORMULA";
             _FrmListados.TituloListado = "Listado De Formulas";
-            _FrmListados.Abm = _FrmForAddFormulas;
+            _FrmListados.Abm = _FrmForAddFormulasCarnicas;
             _FrmListados.StartPosition = FormStartPosition.CenterScreen;
             _FrmListados.WindowState = FormWindowState.Maximized;
             AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void toolStripMenuItem4_Click_2(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            FrmListados _FrmListados = new FrmListados();
+            FrmForOrdenDeTrabajo _FrmForOrdenDeTrabajo = new FrmForOrdenDeTrabajo();
+            _FrmListados.Tabla = "OTH";
+            _FrmListados.Listado = "OTH";
+            _FrmListados.TituloListado = "Listado De Orden de Trabajo";
+            _FrmListados.Abm = _FrmForOrdenDeTrabajo;
+            _FrmListados.StartPosition = FormStartPosition.CenterScreen;
+            _FrmListados.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmListados);
+        }
+
+        private void actualizarPreciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            CheckForIllegalCrossThreadCalls = false;
+            //FrmListados _FrmListados = new FrmListados();
+            FrmActualizacionPrecio _FrmActualizacionPrecio = new FrmActualizacionPrecio();
+            //_FrmListados.Tabla = "OTH";
+            //_FrmListados.Listado = "OTH";
+            //_FrmListados.TituloListado = "Listado De Orden de Trabajo";
+            //_FrmListados.Abm = _FrmActualizacionPrecio;
+            _FrmActualizacionPrecio.StartPosition = FormStartPosition.CenterScreen;
+            _FrmActualizacionPrecio.WindowState = FormWindowState.Maximized;
+            AbrirFormEnPanel(_FrmActualizacionPrecio);
         }
     }
 }

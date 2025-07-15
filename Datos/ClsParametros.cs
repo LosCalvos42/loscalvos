@@ -16,7 +16,7 @@ namespace Datos
 
         public ClsParametros(String objNombre, Object objValor)
         {
-            Nombre = objNombre;
+            Nombre = objNombre; 
             Valor = objValor;
             Direccion = ParameterDirection.Input;
         }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace LOSCALVOS
 {
-    public partial class FrmForAddFormulas : Form
+    public partial class FrmForAddFormulasCarnicas : Form
     {
-        public FrmForAddFormulas()
+        public FrmForAddFormulasCarnicas()
         {
             InitializeComponent();
         }
@@ -36,9 +36,22 @@ namespace LOSCALVOS
             Inicio();
         }
         private void limpiarObjetos() {
-            
+
+            TxtProducto.Text = "";
             TxtCodigo.Text = "";
             TxtDescripcion.Text = "";
+            TxtKEsperados.Text = "";
+            TxtMerma.Text = "";
+            TxtMinutos.Text = "";
+            TxtObservacion.Text = "";
+            TxtPesoTotal.Text = "";
+            TxtPeso.Text = "";
+            TxtUniEsperadas.Text = "";
+            TxtCantidadItems.Text = "";
+            Dgprincipal.DataSource = null;
+            DgVersiones.DataSource = null;
+            Dgprincipal.Rows.Clear();
+
         }
         private void Inicio()
         {
@@ -46,11 +59,14 @@ namespace LOSCALVOS
             {
                 id = 0;
                 limpiarObjetos();
+                TxtVercion.Text = "1";
                 chekActivo.Checked = true;
+                RVigSi.Checked= true;
                 groupBox1.Enabled = true;
             }
             if (Tipo == "MODIFICAR")
             {
+                limpiarObjetos();
                 groupBox1.Enabled = true;
                 ClsManejador M = new ClsManejador();
                 DataTable dt = new DataTable();
@@ -74,7 +90,7 @@ namespace LOSCALVOS
                         {
                             if (DgVersiones.Rows[i].Cells[5].Value.ToString()=="S")
                             {
-                                CargaDeDatos(Convert.ToInt32(DgVersiones.Rows[i].Cells[0].Value.ToString()));
+                                CargaDeDatos(Convert.ToInt32(DgVersiones.Rows[i].Cells[1].Value.ToString()));
 
                                 DgVersiones.ClearSelection();
                                 DgVersiones.Rows[i].Selected = true;
@@ -85,7 +101,7 @@ namespace LOSCALVOS
                         }
                         if (HayVigente != "Si")
                         {
-                            CargaDeDatos(Convert.ToInt32(DgVersiones.Rows[DgVersiones.Rows.Count-1].Cells[0].Value.ToString()));
+                            CargaDeDatos(Convert.ToInt32(DgVersiones.Rows[DgVersiones.Rows.Count-1].Cells[1].Value.ToString()));
                         }
                         
                         //DgVersiones.ClearSelection();
@@ -150,34 +166,43 @@ namespace LOSCALVOS
 
                 for (int i = 0; i < Dgprincipal.Rows.Count; i++)
                 {
-                    if ((Dgprincipal.Rows[i].Cells[8].Value == null))
-                    {
-                        Dgprincipal.Rows[i].Cells[8].Value = " ";
-                    }
+                    //if ((Dgprincipal.Rows[i].Cells[8].Value == null))
+                    //{
+                    //    Dgprincipal.Rows[i].Cells[8].Value = " ";
+                    //}
                     CantidadItems = CantidadItems + 1;
-                    if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "+")
-                    {
-                        peso += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
+                    //if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "+")
+                    //{
+                    //    peso += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
 
-                        if (Dgprincipal.Rows[i].Cells[10].Value.ToString() == "1" || Dgprincipal.Rows[i].Cells[10].Value.ToString() == "2")
-                        {
-                            totalCarnicos+= Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
-                        }
-                    }
+                    //    //if (Dgprincipal.Rows[i].Cells[10].Value.ToString() == "1" || Dgprincipal.Rows[i].Cells[10].Value.ToString() == "2")
+                    //    //{
+                    //    //    totalCarnicos+= Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
+                    //    //}
+                    //}
+                        
+                        Dgprincipal.EndEdit();
 
-                    if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "-")
+                    if (Dgprincipal.Rows[i].Cells[1].Value.ToString() == "004686")
                     {
-                        Merma += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
+                        Merma += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[4].Value.ToString());
                     }
-                    costototal += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[9].Value.ToString());
-                    TxtCantidadItems.Text = CantidadItems.ToString();
+                    else
+                    {
+                        peso += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[4].Value.ToString());
+                    }
+                        
+                    
+                    //costototal += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[9].Value.ToString());
+                    ////TxtCantidadItems.Text = CantidadItems.ToString();
+
                 }
                 TxtCantidadItems.Text = Convert.ToString(CantidadItems.ToString("N0"));
                 TxtPeso.Text = Convert.ToString(peso.ToString("N2"));
                 TxtPesoTotal.Text = Convert.ToString((peso - Merma).ToString("N2"));
                 TxtMerma.Text = Convert.ToString(Merma.ToString("N2"));
-                TxtCostoTotal.Text = Convert.ToString(costototal.ToString("N2"));
-                TxtCostoUnitario.Text = Convert.ToString((costototal / Convert.ToDecimal(TxtPesoTotal.Text)).ToString("N2"));
+               // TxtCostoTotal.Text = Convert.ToString(costototal.ToString("N2"));
+                //TxtCostoUnitario.Text = Convert.ToString((costototal / Convert.ToDecimal(TxtPesoTotal.Text)).ToString("N2"));
             }
             catch (Exception ex)
             {
@@ -212,7 +237,7 @@ namespace LOSCALVOS
                         RVigNo.Checked = true;
                     }
 
-                    textBox1.Text = dt.Rows[0][3].ToString();
+                    TxtVercion.Text = dt.Rows[0][3].ToString();
                     if (dt.Rows[0][4].ToString() == "N")
                     {
                         chekActivo.Checked = true;
@@ -221,27 +246,24 @@ namespace LOSCALVOS
                     {
                         chekActivo.Checked = false;
                     }
-                    
+                    TxtProducto.Text = dt.Rows[0][5].ToString() + " - " + dt.Rows[0][6].ToString();
                     TxtCodigo.Text = dt.Rows[0][5].ToString();//,A.[ALMACEN_CODIGO] CODIGO
-                    TxtDescripcion.Text = dt.Rows[0][6].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION
+                    TxtDescripcion.Text = dt.Rows[0][6].ToString();//,A.[ALMACEN_DESCRIPCION] DESCRIPCION 
                     TxtObservacion.Text= dt.Rows[0][7].ToString();
-
+                    TxtUniEsperadas.Text = dt.Rows[0][8].ToString();
+                    TxtKEsperados.Text = dt.Rows[0][9].ToString();
+                    TxtMinutos.Text = dt.Rows[0][14].ToString();
                     Dgprincipal.Rows.Clear();
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         Dgprincipal.Rows.Add(1);
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[1].Value = dt.Rows[i][8].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[2].Value = dt.Rows[i][9].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[3].Value = dt.Rows[i][10].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[4].Value = dt.Rows[i][11].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[5].Value = dt.Rows[i][12].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[6].Value = dt.Rows[i][13].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[7].Value = dt.Rows[i][14].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[8].Value = dt.Rows[i][15].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[9].Value = dt.Rows[i][16].ToString();
-                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[10].Value = dt.Rows[i][17].ToString();
+                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[1].Value = dt.Rows[i][10].ToString();
+                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[2].Value = dt.Rows[i][11].ToString();
+                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[3].Value = dt.Rows[i][12].ToString();
+                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[4].Value = dt.Rows[i][13].ToString();
+                        Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[5].Value = dt.Rows[i][14].ToString();
                     }
-                    CalculaTotales();
+                    //CalculaTotales();
                     CalculaMerma();
                     CalculaTotales(); 
                     Dgprincipal.ClearSelection();
@@ -294,6 +316,22 @@ namespace LOSCALVOS
                 TxtDescripcion.Focus();
                 return false;
             }
+            if (TxtKEsperados.Text=="")
+            {
+                MessageBox.Show("El Campo Kg esperados NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            if (TxtUniEsperadas.Text=="")
+            {
+                MessageBox.Show("El Campo Kg esperados NO puede estar Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+
+            if (Dgprincipal.RowCount<1)
+            {
+                MessageBox.Show("Listado de componentes esta Vacio", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
             return true;
         }
         private String[] AbmUser(string tipo)
@@ -308,11 +346,35 @@ namespace LOSCALVOS
                 lst.Add(new ClsParametros("@ID", id));
                 lst.Add(new ClsParametros("@CODIGO", TxtCodigo.Text));
                 lst.Add(new ClsParametros("@DESCRIPCION", TxtDescripcion.Text));
-                lst.Add(new ClsParametros("@Clasificacion", CmbClasificacion.SelectedValue));
-                lst.Add(new ClsParametros("@ModPrecio", "NO"));
+                lst.Add(new ClsParametros("@VERSION", TxtVercion.Text));
+                lst.Add(new ClsParametros("@CLASIFICACION", CmbClasificacion.SelectedValue));
+
+                if (RVigSi.Checked)
+                {
+                    lst.Add(new ClsParametros("@VIGENCIA", "S"));
+                }
+                else
+                {
+                    lst.Add(new ClsParametros("@VIGENCIA", "N"));
+                }
+                lst.Add(new ClsParametros("@UESPERADAS", TxtUniEsperadas.Text.ToString().Replace(",", ".")));
+                lst.Add(new ClsParametros("@KESPERADOS", TxtKEsperados.Text.ToString().Replace(",", "."))); 
+                lst.Add(new ClsParametros("@MINUTOS", TxtMinutos.Text));
+                lst.Add(new ClsParametros("@COMENTARIO", TxtObservacion.Text));
                 
-                //lst.Add(new ClsParametros("@Unimed", CmbUnimed.SelectedValue));
-               // lst.Add(new ClsParametros("@PRECIO", Convert.ToDecimal(TxtPrecio.Text)));
+                var DtComponentes = new DataTable();
+                DtComponentes.Columns.Add("FORMULA_CODIGO", typeof(string));
+                DtComponentes.Columns.Add("FORMULA_VERCION", typeof(string));
+                DtComponentes.Columns.Add("FORMULA_ARTI_CODIGO", typeof(string));
+                DtComponentes.Columns.Add("FORMULA_CANTIDAD", typeof(decimal));
+                DtComponentes.Columns.Add("FORMULA_USR", typeof(string));
+                DtComponentes.Columns.Add("FORMULA_DEBAJA", typeof(string));
+
+                for (int i = 0; i < Dgprincipal.Rows.Count; i++)
+                {
+                    DtComponentes.Rows.Add(TxtCodigo.Text, TxtVercion.Text, Dgprincipal.Rows[i].Cells[1].Value, Dgprincipal.Rows[i].Cells[4].Value.ToString().Replace(".",",") , Program.IDUSER,"N");
+                }
+                lst.Add(new ClsParametros("@FORMULAI", DtComponentes, SqlDbType.Structured, ParameterDirection.Input));
                 lst.Add(new ClsParametros("@USR_ID ", Program.IDUSER));
                 if (chekActivo.Checked == true)
                 { 
@@ -324,10 +386,10 @@ namespace LOSCALVOS
                 }
                 lst.Add(new ClsParametros("@Resultado", "", SqlDbType.VarChar, ParameterDirection.Output, 5));
                 lst.Add(new ClsParametros("@Mensaje", "", SqlDbType.VarChar, ParameterDirection.Output, 300));
-                M.EjecutarSP("SP_For_AddComponentes", ref lst);
+                M.EjecutarSP("SP_For_AddFormula", ref lst);
                 msj = new string[2];
-                msj[0] = lst[10].Valor.ToString();
-                msj[1] = lst[11].Valor.ToString();
+                msj[0] = lst[14].Valor.ToString();
+                msj[1] = lst[15].Valor.ToString();
             }
             catch (Exception ex)
             {
@@ -446,14 +508,10 @@ namespace LOSCALVOS
             FrmGrillaBuscar _FrmGrillaBuscar = new FrmGrillaBuscar
             {
                 StartPosition = FormStartPosition.CenterScreen,
-                combo = "COMPONENTEBUSCAR"
+                combo = "COMPONENTE_CARNICO_BUSCAR"
             };
             if (_FrmGrillaBuscar.ShowDialog() == DialogResult.OK)
             {
-
-
-
-
 
                 for (int i = 0; i < Dgprincipal.RowCount; i++)
                 {
@@ -468,17 +526,14 @@ namespace LOSCALVOS
                 Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[0].Value = Convert.ToInt32(_FrmGrillaBuscar.id);
                 Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[1].Value = _FrmGrillaBuscar.Codigo;
                 Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[2].Value = _FrmGrillaBuscar.nombre;
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[3].Value = Convert.ToDouble(_FrmGrillaBuscar.Costo);
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[6].Value = _FrmGrillaBuscar.Unimed;
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[10].Value = _FrmGrillaBuscar.tipo_F;
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[5].Value = 0.0;
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[7].Value = 0.00;
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[8].Value = "";
-                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[9].Value = 0.0;
+                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[3].Value = _FrmGrillaBuscar.Unimed;
+                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[4].Value = 0;
+                Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[5].Value = _FrmGrillaBuscar.tipo_F;
+
                 Dgprincipal.ClearSelection();
 
-                //Dgprincipal.EditMode = DataGridViewEditMode.EditOnEnter;
-                Dgprincipal.CurrentCell = Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[7];
+                Dgprincipal.EditMode = DataGridViewEditMode.EditOnEnter;
+                Dgprincipal.CurrentCell = Dgprincipal.Rows[Dgprincipal.RowCount - 1].Cells[4];
                 Dgprincipal.CurrentCell.Selected = true;
                 Dgprincipal.Focus();
             }
@@ -497,47 +552,47 @@ namespace LOSCALVOS
             for (int i = 0; i < Dgprincipal.Rows.Count; i++)
             {
 
-                if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "+")
+                if ((Dgprincipal.Rows[i].Cells[4].Value.ToString()) == "99")
                 {
-                    peso += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[7].Value.ToString());
+                    Merma += Convert.ToDecimal(Dgprincipal.Rows[i].Cells[4].Value.ToString());
                 }
             }
-            for (int i = 0; i < Dgprincipal.Rows.Count; i++)
-            {
-                if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "-")
-                {
-                    Dgprincipal.Rows[i].Cells[7].Value = Convert.ToDecimal(Dgprincipal.Rows[i].Cells[5].Value.ToString()) * peso / 100;
-                }
-            }
+            //for (int i = 0; i < Dgprincipal.Rows.Count; i++)
+            //{
+            //    if ((Dgprincipal.Rows[i].Cells[8].Value.ToString()) == "-")
+            //    {
+            //        Dgprincipal.Rows[i].Cells[7].Value = Convert.ToDecimal(Dgprincipal.Rows[i].Cells[5].Value.ToString()) * peso / 100;
+            //    }
+            //}
         }
 
-        private void Dgprincipal_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
+        //private void Dgprincipal_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        //{
 
-            int rowIndex =e.RowIndex;
-            if (Dgprincipal.Rows[rowIndex].Cells[7].Value != null)
-            {
-                Dgprincipal.Rows[rowIndex].Cells[7].Value = Dgprincipal.Rows[rowIndex].Cells[7].Value.ToString().Replace(".", ",");
-                //Dgprincipal.CurrentRow.Cells[9].Value = Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[3].Value) * Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[7].Value);
-            }
+        //    int rowIndex =e.RowIndex;
+        //    if (Dgprincipal.Rows[rowIndex].Cells[4].Value != null)
+        //    {
+        //        Dgprincipal.Rows[rowIndex].Cells[4].Value = Dgprincipal.Rows[rowIndex].Cells[4].Value.ToString().Replace(".", ",");
+        //        //Dgprincipal.CurrentRow.Cells[9].Value = Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[3].Value) * Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[7].Value);
+        //    }
 
-            
-            if (Dgprincipal.Rows[rowIndex].Cells[5].Value != null)
-            {
-                Dgprincipal.Rows[rowIndex].Cells[5].Value = Dgprincipal.Rows[rowIndex].Cells[5].Value.ToString().Replace(".", ",");
-            }
-            Dgprincipal.CurrentRow.Cells[9].Value = Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[3].Value) * Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[7].Value);
 
-            CalculaTotales();
-            CalculaMerma();
-            CalculaTotales();
-        }
+        //    //if (Dgprincipal.Rows[rowIndex].Cells[5].Value != null)
+        //    //{
+        //    //    Dgprincipal.Rows[rowIndex].Cells[5].Value = Dgprincipal.Rows[rowIndex].Cells[5].Value.ToString().Replace(".", ",");
+        //    //}
+        //    //Dgprincipal.CurrentRow.Cells[9].Value = Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[3].Value) * Convert.ToDouble(Dgprincipal.Rows[rowIndex].Cells[7].Value);
 
-        private void Dgprincipal_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
-        {
-            //Dgprincipal.CurrentCell = Dgprincipal.Rows[e.RowIndex].Cells[4];
-            //Dgprincipal.BeginEdit(true);
-        }
+        //    CalculaTotales();
+        //    CalculaMerma();
+        //    CalculaTotales();
+        //}
+
+        //private void Dgprincipal_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        //{
+        //    Dgprincipal.CurrentCell = Dgprincipal.Rows[e.RowIndex].Cells[4];
+        //    Dgprincipal.BeginEdit(true);
+        //}
 
         private void Dgprincipal_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
@@ -545,59 +600,59 @@ namespace LOSCALVOS
             if (!Dgprincipal.Rows[e.RowIndex].IsNewRow)
             {
                 //Sólo controlamos el dato de la columna 0
-                if (e.ColumnIndex == 4 || e.ColumnIndex == 8)
-                {
-                    if (!this.EsMasMenos(e.FormattedValue.ToString()))
-                    {
-                        MessageBox.Show("El dato introducido no es de tipo fecha", "Error de validación",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Dgprincipal.Rows[e.RowIndex].ErrorText = "El dato introducido no es de tipo fecha";
-                        
-                        //
-                        e.Cancel = true;
-                        
-                    }
-                }
+                //if (e.ColumnIndex == 4 || e.ColumnIndex == 8)
+                //{
+                //    if (!this.EsMasMenos(e.FormattedValue.ToString()))
+                //    {
+                //        MessageBox.Show("El dato introducido no es de tipo fecha", "Error de validación",
+                //                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        Dgprincipal.Rows[e.RowIndex].ErrorText = "El dato introducido no es de tipo fecha";
 
-                if (e.ColumnIndex == 5 || e.ColumnIndex == 7)
+                //        //
+                //        e.Cancel = true;
+
+                //    }
+                //}
+
+                if (e.ColumnIndex == 4)
                 {
                     if (!this.EsDecimal(e.FormattedValue.ToString()))
                     {
                         MessageBox.Show("El dato introducido no es de tipo fecha", "Error de validación",
                                         MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Dgprincipal.Rows[e.RowIndex].ErrorText = "El dato introducido no es de tipo fecha";
+                        Dgprincipal.Rows[e.RowIndex].ErrorText = "El dato introducido no es de tipo fechfffffa";
                         e.Cancel = true;
 
                     }
+                    CalculaMerma();
+                    CalculaTotales();
                 }
             }
-            CalculaTotales();
-            CalculaMerma();
-            CalculaTotales();
+            //CalculaTotales();
+            // CalculaMerma();
+            // CalculaTotales();
         }
 
-        //private void Dgprincipal_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        //{
-        //    //e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
-        //    if (Dgprincipal.CurrentCell.ColumnIndex == 0 |
-        //        Dgprincipal.CurrentCell.ColumnIndex == 1 |
-        //        Dgprincipal.CurrentCell.ColumnIndex == 5) //Columnas deseadas
-        //    {
-        //        TextBox tb = e.Control as TextBox;
-        //        if (tb != null)
-        //        {
-        //            tb.KeyPress += new KeyPressEventHandler(Columns_KeyPress);
-        //        }
-        //    }
-        //}
+        private void Dgprincipal_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            //e.Control.KeyPress -= new KeyPressEventHandler(Column1_KeyPress);
+            if (Dgprincipal.CurrentCell.ColumnIndex == 4) //Columnas deseadas
+            {
+                TextBox tb = e.Control as TextBox;
+                if (tb != null)
+                {
+                    tb.KeyPress += new KeyPressEventHandler(Columns_KeyPress);
+                }
+            }
+        }
 
-        //private void Columns_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
+        private void Columns_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
 
         private Boolean EsMasMenos(String Dato)
@@ -640,6 +695,50 @@ namespace LOSCALVOS
         {
             CargaDeDatos(Convert.ToInt32(DgVersiones.CurrentRow.Cells[0].Value.ToString()));
             
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Dgprincipal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+           
+                if (e.KeyChar == (char)13)  // Si es un enter
+            {
+                SendKeys.Send("{TAB}");
+                }
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmGrillaBuscar _FrmGrillaBuscar = new FrmGrillaBuscar
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                combo = "PTERMINADOS"
+            };
+            if (_FrmGrillaBuscar.ShowDialog() == DialogResult.OK)
+            {
+
+                TxtCodigo.Text= _FrmGrillaBuscar.Codigo;
+                TxtDescripcion.Text = _FrmGrillaBuscar.nombre;
+            }
+        }
+
+        private void btnMenosMQ_Click(object sender, EventArgs e)
+        {
+            if (Dgprincipal.SelectedRows.Count > 0)
+            {
+                Dgprincipal.Rows.RemoveAt(Dgprincipal.CurrentRow.Index);
+                CalculaMerma();
+                CalculaTotales();
+            }
+            else
+            {
+                MessageBox.Show("Por favor seleccione un Item para Eliminar.", "SystemCenter.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

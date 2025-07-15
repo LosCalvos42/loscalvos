@@ -226,7 +226,7 @@ namespace LOSCALVOS
             List<ClsParametros> lst = new List<ClsParametros>();
             try
             {
-                lst.Add(new ClsParametros("@Tipo", "RESUMEN"));
+                lst.Add(new ClsParametros("@Tipo", 1));
                 lst.Add(new ClsParametros("@coti", Convert.ToDouble(Txtvalor.Text)));
                 dtr = M.Listado("SP_ConsultaComponentesUltimaC", lst);    //SP del reporte
 

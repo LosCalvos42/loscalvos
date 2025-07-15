@@ -32,17 +32,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForAddFormulas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmForAddFormulas));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -64,27 +64,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
             this.Dgprincipal = new System.Windows.Forms.DataGridView();
-            this.btnMenosMQ = new System.Windows.Forms.Button();
-            this.btnMasMQ = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnAceptar = new System.Windows.Forms.Button();
-            this.DgVersiones = new System.Windows.Forms.DataGridView();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.GrTotales = new System.Windows.Forms.GroupBox();
-            this.TxtCostoUnitario = new System.Windows.Forms.TextBox();
-            this.TxtCostoTotal = new System.Windows.Forms.TextBox();
-            this.TxtPesoTotal = new System.Windows.Forms.TextBox();
-            this.TxtMerma = new System.Windows.Forms.TextBox();
-            this.TxtPeso = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.TxtCantidadItems = new System.Windows.Forms.TextBox();
             this.Linea = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Lote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,6 +75,28 @@
             this.codbar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoarti = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgVersiones = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.GrTotales = new System.Windows.Forms.GroupBox();
+            this.TxtCantidadItems = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.TxtCostoUnitario = new System.Windows.Forms.TextBox();
+            this.TxtCostoTotal = new System.Windows.Forms.TextBox();
+            this.TxtPesoTotal = new System.Windows.Forms.TextBox();
+            this.TxtMerma = new System.Windows.Forms.TextBox();
+            this.TxtPeso = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnMenosMQ = new System.Windows.Forms.Button();
+            this.btnMasMQ = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnAceptar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.GrpVigencia.SuspendLayout();
@@ -387,7 +388,7 @@
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgprincipal.DefaultCellStyle = dataGridViewCellStyle9;
             this.Dgprincipal.EnableHeadersVisualStyles = false;
-            this.Dgprincipal.Location = new System.Drawing.Point(363, 182);
+            this.Dgprincipal.Location = new System.Drawing.Point(387, 182);
             this.Dgprincipal.Name = "Dgprincipal";
             this.Dgprincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -408,74 +409,97 @@
             this.Dgprincipal.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.Dgprincipal_CellValidating);
             this.Dgprincipal.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.Dgprincipal_RowsAdded);
             // 
-            // btnMenosMQ
+            // Linea
             // 
-            this.btnMenosMQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMenosMQ.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMenosMQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnMenosMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenosMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenosMQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnMenosMQ.Image = global::LOSCALVOS.Properties.Resources.menosLC;
-            this.btnMenosMQ.Location = new System.Drawing.Point(448, 459);
-            this.btnMenosMQ.Name = "btnMenosMQ";
-            this.btnMenosMQ.Size = new System.Drawing.Size(79, 29);
-            this.btnMenosMQ.TabIndex = 157;
-            this.btnMenosMQ.UseVisualStyleBackColor = false;
+            this.Linea.HeaderText = "ID";
+            this.Linea.Name = "Linea";
+            this.Linea.Visible = false;
+            this.Linea.Width = 50;
             // 
-            // btnMasMQ
+            // Lote
             // 
-            this.btnMasMQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnMasMQ.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnMasMQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnMasMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMasMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMasMQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnMasMQ.Image = global::LOSCALVOS.Properties.Resources.masLC;
-            this.btnMasMQ.Location = new System.Drawing.Point(363, 459);
-            this.btnMasMQ.Name = "btnMasMQ";
-            this.btnMasMQ.Size = new System.Drawing.Size(79, 29);
-            this.btnMasMQ.TabIndex = 156;
-            this.btnMasMQ.UseVisualStyleBackColor = false;
-            this.btnMasMQ.Click += new System.EventHandler(this.btnMasMQ_Click);
+            this.Lote.HeaderText = "COD";
+            this.Lote.Name = "Lote";
+            this.Lote.ReadOnly = true;
+            this.Lote.Width = 60;
             // 
-            // btnCancel
+            // Fecha
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(786, 583);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(97, 28);
-            this.btnCancel.TabIndex = 76;
-            this.btnCancel.Text = "&Cancelar";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.Fecha.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fecha.HeaderText = "DESCRIPCION";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 250;
             // 
-            // btnAceptar
+            // Hora
             // 
-            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.Color.White;
-            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
-            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(679, 583);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(97, 28);
-            this.btnAceptar.TabIndex = 75;
-            this.btnAceptar.Text = "&Aceptar";
-            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAceptar.UseVisualStyleBackColor = false;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.Hora.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Hora.HeaderText = "PRECIO";
+            this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
+            this.Hora.Width = 70;
+            // 
+            // blanco
+            // 
+            this.blanco.HeaderText = "+ / -";
+            this.blanco.Name = "blanco";
+            this.blanco.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.blanco.Width = 50;
+            // 
+            // barra
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N2";
+            dataGridViewCellStyle5.NullValue = "0";
+            this.barra.DefaultCellStyle = dataGridViewCellStyle5;
+            this.barra.HeaderText = "MERMA";
+            this.barra.Name = "barra";
+            this.barra.Width = 60;
+            // 
+            // Kilos
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Kilos.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Kilos.HeaderText = "UNIMED";
+            this.Kilos.Name = "Kilos";
+            this.Kilos.ReadOnly = true;
+            this.Kilos.Width = 70;
+            // 
+            // categoria
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.categoria.DefaultCellStyle = dataGridViewCellStyle7;
+            this.categoria.HeaderText = "CANTIDAD";
+            this.categoria.Name = "categoria";
+            this.categoria.Width = 80;
+            // 
+            // codbar
+            // 
+            this.codbar.HeaderText = "+ / -";
+            this.codbar.Name = "codbar";
+            this.codbar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.codbar.Width = 50;
+            // 
+            // total
+            // 
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = "0";
+            this.total.DefaultCellStyle = dataGridViewCellStyle8;
+            this.total.HeaderText = "TOTAL";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // tipoarti
+            // 
+            this.tipoarti.HeaderText = "Tipo";
+            this.tipoarti.Name = "tipoarti";
             // 
             // DgVersiones
             // 
@@ -629,6 +653,28 @@
             this.GrTotales.TabIndex = 166;
             this.GrTotales.TabStop = false;
             // 
+            // TxtCantidadItems
+            // 
+            this.TxtCantidadItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtCantidadItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCantidadItems.Location = new System.Drawing.Point(24, 37);
+            this.TxtCantidadItems.Name = "TxtCantidadItems";
+            this.TxtCantidadItems.Size = new System.Drawing.Size(100, 40);
+            this.TxtCantidadItems.TabIndex = 178;
+            this.TxtCantidadItems.Text = "120";
+            this.TxtCantidadItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.label13.Location = new System.Drawing.Point(6, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(137, 20);
+            this.label13.TabIndex = 177;
+            this.label13.Text = "Cantidad de items";
+            // 
             // TxtCostoUnitario
             // 
             this.TxtCostoUnitario.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -696,119 +742,89 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label13
+            // button2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
-            this.label13.Location = new System.Drawing.Point(6, 14);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(137, 20);
-            this.label13.TabIndex = 177;
-            this.label13.Text = "Cantidad de items";
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.button2.Image = global::LOSCALVOS.Properties.Resources.updateTraza;
+            this.button2.Location = new System.Drawing.Point(363, 492);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 29);
+            this.button2.TabIndex = 167;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // TxtCantidadItems
+            // btnMenosMQ
             // 
-            this.TxtCantidadItems.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtCantidadItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCantidadItems.Location = new System.Drawing.Point(24, 37);
-            this.TxtCantidadItems.Name = "TxtCantidadItems";
-            this.TxtCantidadItems.Size = new System.Drawing.Size(100, 40);
-            this.TxtCantidadItems.TabIndex = 178;
-            this.TxtCantidadItems.Text = "120";
-            this.TxtCantidadItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnMenosMQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMenosMQ.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMenosMQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnMenosMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenosMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenosMQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnMenosMQ.Image = global::LOSCALVOS.Properties.Resources.menosLC;
+            this.btnMenosMQ.Location = new System.Drawing.Point(447, 458);
+            this.btnMenosMQ.Name = "btnMenosMQ";
+            this.btnMenosMQ.Size = new System.Drawing.Size(79, 29);
+            this.btnMenosMQ.TabIndex = 157;
+            this.btnMenosMQ.UseVisualStyleBackColor = false;
             // 
-            // Linea
+            // btnMasMQ
             // 
-            this.Linea.HeaderText = "ID";
-            this.Linea.Name = "Linea";
-            this.Linea.Visible = false;
-            this.Linea.Width = 50;
+            this.btnMasMQ.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMasMQ.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnMasMQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnMasMQ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMasMQ.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMasMQ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnMasMQ.Image = global::LOSCALVOS.Properties.Resources.masLC;
+            this.btnMasMQ.Location = new System.Drawing.Point(363, 458);
+            this.btnMasMQ.Name = "btnMasMQ";
+            this.btnMasMQ.Size = new System.Drawing.Size(75, 29);
+            this.btnMasMQ.TabIndex = 156;
+            this.btnMasMQ.UseVisualStyleBackColor = false;
+            this.btnMasMQ.Click += new System.EventHandler(this.btnMasMQ_Click);
             // 
-            // Lote
+            // btnCancel
             // 
-            this.Lote.HeaderText = "COD";
-            this.Lote.Name = "Lote";
-            this.Lote.ReadOnly = true;
-            this.Lote.Width = 60;
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancel.Location = new System.Drawing.Point(786, 583);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(97, 28);
+            this.btnCancel.TabIndex = 76;
+            this.btnCancel.Text = "&Cancelar";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // Fecha
+            // btnAceptar
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.Fecha.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Fecha.HeaderText = "DESCRIPCION";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 250;
-            // 
-            // Hora
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.Hora.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Hora.HeaderText = "PRECIO";
-            this.Hora.Name = "Hora";
-            this.Hora.ReadOnly = true;
-            this.Hora.Width = 70;
-            // 
-            // blanco
-            // 
-            this.blanco.HeaderText = "+ / -";
-            this.blanco.Name = "blanco";
-            this.blanco.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.blanco.Width = 50;
-            // 
-            // barra
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = "0";
-            this.barra.DefaultCellStyle = dataGridViewCellStyle5;
-            this.barra.HeaderText = "MERMA";
-            this.barra.Name = "barra";
-            this.barra.Width = 60;
-            // 
-            // Kilos
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Kilos.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Kilos.HeaderText = "UNIMED";
-            this.Kilos.Name = "Kilos";
-            this.Kilos.ReadOnly = true;
-            this.Kilos.Width = 70;
-            // 
-            // categoria
-            // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = "0";
-            this.categoria.DefaultCellStyle = dataGridViewCellStyle7;
-            this.categoria.HeaderText = "CANTIDAD";
-            this.categoria.Name = "categoria";
-            this.categoria.Width = 80;
-            // 
-            // codbar
-            // 
-            this.codbar.HeaderText = "+ / -";
-            this.codbar.Name = "codbar";
-            this.codbar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.codbar.Width = 50;
-            // 
-            // total
-            // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            dataGridViewCellStyle8.NullValue = "0";
-            this.total.DefaultCellStyle = dataGridViewCellStyle8;
-            this.total.HeaderText = "TOTAL";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            // 
-            // tipoarti
-            // 
-            this.tipoarti.HeaderText = "Tipo";
-            this.tipoarti.Name = "tipoarti";
+            this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAceptar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(19)))), ((int)(((byte)(76)))));
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
+            this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
+            this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAceptar.Location = new System.Drawing.Point(679, 583);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(97, 28);
+            this.btnAceptar.TabIndex = 75;
+            this.btnAceptar.Text = "&Aceptar";
+            this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // FrmForAddFormulas
             // 
@@ -816,6 +832,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1263, 617);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.GrTotales);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label4);
@@ -902,5 +919,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn codbar;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoarti;
+        private System.Windows.Forms.Button button2;
     }
 }
